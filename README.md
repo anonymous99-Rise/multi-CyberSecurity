@@ -1,4 +1,4 @@
-# multi-CyberSecurity v4.2.27
+# multi-CyberSecurity v4.2.28
 
 > AI驱动的网络安全技能框架 — 融合MITRE ATT&CK + NIST CSF标准
 

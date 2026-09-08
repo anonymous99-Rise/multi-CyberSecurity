@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/adminlove520/multi-CyberSecurity/main/index.schema.json",
+  "$id": "https://raw.githubusercontent.com/anonymous99-Rise/multi-CyberSecurity/main/index.schema.json",
   "title": "multi-CyberSecurity Index Schema",
   "description": "验证 index.json 文件的结构和完整性，确保所有技能索引数据符合规范。",
   "type": "object",

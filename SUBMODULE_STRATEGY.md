@@ -68,7 +68,7 @@ scripts/                     # 协同脚本 (我们维护)
 ## 接入流程
 
 ### 提名阶段
-1. 在 [Issues](https://github.com/adminlove520/multi-CyberSecurity/issues/new?template=submodule-nomination.md) 提交提名
+1. 在 [Issues](https://github.com/anonymous99-Rise/multi-CyberSecurity/issues/new?template=submodule-nomination.md) 提交提名
 2. 说明：
    - 项目名称和 URL
    - 与我们的协同场景

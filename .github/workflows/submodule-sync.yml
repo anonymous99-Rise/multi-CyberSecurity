@@ -80,7 +80,7 @@ jobs:
         run: |
           # 查找已有的 submodule-update PR
           EXISTING=$(gh pr list \
-            --repo adminlove520/multi-CyberSecurity \
+            --repo anonymous99-Rise/multi-CyberSecurity \
             --label "submodule-update" \
             --state "open" \
             --json number \
@@ -105,12 +105,12 @@ jobs:
           # 创建 label
           gh label create "submodule-update" \
             --description "子仓库同步更新" \
-            --repo adminlove520/multi-CyberSecurity \
+            --repo anonymous99-Rise/multi-CyberSecurity \
             2>/dev/null || true
 
           # 创建 PR
           PR_URL=$(gh pr create \
-            --repo adminlove520/multi-CyberSecurity \
+            --repo anonymous99-Rise/multi-CyberSecurity \
             --head "$BRANCH" \
             --base main \
             --title "chore: sync submodules to latest" \
@@ -140,7 +140,7 @@ jobs:
           gh pr merge "$PR_NUMBER" \
             --squash \
             --delete-branch \
-            --repo adminlove520/multi-CyberSecurity
+            --repo anonymous99-Rise/multi-CyberSecurity
 
           echo "✅ PR #$PR_NUMBER 已合并"
 
@@ -178,7 +178,7 @@ jobs:
 
           # 查找 open 的 submodule-update PR
           EXISTING=$(gh pr list \
-            --repo adminlove520/multi-CyberSecurity \
+            --repo anonymous99-Rise/multi-CyberSecurity \
             --label "submodule-update" \
             --state "open" \
             --json number \
@@ -209,7 +209,7 @@ jobs:
           gh pr merge "$PR_NUMBER" \
             --squash \
             --delete-branch \
-            --repo adminlove520/multi-CyberSecurity
+            --repo anonymous99-Rise/multi-CyberSecurity
 
           echo "✅ PR #$PR_NUMBER 已合并"
 

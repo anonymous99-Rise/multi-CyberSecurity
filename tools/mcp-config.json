@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/adminlove520/multi-CyberSecurity/main/tools/mcp-config.schema.json",
+  "$schema": "https://raw.githubusercontent.com/anonymous99-Rise/multi-CyberSecurity/main/tools/mcp-config.schema.json",
   "name": "multi-CyberSecurity Tools",
   "version": "1.1.0",
   "description": "统一工具 MCP 配置 - 方便 Agents 按需调用",

@@ -140,7 +140,7 @@ jobs:
               "# 📦 子仓库状态汇总报告",
               "",
               f"> 生成时间: {now}",
-              "> 仓库: [adminlove520/multi-CyberSecurity](https://github.com/adminlove520/multi-CyberSecurity)",
+              "> 仓库: [anonymous99-Rise/multi-CyberSecurity](https://github.com/anonymous99-Rise/multi-CyberSecurity)",
               "",
               "## 📊 概览",
               "",
@@ -210,7 +210,7 @@ jobs:
             git push origin "$BRANCH" || echo "推送失败"
 
             gh pr create \
-              --repo adminlove520/multi-CyberSecurity \
+              --repo anonymous99-Rise/multi-CyberSecurity \
               --head "$BRANCH" \
               --base main \
               --title "docs: submodule status report $(date +%Y-%m-%d)" \

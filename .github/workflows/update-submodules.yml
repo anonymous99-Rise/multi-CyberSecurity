@@ -1,6 +1,6 @@
 # 子模块手动更新工作流
 # 需要更新时在 GitHub Actions 页面手动触发
-# 也可通过 repository_dispatch 触发: curl -X POST https://api.github.com/repos/adminlove520/multi-CyberSecurity/dispatches -H "Accept: application/vnd.github.v3+json" -H "Authorization: token $TOKEN" -d '{"event_type":"update-submodules"}'
+# 也可通过 repository_dispatch 触发: curl -X POST https://api.github.com/repos/anonymous99-Rise/multi-CyberSecurity/dispatches -H "Accept: application/vnd.github.v3+json" -H "Authorization: token $TOKEN" -d '{"event_type":"update-submodules"}'
 
 name: Update Submodules (Manual)
 
@@ -83,7 +83,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           PR_URL=$(gh pr create \
-            --repo adminlove520/multi-CyberSecurity \
+            --repo anonymous99-Rise/multi-CyberSecurity \
             --head "${{ steps.push.outputs.branch }}" \
             --base main \
             --title "${{ github.event.inputs.message || 'chore: update submodules' }}" \

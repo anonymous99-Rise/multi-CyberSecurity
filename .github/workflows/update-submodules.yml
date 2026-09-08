@@ -63,6 +63,7 @@ jobs:
 
       - name: Create commit and push
         if: steps.check_changes.outputs.has_changes == 'true'
+        id: create_commit
         run: |
           BRANCH="update-submodules-$(date +%s)"
           git checkout -b "$BRANCH"
@@ -82,14 +83,28 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # 确保 label 存在（幂等）
+          gh label create "submodule-update" \
+            --description "子仓库同步更新" \
+            --repo anonymous99-Rise/multi-CyberSecurity 2>/dev/null || true
+
           PR_URL=$(gh pr create \
             --repo anonymous99-Rise/multi-CyberSecurity \
-            --head "${{ steps.push.outputs.branch }}" \
+            --head "${{ steps.create_commit.outputs.branch }}" \
             --base main \
             --title "${{ github.event.inputs.message || 'chore: update submodules' }}" \
             --body "Automated submodule update triggered manually" \
             --fill)
           echo "PR created: $PR_URL"
 
-          # 添加 label
-          gh pr edit "$PR_URL" --add-label "submodule-update"
+          # 添加 label（带重试以避免 PR 刚创建时同步延迟）
+          for i in 1 2 3; do
+            if gh pr edit "$PR_URL" --add-label "submodule-update" \
+               --repo anonymous99-Rise/multi-CyberSecurity; then
+              echo "Label added successfully"
+              break
+            else
+              echo "Attempt $i failed, retrying in 5s..."
+              sleep 5
+            fi
+          done

@@ -1,5 +1,6 @@
 -ef9d0cd14cc21d1404b2fd3fe1405b6b4b9bacdb external/AboutSecurity
 -93f3c5f81837cb784e225c3cebe5c3620d7d3cd4 external/agency-agents
 -9254572c681af4831523a17fabd43a2eb0754350 external/agency-agents-zh
+-6edc70f3fc6ece3678009b58c1900de02832690d external/CyberStrikeAI
 -9ec60377bfdcafa0b317ed3612acc6c46270be78 external/reverse-skill
 -f34f60634249f681c88caa34dbbbd67f8e4857cd vendor/codegraph

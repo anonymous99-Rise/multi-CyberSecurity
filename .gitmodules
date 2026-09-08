@@ -34,3 +34,6 @@
 [submodule "knowledge/owasp-top10"]
 	path = standards/owasp-top10
 	url = https://github.com/OWASP/Top10.git
+[submodule "external/CyberStrikeAI"]
+	path = external/CyberStrikeAI
+	url = https://github.com/AIPentest/CyberStrikeAI.git

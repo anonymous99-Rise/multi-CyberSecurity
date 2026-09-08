@@ -1,6 +1,7 @@
 external/AboutSecurity
 external/Anthropic-Cybersecurity-Skills
 external/Claude-BugHunter
+external/CyberStrikeAI
 external/Vulnerability-Wiki-PoC
 external/agency-agents
 external/agency-agents-zh

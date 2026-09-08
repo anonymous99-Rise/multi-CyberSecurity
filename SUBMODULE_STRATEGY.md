@@ -28,6 +28,7 @@ external/                    # 外部引用的独立项目
 ├── reverse-skill/           # 逆向/渗透技能路由包
 ├── agency-agents-zh/        # Agent 编排框架
 ├── AboutSecurity/           # 安全工具集合
+├── CyberStrikeAI/           # AI原生安全操作平台 (Eino+MCP+RAG)
 └── <new-submodule>/         # 欢迎新的独立项目
 
 vendor/                      # 内部使用的工具/库 (可修改)
@@ -123,6 +124,7 @@ Agent → 查询 external/<kb>/README.md → 获取知识
 | reverse-skill | 技能路由包 | 路由矩阵引用 | ✅ 活跃 |
 | agency-agents-zh | Agent 框架 | 协作参考 | ✅ 活跃 |
 | AboutSecurity | 工具集合 | 工具索引 | ✅ 活跃 |
+| CyberStrikeAI | AI安全操作平台 | Eino ADK + Skills20260809 技能包 | ✅ 活跃 |
 | codegraph | 代码分析 | MCP 集成 | ✅ 活跃 |
 
 ---

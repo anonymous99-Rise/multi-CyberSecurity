@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
+const repo = "multi-CyberSecurity";
+
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "",
-  assetPrefix: "",
+  basePath: `/${repo}`,
+  assetPrefix: `/${repo}/`,
   trailingSlash: true,
   images: { unoptimized: true },
 };

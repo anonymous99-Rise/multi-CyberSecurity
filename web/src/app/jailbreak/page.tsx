@@ -1,34 +1,26 @@
 "use client";
 import { useState, useMemo } from "react";
-import { jailbreakLevels, platforms } from "@/lib/data";
+import { jailbreakLevels, platforms, jailbreakPayloads } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { Copy, Check } from "lucide-react";
 
 export default function JailbreakPage() {
   const [level, setLevel] = useState("L3");
   const [platform, setPlatform] = useState("dsh");
+  const [copied, setCopied] = useState(false);
 
   const levelData = useMemo(() => jailbreakLevels.find((l) => l.id === level)!, [level]);
 
-  const platformPayloads: Record<string, Record<string, string[]>> = {
-    L1: { universal: ["universal.md"] },
-    L2: { universal: ["universal.md"] },
-    L3: {
-      universal: ["universal.md"], claude: ["claude.md"], codex: ["codex.md"],
-      cursor: ["cursor.md"], trae: ["trae.md"], openclaw: ["openclaw.md"],
-      hermes: ["hermes.md"], dsh: ["dsh.md"],
-    },
-    L4: {
-      universal: ["universal.md"], claude: ["claude.md"], codex: ["codex.md"],
-      cursor: ["cursor.md"], trae: ["trae.md"], openclaw: ["openclaw.md"],
-      hermes: ["hermes.md"], dsh: ["dsh.md"],
-    },
-  };
+  const availablePlatforms = jailbreakPayloads[level] || {};
+  const payloadContent = availablePlatforms[platform] || "";
 
-  const availablePlatforms = platformPayloads[level] || {};
-  const filePath = availablePlatforms[platform]?.[0];
-  const fullPath = filePath
-    ? `framework/skills/redteam/jailbreak/L${level === "L1" ? "1_soft" : level === "L2" ? "2_medium" : level === "L3" ? "3_hard" : "4_deep"}/${filePath}`
-    : null;
+  const cliCmd = `python cli.py jailbreak payload --level ${level} --platform ${platform}`;
+
+  const copyCmd = () => {
+    navigator.clipboard.writeText(cliCmd);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <div className="p-8 max-w-4xl">
@@ -45,9 +37,7 @@ export default function JailbreakPage() {
               disabled={l.id === "L4"}
               className={cn(
                 "p-3 rounded-lg border text-left transition-all disabled:opacity-30 disabled:cursor-not-allowed",
-                level === l.id
-                  ? "border-2"
-                  : "border-bg-border hover:border-gray-600",
+                level === l.id ? "border-2" : "border-bg-border hover:border-gray-600",
               )}
               style={level === l.id ? { borderColor: l.color, backgroundColor: l.color + "10" } : {}}
             >
@@ -84,22 +74,36 @@ export default function JailbreakPage() {
         </div>
       </div>
 
-      {/* Payload 路径 */}
-      {fullPath && (
-        <div className="border border-bg-border rounded-lg p-5">
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="text-sm font-semibold text-gray-300">Payload 文件</h2>
+      {/* CLI 命令 */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-2">
+          <label className="text-xs text-gray-500">CLI 命令</label>
+          <button
+            onClick={copyCmd}
+            className="flex items-center gap-1 text-xs text-accent hover:text-accent/80 transition-colors"
+          >
+            {copied ? <Check size={12} /> : <Copy size={12} />}
+            {copied ? "已复制" : "复制"}
+          </button>
+        </div>
+        <div className="p-3 bg-black border border-bg-border rounded-lg">
+          <code className="text-xs text-accent font-mono break-all">{cliCmd}</code>
+        </div>
+      </div>
+
+      {/* Payload 内容 */}
+      {payloadContent && (
+        <div className="border border-bg-border rounded-lg overflow-hidden">
+          <div className="px-4 py-2.5 border-b border-bg-border bg-bg-secondary flex items-center justify-between">
+            <h2 className="text-sm font-semibold text-gray-300">Payload 内容</h2>
             <span className="text-xs px-2 py-0.5 rounded font-mono" style={{ backgroundColor: levelData.color + "20", color: levelData.color }}>
-              {levelData.name}
+              {levelData.name} · {platform}
             </span>
           </div>
-          <div className="p-3 bg-black border border-bg-border rounded font-mono text-xs text-accent break-all">
-            {fullPath}
-          </div>
-          <div className="mt-4 text-xs text-gray-500 space-y-1">
-            <p>▸ CLI 获取: <code className="text-accent/70">python cli.py jailbreak payload --level {level} --platform {platform}</code></p>
-            <p>▸ 引擎自动发现: <code className="text-accent/70">framework/skills/redteam/jailbreak/</code> 下 glob *.md</p>
-            <p>▸ 回退策略: 找不到平台时回退 <code className="text-accent/70">universal</code></p>
+          <div className="p-4 bg-black/50 overflow-x-auto max-h-[600px] overflow-y-auto">
+            <pre className="text-xs text-gray-400 font-mono whitespace-pre-wrap leading-relaxed">
+              {payloadContent}
+            </pre>
           </div>
         </div>
       )}
@@ -118,19 +122,22 @@ export default function JailbreakPage() {
             </tr>
           </thead>
           <tbody>
-            {jailbreakLevels.map((l) => (
-              <tr key={l.id} className="border-b border-bg-border/50">
-                <td className="py-2 px-2 font-mono" style={{ color: l.color }}>{l.name}</td>
-                <td className="text-center py-2 px-2">
-                  {platformPayloads[l.id]?.universal ? <span className="text-accent">✓</span> : <span className="text-gray-700">—</span>}
-                </td>
-                {platforms.map((p) => (
-                  <td key={p.id} className="text-center py-2 px-2">
-                    {platformPayloads[l.id]?.[p.id] ? <span className="text-accent">✓</span> : <span className="text-gray-700">—</span>}
+            {jailbreakLevels.map((l) => {
+              const levelPayloads = jailbreakPayloads[l.id] || {};
+              return (
+                <tr key={l.id} className="border-b border-bg-border/50">
+                  <td className="py-2 px-2 font-mono" style={{ color: l.color }}>{l.name}</td>
+                  <td className="text-center py-2 px-2">
+                    {levelPayloads.universal ? <span className="text-accent">✓</span> : <span className="text-gray-700">—</span>}
                   </td>
-                ))}
-              </tr>
-            ))}
+                  {platforms.map((p) => (
+                    <td key={p.id} className="text-center py-2 px-2">
+                      {levelPayloads[p.id] ? <span className="text-accent">✓</span> : <span className="text-gray-700">—</span>}
+                    </td>
+                  ))}
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

@@ -1,7 +1,7 @@
 "use client";
 import { useState, useMemo } from "react";
-import { Search, ChevronRight } from "lucide-react";
-import { modules, skillsIndex, searchSkills, type SkillIndexEntry } from "@/lib/data";
+import { Search, ChevronRight, X } from "lucide-react";
+import { modules, skillsIndex, searchSkills, skillsContent, type SkillIndexEntry } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export default function SkillsPage() {
@@ -19,15 +19,12 @@ export default function SkillsPage() {
     <div className="flex h-screen">
       {/* 左侧模块树 */}
       <div className="w-56 shrink-0 border-r border-bg-border bg-bg-secondary overflow-y-auto">
-        <div className="p-3">
+        <div className="p-3 sticky top-0 bg-bg-secondary z-10">
           <div className="relative">
             <Search size={14} className="absolute left-2.5 top-2.5 text-gray-600" />
             <input
               value={query}
-              onChange={(e) => {
-                setQuery(e.target.value);
-                setSelectedModule(null);
-              }}
+              onChange={(e) => { setQuery(e.target.value); setSelectedModule(null); }}
               placeholder="搜索技能..."
               className="w-full pl-8 pr-3 py-2 text-xs bg-bg border border-bg-border rounded text-gray-300 focus:border-accent/50 focus:outline-none"
             />
@@ -68,32 +65,42 @@ export default function SkillsPage() {
             {selectedModule && ` · ${modules.find(m => m.path === selectedModule)?.name_cn}`}
           </p>
         </div>
-        {filtered.map((skill, i) => (
-          <button
-            key={i}
-            onClick={() => setSelectedSkill(skill)}
-            className={cn(
-              "w-full text-left px-4 py-3 border-b border-bg-border/50 hover:bg-white/5 transition-colors",
-              selectedSkill?.name === skill.name && "bg-accent/5",
-            )}
-          >
-            <h3 className="text-sm text-gray-200 mb-1">{skill.name.split("-")[0]}</h3>
-            <p className="text-xs text-gray-500 line-clamp-2">{skill.description}</p>
-            <div className="flex gap-1 mt-1.5 flex-wrap">
-              {skill.mitre_attack.slice(0, 3).map((t) => (
-                <span key={t} className="text-[10px] px-1.5 py-0.5 rounded bg-accent/10 text-accent/70 font-mono">
-                  {t}
-                </span>
-              ))}
-            </div>
-          </button>
-        ))}
+        {filtered.length === 0 ? (
+          <div className="p-8 text-center text-gray-600 text-sm">无匹配结果</div>
+        ) : (
+          filtered.map((skill, i) => (
+            <button
+              key={i}
+              onClick={() => setSelectedSkill(skill)}
+              className={cn(
+                "w-full text-left px-4 py-3 border-b border-bg-border/50 hover:bg-white/5 transition-colors",
+                selectedSkill?.name === skill.name && "bg-accent/5",
+              )}
+            >
+              <h3 className="text-sm text-gray-200 mb-1">{skill.name.split("-")[0]}</h3>
+              <p className="text-xs text-gray-500 line-clamp-2">{skill.description}</p>
+              <div className="flex gap-1 mt-1.5 flex-wrap">
+                {skill.mitre_attack.slice(0, 3).map((t) => (
+                  <span key={t} className="text-[10px] px-1.5 py-0.5 rounded bg-accent/10 text-accent/70 font-mono">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </button>
+          ))
+        )}
       </div>
 
       {/* 右侧详情 */}
-      <div className="flex-1 overflow-y-auto p-6">
+      <div className="flex-1 overflow-y-auto">
         {selectedSkill ? (
-          <div>
+          <div className="p-6">
+            <button
+              onClick={() => setSelectedSkill(null)}
+              className="absolute top-4 right-4 lg:hidden text-gray-500 hover:text-gray-300"
+            >
+              <X size={18} />
+            </button>
             <h1 className="text-xl font-bold text-gray-100 mb-2">{selectedSkill.name}</h1>
             <p className="text-sm text-gray-400 mb-4">{selectedSkill.description}</p>
             <div className="grid grid-cols-2 gap-4 mb-6">
@@ -110,7 +117,7 @@ export default function SkillsPage() {
                 ))}
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-6 mb-6">
               <div>
                 <h2 className="text-xs text-gray-500 mb-2">MITRE ATT&CK</h2>
                 <div className="flex flex-wrap gap-1.5">
@@ -128,14 +135,28 @@ export default function SkillsPage() {
                 </div>
               </div>
             </div>
+            {/* MD 正文 */}
+            {skillsContent[selectedSkill.name] && (
+              <div className="mt-6 pt-4 border-t border-bg-border">
+                <h2 className="text-xs text-gray-500 mb-3">技能正文</h2>
+                <div className="p-4 bg-black/50 border border-bg-border rounded-lg overflow-x-auto">
+                  <pre className="text-xs text-gray-400 font-mono whitespace-pre-wrap leading-relaxed">
+                    {skillsContent[selectedSkill.name]}
+                  </pre>
+                </div>
+              </div>
+            )}
             <div className="mt-6 pt-4 border-t border-bg-border">
               <p className="text-xs text-gray-600">文件路径</p>
-              <code className="text-xs text-gray-400 font-mono">{selectedSkill.file}</code>
+              <code className="text-xs text-gray-400 font-mono break-all">{selectedSkill.file}</code>
             </div>
           </div>
         ) : (
           <div className="flex items-center justify-center h-full text-gray-600">
-            <ChevronRight size={20} className="mr-2" /> 选择一个技能查看详情
+            <div className="text-center">
+              <ChevronRight size={24} className="mx-auto mb-2 opacity-50" />
+              <p className="text-sm">选择一个技能查看详情</p>
+            </div>
           </div>
         )}
       </div>

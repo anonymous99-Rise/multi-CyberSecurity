@@ -1,6 +1,11 @@
 import indexData from "@/data/index.json";
 import skillsIndexData from "@/data/skills_index.json";
 import attackLayerData from "@/data/attack-navigator-layer.json";
+import skillsContentData from "@/data/skills_content.json";
+import jailbreakPayloadsData from "@/data/jailbreak_payloads.json";
+
+export const skillsContent = skillsContentData as Record<string, string>;
+export const jailbreakPayloads = jailbreakPayloadsData as Record<string, Record<string, string>>;
 
 export interface MetaInfo {
   title: string;

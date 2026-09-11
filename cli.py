@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-multi-CyberSecurity v4.3.0 Enhanced CLI
+multi-CyberSecurity v4.3.1 Enhanced CLI
 Unified command-line interface for security operations
 
 Architecture:
@@ -56,7 +56,7 @@ def print_banner():
 \____/\____/_/\____/\__, /_/        /____/_/ /_/\____/\____/\__/\___/_/     
                    /____/                                                    
 {Colors.ENDC}
-{Colors.GREEN}multi-CyberSecurity v4.3.0 Enhanced - AI-Powered Security Framework{Colors.ENDC}
+{Colors.GREEN}multi-CyberSecurity v4.3.1 Enhanced - AI-Powered Security Framework{Colors.ENDC}
 {Colors.BLUE}Architecture: Unified Gateway | Layered Jailbreak | Agent Registry | DSH Support{Colors.ENDC}
     """
     print(banner)
@@ -336,7 +336,7 @@ def main():
     print_banner()
     
     parser = argparse.ArgumentParser(
-        description="multi-CyberSecurity v4.3.0 Enhanced - AI-Powered Security Framework",
+        description="multi-CyberSecurity v4.3.1 Enhanced - AI-Powered Security Framework",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

@@ -31,9 +31,9 @@ class PayloadGenerator(ABC):
         """生成 payload"""
         pass
 
-    def generate_batch(self, count: int = 5) -> list[str]:
+    def generate_batch(self, count: int = 5, target: str = "", context: Optional[dict] = None) -> list[str]:
         """批量生成"""
-        return [self.generate() for _ in range(count)]
+        return [self.generate(target=target, context=context) for _ in range(count)]
 
 
 class SQLiPayloadGenerator(PayloadGenerator):

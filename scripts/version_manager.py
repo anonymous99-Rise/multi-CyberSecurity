@@ -40,7 +40,7 @@ VERSION_FILES = [
 
 # 用于一致性检查的文件（只读检查）
 CHECK_ONLY_FILES = [
-    ("CHANGELOG_v4.md", r"## \[([\d.]+)\]"),
+    ("CHANGELOG.md", r"## \[v([\d.]+)\]"),
 ]
 
 

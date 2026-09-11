@@ -1,5 +1,16 @@
 # Changelog
 
+## [v4.3.1] - 2026-09-11
+
+### 🔧 优化与修复
+
+- `version_manager.py`：`CHECK_ONLY_FILES` 从不存在的 `CHANGELOG_v4.md` 改为 `CHANGELOG.md`，使 `check` 子命令能正确纳入 CHANGELOG 一致性校验
+- `index.json`：`last_updated` 从 `2026-05-29` 更新为 `2026-09-11`
+- `framework/core/oracle/generators.py`：`PayloadGenerator.generate_batch()` 新增 `target`/`context` 参数并透传给 `generate()`，修复子类依赖参数时批量生成出错的隐患
+- 全局版本号同步至 v4.3.1（README / cli.py / index.json / framework/skills/index.md）
+
+---
+
 ## [v4.3.0] - 2026-09-11
 
 ### 🚀 新增功能

@@ -21,11 +21,47 @@
 20-29/          痕迹清除 · 报告撰写 · 移动安全 · 区块链 · IoT
 30-39/          SOC运营 · 威胁狩猎 · 数字取证 · 容器安全 · API安全
 Skills20260809/ CyberStrikeAI v3.0 深度攻防专家技能包（31个技能包，兼容agentskills.io规范）
-external/        外部子仓库（CyberStrikeAI 运行时、reverse-skill、AboutSecurity 等）
+external/        外部子仓库（CyberStrikeAI 运行时、CkSKILLS、dsh-pentest、dsh-infinite-gen-4 等）
 framework/      红队框架（jailbreak技能分级体系）
 mappings/       ATT&CK Navigator可视化层
 tools/          标准化脚本集
 workflows/      多Agent工作流定义（web_pentest_flow.yaml等）
+.dsh/           DeepSeek Harness (DSH) 平台配置包（AGENTS/RULES/IDENTITY/REDTEAM/HARNESS）
+.hermes/        Hermes 平台配置包
+.openclaw/      OpenClaw 平台配置包
+.trae/ .cursor/ .claude/ .codex/   各 AI Agent 平台适配配置
+```
+
+## 多平台适配
+
+框架为主流 AI Agent 平台提供同级配置包与 jailbreak payload 适配：
+
+| 平台 | 配置目录 | redteam/jailbreak `--platform` |
+|------|----------|-------------------------------|
+| Trae | [.trae/](.trae) | `trae` |
+| Cursor | [.cursor/](.cursor) | `cursor` |
+| Claude Code | [.claude/](.claude) | `claude` |
+| Codex | [.codex/](.codex) | `codex` |
+| OpenClaw | [.openclaw/](.openclaw) | `openclaw` |
+| Hermes | [.hermes/](.hermes) | `hermes` |
+| **DeepSeek Harness (DSH)** | [.dsh/](.dsh) | `dsh` |
+
+DSH 平台采用 Cordis 组合式架构（preset + bundle + 系统提示词段），集成说明、插件安装命令与
+8 阶段流水线映射见 [.dsh/HARNESS.md](.dsh/HARNESS.md)。配套 3 个 DSH 生态子仓库：
+
+| 子仓库 | 用途 |
+|--------|------|
+| [external/CkSKILLS](external/CkSKILLS)（[zhaji2333/CkSKILLS](https://github.com/zhaji2333/CkSKILLS)） | SRC 挖洞技能体系（`.agents/skills/` 20 个技能 + hunts 线索板） |
+| [external/dsh-pentest](external/dsh-pentest)（[howmp/dsh-pentest](https://github.com/howmp/dsh-pentest)） | DSH 渗透模式插件（`pentest_*` 工具 + sqlite 会话存储 + Web UI） |
+| [external/dsh-infinite-gen-4](external/dsh-infinite-gen-4)（[Minglink/dsh-infinite-gen-4](https://github.com/Minglink/dsh-infinite-gen-4)） | DSH 红队评测破甲插件（双层系统提示词注入） |
+
+```bash
+# 指定平台执行红队操作 / 获取破限 payload
+python cli.py redteam --operation recon --target 10.10.0.0/24 --platform dsh
+python cli.py jailbreak payload --level L3 --platform dsh
+
+# 导出平台配置包（trae/cursor/claude/codex/openclaw/hermes/dsh）
+python cli.py skill export --platform dsh
 ```
 
 ## CyberStrikeAI 技能包 (Skills20260809)

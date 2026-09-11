@@ -224,4 +224,4 @@ payload = engine.get_payload_auto("claude")
 ---
 
 *Last Updated: 2026-05-29*
-*Framework Version: v4.1.5*
+*Framework Version: v4.3.0*

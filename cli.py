@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-multi-CyberSecurity v4.1.5 Enhanced CLI
+multi-CyberSecurity v4.3.0 Enhanced CLI
 Unified command-line interface for security operations
 
 Architecture:
@@ -47,17 +47,17 @@ class Colors:
 
 def print_banner():
     """Print CLI banner"""
-    banner = f"""
+    banner = rf"""
 {Colors.CYAN}
    ______      __                      _____ __                __            
   / ____/___  / /___  ____ ______     / ___// /_  ____  ____  / /____  _____
- / /   / __ \/ / __ \/ __ `/ ___/     \\__ \\/ __ \\/ __ \\/ __ \\/ __/ _ \\/ ___/
+ / /   / __ \/ / __ \/ __ `/ ___/     \__ \/ __ \/ __ \/ __ \/ __/ _ \/ ___/
 / /___/ /_/ / / /_/ / /_/ / /        ___/ / / / / /_/ / /_/ / /_/  __/ /    
-\\____/\\____/_/\\____/\\__, /_/        /____/_/ /_/\\____/\\____/\\__/\\___/_/     
+\____/\____/_/\____/\__, /_/        /____/_/ /_/\____/\____/\__/\___/_/     
                    /____/                                                    
 {Colors.ENDC}
-{Colors.GREEN}multi-CyberSecurity v4.1.5 Enhanced - AI-Powered Security Framework{Colors.ENDC}
-{Colors.BLUE}Architecture: Unified Gateway | Layered Jailbreak | Agent Registry{Colors.ENDC}
+{Colors.GREEN}multi-CyberSecurity v4.3.0 Enhanced - AI-Powered Security Framework{Colors.ENDC}
+{Colors.BLUE}Architecture: Unified Gateway | Layered Jailbreak | Agent Registry | DSH Support{Colors.ENDC}
     """
     print(banner)
 
@@ -335,18 +335,20 @@ def main():
     print_banner()
     
     parser = argparse.ArgumentParser(
-        description="multi-CyberSecurity v4.1.5 Enhanced - AI-Powered Security Framework",
+        description="multi-CyberSecurity v4.3.0 Enhanced - AI-Powered Security Framework",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   %(prog)s audit --target https://example.com --max-cost 50
   %(prog)s redteam --operation recon --target 192.168.1.1 --platform claude
+  %(prog)s redteam --operation scan --target 10.10.0.0/24 --platform dsh
   %(prog)s agent list
   %(prog)s jailbreak status
+  %(prog)s jailbreak payload --level L3 --platform dsh
   %(prog)s wxmini --path /path/to/miniapp --deep
   %(prog)s java --path /path/to/project --type full
   %(prog)s mcp list
-  %(prog)s skill export --platform trae
+  %(prog)s skill export --platform dsh
         """
     )
     
@@ -365,7 +367,7 @@ Examples:
                                help="Operation type")
     redteam_parser.add_argument("--target", "-t", required=True, help="Target to attack/test")
     redteam_parser.add_argument("--platform", "-p", default="universal",
-                               choices=["claude", "codex", "cursor", "trae", "openclaw", "hermes", "universal"],
+                               choices=["claude", "codex", "cursor", "trae", "openclaw", "hermes", "dsh", "universal"],
                                help="Target AI platform")
     redteam_parser.add_argument("--exploit-type", default="", help="Exploit type (for exploit operation)")
     redteam_parser.add_argument("--scan-type", default="port", help="Scan type (for scan operation)")
@@ -396,7 +398,7 @@ Examples:
     jailbreak_parser.add_argument("--level", choices=["L1", "L2", "L3", "L4"],
                                  help="Jailbreak level (for payload action)")
     jailbreak_parser.add_argument("--platform", default="universal",
-                                 choices=["claude", "codex", "cursor", "trae", "openclaw", "hermes", "universal"],
+                                 choices=["claude", "codex", "cursor", "trae", "openclaw", "hermes", "dsh", "universal"],
                                  help="Target platform (for payload action)")
     
     # MCP management
@@ -407,7 +409,8 @@ Examples:
     # Skill management
     skill_parser = subparsers.add_parser("skill", help="Skill management")
     skill_parser.add_argument("action", choices=["list", "export"], help="Action to perform")
-    skill_parser.add_argument("--platform", choices=["trae", "cursor", "claude", "codex"], 
+    skill_parser.add_argument("--platform",
+                             choices=["trae", "cursor", "claude", "codex", "openclaw", "hermes", "dsh"],
                              default="trae", help="Target platform")
     
     args = parser.parse_args()

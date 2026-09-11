@@ -14,6 +14,13 @@ python skill.py lint
 python skill.py export
 ```
 
+当前推荐通过统一入口按平台导出，支持 `trae`、`cursor`、`claude`、`codex`、`openclaw`、`hermes`、`dsh`（DeepSeek Harness）：
+```bash
+# 导出 DSH 平台配置包 -> templates/dsh/（AGENTS.md / RULES.md / preset.yml）
+python cli.py skill export --platform dsh
+python scripts/platform_exporter.py --platform dsh
+```
+
 ### `graph`
 构建 MITRE ATT&CK 映射知识图谱。
 ```bash

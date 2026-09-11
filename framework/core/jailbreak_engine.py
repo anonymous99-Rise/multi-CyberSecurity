@@ -168,7 +168,7 @@ class JailbreakEngine:
         
         Args:
             level: 破限级别 (L1, L2, L3, L4)
-            platform: 目标平台 (claude, codex, cursor, trae, openclaw, hermes)
+            platform: 目标平台 (claude, codex, cursor, trae, openclaw, hermes, dsh, universal)
         
         Returns:
             payload字符串，如果不存在则返回None

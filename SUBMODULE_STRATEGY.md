@@ -29,6 +29,9 @@ external/                    # 外部引用的独立项目
 ├── agency-agents-zh/        # Agent 编排框架
 ├── AboutSecurity/           # 安全工具集合
 ├── CyberStrikeAI/           # AI原生安全操作平台 (Eino+MCP+RAG)
+├── CkSKILLS/                # SRC 挖洞技能体系 (.agents/skills + hunts)
+├── dsh-pentest/             # DeepSeek Harness 渗透模式插件 (pentest_*)
+├── dsh-infinite-gen-4/      # DSH 红队评测破甲插件
 └── <new-submodule>/         # 欢迎新的独立项目
 
 vendor/                      # 内部使用的工具/库 (可修改)

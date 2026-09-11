@@ -26,9 +26,16 @@ from .generators import (
     PayloadGenerator,
     SQLiPayloadGenerator,
     XSSPayloadGenerator,
-    CmdInjectionGenerator,
+    CmdInjectionPayloadGenerator,
     SSRFGenerator,
+    PathTraversalGenerator,
+    XXEGenerator,
+    SSTIGenerator,
+    get_generator,
 )
+
+# 向后兼容别名（旧导出名为 CmdInjectionGenerator）
+CmdInjectionGenerator = CmdInjectionPayloadGenerator
 
 __all__ = [
     # Core
@@ -41,6 +48,11 @@ __all__ = [
     "PayloadGenerator",
     "SQLiPayloadGenerator",
     "XSSPayloadGenerator",
+    "CmdInjectionPayloadGenerator",
     "CmdInjectionGenerator",
     "SSRFGenerator",
+    "PathTraversalGenerator",
+    "XXEGenerator",
+    "SSTIGenerator",
+    "get_generator",
 ]

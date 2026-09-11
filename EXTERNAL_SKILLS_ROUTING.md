@@ -20,6 +20,9 @@
 | **Anthropic-Cybersecurity-Skills** | `external/Anthropic-Cybersecurity-Skills/` | 817+ | 全面安全评估, 29个领域 |
 | **reverse-skill** | `external/reverse-skill/` | 20+ | 逆向工程, CTF, 渗透测试 |
 | **AboutSecurity** | `external/AboutSecurity/` | 工具集 | 安全工具集合 |
+| **CkSKILLS** | `external/CkSKILLS/` | 20 | SRC 挖洞技能体系（JS 分析/认证鉴权/注入/WAF 绕过/小程序/APK 逆向）+ `hunts/` 线索板 |
+| **dsh-pentest** | `external/dsh-pentest/` | 8 工具 | DSH 渗透模式插件：`pentest_*` 工具链（goal/intent/fact/finding/asset/submit/graph/report）+ sqlite 会话 + Web UI |
+| **dsh-infinite-gen-4** | `external/dsh-infinite-gen-4/` | 插件 | DSH 红队评测破甲插件：零工具面 + 双层系统提示词注入 |
 
 ---
 
@@ -162,15 +165,32 @@ external/reverse-skill/
 
 ---
 
+## 🧩 DSH (DeepSeek Harness) 平台插件路由
+
+当运行环境为 DSH 时，除文件型技能路由外，还可通过 Cordis 插件链使用专用能力。
+完整安装与 profile 配置见 [.dsh/HARNESS.md](.dsh/HARNESS.md)。
+
+| 场景 | 路由目标 | 加载方式 |
+|------|----------|----------|
+| SRC/众包挖洞方法论、线索板跟踪 | `external/CkSKILLS/.agents/skills/`、`hunts/` | DSH skill-filesystem 行按目录加载 |
+| 渗透任务全链路记录（goal→intent→fact→finding→report） | `external/dsh-pentest/` | `dsh plugin --profile web add` 安装 bundle；`pentest_*` 工具 + pentest preset |
+| 红队模型破甲评测 / 双层提示词注入研究 | `external/dsh-infinite-gen-4/` | `install.ps1` / `install.sh` 安装（仅授权评测环境） |
+
+DSH 运行时纪律：commander（decision agent）建 goal/intent 并委派；spawn/fork 执行子代理
+只回写 `pentest_submit` 已确认结果，引用真实 ID，finding 必须含 `reproducibleSteps`。
+
+---
+
 ## 路由优先级
 
 当多个子仓库提供相似技能时，按以下优先级:
 
 1. **内部 skills/** - 核心技能（最高优先级）
 2. **Claude-BugHunter** - Bug Hunting 专项
-3. **Anthropic-Cybersecurity-Skills** - 全面覆盖
-4. **reverse-skill** - 逆向/CTF 专项
-5. **AboutSecurity** - 工具集成
+3. **CkSKILLS** - SRC 挖洞专项（DSH 环境可由 skill-filesystem 直连）
+4. **Anthropic-Cybersecurity-Skills** - 全面覆盖
+5. **reverse-skill** - 逆向/CTF 专项
+6. **AboutSecurity** - 工具集成
 
 ---
 
@@ -182,4 +202,4 @@ external/reverse-skill/
 
 ---
 
-*最后更新: 2026-07-10*
+*最后更新: 2026-09-11*

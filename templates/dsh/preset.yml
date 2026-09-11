@@ -1,0 +1,5 @@
+# DSH preset 元数据示例
+# 完整组合行（persona / tool-bash / tool-fs / skill-filesystem /
+# tool-subagent / pentest）参考 external/dsh-pentest/preset/pentest/agent.cordis.yml
+name: 网络安全评估
+description: multi-CyberSecurity 8 阶段审计流水线（授权范围使用）

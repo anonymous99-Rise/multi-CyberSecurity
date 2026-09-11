@@ -1,0 +1,219 @@
+# multi-CyberSecurity Agent Definitions for DeepSeek Harness (DSH)
+
+> commander（decision agent）建 goal/intent 并委派；spawn/fork 执行子代理通过 pentest_submit 回写已确认结果。
+
+## Agent 编队
+
+| Agent | 职责 |
+|-------|------|
+| Coordinator | 渗透指挥官：goal/intent、委派、报告 |
+| ReconAgent | 资产测绘、指纹、JS/密钥提取 |
+| VulnerabilityHunter | 漏洞验证与 PoC（含安全检查） |
+| ValidatorAgent | 复现确认、误报排除（95%+ 置信度） |
+| AdvisorAgent | 风险优先级、修复路线图 |
+| BlueTeamAgent | 加固基线、检测规则 |
+| LibrarianAgent | 模式沉淀、技能维护 |
+
+## 技能路由（按需经 tool-skill 加载）
+
+- **01-信息搜集-Reconnaissance\skills\DNS枚举-DNSEnumeration.md**: `01-信息搜集-Reconnaissance\skills\DNS枚举-DNSEnumeration.md`
+- **01-信息搜集-Reconnaissance\skills\主动信息搜集-ActiveRecon.md**: `01-信息搜集-Reconnaissance\skills\主动信息搜集-ActiveRecon.md`
+- **01-信息搜集-Reconnaissance\skills\子域名探测-SubdomainDiscovery.md**: `01-信息搜集-Reconnaissance\skills\子域名探测-SubdomainDiscovery.md`
+- **01-信息搜集-Reconnaissance\skills\目标技术栈识别-TechStackFingerprint.md**: `01-信息搜集-Reconnaissance\skills\目标技术栈识别-TechStackFingerprint.md`
+- **01-信息搜集-Reconnaissance\skills\社会工程学信息-SocialEngineeringInfo.md**: `01-信息搜集-Reconnaissance\skills\社会工程学信息-SocialEngineeringInfo.md`
+- **01-信息搜集-Reconnaissance\skills\网络空间搜索引擎-OSINT-SearchEngine.md**: `01-信息搜集-Reconnaissance\skills\网络空间搜索引擎-OSINT-SearchEngine.md`
+- **01-信息搜集-Reconnaissance\skills\被动信息搜集-PassiveRecon.md**: `01-信息搜集-Reconnaissance\skills\被动信息搜集-PassiveRecon.md`
+- **02-漏洞扫描-VulnerabilityScanning\skills\AI代理漏洞扫描-AIAgentVulnScan.md**: `02-漏洞扫描-VulnerabilityScanning\skills\AI代理漏洞扫描-AIAgentVulnScan.md`
+- **02-漏洞扫描-VulnerabilityScanning\skills\Web漏洞扫描-WebVulnScan.md**: `02-漏洞扫描-VulnerabilityScanning\skills\Web漏洞扫描-WebVulnScan.md`
+- **02-漏洞扫描-VulnerabilityScanning\skills\数据库安全评估-DatabaseAssessment.md**: `02-漏洞扫描-VulnerabilityScanning\skills\数据库安全评估-DatabaseAssessment.md`
+- **02-漏洞扫描-VulnerabilityScanning\skills\漏洞扫描器自动化-VulnScannerAutomation.md**: `02-漏洞扫描-VulnerabilityScanning\skills\漏洞扫描器自动化-VulnScannerAutomation.md`
+- **02-漏洞扫描-VulnerabilityScanning\skills\网络漏洞扫描-NetworkVulnScan.md**: `02-漏洞扫描-VulnerabilityScanning\skills\网络漏洞扫描-NetworkVulnScan.md`
+- **02-漏洞扫描-VulnerabilityScanning\skills\配置审计扫描-ConfigAuditScan.md**: `02-漏洞扫描-VulnerabilityScanning\skills\配置审计扫描-ConfigAuditScan.md`
+- **03-漏洞利用-Exploitation\skills\AI代理漏洞利用-AIAgentExploitation.md**: `03-漏洞利用-Exploitation\skills\AI代理漏洞利用-AIAgentExploitation.md`
+- **03-漏洞利用-Exploitation\skills\Metasploit框架利用-Metasploit.md**: `03-漏洞利用-Exploitation\skills\Metasploit框架利用-Metasploit.md`
+- **03-漏洞利用-Exploitation\skills\SQL注入利用-SQLInjection.md**: `03-漏洞利用-Exploitation\skills\SQL注入利用-SQLInjection.md`
+- **03-漏洞利用-Exploitation\skills\SSRF服务端请求伪造-SSRF.md**: `03-漏洞利用-Exploitation\skills\SSRF服务端请求伪造-SSRF.md`
+- **03-漏洞利用-Exploitation\skills\Web漏洞利用-WebExploitation.md**: `03-漏洞利用-Exploitation\skills\Web漏洞利用-WebExploitation.md`
+- **03-漏洞利用-Exploitation\skills\XSS跨站脚本-XSSExploitation.md**: `03-漏洞利用-Exploitation\skills\XSS跨站脚本-XSSExploitation.md`
+- **03-漏洞利用-Exploitation\skills\命令注入-CommandInjection.md**: `03-漏洞利用-Exploitation\skills\命令注入-CommandInjection.md`
+- **03-漏洞利用-Exploitation\skills\文件包含利用-FileInclusion.md**: `03-漏洞利用-Exploitation\skills\文件包含利用-FileInclusion.md`
+- **03-漏洞利用-Exploitation\skills\认证绕过-AuthBypass.md**: `03-漏洞利用-Exploitation\skills\认证绕过-AuthBypass.md`
+- **04-权限提升-PrivilegeEscalation\skills\Linux提权-LinuxPrivEsc.md**: `04-权限提升-PrivilegeEscalation\skills\Linux提权-LinuxPrivEsc.md`
+- **04-权限提升-PrivilegeEscalation\skills\Windows提权-WindowsPrivEsc.md**: `04-权限提升-PrivilegeEscalation\skills\Windows提权-WindowsPrivEsc.md`
+- **04-权限提升-PrivilegeEscalation\skills\内核漏洞与服务配置错误提权-KernelServicePrivEsc.md**: `04-权限提升-PrivilegeEscalation\skills\内核漏洞与服务配置错误提权-KernelServicePrivEsc.md`
+- **04-权限提升-PrivilegeEscalation\skills\凭证窃取与利用-CredentialTheft.md**: `04-权限提升-PrivilegeEscalation\skills\凭证窃取与利用-CredentialTheft.md`
+- **05-后渗透-PostExploitation\skills\信息收集与数据窃取-InfoGatheringDataExfil.md**: `05-后渗透-PostExploitation\skills\信息收集与数据窃取-InfoGatheringDataExfil.md`
+- **05-后渗透-PostExploitation\skills\凭证转储与哈希传递-CredentialDumpingPtH.md**: `05-后渗透-PostExploitation\skills\凭证转储与哈希传递-CredentialDumpingPtH.md`
+- **05-后渗透-PostExploitation\skills\远程控制与交互式Shell-RemoteControlShell.md**: `05-后渗透-PostExploitation\skills\远程控制与交互式Shell-RemoteControlShell.md`
+- **05-后渗透-PostExploitation\skills\键盘记录与屏幕捕获-KeyloggingScreenCapture.md**: `05-后渗透-PostExploitation\skills\键盘记录与屏幕捕获-KeyloggingScreenCapture.md`
+- **06-横向移动-LateralMovement\skills\PsExec与WMI远程执行-PsExecWMI.md**: `06-横向移动-LateralMovement\skills\PsExec与WMI远程执行-PsExecWMI.md`
+- **06-横向移动-LateralMovement\skills\内网代理与隧道-InternalProxyTunnel.md**: `06-横向移动-LateralMovement\skills\内网代理与隧道-InternalProxyTunnel.md`
+- **06-横向移动-LateralMovement\skills\横向移动-LateralMovement.md**: `06-横向移动-LateralMovement\skills\横向移动-LateralMovement.md`
+- **07-持久化-Persistence\skills\Bootkit与固件持久化-BootkitFirmwarePersistence.md**: `07-持久化-Persistence\skills\Bootkit与固件持久化-BootkitFirmwarePersistence.md`
+- **07-持久化-Persistence\skills\Office应用程序持久化-OfficePersistence.md**: `07-持久化-Persistence\skills\Office应用程序持久化-OfficePersistence.md`
+- **07-持久化-Persistence\skills\启动项与登录自动执行-BootLogonAutostart.md**: `07-持久化-Persistence\skills\启动项与登录自动执行-BootLogonAutostart.md`
+- **07-持久化-Persistence\skills\持久化-Persistence.md**: `07-持久化-Persistence\skills\持久化-Persistence.md`
+- **07-持久化-Persistence\skills\账户持久化-AccountPersistence.md**: `07-持久化-Persistence\skills\账户持久化-AccountPersistence.md`
+- **08-痕迹清除-CoveringTracks\skills\AMSI绕过与EDR规避-AMSIByPassEDREvasion.md**: `08-痕迹清除-CoveringTracks\skills\AMSI绕过与EDR规避-AMSIByPassEDREvasion.md`
+- **08-痕迹清除-CoveringTracks\skills\代码混淆与反分析-ObfuscationAntiAnalysis.md**: `08-痕迹清除-CoveringTracks\skills\代码混淆与反分析-ObfuscationAntiAnalysis.md`
+- **08-痕迹清除-CoveringTracks\skills\痕迹清除-CoveringTracks.md**: `08-痕迹清除-CoveringTracks\skills\痕迹清除-CoveringTracks.md`
+- **08-痕迹清除-CoveringTracks\skills\进程注入与代码注入-ProcessInjection.md**: `08-痕迹清除-CoveringTracks\skills\进程注入与代码注入-ProcessInjection.md`
+- **09-报告撰写-Reporting\skills\安全报告模板-HTML.md**: `09-报告撰写-Reporting\skills\安全报告模板-HTML.md`
+- **09-报告撰写-Reporting\skills\安全报告模板-Markdown.md**: `09-报告撰写-Reporting\skills\安全报告模板-Markdown.md`
+- **09-报告撰写-Reporting\skills\安全报告模板-Word.md**: `09-报告撰写-Reporting\skills\安全报告模板-Word.md`
+- **09-报告撰写-Reporting\skills\报告编写-PentestReport.md**: `09-报告撰写-Reporting\skills\报告编写-PentestReport.md`
+- **09-报告撰写-Reporting\skills\漏洞评级与CVSS-VulnRatingCVSS.md**: `09-报告撰写-Reporting\skills\漏洞评级与CVSS-VulnRatingCVSS.md`
+- **10-移动安全-MobileSecurity\skills\Android安全测试-AndroidSecurityTest.md**: `10-移动安全-MobileSecurity\skills\Android安全测试-AndroidSecurityTest.md`
+- **10-移动安全-MobileSecurity\skills\iOS安全测试-iOSSecurityTest.md**: `10-移动安全-MobileSecurity\skills\iOS安全测试-iOSSecurityTest.md`
+- **11-无线安全-WirelessSecurity\skills\WiFi安全审计-WiFiSecurityAudit.md**: `11-无线安全-WirelessSecurity\skills\WiFi安全审计-WiFiSecurityAudit.md`
+- **12-代码审计-CodeAudit\skills\AI Agent代码审计-AIAgentCodeAudit.md**: `12-代码审计-CodeAudit\skills\AI Agent代码审计-AIAgentCodeAudit.md`
+- **12-代码审计-CodeAudit\skills\C++代码审计-CPPCodeAudit.md**: `12-代码审计-CodeAudit\skills\C++代码审计-CPPCodeAudit.md`
+- **12-代码审计-CodeAudit\skills\C代码审计-CCodeAudit.md**: `12-代码审计-CodeAudit\skills\C代码审计-CCodeAudit.md`
+- **12-代码审计-CodeAudit\skills\Go代码审计-GoCodeAudit.md**: `12-代码审计-CodeAudit\skills\Go代码审计-GoCodeAudit.md`
+- **12-代码审计-CodeAudit\skills\JavaScript代码审计-JSCodeAudit.md**: `12-代码审计-CodeAudit\skills\JavaScript代码审计-JSCodeAudit.md`
+- **12-代码审计-CodeAudit\skills\Java代码审计-JavaCodeAudit.md**: `12-代码审计-CodeAudit\skills\Java代码审计-JavaCodeAudit.md`
+- **12-代码审计-CodeAudit\skills\Java代码审计进阶-JavaAuditAdvanced.md**: `12-代码审计-CodeAudit\skills\Java代码审计进阶-JavaAuditAdvanced.md`
+- **12-代码审计-CodeAudit\skills\PHP代码审计-PHPCodeAudit.md**: `12-代码审计-CodeAudit\skills\PHP代码审计-PHPCodeAudit.md`
+- **12-代码审计-CodeAudit\skills\PHP代码审计专业版-PHPAuditPro.md**: `12-代码审计-CodeAudit\skills\PHP代码审计专业版-PHPAuditPro.md`
+- **12-代码审计-CodeAudit\skills\Python代码审计-PythonCodeAudit.md**: `12-代码审计-CodeAudit\skills\Python代码审计-PythonCodeAudit.md`
+- **12-代码审计-CodeAudit\skills\Rust代码审计-RustCodeAudit.md**: `12-代码审计-CodeAudit\skills\Rust代码审计-RustCodeAudit.md`
+- **13-逆向工程-ReverseEngineering\skills\动态调试分析-DynamicDebugAnalysis.md**: `13-逆向工程-ReverseEngineering\skills\动态调试分析-DynamicDebugAnalysis.md`
+- **13-逆向工程-ReverseEngineering\skills\恶意软件分析-MalwareAnalysis.md**: `13-逆向工程-ReverseEngineering\skills\恶意软件分析-MalwareAnalysis.md`
+- **13-逆向工程-ReverseEngineering\skills\静态逆向分析-StaticReverseAnalysis.md**: `13-逆向工程-ReverseEngineering\skills\静态逆向分析-StaticReverseAnalysis.md`
+- **14-安全审计-SecurityAudit\skills\AI Agent安全审计-AIAgentSecurityAudit.md**: `14-安全审计-SecurityAudit\skills\AI Agent安全审计-AIAgentSecurityAudit.md`
+- **14-安全审计-SecurityAudit\skills\云安全审计-CloudSecurityAudit.md**: `14-安全审计-SecurityAudit\skills\云安全审计-CloudSecurityAudit.md`
+- **14-安全审计-SecurityAudit\skills\安全架构审计-SecurityArchitectureAudit.md**: `14-安全审计-SecurityAudit\skills\安全架构审计-SecurityArchitectureAudit.md`
+- **14-安全审计-SecurityAudit\skills\容器安全审计-ContainerSecurityAudit.md**: `14-安全审计-SecurityAudit\skills\容器安全审计-ContainerSecurityAudit.md`
+- **14-安全审计-SecurityAudit\skills\等级保护合规审计-ClassifiedProtectionAudit.md**: `14-安全审计-SecurityAudit\skills\等级保护合规审计-ClassifiedProtectionAudit.md`
+- **14-安全审计-SecurityAudit\skills\网络安全合规评估-NetworkComplianceAssessment.md**: `14-安全审计-SecurityAudit\skills\网络安全合规评估-NetworkComplianceAssessment.md`
+- **14-安全审计-SecurityAudit\skills\配置安全审计-ConfigSecurityAudit.md**: `14-安全审计-SecurityAudit\skills\配置安全审计-ConfigSecurityAudit.md`
+- **15-应急响应-IncidentResponse\skills\AI安全应急响应-AISecurityIncidentResponse.md**: `15-应急响应-IncidentResponse\skills\AI安全应急响应-AISecurityIncidentResponse.md`
+- **15-应急响应-IncidentResponse\skills\Linux应急响应AI检查-LinuxGun.md**: `15-应急响应-IncidentResponse\skills\Linux应急响应AI检查-LinuxGun.md`
+- **15-应急响应-IncidentResponse\skills\事件分类与优先级评估-IncidentTriage.md**: `15-应急响应-IncidentResponse\skills\事件分类与优先级评估-IncidentTriage.md`
+- **15-应急响应-IncidentResponse\skills\事件复盘与报告-LessonsLearnedReporting.md**: `15-应急响应-IncidentResponse\skills\事件复盘与报告-LessonsLearnedReporting.md`
+- **15-应急响应-IncidentResponse\skills\事件遏制与清除-ContainmentEradication.md**: `15-应急响应-IncidentResponse\skills\事件遏制与清除-ContainmentEradication.md`
+- **15-应急响应-IncidentResponse\skills\云环境应急响应-CloudIncidentResponse.md**: `15-应急响应-IncidentResponse\skills\云环境应急响应-CloudIncidentResponse.md`
+- **15-应急响应-IncidentResponse\skills\日志收集与分析-LogCollectionAnalysis.md**: `15-应急响应-IncidentResponse\skills\日志收集与分析-LogCollectionAnalysis.md`
+- **15-应急响应-IncidentResponse\skills\网络流量分析-NetworkTrafficAnalysis.md**: `15-应急响应-IncidentResponse\skills\网络流量分析-NetworkTrafficAnalysis.md`
+- **16-大模型安全-LLMSecurity\skills\AI Agent权限与访问控制-AgentAuthorization.md**: `16-大模型安全-LLMSecurity\skills\AI Agent权限与访问控制-AgentAuthorization.md`
+- **16-大模型安全-LLMSecurity\skills\AI供应链安全-AISupplyChainSecurity.md**: `16-大模型安全-LLMSecurity\skills\AI供应链安全-AISupplyChainSecurity.md`
+- **16-大模型安全-LLMSecurity\skills\AI应用安全配置审计-AIAppSecurityConfig.md**: `16-大模型安全-LLMSecurity\skills\AI应用安全配置审计-AIAppSecurityConfig.md`
+- **16-大模型安全-LLMSecurity\skills\LLM提示注入与安全防护-PromptInjectionDefense.md**: `16-大模型安全-LLMSecurity\skills\LLM提示注入与安全防护-PromptInjectionDefense.md`
+- **16-大模型安全-LLMSecurity\skills\LLM数据泄露与隐私保护-DataLeakagePrivacy.md**: `16-大模型安全-LLMSecurity\skills\LLM数据泄露与隐私保护-DataLeakagePrivacy.md`
+- **16-大模型安全-LLMSecurity\skills\多模态AI安全-MultimodalAISecurity.md**: `16-大模型安全-LLMSecurity\skills\多模态AI安全-MultimodalAISecurity.md`
+- **16-大模型安全-LLMSecurity\skills\大模型红队测试-LLMRedTeaming.md**: `16-大模型安全-LLMSecurity\skills\大模型红队测试-LLMRedTeaming.md`
+- **16-大模型安全-LLMSecurity\skills\模型对抗攻击与防御-AdversarialAttackDefense.md**: `16-大模型安全-LLMSecurity\skills\模型对抗攻击与防御-AdversarialAttackDefense.md`
+- **16-大模型安全-LLMSecurity\skills\模型输出安全与幻觉检测-OutputSafetyHallucination.md**: `16-大模型安全-LLMSecurity\skills\模型输出安全与幻觉检测-OutputSafetyHallucination.md`
+- **16-大模型安全-LLMSecurity\skills\联邦学习安全-FederatedLearningSecurity.md**: `16-大模型安全-LLMSecurity\skills\联邦学习安全-FederatedLearningSecurity.md`
+- **17-云安全-CloudSecurity\skills\AWS安全评估-AWSSecurityAssessment.md**: `17-云安全-CloudSecurity\skills\AWS安全评估-AWSSecurityAssessment.md`
+- **17-云安全-CloudSecurity\skills\Azure安全评估-AzureSecurityAssessment.md**: `17-云安全-CloudSecurity\skills\Azure安全评估-AzureSecurityAssessment.md`
+- **17-云安全-CloudSecurity\skills\GCP安全评估-GCPSecurityAssessment.md**: `17-云安全-CloudSecurity\skills\GCP安全评估-GCPSecurityAssessment.md`
+- **17-云安全-CloudSecurity\skills\云IAM权限与访问控制审计-CloudIAMAudit.md**: `17-云安全-CloudSecurity\skills\云IAM权限与访问控制审计-CloudIAMAudit.md`
+- **17-云安全-CloudSecurity\skills\云存储安全配置审计-CloudStorageSecurity.md**: `17-云安全-CloudSecurity\skills\云存储安全配置审计-CloudStorageSecurity.md`
+- **17-云安全-CloudSecurity\skills\云网络与WAF安全-CloudNetworkWAF.md**: `17-云安全-CloudSecurity\skills\云网络与WAF安全-CloudNetworkWAF.md`
+- **17-云安全-CloudSecurity\skills\多云安全策略评估-MultiCloudSecurity.md**: `17-云安全-CloudSecurity\skills\多云安全策略评估-MultiCloudSecurity.md`
+- **17-云安全-CloudSecurity\skills\无服务器架构安全-ServerlessSecurity.md**: `17-云安全-CloudSecurity\skills\无服务器架构安全-ServerlessSecurity.md`
+- **18-安全开发运维-DevSecOps\skills\CI-CD管道安全审计-CICDPipelineSecurity.md**: `18-安全开发运维-DevSecOps\skills\CI-CD管道安全审计-CICDPipelineSecurity.md`
+- **18-安全开发运维-DevSecOps\skills\DAST动态应用安全测试-DAST.md**: `18-安全开发运维-DevSecOps\skills\DAST动态应用安全测试-DAST.md`
+- **18-安全开发运维-DevSecOps\skills\IaC安全扫描-InfrastructureAsCodeSecurity.md**: `18-安全开发运维-DevSecOps\skills\IaC安全扫描-InfrastructureAsCodeSecurity.md`
+- **18-安全开发运维-DevSecOps\skills\SAST静态应用安全测试-SAST.md**: `18-安全开发运维-DevSecOps\skills\SAST静态应用安全测试-SAST.md`
+- **18-安全开发运维-DevSecOps\skills\安全需求与威胁建模-ThreatModeling.md**: `18-安全开发运维-DevSecOps\skills\安全需求与威胁建模-ThreatModeling.md`
+- **18-安全开发运维-DevSecOps\skills\软件供应链安全-SoftwareSupplyChainSecurity.md**: `18-安全开发运维-DevSecOps\skills\软件供应链安全-SoftwareSupplyChainSecurity.md`
+- **19-工控安全-ICS-OT-Security\skills\PLC与RTU安全测试-PLC-RTU-SecurityTesting.md**: `19-工控安全-ICS-OT-Security\skills\PLC与RTU安全测试-PLC-RTU-SecurityTesting.md`
+- **19-工控安全-ICS-OT-Security\skills\SCADA系统安全评估-SCADASecurityAssessment.md**: `19-工控安全-ICS-OT-Security\skills\SCADA系统安全评估-SCADASecurityAssessment.md`
+- **19-工控安全-ICS-OT-Security\skills\工业防火墙与网络分段-Industrial-Firewall-Segmentation.md**: `19-工控安全-ICS-OT-Security\skills\工业防火墙与网络分段-Industrial-Firewall-Segmentation.md`
+- **19-工控安全-ICS-OT-Security\skills\工控安全合规审计-IEC62443-Audit.md**: `19-工控安全-ICS-OT-Security\skills\工控安全合规审计-IEC62443-Audit.md`
+- **19-工控安全-ICS-OT-Security\skills\工控安全应急预案-ICS-IncidentResponse.md**: `19-工控安全-ICS-OT-Security\skills\工控安全应急预案-ICS-IncidentResponse.md`
+- **19-工控安全-ICS-OT-Security\skills\工控网络协议安全-ICS-NetworkProtocolSecurity.md**: `19-工控安全-ICS-OT-Security\skills\工控网络协议安全-ICS-NetworkProtocolSecurity.md`
+- **20-区块链安全-Blockchain-Web3-Security\skills\DeFi协议安全评估-DeFiSecurityAssessment.md**: `20-区块链安全-Blockchain-Web3-Security\skills\DeFi协议安全评估-DeFiSecurityAssessment.md`
+- **20-区块链安全-Blockchain-Web3-Security\skills\MEV与跨链桥安全-MEV-CrossChainBridgeSecurity.md**: `20-区块链安全-Blockchain-Web3-Security\skills\MEV与跨链桥安全-MEV-CrossChainBridgeSecurity.md`
+- **20-区块链安全-Blockchain-Web3-Security\skills\Web3前端与钱包安全-Web3WalletSecurity.md**: `20-区块链安全-Blockchain-Web3-Security\skills\Web3前端与钱包安全-Web3WalletSecurity.md`
+- **20-区块链安全-Blockchain-Web3-Security\skills\共识机制安全分析-ConsensusSecurityAnalysis.md**: `20-区块链安全-Blockchain-Web3-Security\skills\共识机制安全分析-ConsensusSecurityAnalysis.md`
+- **20-区块链安全-Blockchain-Web3-Security\skills\区块链节点安全加固-BlockchainNodeHardening.md**: `20-区块链安全-Blockchain-Web3-Security\skills\区块链节点安全加固-BlockchainNodeHardening.md`
+- **20-区块链安全-Blockchain-Web3-Security\skills\智能合约安全审计-SmartContractAudit.md**: `20-区块链安全-Blockchain-Web3-Security\skills\智能合约安全审计-SmartContractAudit.md`
+- **21-物联网安全-IoT-Security\skills\BLE-Zigbee-Z-Wave无线安全测试-WirelessProtocolSecurity.md**: `21-物联网安全-IoT-Security\skills\BLE-Zigbee-Z-Wave无线安全测试-WirelessProtocolSecurity.md`
+- **21-物联网安全-IoT-Security\skills\固件逆向与分析-FirmwareReverseEngineering.md**: `21-物联网安全-IoT-Security\skills\固件逆向与分析-FirmwareReverseEngineering.md`
+- **21-物联网安全-IoT-Security\skills\嵌入式设备硬件安全测试-EmbeddedHardwareSecurity.md**: `21-物联网安全-IoT-Security\skills\嵌入式设备硬件安全测试-EmbeddedHardwareSecurity.md`
+- **21-物联网安全-IoT-Security\skills\智能家居与车联网安全-SmartHomeConnectedVehicleSecurity.md**: `21-物联网安全-IoT-Security\skills\智能家居与车联网安全-SmartHomeConnectedVehicleSecurity.md`
+- **21-物联网安全-IoT-Security\skills\物联网平台与云安全-IoTPlatformCloudSecurity.md**: `21-物联网安全-IoT-Security\skills\物联网平台与云安全-IoTPlatformCloudSecurity.md`
+- **21-物联网安全-IoT-Security\skills\物联网通信协议安全-IoTCommunicationSecurity.md**: `21-物联网安全-IoT-Security\skills\物联网通信协议安全-IoTCommunicationSecurity.md`
+- **22-数据安全与隐私-DataSecurityPrivacy\skills\DLP数据防泄漏策略-DataLossPrevention.md**: `22-数据安全与隐私-DataSecurityPrivacy\skills\DLP数据防泄漏策略-DataLossPrevention.md`
+- **22-数据安全与隐私-DataSecurityPrivacy\skills\GDPR-个保法合规评估-PrivacyCompliance.md**: `22-数据安全与隐私-DataSecurityPrivacy\skills\GDPR-个保法合规评估-PrivacyCompliance.md`
+- **22-数据安全与隐私-DataSecurityPrivacy\skills\数据分类与分级保护-DataClassificationGrading.md**: `22-数据安全与隐私-DataSecurityPrivacy\skills\数据分类与分级保护-DataClassificationGrading.md`
+- **22-数据安全与隐私-DataSecurityPrivacy\skills\数据库安全与加密-DatabaseSecurityEncryption.md**: `22-数据安全与隐私-DataSecurityPrivacy\skills\数据库安全与加密-DatabaseSecurityEncryption.md`
+- **22-数据安全与隐私-DataSecurityPrivacy\skills\数据脱敏与匿名化-DataMaskingAnonymization.md**: `22-数据安全与隐私-DataSecurityPrivacy\skills\数据脱敏与匿名化-DataMaskingAnonymization.md`
+- **22-数据安全与隐私-DataSecurityPrivacy\skills\隐私影响评估-PIA-PrivacyImpactAssessment.md**: `22-数据安全与隐私-DataSecurityPrivacy\skills\隐私影响评估-PIA-PrivacyImpactAssessment.md`
+- **23-社会工程学-SocialEngineering\skills\员工安全意识评估-SecurityAwarenessAssessment.md**: `23-社会工程学-SocialEngineering\skills\员工安全意识评估-SecurityAwarenessAssessment.md`
+- **23-社会工程学-SocialEngineering\skills\物理渗透与社会工程-PhysicalSocialEngineering.md**: `23-社会工程学-SocialEngineering\skills\物理渗透与社会工程-PhysicalSocialEngineering.md`
+- **23-社会工程学-SocialEngineering\skills\电话诈骗与Vishing测试-VishingTesting.md**: `23-社会工程学-SocialEngineering\skills\电话诈骗与Vishing测试-VishingTesting.md`
+- **23-社会工程学-SocialEngineering\skills\钓鱼基础设施搭建-PhishingInfrastructure.md**: `23-社会工程学-SocialEngineering\skills\钓鱼基础设施搭建-PhishingInfrastructure.md`
+- **23-社会工程学-SocialEngineering\skills\钓鱼邮件模拟-PhishingSimulation.md**: `23-社会工程学-SocialEngineering\skills\钓鱼邮件模拟-PhishingSimulation.md`
+- **25-供应链安全-SupplyChainSecurity\skills\SBOM生成与验证-SBOMGeneration.md**: `25-供应链安全-SupplyChainSecurity\skills\SBOM生成与验证-SBOMGeneration.md`
+- **25-供应链安全-SupplyChainSecurity\skills\代码签名与供应链完整性-CodeSigningIntegrity.md**: `25-供应链安全-SupplyChainSecurity\skills\代码签名与供应链完整性-CodeSigningIntegrity.md`
+- **25-供应链安全-SupplyChainSecurity\skills\供应链攻击检测与响应-SupplyChainAttackResponse.md**: `25-供应链安全-SupplyChainSecurity\skills\供应链攻击检测与响应-SupplyChainAttackResponse.md`
+- **25-供应链安全-SupplyChainSecurity\skills\第三方供应商风险评估-ThirdPartyVendorRisk.md**: `25-供应链安全-SupplyChainSecurity\skills\第三方供应商风险评估-ThirdPartyVendorRisk.md`
+- **25-供应链安全-SupplyChainSecurity\skills\软件依赖与开源合规审计-DependencyLicenseCompliance.md**: `25-供应链安全-SupplyChainSecurity\skills\软件依赖与开源合规审计-DependencyLicenseCompliance.md`
+- **26-漏洞管理-VulnerabilityManagement\skills\漏洞优先级与风险评估-VulnerabilityPrioritization.md**: `26-漏洞管理-VulnerabilityManagement\skills\漏洞优先级与风险评估-VulnerabilityPrioritization.md`
+- **26-漏洞管理-VulnerabilityManagement\skills\漏洞修复与补丁管理-VulnerabilityRemediation.md**: `26-漏洞管理-VulnerabilityManagement\skills\漏洞修复与补丁管理-VulnerabilityRemediation.md`
+- **26-漏洞管理-VulnerabilityManagement\skills\漏洞奖励计划与安全众测-BugBountyCrowdsourcedTesting.md**: `26-漏洞管理-VulnerabilityManagement\skills\漏洞奖励计划与安全众测-BugBountyCrowdsourcedTesting.md`
+- **26-漏洞管理-VulnerabilityManagement\skills\漏洞情报与CVE查询-VulnerabilityIntelligence.md**: `26-漏洞管理-VulnerabilityManagement\skills\漏洞情报与CVE查询-VulnerabilityIntelligence.md`
+- **26-漏洞管理-VulnerabilityManagement\skills\漏洞生命周期闭环管理-VulnerabilityLifecycle.md**: `26-漏洞管理-VulnerabilityManagement\skills\漏洞生命周期闭环管理-VulnerabilityLifecycle.md`
+- **26-漏洞管理-VulnerabilityManagement\skills\漏洞验证与PoC测试-VulnerabilityVerification.md**: `26-漏洞管理-VulnerabilityManagement\skills\漏洞验证与PoC测试-VulnerabilityVerification.md`
+- **27-操作系统安全-OSSecurity\skills\Linux安全加固与基线检查-LinuxHardeningBaseline.md**: `27-操作系统安全-OSSecurity\skills\Linux安全加固与基线检查-LinuxHardeningBaseline.md`
+- **27-操作系统安全-OSSecurity\skills\Linux攻击与权限维持技术-LinuxAttackPersistence.md**: `27-操作系统安全-OSSecurity\skills\Linux攻击与权限维持技术-LinuxAttackPersistence.md`
+- **27-操作系统安全-OSSecurity\skills\macOS安全评估与加固-macOSSecurityHardening.md**: `27-操作系统安全-OSSecurity\skills\macOS安全评估与加固-macOSSecurityHardening.md`
+- **27-操作系统安全-OSSecurity\skills\Windows安全加固与基线检查-WindowsHardeningBaseline.md**: `27-操作系统安全-OSSecurity\skills\Windows安全加固与基线检查-WindowsHardeningBaseline.md`
+- **27-操作系统安全-OSSecurity\skills\Windows攻击与横向移动技术-WindowsAttackLateralMovement.md**: `27-操作系统安全-OSSecurity\skills\Windows攻击与横向移动技术-WindowsAttackLateralMovement.md`
+- **27-操作系统安全-OSSecurity\skills\国产操作系统安全加固-DomesticOSSecurity.md**: `27-操作系统安全-OSSecurity\skills\国产操作系统安全加固-DomesticOSSecurity.md`
+- **28-威胁狩猎-ThreatHunting\skills\ATT&CK威胁狩猎-MITREAttackHunting.md**: `28-威胁狩猎-ThreatHunting\skills\ATT&CK威胁狩猎-MITREAttackHunting.md`
+- **28-威胁狩猎-ThreatHunting\skills\Sigma规则检测工程-SigmaRuleEngineering.md**: `28-威胁狩猎-ThreatHunting\skills\Sigma规则检测工程-SigmaRuleEngineering.md`
+- **28-威胁狩猎-ThreatHunting\skills\威胁狩猎方法论-ThreatHuntingMethodology.md**: `28-威胁狩猎-ThreatHunting\skills\威胁狩猎方法论-ThreatHuntingMethodology.md`
+- **28-威胁狩猎-ThreatHunting\skills\网络流量与日志异常检测-TrafficLogAnomalyDetection.md**: `28-威胁狩猎-ThreatHunting\skills\网络流量与日志异常检测-TrafficLogAnomalyDetection.md`
+- **29-威胁情报-ThreatIntelligence\skills\APT组织分析与归因-APTGroupAnalysisAttribution.md**: `29-威胁情报-ThreatIntelligence\skills\APT组织分析与归因-APTGroupAnalysisAttribution.md`
+- **29-威胁情报-ThreatIntelligence\skills\MISP部署与威胁情报共享-MISPDeploymentIntelSharing.md**: `29-威胁情报-ThreatIntelligence\skills\MISP部署与威胁情报共享-MISPDeploymentIntelSharing.md`
+- **29-威胁情报-ThreatIntelligence\skills\威胁情报馈入与TAXII-STIX管理-ThreatIntelFeedsTAXIISTIX.md**: `29-威胁情报-ThreatIntelligence\skills\威胁情报馈入与TAXII-STIX管理-ThreatIntelFeedsTAXIISTIX.md`
+- **29-威胁情报-ThreatIntelligence\skills\威胁情报驱动安全运营-ThreatIntelDrivenSOC.md**: `29-威胁情报-ThreatIntelligence\skills\威胁情报驱动安全运营-ThreatIntelDrivenSOC.md`
+- **30-数字取证-DigitalForensics\skills\Linux数字取证分析-LinuxDigitalForensics.md**: `30-数字取证-DigitalForensics\skills\Linux数字取证分析-LinuxDigitalForensics.md`
+- **30-数字取证-DigitalForensics\skills\Windows数字取证分析-WindowsDigitalForensics.md**: `30-数字取证-DigitalForensics\skills\Windows数字取证分析-WindowsDigitalForensics.md`
+- **30-数字取证-DigitalForensics\skills\内存取证分析-Volatility-MemoryForensicsVolatility.md**: `30-数字取证-DigitalForensics\skills\内存取证分析-Volatility-MemoryForensicsVolatility.md`
+- **30-数字取证-DigitalForensics\skills\浏览器与邮件取证-BrowserEmailForensics.md**: `30-数字取证-DigitalForensics\skills\浏览器与邮件取证-BrowserEmailForensics.md`
+- **30-数字取证-DigitalForensics\skills\磁盘镜像与证据获取-DiskImagingEvidenceAcquisition.md**: `30-数字取证-DigitalForensics\skills\磁盘镜像与证据获取-DiskImagingEvidenceAcquisition.md`
+- **31-SOC运营-SOCOperations\skills\SIEM告警规则与关联分析-SIEMAlertCorrelation.md**: `31-SOC运营-SOCOperations\skills\SIEM告警规则与关联分析-SIEMAlertCorrelation.md`
+- **31-SOC运营-SOCOperations\skills\SOC事件分级与响应流程-SOCTriageResponse.md**: `31-SOC运营-SOCOperations\skills\SOC事件分级与响应流程-SOCTriageResponse.md`
+- **31-SOC运营-SOCOperations\skills\SOC指标与运营效能度量-SOCMetricsKPIs.md**: `31-SOC运营-SOCOperations\skills\SOC指标与运营效能度量-SOCMetricsKPIs.md`
+- **31-SOC运营-SOCOperations\skills\安全自动化与编排-SOAR-SecurityAutomationOrchestration.md**: `31-SOC运营-SOCOperations\skills\安全自动化与编排-SOAR-SecurityAutomationOrchestration.md`
+- **32-身份访问管理-IAM\skills\AD域安全与攻击路径分析-ADSecurityAttackPathAnalysis.md**: `32-身份访问管理-IAM\skills\AD域安全与攻击路径分析-ADSecurityAttackPathAnalysis.md`
+- **32-身份访问管理-IAM\skills\PAM特权账号管理-PrivilegedAccessManagement.md**: `32-身份访问管理-IAM\skills\PAM特权账号管理-PrivilegedAccessManagement.md`
+- **32-身份访问管理-IAM\skills\云IAM与联邦认证-CloudIAMFederation.md**: `32-身份访问管理-IAM\skills\云IAM与联邦认证-CloudIAMFederation.md`
+- **32-身份访问管理-IAM\skills\企业IAM策略与架构-EnterpriseIAMStrategy.md**: `32-身份访问管理-IAM\skills\企业IAM策略与架构-EnterpriseIAMStrategy.md`
+- **33-容器安全-ContainerSecurity\skills\Kubernetes RBAC与安全策略-KubernetesRBACSecurityPolicy.md**: `33-容器安全-ContainerSecurity\skills\Kubernetes RBAC与安全策略-KubernetesRBACSecurityPolicy.md`
+- **33-容器安全-ContainerSecurity\skills\容器运行时安全-Falco-ContainerRuntimeSecurityFalco.md**: `33-容器安全-ContainerSecurity\skills\容器运行时安全-Falco-ContainerRuntimeSecurityFalco.md`
+- **33-容器安全-ContainerSecurity\skills\容器逃逸检测与防御-ContainerEscapeDetectionDefense.md**: `33-容器安全-ContainerSecurity\skills\容器逃逸检测与防御-ContainerEscapeDetectionDefense.md`
+- **33-容器安全-ContainerSecurity\skills\容器镜像安全与漏洞扫描-ContainerImageSecurityScanning.md**: `33-容器安全-ContainerSecurity\skills\容器镜像安全与漏洞扫描-ContainerImageSecurityScanning.md`
+- **34-API安全-APISecurity\skills\API认证与授权安全-APIAuthAuthorizationSecurity.md**: `34-API安全-APISecurity\skills\API认证与授权安全-APIAuthAuthorizationSecurity.md`
+- **34-API安全-APISecurity\skills\GraphQL与微服务API安全-GraphQLMicroserviceAPISecurity.md**: `34-API安全-APISecurity\skills\GraphQL与微服务API安全-GraphQLMicroserviceAPISecurity.md`
+- **34-API安全-APISecurity\skills\OWASP API安全测试-OWASPAPISecurityTesting.md**: `34-API安全-APISecurity\skills\OWASP API安全测试-OWASPAPISecurityTesting.md`
+- **35-密码学与PKI-CryptographyPKI\skills\PKI架构与证书安全管理-PKIArchitectureCertificateManagement.md**: `35-密码学与PKI-CryptographyPKI\skills\PKI架构与证书安全管理-PKIArchitectureCertificateManagement.md`
+- **35-密码学与PKI-CryptographyPKI\skills\TLS-SSL安全配置与审计-TLSSSLSecurityConfigurationAudit.md**: `35-密码学与PKI-CryptographyPKI\skills\TLS-SSL安全配置与审计-TLSSSLSecurityConfigurationAudit.md`
+- **35-密码学与PKI-CryptographyPKI\skills\加密算法与密钥管理-EncryptionAlgorithmsKeyManagement.md**: `35-密码学与PKI-CryptographyPKI\skills\加密算法与密钥管理-EncryptionAlgorithmsKeyManagement.md`
+- **36-零信任架构-ZeroTrust\skills\ZTNA解决方案与IAM集成-ZTNASolutionsIAMIntegration.md**: `36-零信任架构-ZeroTrust\skills\ZTNA解决方案与IAM集成-ZTNASolutionsIAMIntegration.md`
+- **36-零信任架构-ZeroTrust\skills\微隔离与软件定义边界-SDP-MicrosegmentationSDP.md**: `36-零信任架构-ZeroTrust\skills\微隔离与软件定义边界-SDP-MicrosegmentationSDP.md`
+- **36-零信任架构-ZeroTrust\skills\零信任架构设计与实施-ZeroTrustArchitectureDesign.md**: `36-零信任架构-ZeroTrust\skills\零信任架构设计与实施-ZeroTrustArchitectureDesign.md`
+- **37-端点安全-EndpointSecurity\skills\EDR部署与检测规则-EDRDeploymentDetectionRules.md**: `37-端点安全-EndpointSecurity\skills\EDR部署与检测规则-EDRDeploymentDetectionRules.md`
+- **37-端点安全-EndpointSecurity\skills\文件less恶意软件与LOLBins检测-FilelessMalwareLOLBinsDetection.md**: `37-端点安全-EndpointSecurity\skills\文件less恶意软件与LOLBins检测-FilelessMalwareLOLBinsDetection.md`
+- **37-端点安全-EndpointSecurity\skills\移动设备安全与MDM-MobileDeviceSecurityMDM.md**: `37-端点安全-EndpointSecurity\skills\移动设备安全与MDM-MobileDeviceSecurityMDM.md`
+- **37-端点安全-EndpointSecurity\skills\端点加固与合规基线-EndpointHardeningComplianceBaseline.md**: `37-端点安全-EndpointSecurity\skills\端点加固与合规基线-EndpointHardeningComplianceBaseline.md`
+- **38-勒索软件防御-RansomwareDefense\skills\勒索软件应急响应与恢复-RansomwareIncidentResponseRecovery.md**: `38-勒索软件防御-RansomwareDefense\skills\勒索软件应急响应与恢复-RansomwareIncidentResponseRecovery.md`
+- **38-勒索软件防御-RansomwareDefense\skills\勒索软件攻击链分析与检测-RansomwareAttackChainAnalysisDetection.md**: `38-勒索软件防御-RansomwareDefense\skills\勒索软件攻击链分析与检测-RansomwareAttackChainAnalysisDetection.md`
+- **38-勒索软件防御-RansomwareDefense\skills\反勒索软件加固与备份策略-AntiRansomwareHardeningBackup.md**: `38-勒索软件防御-RansomwareDefense\skills\反勒索软件加固与备份策略-AntiRansomwareHardeningBackup.md`
+- **39-安全治理合规-GovernanceCompliance\skills\安全框架与合规审计-SecurityFrameworkComplianceAudit.md**: `39-安全治理合规-GovernanceCompliance\skills\安全框架与合规审计-SecurityFrameworkComplianceAudit.md`
+- **39-安全治理合规-GovernanceCompliance\skills\安全策略体系与安全意识-SecurityPolicyAwareness.md**: `39-安全治理合规-GovernanceCompliance\skills\安全策略体系与安全意识-SecurityPolicyAwareness.md`
+- **39-安全治理合规-GovernanceCompliance\skills\风险管理与安全度量-RiskManagementSecurityMetrics.md**: `39-安全治理合规-GovernanceCompliance\skills\风险管理与安全度量-RiskManagementSecurityMetrics.md`
+
+## 子代理委派约束
+
+- intentId 必须是 pentest_add_intent 实际返回的 ID，禁止占位符
+- 执行子代理禁止再委派、禁止建 goal/intent/report
+- finding 必须含 title/severity/reproducibleSteps（≥1 条）
+- 每批独立、已确认结果立即提交，不重复提交
+- 提交后回复仅含结论、证据摘要、提交计数

@@ -1,5 +1,48 @@
 # Changelog
 
+## [v4.3.0] - 2026-09-11
+
+### 🚀 新增功能
+
+#### DeepSeek Harness (DSH) 平台支持
+
+新增与 `.hermes/`、`.openclaw/` 同级的 `.dsh/` 平台配置包（6 个文件）：
+
+| 文件 | 内容 |
+|------|------|
+| `.dsh/README.md` | DSH/Cordis 架构说明（preset、bundle、`dsh plugin add`、`dsh://` 协议） |
+| `.dsh/AGENTS.md` | commander 决策 agent + spawn/fork 执行子代理编队、委派协议（真实 intentId、禁占位符） |
+| `.dsh/RULES.md` | 4 层安全规则 + DSH 运行时规则（preset 边界、证据门 reproducibleSteps≥1、会话作用域） |
+| `.dsh/IDENTITY.md` | DSH 指挥官身份与沟通风格 |
+| `.dsh/REDTEAM.md` | 红队模式：pentest 链路记录协议、子代理纪律 |
+| `.dsh/HARNESS.md` | 完整集成指南：profile 路径、3 种加载方式、插件安装命令、8 阶段流水线映射 |
+
+- 新增 DSH 平台 jailbreak payload：`framework/skills/redteam/jailbreak/L3_hard/dsh.md`（Cordis 组合层/工具记录层/委派层 3 个 payload）与 `L4_deep/dsh.md`（双层 prompt 段 order 100/200 + 5 大技术）
+- `cli.py`：`redteam --platform`、`jailbreak --platform` 枚举新增 `dsh`；`skill export --platform` 新增 `dsh`/`hermes`/`openclaw`；banner/帮助示例同步更新至 v4.3.0
+- `scripts/platform_exporter.py`：新增 `--platform` 参数与 `generate_dsh_manifests()`，导出 `templates/dsh/`（AGENTS.md / RULES.md / preset.yml）；同时补齐 hermes 导出器
+- `framework/core/jailbreak_engine.py`：平台文档字符串补充 dsh（payload 文件仍由 glob 自动发现，无需注册）
+
+#### DSH 生态子仓库集成（3 个）
+
+| 子仓库 | 路径 | 内容 |
+|--------|------|------|
+| [zhaji2333/CkSKILLS](https://github.com/zhaji2333/CkSKILLS) | `external/CkSKILLS` | SRC 挖洞技能体系：`.agents/skills/` 20 个技能（JS 分析、认证鉴权、注入、WAF 绕过、小程序、APK 逆向等）+ `hunts/` 线索板 |
+| [howmp/dsh-pentest](https://github.com/howmp/dsh-pentest) | `external/dsh-pentest` | `@howmp/dsh-pentest` Cordis bundle：8 个 `pentest_*` 工具、sqlite 会话存储、Web 四子标签、pentest preset |
+| [Minglink/dsh-infinite-gen-4](https://github.com/Minglink/dsh-infinite-gen-4) | `external/dsh-infinite-gen-4` | 红队评测破甲插件：零工具面 + 双层系统提示词注入（order 100/200）+ client 状态条 |
+
+### 🐛 问题修复
+
+- 修复 `framework/core/oracle/__init__.py` 导入名与 `generators.py` 类名不一致（`CmdInjectionGenerator` vs `CmdInjectionPayloadGenerator`）导致整个 `framework.core` 包及 `cli.py` 无法启动的既有问题；保留旧名作为兼容别名，并补齐 `PathTraversalGenerator`/`XXEGenerator`/`SSTIGenerator`/`get_generator` 的再导出
+
+### 📚 文档更新
+
+- README：新增「多平台适配」小节、目录结构补充各平台配置包与 3 个新子仓库
+- SUBMODULE_STRATEGY.md / EXTERNAL_SKILLS_ROUTING.md：子仓库清单与路由表补充 DSH 三子仓库
+- docs/guide/README.md：AI 平台列表补充 Hermes、DeepSeek Harness
+- docs/reference/CLI_REFERENCE.md：skill export 平台列表补充 dsh/hermes/openclaw
+
+---
+
 ## [v4.2.25] - 2026-09-08
 
 ### 🚀 新增功能

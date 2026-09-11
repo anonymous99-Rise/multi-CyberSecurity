@@ -37,3 +37,12 @@
 [submodule "external/CyberStrikeAI"]
 	path = external/CyberStrikeAI
 	url = https://github.com/AIPentest/CyberStrikeAI.git
+[submodule "external/CkSKILLS"]
+	path = external/CkSKILLS
+	url = https://github.com/zhaji2333/CkSKILLS.git
+[submodule "external/dsh-pentest"]
+	path = external/dsh-pentest
+	url = https://github.com/howmp/dsh-pentest.git
+[submodule "external/dsh-infinite-gen-4"]
+	path = external/dsh-infinite-gen-4
+	url = https://github.com/Minglink/dsh-infinite-gen-4.git

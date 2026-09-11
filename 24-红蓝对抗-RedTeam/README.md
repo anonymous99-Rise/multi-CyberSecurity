@@ -14,7 +14,7 @@
 | 🤖 **AI 驱动** | 通过 Skill + 终端，AI 直接调用渗透工具 |
 | 💰 **Token 优化** | 智能输出压缩，节省 80% Token 消耗 |
 | 🛡️ **域渗透完整** | BloodHound + impacket + Responder 全链路 |
-| 🌐 **多平台支持** | Trae, Hermes, OpenClaw, Cursor, Claude, Codex |
+| 🌐 **多平台支持** | Trae, Hermes, OpenClaw, Cursor, Claude, Codex, DSH |
 
 ## 工具矩阵
 

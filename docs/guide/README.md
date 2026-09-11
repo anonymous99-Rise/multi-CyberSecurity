@@ -3,7 +3,7 @@
 ## 1. 环境准备
 - **Python 3.10+**：核心框架运行环境。
 - **Docker**：用于运行 `playground/` 靶场环境。
-- **AI 平台**：Trae, Cursor 或 OpenClaw。
+- **AI 平台**：Trae、Cursor、Claude Code、Codex、OpenClaw、Hermes 或 DeepSeek Harness (DSH)。
 
 ## 2. 启动演练靶场
 ```bash

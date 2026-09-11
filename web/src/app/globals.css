@@ -57,13 +57,17 @@ body::after {
 }
 
 /* === Scrollbar === */
-::-webkit-scrollbar { width: 4px; height: 4px; }
-::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--accent-dim); }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
 /* === Selection === */
 ::selection { background: var(--accent); color: var(--bg); }
+::-moz-selection { background: var(--accent); color: var(--bg); }
+
+/* === Focus visible === */
+:focus-visible { outline: 1px solid var(--accent); outline-offset: 1px; }
 
 /* === Tactical Card === */
 .tac-card {

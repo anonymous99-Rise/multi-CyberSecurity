@@ -79,6 +79,7 @@ from .redblue import (
     EvidenceBus,
     RedBlueController,
     EngagementConfig,
+    EngagementResult,
 )
 
 # Context Guard

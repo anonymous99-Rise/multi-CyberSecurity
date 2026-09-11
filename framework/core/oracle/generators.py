@@ -380,4 +380,5 @@ def get_generator(vuln_type: str) -> PayloadGenerator:
     generator_class = generators.get(vuln_type.lower())
     if generator_class:
         return generator_class()
-    return PayloadGenerator()  # 默认空生成器
+    raise ValueError(f"Unknown vulnerability type: {vuln_type}. "
+                     f"Supported: {', '.join(generators.keys())}")

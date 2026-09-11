@@ -328,7 +328,8 @@ def cmd_skill(args):
     
     elif args.action == "export":
         print(f"{Colors.BLUE}[*] Exporting skills for platform: {args.platform}{Colors.ENDC}")
-        os.system(f"python scripts/platform_exporter.py --platform {args.platform}")
+        exporter = Path(__file__).parent / "scripts" / "platform_exporter.py"
+        os.system(f'"{sys.executable}" "{exporter}" --platform {args.platform}')
 
 
 def main():

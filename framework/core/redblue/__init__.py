@@ -36,6 +36,7 @@ from .evidence import (
 from .controller import (
     RedBlueController,
     EngagementConfig,
+    EngagementResult,
 )
 
 __all__ = [
@@ -57,4 +58,5 @@ __all__ = [
     # Controller
     "RedBlueController",
     "EngagementConfig",
+    "EngagementResult",
 ]

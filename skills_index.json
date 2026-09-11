@@ -22,7 +22,7 @@
       "ID.AM-04",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "01-信息搜集-Reconnaissance",
@@ -51,7 +51,7 @@
       "ID.AM-04",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "01-信息搜集-Reconnaissance",
@@ -80,7 +80,7 @@
       "ID.AM-04",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "01-信息搜集-Reconnaissance",
@@ -109,7 +109,7 @@
       "ID.AM-04",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "01-信息搜集-Reconnaissance",
@@ -138,7 +138,7 @@
       "ID.AM-04",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "01-信息搜集-Reconnaissance",
@@ -167,7 +167,7 @@
       "ID.AM-04",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "01-信息搜集-Reconnaissance",
@@ -196,7 +196,7 @@
       "ID.AM-04",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "01-信息搜集-Reconnaissance",
@@ -223,7 +223,7 @@
       "DE.CM-08",
       "PR.IP-12"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "02-漏洞扫描-VulnerabilityScanning",
@@ -250,7 +250,7 @@
       "DE.CM-08",
       "PR.IP-12"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "02-漏洞扫描-VulnerabilityScanning",
@@ -277,7 +277,7 @@
       "DE.CM-08",
       "PR.IP-12"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "02-漏洞扫描-VulnerabilityScanning",
@@ -304,7 +304,7 @@
       "DE.CM-08",
       "PR.IP-12"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "02-漏洞扫描-VulnerabilityScanning",
@@ -331,7 +331,7 @@
       "DE.CM-08",
       "PR.IP-12"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "02-漏洞扫描-VulnerabilityScanning",
@@ -358,7 +358,7 @@
       "DE.CM-08",
       "PR.IP-12"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "02-漏洞扫描-VulnerabilityScanning",
@@ -386,7 +386,7 @@
       "DE.CM-08",
       "PR.IP-12"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "03-漏洞利用-Exploitation",
@@ -414,7 +414,7 @@
       "DE.CM-08",
       "PR.IP-12"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "03-漏洞利用-Exploitation",
@@ -442,7 +442,7 @@
       "DE.CM-08",
       "PR.IP-12"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "03-漏洞利用-Exploitation",
@@ -470,7 +470,7 @@
       "DE.CM-08",
       "PR.IP-12"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "03-漏洞利用-Exploitation",
@@ -498,7 +498,7 @@
       "DE.CM-08",
       "PR.IP-12"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "03-漏洞利用-Exploitation",
@@ -526,7 +526,7 @@
       "DE.CM-08",
       "PR.IP-12"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "03-漏洞利用-Exploitation",
@@ -554,7 +554,7 @@
       "DE.CM-08",
       "PR.IP-12"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "03-漏洞利用-Exploitation",
@@ -582,7 +582,7 @@
       "DE.CM-08",
       "PR.IP-12"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "03-漏洞利用-Exploitation",
@@ -610,7 +610,7 @@
       "DE.CM-08",
       "PR.IP-12"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "03-漏洞利用-Exploitation",
@@ -637,7 +637,7 @@
       "PR.AC-01",
       "DE.CM-04"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "04-权限提升-PrivilegeEscalation",
@@ -664,7 +664,7 @@
       "PR.AC-01",
       "DE.CM-04"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "04-权限提升-PrivilegeEscalation",
@@ -691,7 +691,7 @@
       "PR.AC-01",
       "DE.CM-04"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "04-权限提升-PrivilegeEscalation",
@@ -718,7 +718,7 @@
       "PR.AC-01",
       "DE.CM-04"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "04-权限提升-PrivilegeEscalation",
@@ -745,7 +745,7 @@
       "PR.AC-01",
       "PR.DS-05"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "05-后渗透-PostExploitation",
@@ -772,7 +772,7 @@
       "PR.AC-01",
       "PR.DS-05"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "05-后渗透-PostExploitation",
@@ -799,7 +799,7 @@
       "PR.AC-01",
       "PR.DS-05"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "05-后渗透-PostExploitation",
@@ -826,7 +826,7 @@
       "PR.AC-01",
       "PR.DS-05"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "05-后渗透-PostExploitation",
@@ -853,7 +853,7 @@
       "DE.CM-04",
       "PR.AC-05"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "06-横向移动-LateralMovement",
@@ -880,7 +880,7 @@
       "DE.CM-04",
       "PR.AC-05"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "06-横向移动-LateralMovement",
@@ -907,7 +907,7 @@
       "DE.CM-04",
       "PR.AC-05"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "06-横向移动-LateralMovement",
@@ -934,7 +934,7 @@
       "PR.AC-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "07-持久化-Persistence",
@@ -961,7 +961,7 @@
       "PR.AC-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "07-持久化-Persistence",
@@ -988,7 +988,7 @@
       "PR.AC-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "07-持久化-Persistence",
@@ -1015,7 +1015,7 @@
       "PR.AC-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "07-持久化-Persistence",
@@ -1042,7 +1042,7 @@
       "PR.AC-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "07-持久化-Persistence",
@@ -1069,7 +1069,7 @@
       "DE.CM-01",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "08-痕迹清除-CoveringTracks",
@@ -1096,7 +1096,7 @@
       "DE.CM-01",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "08-痕迹清除-CoveringTracks",
@@ -1123,7 +1123,7 @@
       "DE.CM-01",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "08-痕迹清除-CoveringTracks",
@@ -1150,7 +1150,7 @@
       "DE.CM-01",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "08-痕迹清除-CoveringTracks",
@@ -1173,7 +1173,7 @@
       "ID.GV-01",
       "ID.SC-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "09-报告撰写-Reporting",
@@ -1196,7 +1196,7 @@
       "ID.GV-01",
       "ID.SC-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "09-报告撰写-Reporting",
@@ -1219,7 +1219,7 @@
       "ID.GV-01",
       "ID.SC-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "09-报告撰写-Reporting",
@@ -1242,7 +1242,7 @@
       "ID.GV-01",
       "ID.SC-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "09-报告撰写-Reporting",
@@ -1265,7 +1265,7 @@
       "ID.GV-01",
       "ID.SC-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "09-报告撰写-Reporting",
@@ -1293,7 +1293,7 @@
       "PR.DS-03",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "10-移动安全-MobileSecurity",
@@ -1321,7 +1321,7 @@
       "PR.DS-03",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "10-移动安全-MobileSecurity",
@@ -1346,7 +1346,7 @@
       "PR.AC-01",
       "PR.DS-02"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "11-无线安全-WirelessSecurity",
@@ -1369,7 +1369,7 @@
       "PR.IP-12",
       "ID.RA-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "12-代码审计-CodeAudit",
@@ -1392,7 +1392,7 @@
       "PR.IP-12",
       "ID.RA-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "12-代码审计-CodeAudit",
@@ -1415,7 +1415,7 @@
       "PR.IP-12",
       "ID.RA-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "12-代码审计-CodeAudit",
@@ -1440,7 +1440,7 @@
       "PR.IP-12",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "12-代码审计-CodeAudit",
@@ -1463,7 +1463,7 @@
       "PR.IP-12",
       "ID.RA-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "12-代码审计-CodeAudit",
@@ -1486,7 +1486,7 @@
       "PR.IP-12",
       "ID.RA-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "12-代码审计-CodeAudit",
@@ -1509,7 +1509,7 @@
       "PR.IP-12",
       "ID.RA-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "12-代码审计-CodeAudit",
@@ -1532,7 +1532,7 @@
       "PR.IP-12",
       "ID.RA-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "12-代码审计-CodeAudit",
@@ -1557,7 +1557,7 @@
       "PR.IP-12",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "12-代码审计-CodeAudit",
@@ -1580,7 +1580,7 @@
       "PR.IP-12",
       "ID.RA-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "12-代码审计-CodeAudit",
@@ -1603,7 +1603,7 @@
       "PR.IP-12",
       "ID.RA-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "12-代码审计-CodeAudit",
@@ -1628,7 +1628,7 @@
       "DE.CM-04",
       "DE.AE-02"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "13-逆向工程-ReverseEngineering",
@@ -1653,7 +1653,7 @@
       "DE.CM-04",
       "DE.AE-02"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "13-逆向工程-ReverseEngineering",
@@ -1678,7 +1678,7 @@
       "DE.CM-04",
       "DE.AE-02"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "13-逆向工程-ReverseEngineering",
@@ -1702,7 +1702,7 @@
       "ID.RM-01",
       "ID.SC-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "14-安全审计-SecurityAudit",
@@ -1726,7 +1726,7 @@
       "ID.RM-01",
       "ID.SC-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "14-安全审计-SecurityAudit",
@@ -1750,7 +1750,7 @@
       "ID.RM-01",
       "ID.SC-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "14-安全审计-SecurityAudit",
@@ -1774,7 +1774,7 @@
       "ID.RM-01",
       "ID.SC-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "14-安全审计-SecurityAudit",
@@ -1798,7 +1798,7 @@
       "ID.RM-01",
       "ID.SC-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "14-安全审计-SecurityAudit",
@@ -1822,7 +1822,7 @@
       "ID.RM-01",
       "ID.SC-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "14-安全审计-SecurityAudit",
@@ -1846,7 +1846,7 @@
       "ID.RM-01",
       "ID.SC-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "14-安全审计-SecurityAudit",
@@ -1872,7 +1872,7 @@
       "RS.RP-01",
       "RS.AN-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "15-应急响应-IncidentResponse",
@@ -1902,7 +1902,7 @@
       "RS.AN-01",
       "RS.MI-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "15-应急响应-IncidentResponse",
@@ -1932,7 +1932,7 @@
       "RS.AN-01",
       "RS.MI-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "15-应急响应-IncidentResponse",
@@ -1962,7 +1962,7 @@
       "RS.AN-01",
       "RS.MI-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "15-应急响应-IncidentResponse",
@@ -1992,7 +1992,7 @@
       "RS.AN-01",
       "RS.MI-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "15-应急响应-IncidentResponse",
@@ -2022,7 +2022,7 @@
       "RS.AN-01",
       "RS.MI-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "15-应急响应-IncidentResponse",
@@ -2052,7 +2052,7 @@
       "RS.AN-01",
       "RS.MI-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "15-应急响应-IncidentResponse",
@@ -2082,7 +2082,7 @@
       "RS.AN-01",
       "RS.MI-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "15-应急响应-IncidentResponse",
@@ -2106,7 +2106,7 @@
       "PR.DS-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "16-大模型安全-LLMSecurity",
@@ -2130,7 +2130,7 @@
       "PR.DS-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "16-大模型安全-LLMSecurity",
@@ -2154,7 +2154,7 @@
       "PR.DS-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "16-大模型安全-LLMSecurity",
@@ -2178,7 +2178,7 @@
       "PR.DS-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "16-大模型安全-LLMSecurity",
@@ -2202,7 +2202,7 @@
       "PR.DS-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "16-大模型安全-LLMSecurity",
@@ -2226,7 +2226,7 @@
       "PR.DS-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "16-大模型安全-LLMSecurity",
@@ -2250,7 +2250,7 @@
       "PR.DS-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "16-大模型安全-LLMSecurity",
@@ -2274,7 +2274,7 @@
       "PR.DS-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "16-大模型安全-LLMSecurity",
@@ -2298,7 +2298,7 @@
       "PR.DS-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "16-大模型安全-LLMSecurity",
@@ -2322,7 +2322,7 @@
       "PR.DS-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "16-大模型安全-LLMSecurity",
@@ -2351,7 +2351,7 @@
       "PR.DS-05",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "17-云安全-CloudSecurity",
@@ -2380,7 +2380,7 @@
       "PR.DS-05",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "17-云安全-CloudSecurity",
@@ -2409,7 +2409,7 @@
       "PR.DS-05",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "17-云安全-CloudSecurity",
@@ -2438,7 +2438,7 @@
       "PR.DS-05",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "17-云安全-CloudSecurity",
@@ -2467,7 +2467,7 @@
       "PR.DS-05",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "17-云安全-CloudSecurity",
@@ -2496,7 +2496,7 @@
       "PR.DS-05",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "17-云安全-CloudSecurity",
@@ -2525,7 +2525,7 @@
       "PR.DS-05",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "17-云安全-CloudSecurity",
@@ -2554,7 +2554,7 @@
       "PR.DS-05",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "17-云安全-CloudSecurity",
@@ -2581,7 +2581,7 @@
       "ID.RA-01",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "18-安全开发运维-DevSecOps",
@@ -2608,7 +2608,7 @@
       "ID.RA-01",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "18-安全开发运维-DevSecOps",
@@ -2633,7 +2633,7 @@
       "ID.RA-01",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "18-安全开发运维-DevSecOps",
@@ -2658,7 +2658,7 @@
       "ID.RA-01",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "18-安全开发运维-DevSecOps",
@@ -2683,7 +2683,7 @@
       "ID.RA-01",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "18-安全开发运维-DevSecOps",
@@ -2708,7 +2708,7 @@
       "ID.RA-01",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "18-安全开发运维-DevSecOps",
@@ -2738,7 +2738,7 @@
       "PR.DS-07",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "19-工控安全-ICS-OT-Security",
@@ -2768,7 +2768,7 @@
       "PR.DS-07",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "19-工控安全-ICS-OT-Security",
@@ -2798,7 +2798,7 @@
       "PR.DS-07",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "19-工控安全-ICS-OT-Security",
@@ -2828,7 +2828,7 @@
       "PR.DS-07",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "19-工控安全-ICS-OT-Security",
@@ -2858,7 +2858,7 @@
       "PR.DS-07",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "19-工控安全-ICS-OT-Security",
@@ -2888,7 +2888,7 @@
       "PR.DS-07",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "19-工控安全-ICS-OT-Security",
@@ -2911,7 +2911,7 @@
       "PR.AC-01",
       "PR.DS-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "20-区块链安全-Blockchain-Web3-Security",
@@ -2934,7 +2934,7 @@
       "PR.AC-01",
       "PR.DS-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "20-区块链安全-Blockchain-Web3-Security",
@@ -2957,7 +2957,7 @@
       "PR.AC-01",
       "PR.DS-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "20-区块链安全-Blockchain-Web3-Security",
@@ -2980,7 +2980,7 @@
       "PR.AC-01",
       "PR.DS-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "20-区块链安全-Blockchain-Web3-Security",
@@ -3003,7 +3003,7 @@
       "PR.AC-01",
       "PR.DS-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "20-区块链安全-Blockchain-Web3-Security",
@@ -3026,7 +3026,7 @@
       "PR.AC-01",
       "PR.DS-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "20-区块链安全-Blockchain-Web3-Security",
@@ -3055,7 +3055,7 @@
       "PR.DS-03",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "21-物联网安全-IoT-Security",
@@ -3084,7 +3084,7 @@
       "PR.DS-03",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "21-物联网安全-IoT-Security",
@@ -3113,7 +3113,7 @@
       "PR.DS-03",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "21-物联网安全-IoT-Security",
@@ -3142,7 +3142,7 @@
       "PR.DS-03",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "21-物联网安全-IoT-Security",
@@ -3171,7 +3171,7 @@
       "PR.DS-03",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "21-物联网安全-IoT-Security",
@@ -3200,7 +3200,7 @@
       "PR.DS-03",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "21-物联网安全-IoT-Security",
@@ -3230,7 +3230,7 @@
       "PR.DS-05",
       "ID.GV-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "22-数据安全与隐私-DataSecurityPrivacy",
@@ -3260,7 +3260,7 @@
       "PR.DS-05",
       "ID.GV-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "22-数据安全与隐私-DataSecurityPrivacy",
@@ -3290,7 +3290,7 @@
       "PR.DS-05",
       "ID.GV-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "22-数据安全与隐私-DataSecurityPrivacy",
@@ -3320,7 +3320,7 @@
       "PR.DS-05",
       "ID.GV-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "22-数据安全与隐私-DataSecurityPrivacy",
@@ -3350,7 +3350,7 @@
       "PR.DS-05",
       "ID.GV-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "22-数据安全与隐私-DataSecurityPrivacy",
@@ -3380,7 +3380,7 @@
       "PR.DS-05",
       "ID.GV-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "22-数据安全与隐私-DataSecurityPrivacy",
@@ -3407,7 +3407,7 @@
       "PR.AT-01",
       "PR.AT-02"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "23-社会工程学-SocialEngineering",
@@ -3434,7 +3434,7 @@
       "PR.AT-01",
       "PR.AT-02"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "23-社会工程学-SocialEngineering",
@@ -3461,7 +3461,7 @@
       "PR.AT-01",
       "PR.AT-02"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "23-社会工程学-SocialEngineering",
@@ -3488,7 +3488,7 @@
       "PR.AT-01",
       "PR.AT-02"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "23-社会工程学-SocialEngineering",
@@ -3515,7 +3515,7 @@
       "PR.AT-01",
       "PR.AT-02"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "23-社会工程学-SocialEngineering",
@@ -3542,7 +3542,7 @@
       "RS.AN-01",
       "ID.RM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "24-红蓝对抗-RedBlueTeam",
@@ -3569,7 +3569,7 @@
       "RS.AN-01",
       "ID.RM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "24-红蓝对抗-RedBlueTeam",
@@ -3596,7 +3596,7 @@
       "RS.AN-01",
       "ID.RM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "24-红蓝对抗-RedBlueTeam",
@@ -3623,7 +3623,7 @@
       "RS.AN-01",
       "ID.RM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "24-红蓝对抗-RedBlueTeam",
@@ -3650,7 +3650,7 @@
       "RS.AN-01",
       "ID.RM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "24-红蓝对抗-RedBlueTeam",
@@ -3676,7 +3676,7 @@
       "ID.RA-01",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "24-红蓝对抗-RedBlueTeam",
@@ -3703,7 +3703,7 @@
       "ID.SC-02",
       "PR.DS-10"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "25-供应链安全-SupplyChainSecurity",
@@ -3730,7 +3730,7 @@
       "ID.SC-02",
       "PR.DS-10"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "25-供应链安全-SupplyChainSecurity",
@@ -3757,7 +3757,7 @@
       "ID.SC-02",
       "PR.DS-10"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "25-供应链安全-SupplyChainSecurity",
@@ -3784,7 +3784,7 @@
       "ID.SC-02",
       "PR.DS-10"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "25-供应链安全-SupplyChainSecurity",
@@ -3811,7 +3811,7 @@
       "ID.SC-02",
       "PR.DS-10"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "25-供应链安全-SupplyChainSecurity",
@@ -3835,7 +3835,7 @@
       "PR.IP-12",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "26-漏洞管理-VulnerabilityManagement",
@@ -3859,7 +3859,7 @@
       "PR.IP-12",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "26-漏洞管理-VulnerabilityManagement",
@@ -3883,7 +3883,7 @@
       "PR.IP-12",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "26-漏洞管理-VulnerabilityManagement",
@@ -3907,7 +3907,7 @@
       "PR.IP-12",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "26-漏洞管理-VulnerabilityManagement",
@@ -3931,7 +3931,7 @@
       "PR.IP-12",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "26-漏洞管理-VulnerabilityManagement",
@@ -3955,7 +3955,7 @@
       "PR.IP-12",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "26-漏洞管理-VulnerabilityManagement",
@@ -3983,7 +3983,7 @@
       "PR.DS-07",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "27-操作系统安全-OSSecurity",
@@ -4011,7 +4011,7 @@
       "PR.DS-07",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "27-操作系统安全-OSSecurity",
@@ -4039,7 +4039,7 @@
       "PR.DS-07",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "27-操作系统安全-OSSecurity",
@@ -4067,7 +4067,7 @@
       "PR.DS-07",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "27-操作系统安全-OSSecurity",
@@ -4095,7 +4095,7 @@
       "PR.DS-07",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "27-操作系统安全-OSSecurity",
@@ -4123,7 +4123,7 @@
       "PR.DS-07",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "27-操作系统安全-OSSecurity",
@@ -4146,7 +4146,7 @@
       "DE.AE-03",
       "ID.GV-04"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "28-威胁狩猎-ThreatHunting",
@@ -4176,7 +4176,7 @@
       "DE.AE-02",
       "DE.DP-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "28-威胁狩猎-ThreatHunting",
@@ -4206,7 +4206,7 @@
       "DE.AE-04",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "28-威胁狩猎-ThreatHunting",
@@ -4237,7 +4237,7 @@
       "DE.CM-01",
       "DE.CM-04"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "28-威胁狩猎-ThreatHunting",
@@ -4266,7 +4266,7 @@
       "RS.AN-01",
       "DE.AE-05"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "29-威胁情报-ThreatIntelligence",
@@ -4296,7 +4296,7 @@
       "RS.AN-01",
       "RS.CO-02"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "29-威胁情报-ThreatIntelligence",
@@ -4323,7 +4323,7 @@
       "ID.RA-02",
       "RS.CO-04"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "29-威胁情报-ThreatIntelligence",
@@ -4353,7 +4353,7 @@
       "ID.RA-02",
       "RS.AN-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "29-威胁情报-ThreatIntelligence",
@@ -4383,7 +4383,7 @@
       "DE.CM-04",
       "RS.AN-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "30-数字取证-DigitalForensics",
@@ -4412,7 +4412,7 @@
       "DE.CM-07",
       "RS.AN-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "30-数字取证-DigitalForensics",
@@ -4440,7 +4440,7 @@
       "DE.AE-05",
       "ID.RA-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "30-数字取证-DigitalForensics",
@@ -4469,7 +4469,7 @@
       "DE.AE-05",
       "RS.AN-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "30-数字取证-DigitalForensics",
@@ -4499,7 +4499,7 @@
       "DE.CM-04",
       "RS.AN-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "30-数字取证-DigitalForensics",
@@ -4523,7 +4523,7 @@
       "RS.IM-01",
       "RS.IM-02"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "31-SOC运营-SOCOperations",
@@ -4552,7 +4552,7 @@
       "RS.MI-01",
       "RS.MI-02"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "31-SOC运营-SOCOperations",
@@ -4582,7 +4582,7 @@
       "RS.AN-05",
       "RS.MI-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "31-SOC运营-SOCOperations",
@@ -4612,7 +4612,7 @@
       "DE.CM-04",
       "DE.AE-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "31-SOC运营-SOCOperations",
@@ -4642,7 +4642,7 @@
       "PR.AC-06",
       "PR.DS-05"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "32-身份访问管理-IAM",
@@ -4673,7 +4673,7 @@
       "PR.AC-01",
       "PR.AC-05"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "32-身份访问管理-IAM",
@@ -4703,7 +4703,7 @@
       "PR.AC-06",
       "ID.AM-05"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "32-身份访问管理-IAM",
@@ -4734,7 +4734,7 @@
       "PR.AC-06",
       "PR.AC-07"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "32-身份访问管理-IAM",
@@ -4764,7 +4764,7 @@
       "PR.DS-03",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "33-容器安全-ContainerSecurity",
@@ -4794,7 +4794,7 @@
       "PR.PT-01",
       "PR.PT-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "33-容器安全-ContainerSecurity",
@@ -4824,7 +4824,7 @@
       "DE.CM-08",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "33-容器安全-ContainerSecurity",
@@ -4854,7 +4854,7 @@
       "PR.DS-06",
       "DE.CM-08"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "33-容器安全-ContainerSecurity",
@@ -4885,7 +4885,7 @@
       "PR.AC-07",
       "PR.DS-05"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "34-API安全-APISecurity",
@@ -4915,7 +4915,7 @@
       "DE.CM-08",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "34-API安全-APISecurity",
@@ -4945,7 +4945,7 @@
       "DE.CM-08",
       "ID.RA-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "34-API安全-APISecurity",
@@ -4976,7 +4976,7 @@
       "PR.DS-05",
       "PR.DS-06"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "35-密码学与PKI-CryptographyPKI",
@@ -5006,7 +5006,7 @@
       "PR.DS-05",
       "DE.CM-07"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "35-密码学与PKI-CryptographyPKI",
@@ -5036,7 +5036,7 @@
       "PR.DS-05",
       "ID.AM-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "35-密码学与PKI-CryptographyPKI",
@@ -5065,7 +5065,7 @@
       "PR.AC-06",
       "PR.AC-07"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "36-零信任架构-ZeroTrust",
@@ -5094,7 +5094,7 @@
       "PR.PT-01",
       "PR.PT-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "36-零信任架构-ZeroTrust",
@@ -5123,7 +5123,7 @@
       "PR.AC-05",
       "PR.AC-06"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "36-零信任架构-ZeroTrust",
@@ -5154,7 +5154,7 @@
       "DE.AE-02",
       "RS.AN-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "37-端点安全-EndpointSecurity",
@@ -5185,7 +5185,7 @@
       "PR.PT-01",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "37-端点安全-EndpointSecurity",
@@ -5217,7 +5217,7 @@
       "DE.AE-02",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "37-端点安全-EndpointSecurity",
@@ -5245,7 +5245,7 @@
       "PR.IP-01",
       "PR.PT-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "37-端点安全-EndpointSecurity",
@@ -5275,7 +5275,7 @@
       "DE.CM-04",
       "RS.AN-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "38-勒索软件防御-RansomwareDefense",
@@ -5305,7 +5305,7 @@
       "RS.MI-01",
       "RC.RP-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "38-勒索软件防御-RansomwareDefense",
@@ -5333,7 +5333,7 @@
       "PR.IP-04",
       "DE.CM-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "38-勒索软件防御-RansomwareDefense",
@@ -5360,7 +5360,7 @@
       "ID.SC-01",
       "ID.GV-03"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "39-安全治理合规-GovernanceCompliance",
@@ -5386,7 +5386,7 @@
       "ID.RM-01",
       "ID.SC-01"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "39-安全治理合规-GovernanceCompliance",
@@ -5411,7 +5411,7 @@
       "PR.AT-02",
       "ID.GV-02"
     ],
-    "version": "4.3.6",
+    "version": "4.3.7",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
     "category": "39-安全治理合规-GovernanceCompliance",

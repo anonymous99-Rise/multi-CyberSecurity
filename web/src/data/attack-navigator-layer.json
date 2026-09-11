@@ -1,0 +1,1613 @@
+{
+  "name": "multi-CyberSecurity ATT&CK Coverage",
+  "versions": {
+    "attack": "14",
+    "navigator": "4.9.1",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "MITRE ATT&CK technique coverage map for multi-CyberSecurity skills.",
+  "filters": {
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "Cloud",
+      "Network"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average"
+  },
+  "hideDisabled": false,
+  "showID": false,
+  "showName": true,
+  "showAggregateScores": false,
+  "alignIcon": true,
+  "tooltips": true,
+  "selectTechniquesAcross": true,
+  "selectSubtechniquesAcross": true,
+  "selectedLayers": [],
+  "unselectedLayers": [],
+  "url": "",
+  "overrideFilters": false,
+  "overrideSort": false,
+  "overrideHidden": false,
+  "overrideLayout": false,
+  "overrideColors": false,
+  "scale": {
+    "type": "linear"
+  },
+  "metadata": [
+    {
+      "name": "Techniques",
+      "System": "false"
+    }
+  ],
+  "metadataTypes": [
+    "text"
+  ],
+  "legendItems": [],
+  "showTacticRowBackground": false,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniques": false,
+  "selectSubtechniques": false,
+  "selectVisible": false,
+  "selectAggregateFunction": "average",
+  "techniques": [
+    {
+      "techniqueID": "T0839",
+      "score": 6,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "plc与rtu安全测试-plc-rtu-security-testing, 工控安全合规审计---iec-62443-ics-compliance-audit---iec-62443, 工业防火墙与网络分段-industrial-firewall-segmentation, 工控网络协议安全-ics-network-protocol-security, 工控安全应急预案-ics-incident-response, scada系统安全评估-scada-system-security-assessment"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T0843",
+      "score": 6,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "plc与rtu安全测试-plc-rtu-security-testing, 工控安全合规审计---iec-62443-ics-compliance-audit---iec-62443, 工业防火墙与网络分段-industrial-firewall-segmentation, 工控网络协议安全-ics-network-protocol-security, 工控安全应急预案-ics-incident-response, scada系统安全评估-scada-system-security-assessment"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T0855",
+      "score": 6,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "plc与rtu安全测试-plc-rtu-security-testing, 工控安全合规审计---iec-62443-ics-compliance-audit---iec-62443, 工业防火墙与网络分段-industrial-firewall-segmentation, 工控网络协议安全-ics-network-protocol-security, 工控安全应急预案-ics-incident-response, scada系统安全评估-scada-system-security-assessment"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T0881",
+      "score": 6,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "plc与rtu安全测试-plc-rtu-security-testing, 工控安全合规审计---iec-62443-ics-compliance-audit---iec-62443, 工业防火墙与网络分段-industrial-firewall-segmentation, 工控网络协议安全-ics-network-protocol-security, 工控安全应急预案-ics-incident-response, scada系统安全评估-scada-system-security-assessment"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1003",
+      "score": 12,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "凭证窃取与利用-credential-theft-exploitation, windows权限提升-windows-privilege-escalation, 内核漏洞与服务配置错误提权-kernel-exploit-service-misconfig-privesc, linux权限提升-linux-privilege-escalation, 磁盘镜像与证据获取-disk-imaging-evidence-acquisition, 内存取证分析-memory-forensics-with-volatility, windows数字取证分析-windows-digital-forensics, ad域安全与攻击路径分析-ad-security-attack-path-analysis, 凭证转储与哈希传递-credential-dumping-pass-the-hash, 键盘记录与屏幕捕获-keylogging-screen-capture, 后渗透信息收集与数据窃取-post-exploitation-info-gathering-data-exfil, 远程控制与交互式shell-remote-control-interactive-shell"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1021",
+      "score": 7,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "凭证转储与哈希传递-credential-dumping-pass-the-hash, 键盘记录与屏幕捕获-keylogging-screen-capture, 后渗透信息收集与数据窃取-post-exploitation-info-gathering-data-exfil, 远程控制与交互式shell-remote-control-interactive-shell, 内网代理与隧道-internal-proxy-tunneling, 横向移动-lateral-movement, psexec与wmi远程执行-psexec-wmi-remote-execution"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1027",
+      "score": 4,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "amsi绕过与edr规避-amsi-bypass-edr-evasion, 代码混淆与反分析-code-obfuscation-anti-analysis, 痕迹清除-covering-tracks-anti-forensics, 进程注入与代码注入-process-injection-code-injection"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1036",
+      "score": 3,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "静态逆向分析-static-reverse-engineering, 动态调试分析-dynamic-debug-analysis, 恶意软件分析-malware-analysis"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1041",
+      "score": 2,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "网络流量与日志异常检测-network-traffic-log-anomaly-detection, 威胁情报驱动安全运营-threat-intel-driven-security-operations"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1046",
+      "score": 3,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "威胁狩猎方法论与假设驱动-threat-hunting-methodology-hypothesis, 微隔离与软件定义边界-microsegmentation-software-defined-perimeter, siem告警规则与关联分析-siem-alert-rules-correlation"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1048",
+      "score": 6,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "dlp数据防泄漏策略-data-loss-prevention, 数据脱敏与匿名化-data-masking-anonymization, 隐私影响评估-pia-privacy-impact-assessment, gdpr-个保法合规评估-privacy-compliance-assessment, 数据库安全与加密-database-security-encryption, 数据分类与分级保护-data-classification-grading"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1053",
+      "score": 5,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "启动项与登录自动执行-boot-logon-autostart, office应用程序持久化-office-application-persistence, 账户创建与凭证持久化-account-persistence, bootkit与固件持久化-bootkit-firmware-persistence, 持久化---长期控制-persistence---long-term-access"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1055",
+      "score": 14,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "基于sigma规则的检测工程-sigma-rule-detection-engineering, amsi绕过与edr规避-amsi-bypass-edr-evasion, 代码混淆与反分析-code-obfuscation-anti-analysis, 痕迹清除-covering-tracks-anti-forensics, 进程注入与代码注入-process-injection-code-injection, 凭证窃取与利用-credential-theft-exploitation, windows权限提升-windows-privilege-escalation, 内核漏洞与服务配置错误提权-kernel-exploit-service-misconfig-privesc, linux权限提升-linux-privilege-escalation, 内存取证分析-memory-forensics-with-volatility, 凭证转储与哈希传递-credential-dumping-pass-the-hash, 键盘记录与屏幕捕获-keylogging-screen-capture, 后渗透信息收集与数据窃取-post-exploitation-info-gathering-data-exfil, 远程控制与交互式shell-remote-control-interactive-shell"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1057",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "威胁狩猎方法论与假设驱动-threat-hunting-methodology-hypothesis"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1059",
+      "score": 4,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "基于sigma规则的检测工程-sigma-rule-detection-engineering, edr部署与检测规则-edr-deployment-detection-rules, 文件less恶意软件与lolbins检测-fileless-malware-lolbins-detection, linux数字取证分析-linux-digital-forensics"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1059.003",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "java-代码审计进阶-java-audit-advanced"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1059.006",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "php-代码审计专业版-php-code-audit-pro"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1068",
+      "score": 5,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "凭证窃取与利用-credential-theft-exploitation, windows权限提升-windows-privilege-escalation, 内核漏洞与服务配置错误提权-kernel-exploit-service-misconfig-privesc, linux权限提升-linux-privilege-escalation, agent-黑客技能集-agent-hack-skills"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1070",
+      "score": 6,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "amsi绕过与edr规避-amsi-bypass-edr-evasion, 代码混淆与反分析-code-obfuscation-anti-analysis, 痕迹清除-covering-tracks-anti-forensics, 进程注入与代码注入-process-injection-code-injection, windows数字取证分析-windows-digital-forensics, linux-应急响应-ai-检查-linuxgun-ai-response"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1071",
+      "score": 9,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "网络流量与日志异常检测-network-traffic-log-anomaly-detection, edr部署与检测规则-edr-deployment-detection-rules, 浏览器与邮件取证-browser-email-forensics, 内存取证分析-memory-forensics-with-volatility, windows数字取证分析-windows-digital-forensics, 威胁情报驱动安全运营-threat-intel-driven-security-operations, siem告警规则与关联分析-siem-alert-rules-correlation, graphql与微服务api安全-graphql-microservice-api-security, owasp-api安全测试-owasp-api-security-testing"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1078",
+      "score": 7,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "基于sigma规则的检测工程-sigma-rule-detection-engineering, ztna解决方案与iam集成-ztna-solutions-iam-integration, 零信任架构设计与实施-zero-trust-architecture-design-implementation, pam特权账号管理-privileged-access-management, 企业iam策略与架构-enterprise-iam-strategy-architecture, 云iam与联邦认证-cloud-iam-federation, linux-应急响应-ai-检查-linuxgun-ai-response"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1080",
+      "score": 3,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "内网代理与隧道-internal-proxy-tunneling, 横向移动-lateral-movement, psexec与wmi远程执行-psexec-wmi-remote-execution"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1082",
+      "score": 2,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "威胁狩猎方法论与假设驱动-threat-hunting-methodology-hypothesis, siem告警规则与关联分析-siem-alert-rules-correlation"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1087",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "威胁狩猎方法论与假设驱动-threat-hunting-methodology-hypothesis"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1090",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "微隔离与软件定义边界-microsegmentation-software-defined-perimeter"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1095",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "网络流量与日志异常检测-network-traffic-log-anomaly-detection"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1114",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "浏览器与邮件取证-browser-email-forensics"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1134",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "基于sigma规则的检测工程-sigma-rule-detection-engineering"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1136",
+      "score": 5,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "启动项与登录自动执行-boot-logon-autostart, office应用程序持久化-office-application-persistence, 账户创建与凭证持久化-account-persistence, bootkit与固件持久化-bootkit-firmware-persistence, 持久化---长期控制-persistence---long-term-access"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1190",
+      "score": 14,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "metasploit框架利用-metasploit-framework-exploitation, xss跨站脚本攻击-cross-site-scripting-exploitation, 文件包含与上传利用-file-inclusion-upload-exploitation, ssrf---服务端请求伪造-server-side-request-forgery, web漏洞利用-web-exploitation, sql注入利用-sql-injection-exploitation, 命令注入-command-injection, ai-agent漏洞利用-ai-agent-exploitation, 认证绕过与权限绕过-authentication-bypass-authorization-bypass, agent-黑客技能集-agent-hack-skills, java-代码审计进阶-java-audit-advanced, php-代码审计专业版-php-code-audit-pro, graphql与微服务api安全-graphql-microservice-api-security, owasp-api安全测试-owasp-api-security-testing"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1195",
+      "score": 5,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "供应链攻击检测与响应-supply-chain-attack-detection-response, 软件依赖与开源合规审计-dependency-license-compliance, 代码签名与供应链完整性-code-signing-supply-chain-integrity, sbom生成与验证-sbom-generation-verification, 第三方供应商风险评估-third-party-vendor-risk-assessment"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1203",
+      "score": 9,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "metasploit框架利用-metasploit-framework-exploitation, xss跨站脚本攻击-cross-site-scripting-exploitation, 文件包含与上传利用-file-inclusion-upload-exploitation, ssrf---服务端请求伪造-server-side-request-forgery, web漏洞利用-web-exploitation, sql注入利用-sql-injection-exploitation, 命令注入-command-injection, ai-agent漏洞利用-ai-agent-exploitation, 认证绕过与权限绕过-authentication-bypass-authorization-bypass"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1204",
+      "score": 12,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "ios安全测试-ios-security-testing, android安全测试-android-security-testing, 移动设备安全与mdm-mobile-device-security-mdm, 静态逆向分析-static-reverse-engineering, 动态调试分析-dynamic-debug-analysis, 恶意软件分析-malware-analysis, 钓鱼基础设施搭建-phishing-infrastructure, 物理渗透与社会工程-physical-social-engineering, 钓鱼邮件模拟-phishing-simulation, 电话诈骗与vishing测试-vishing-testing, 员工安全意识评估-security-awareness-assessment, 容器镜像安全与漏洞扫描-container-image-security-scanning"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1207",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "ad域安全与攻击路径分析-ad-security-attack-path-analysis"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1210",
+      "score": 9,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "metasploit框架利用-metasploit-framework-exploitation, xss跨站脚本攻击-cross-site-scripting-exploitation, 文件包含与上传利用-file-inclusion-upload-exploitation, ssrf---服务端请求伪造-server-side-request-forgery, web漏洞利用-web-exploitation, sql注入利用-sql-injection-exploitation, 命令注入-command-injection, ai-agent漏洞利用-ai-agent-exploitation, 认证绕过与权限绕过-authentication-bypass-authorization-bypass"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1218",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "文件less恶意软件与lolbins检测-fileless-malware-lolbins-detection"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1465",
+      "score": 7,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "嵌入式设备硬件安全测试-embedded-hardware-security, 物联网平台与云安全-iot-platform-cloud-security, ble-zigbee-z-wave无线安全测试-wireless-protocol-security-testing, 固件逆向与分析-firmware-reverse-engineering, 物联网通信协议安全-iot-communication-security, 智能家居与车联网安全-smart-home-connected-vehicle-security, wi-fi安全审计-wi-fi-security-audit"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1475",
+      "score": 3,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "ios安全测试-ios-security-testing, android安全测试-android-security-testing, 移动设备安全与mdm-mobile-device-security-mdm"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1482",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "威胁狩猎方法论与假设驱动-threat-hunting-methodology-hypothesis"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1484",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "ad域安全与攻击路径分析-ad-security-attack-path-analysis"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1485",
+      "score": 9,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "勒索软件攻击链分析与检测-ransomware-attack-chain-analysis-detection, 勒索软件应急响应与恢复-ransomware-incident-response-recovery, 日志收集与分析-log-collection-analysis, 网络流量分析-network-traffic-analysis, ai安全应急响应-ai-security-incident-response, 事件分类与优先级评估-incident-triage-prioritization, 云环境应急响应-cloud-incident-response, 事件遏制与清除-containment-eradication, 事件复盘与报告-lessons-learned-reporting"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1486",
+      "score": 10,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "勒索软件攻击链分析与检测-ransomware-attack-chain-analysis-detection, 勒索软件应急响应与恢复-ransomware-incident-response-recovery, 反勒索软件加固与备份策略-anti-ransomware-hardening-backup-strategy, 日志收集与分析-log-collection-analysis, 网络流量分析-network-traffic-analysis, ai安全应急响应-ai-security-incident-response, 事件分类与优先级评估-incident-triage-prioritization, 云环境应急响应-cloud-incident-response, 事件遏制与清除-containment-eradication, 事件复盘与报告-lessons-learned-reporting"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1490",
+      "score": 10,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "勒索软件攻击链分析与检测-ransomware-attack-chain-analysis-detection, 勒索软件应急响应与恢复-ransomware-incident-response-recovery, 反勒索软件加固与备份策略-anti-ransomware-hardening-backup-strategy, 日志收集与分析-log-collection-analysis, 网络流量分析-network-traffic-analysis, ai安全应急响应-ai-security-incident-response, 事件分类与优先级评估-incident-triage-prioritization, 云环境应急响应-cloud-incident-response, 事件遏制与清除-containment-eradication, 事件复盘与报告-lessons-learned-reporting"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1505",
+      "score": 12,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "sast静态应用安全测试-static-application-security-testing, dast动态应用安全测试-dynamic-application-security-testing, metasploit框架利用-metasploit-framework-exploitation, xss跨站脚本攻击-cross-site-scripting-exploitation, 文件包含与上传利用-file-inclusion-upload-exploitation, ssrf---服务端请求伪造-server-side-request-forgery, web漏洞利用-web-exploitation, sql注入利用-sql-injection-exploitation, 命令注入-command-injection, ai-agent漏洞利用-ai-agent-exploitation, 认证绕过与权限绕过-authentication-bypass-authorization-bypass, linux数字取证分析-linux-digital-forensics"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1514",
+      "score": 3,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "ios安全测试-ios-security-testing, android安全测试-android-security-testing, 移动设备安全与mdm-mobile-device-security-mdm"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1524",
+      "score": 6,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "嵌入式设备硬件安全测试-embedded-hardware-security, 物联网平台与云安全-iot-platform-cloud-security, ble-zigbee-z-wave无线安全测试-wireless-protocol-security-testing, 固件逆向与分析-firmware-reverse-engineering, 物联网通信协议安全-iot-communication-security, 智能家居与车联网安全-smart-home-connected-vehicle-security"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1525",
+      "score": 17,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "供应链攻击检测与响应-supply-chain-attack-detection-response, 软件依赖与开源合规审计-dependency-license-compliance, 代码签名与供应链完整性-code-signing-supply-chain-integrity, sbom生成与验证-sbom-generation-verification, 第三方供应商风险评估-third-party-vendor-risk-assessment, 云网络与waf安全-cloud-network-waf-security, 云存储安全配置审计-cloud-storage-security, 云iam权限与访问控制审计-cloud-iam-audit, azure安全评估-azure-security-assessment, 多云安全策略评估-multi-cloud-security-strategy, aws安全评估-aws-security-assessment, 无服务器架构安全-serverless-security, gcp安全评估-gcp-security-assessment, kubernetes-rbac与安全策略-kubernetes-rbac-security-policy, 容器运行时安全-container-runtime-security-with-falco, 容器逃逸检测与防御-container-escape-detection-defense, 容器镜像安全与漏洞扫描-container-image-security-scanning"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1528",
+      "score": 3,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "企业iam策略与架构-enterprise-iam-strategy-architecture, 云iam与联邦认证-cloud-iam-federation, api认证与授权安全-api-authentication-authorization-security"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1529",
+      "score": 3,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "ios安全测试-ios-security-testing, android安全测试-android-security-testing, 移动设备安全与mdm-mobile-device-security-mdm"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1530",
+      "score": 6,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "dlp数据防泄漏策略-data-loss-prevention, 数据脱敏与匿名化-data-masking-anonymization, 隐私影响评估-pia-privacy-impact-assessment, gdpr-个保法合规评估-privacy-compliance-assessment, 数据库安全与加密-database-security-encryption, 数据分类与分级保护-data-classification-grading"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1537",
+      "score": 8,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "云网络与waf安全-cloud-network-waf-security, 云存储安全配置审计-cloud-storage-security, 云iam权限与访问控制审计-cloud-iam-audit, azure安全评估-azure-security-assessment, 多云安全策略评估-multi-cloud-security-strategy, aws安全评估-aws-security-assessment, 无服务器架构安全-serverless-security, gcp安全评估-gcp-security-assessment"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1543",
+      "score": 7,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "linux数字取证分析-linux-digital-forensics, 启动项与登录自动执行-boot-logon-autostart, office应用程序持久化-office-application-persistence, 账户创建与凭证持久化-account-persistence, bootkit与固件持久化-bootkit-firmware-persistence, 持久化---长期控制-persistence---long-term-access, linux-应急响应-ai-检查-linuxgun-ai-response"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1546",
+      "score": 4,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "edr部署与检测规则-edr-deployment-detection-rules, 文件less恶意软件与lolbins检测-fileless-malware-lolbins-detection, linux数字取证分析-linux-digital-forensics, windows数字取证分析-windows-digital-forensics"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1547",
+      "score": 5,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "启动项与登录自动执行-boot-logon-autostart, office应用程序持久化-office-application-persistence, 账户创建与凭证持久化-account-persistence, bootkit与固件持久化-bootkit-firmware-persistence, 持久化---长期控制-persistence---long-term-access"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1548",
+      "score": 10,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "凭证窃取与利用-credential-theft-exploitation, windows权限提升-windows-privilege-escalation, 内核漏洞与服务配置错误提权-kernel-exploit-service-misconfig-privesc, linux权限提升-linux-privilege-escalation, 国产操作系统安全加固-domestic-os-security-hardening, windows安全加固与基线检查-windows-hardening-baseline, linux安全加固与基线检查-linux-hardening-baseline, macos安全评估与加固-macos-security-assessment-hardening, linux攻击与权限维持技术-linux-attack-persistence, windows攻击与横向移动技术-windows-attack-lateral-movement"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1550",
+      "score": 10,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "ztna解决方案与iam集成-ztna-solutions-iam-integration, 零信任架构设计与实施-zero-trust-architecture-design-implementation, ad域安全与攻击路径分析-ad-security-attack-path-analysis, 企业iam策略与架构-enterprise-iam-strategy-architecture, 云iam与联邦认证-cloud-iam-federation, api认证与授权安全-api-authentication-authorization-security, owasp-api安全测试-owasp-api-security-testing, 内网代理与隧道-internal-proxy-tunneling, 横向移动-lateral-movement, psexec与wmi远程执行-psexec-wmi-remote-execution"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1552",
+      "score": 9,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "国产操作系统安全加固-domestic-os-security-hardening, windows安全加固与基线检查-windows-hardening-baseline, linux安全加固与基线检查-linux-hardening-baseline, macos安全评估与加固-macos-security-assessment-hardening, linux攻击与权限维持技术-linux-attack-persistence, windows攻击与横向移动技术-windows-attack-lateral-movement, 磁盘镜像与证据获取-disk-imaging-evidence-acquisition, 加密算法与密钥管理-encryption-algorithms-key-management, pki架构与证书安全管理-pki-architecture-certificate-management"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1554",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "linux数字取证分析-linux-digital-forensics"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1555",
+      "score": 5,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "pam特权账号管理-privileged-access-management, 凭证转储与哈希传递-credential-dumping-pass-the-hash, 键盘记录与屏幕捕获-keylogging-screen-capture, 后渗透信息收集与数据窃取-post-exploitation-info-gathering-data-exfil, 远程控制与交互式shell-remote-control-interactive-shell"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1556",
+      "score": 4,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "ztna解决方案与iam集成-ztna-solutions-iam-integration, pam特权账号管理-privileged-access-management, 企业iam策略与架构-enterprise-iam-strategy-architecture, api认证与授权安全-api-authentication-authorization-security"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1557",
+      "score": 3,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "微隔离与软件定义边界-microsegmentation-software-defined-perimeter, 零信任架构设计与实施-zero-trust-architecture-design-implementation, 浏览器与邮件取证-browser-email-forensics"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1559",
+      "score": 7,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "嵌入式设备硬件安全测试-embedded-hardware-security, 物联网平台与云安全-iot-platform-cloud-security, ble-zigbee-z-wave无线安全测试-wireless-protocol-security-testing, 固件逆向与分析-firmware-reverse-engineering, 物联网通信协议安全-iot-communication-security, 智能家居与车联网安全-smart-home-connected-vehicle-security, wi-fi安全审计-wi-fi-security-audit"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1560",
+      "score": 2,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "磁盘镜像与证据获取-disk-imaging-evidence-acquisition, siem告警规则与关联分析-siem-alert-rules-correlation"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1561",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "勒索软件攻击链分析与检测-ransomware-attack-chain-analysis-detection"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1562",
+      "score": 24,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "amsi绕过与edr规避-amsi-bypass-edr-evasion, 代码混淆与反分析-code-obfuscation-anti-analysis, 痕迹清除-covering-tracks-anti-forensics, 进程注入与代码注入-process-injection-code-injection, edr部署与检测规则-edr-deployment-detection-rules, 端点加固与合规基线-endpoint-hardening-compliance-baseline, 国产操作系统安全加固-domestic-os-security-hardening, windows安全加固与基线检查-windows-hardening-baseline, linux安全加固与基线检查-linux-hardening-baseline, macos安全评估与加固-macos-security-assessment-hardening, linux攻击与权限维持技术-linux-attack-persistence, windows攻击与横向移动技术-windows-attack-lateral-movement, 闭环防御改进-defense-improvement-cycle, 红队评估方法论-red-team-assessment, 蓝队防御与检测-blue-team-defense-detection, bas攻击模拟平台-breach-attack-simulation, 紫队协作评估-purple-team-exercise, 日志收集与分析-log-collection-analysis, 网络流量分析-network-traffic-analysis, ai安全应急响应-ai-security-incident-response, 事件分类与优先级评估-incident-triage-prioritization, 云环境应急响应-cloud-incident-response, 事件遏制与清除-containment-eradication, 事件复盘与报告-lessons-learned-reporting"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1564",
+      "score": 5,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "edr部署与检测规则-edr-deployment-detection-rules, 文件less恶意软件与lolbins检测-fileless-malware-lolbins-detection, 端点加固与合规基线-endpoint-hardening-compliance-baseline, 内存取证分析-memory-forensics-with-volatility, windows数字取证分析-windows-digital-forensics"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1566",
+      "score": 6,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "浏览器与邮件取证-browser-email-forensics, 钓鱼基础设施搭建-phishing-infrastructure, 物理渗透与社会工程-physical-social-engineering, 钓鱼邮件模拟-phishing-simulation, 电话诈骗与vishing测试-vishing-testing, 员工安全意识评估-security-awareness-assessment"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1567",
+      "score": 6,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "dlp数据防泄漏策略-data-loss-prevention, 数据脱敏与匿名化-data-masking-anonymization, 隐私影响评估-pia-privacy-impact-assessment, gdpr-个保法合规评估-privacy-compliance-assessment, 数据库安全与加密-database-security-encryption, 数据分类与分级保护-data-classification-grading"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1568",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "威胁情报驱动安全运营-threat-intel-driven-security-operations"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1569",
+      "score": 2,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "基于sigma规则的检测工程-sigma-rule-detection-engineering, pam特权账号管理-privileged-access-management"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1570",
+      "score": 3,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "内网代理与隧道-internal-proxy-tunneling, 横向移动-lateral-movement, psexec与wmi远程执行-psexec-wmi-remote-execution"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1571",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "网络流量与日志异常检测-network-traffic-log-anomaly-detection"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1572",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "网络流量与日志异常检测-network-traffic-log-anomaly-detection"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1573",
+      "score": 3,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "威胁情报驱动安全运营-threat-intel-driven-security-operations, 加密算法与密钥管理-encryption-algorithms-key-management, tls-ssl安全配置与审计-tls-ssl-security-configuration-audit"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1578",
+      "score": 5,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "kubernetes-rbac与安全策略-kubernetes-rbac-security-policy, 容器运行时安全-container-runtime-security-with-falco, 容器逃逸检测与防御-container-escape-detection-defense, 容器镜像安全与漏洞扫描-container-image-security-scanning, graphql与微服务api安全-graphql-microservice-api-security"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1580",
+      "score": 3,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "安全自动化与编排-security-automation-orchestration---soar, soc事件分级与响应流程-soc-triage-response, siem告警规则与关联分析-siem-alert-rules-correlation"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1583",
+      "score": 2,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "misp平台部署与威胁情报共享-misp-deployment-threat-intel-sharing, 威胁情报馈入与taxii-stix管理-threat-intelligence-feeds-taxii-stix"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1584",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "威胁情报馈入与taxii-stix管理-threat-intelligence-feeds-taxii-stix"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1585",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "soc事件分级与响应流程-soc-triage-response"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1586",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "soc事件分级与响应流程-soc-triage-response"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1587",
+      "score": 5,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "apt组织分析与归因-apt-group-analysis-attribution, 安全自动化与编排-security-automation-orchestration---soar, 加密算法与密钥管理-encryption-algorithms-key-management, tls-ssl安全配置与审计-tls-ssl-security-configuration-audit, pki架构与证书安全管理-pki-architecture-certificate-management"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1588",
+      "score": 3,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "apt组织分析与归因-apt-group-analysis-attribution, 安全自动化与编排-security-automation-orchestration---soar, pki架构与证书安全管理-pki-architecture-certificate-management"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1589",
+      "score": 6,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "web漏洞扫描-web-vulnerability-scanning, 网络漏洞扫描-network-vulnerability-scanning, 漏洞扫描器自动化-vulnerability-scanner-automation, ai-agent漏洞扫描-ai-agent-vulnerability-scanning, 数据库安全评估-database-security-assessment, 配置审计扫描-configuration-audit-scanning"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1590",
+      "score": 8,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "子域名探测-subdomain-discovery, 目标技术栈识别-technology-stack-fingerprinting, 被动信息搜集-passive-reconnaissance-osint, dns枚举-dns-enumeration, 主动信息搜集-active-reconnaissance, 社会工程学信息收集-social-engineering-information-gathering, 网络空间搜索引擎-cyberspace-search-engine, soc事件分级与响应流程-soc-triage-response"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1592",
+      "score": 13,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "子域名探测-subdomain-discovery, 目标技术栈识别-technology-stack-fingerprinting, 被动信息搜集-passive-reconnaissance-osint, dns枚举-dns-enumeration, 主动信息搜集-active-reconnaissance, 社会工程学信息收集-social-engineering-information-gathering, 网络空间搜索引擎-cyberspace-search-engine, web漏洞扫描-web-vulnerability-scanning, 网络漏洞扫描-network-vulnerability-scanning, 漏洞扫描器自动化-vulnerability-scanner-automation, ai-agent漏洞扫描-ai-agent-vulnerability-scanning, 数据库安全评估-database-security-assessment, 配置审计扫描-configuration-audit-scanning"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1593",
+      "score": 2,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "apt组织分析与归因-apt-group-analysis-attribution, owasp-api安全测试-owasp-api-security-testing"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1594",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "apt组织分析与归因-apt-group-analysis-attribution"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1595",
+      "score": 20,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "子域名探测-subdomain-discovery, 目标技术栈识别-technology-stack-fingerprinting, 被动信息搜集-passive-reconnaissance-osint, dns枚举-dns-enumeration, 主动信息搜集-active-reconnaissance, 社会工程学信息收集-social-engineering-information-gathering, 网络空间搜索引擎-cyberspace-search-engine, web漏洞扫描-web-vulnerability-scanning, 网络漏洞扫描-network-vulnerability-scanning, 漏洞扫描器自动化-vulnerability-scanner-automation, ai-agent漏洞扫描-ai-agent-vulnerability-scanning, 数据库安全评估-database-security-assessment, 配置审计扫描-configuration-audit-scanning, 威胁情报馈入与taxii-stix管理-threat-intelligence-feeds-taxii-stix, 闭环防御改进-defense-improvement-cycle, 红队评估方法论-red-team-assessment, 蓝队防御与检测-blue-team-defense-detection, bas攻击模拟平台-breach-attack-simulation, 紫队协作评估-purple-team-exercise, agent-黑客技能集-agent-hack-skills"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1596",
+      "score": 7,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "子域名探测-subdomain-discovery, 目标技术栈识别-technology-stack-fingerprinting, 被动信息搜集-passive-reconnaissance-osint, dns枚举-dns-enumeration, 主动信息搜集-active-reconnaissance, 社会工程学信息收集-social-engineering-information-gathering, 网络空间搜索引擎-cyberspace-search-engine"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1597",
+      "score": 2,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "misp平台部署与威胁情报共享-misp-deployment-threat-intel-sharing, 威胁情报馈入与taxii-stix管理-threat-intelligence-feeds-taxii-stix"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1598",
+      "score": 5,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "钓鱼基础设施搭建-phishing-infrastructure, 物理渗透与社会工程-physical-social-engineering, 钓鱼邮件模拟-phishing-simulation, 电话诈骗与vishing测试-vishing-testing, 员工安全意识评估-security-awareness-assessment"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1606",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "api认证与授权安全-api-authentication-authorization-security"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1608",
+      "score": 3,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "加密算法与密钥管理-encryption-algorithms-key-management, tls-ssl安全配置与审计-tls-ssl-security-configuration-audit, pki架构与证书安全管理-pki-architecture-certificate-management"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1610",
+      "score": 4,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "kubernetes-rbac与安全策略-kubernetes-rbac-security-policy, 容器运行时安全-container-runtime-security-with-falco, 容器逃逸检测与防御-container-escape-detection-defense, 容器镜像安全与漏洞扫描-container-image-security-scanning"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1611",
+      "score": 3,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "ad域安全与攻击路径分析-ad-security-attack-path-analysis, 容器运行时安全-container-runtime-security-with-falco, 容器逃逸检测与防御-container-escape-detection-defense"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1613",
+      "score": 11,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "云iam与联邦认证-cloud-iam-federation, 云网络与waf安全-cloud-network-waf-security, 云存储安全配置审计-cloud-storage-security, 云iam权限与访问控制审计-cloud-iam-audit, azure安全评估-azure-security-assessment, 多云安全策略评估-multi-cloud-security-strategy, aws安全评估-aws-security-assessment, 无服务器架构安全-serverless-security, gcp安全评估-gcp-security-assessment, kubernetes-rbac与安全策略-kubernetes-rbac-security-policy, graphql与微服务api安全-graphql-microservice-api-security"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    },
+    {
+      "techniqueID": "T1620",
+      "score": 1,
+      "metadata": [
+        {
+          "name": "Skills",
+          "value": "文件less恶意软件与lolbins检测-fileless-malware-lolbins-detection"
+        }
+      ],
+      "comment": "",
+      "enabled": true,
+      "color": "",
+      "links": [],
+      "showSubtechniques": false,
+      "subtechniques": []
+    }
+  ]
+}

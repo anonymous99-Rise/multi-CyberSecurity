@@ -1,0 +1,5420 @@
+[
+  {
+    "name": "子域名探测-subdomain-discovery",
+    "description": "发现目标域名的所有子域名，扩大攻击面。子域名可能包含测试环境、管理后台、API端点等敏感资源。",
+    "domain": "cybersecurity",
+    "subdomain": "reconnaissance",
+    "tags": [
+      "reconnaissance",
+      "osint",
+      "information-gathering",
+      "dns-enumeration",
+      "passive-recon"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1592",
+      "T1590",
+      "T1596"
+    ],
+    "nist_csf": [
+      "ID.AM-01",
+      "ID.AM-04",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "01-信息搜集-Reconnaissance",
+    "file": "01-信息搜集-Reconnaissance/skills/子域名探测-SubdomainDiscovery.md"
+  },
+  {
+    "name": "目标技术栈识别-technology-stack-fingerprinting",
+    "description": "识别目标网站/系统使用的 Web 服务器、后端语言、前端框架、CMS、CDN、WAF 等技术组件，为后续漏洞利用提供方向。",
+    "domain": "cybersecurity",
+    "subdomain": "reconnaissance",
+    "tags": [
+      "reconnaissance",
+      "osint",
+      "information-gathering",
+      "dns-enumeration",
+      "passive-recon"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1592",
+      "T1590",
+      "T1596"
+    ],
+    "nist_csf": [
+      "ID.AM-01",
+      "ID.AM-04",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "01-信息搜集-Reconnaissance",
+    "file": "01-信息搜集-Reconnaissance/skills/目标技术栈识别-TechStackFingerprint.md"
+  },
+  {
+    "name": "被动信息搜集-passive-reconnaissance-osint",
+    "description": "不直接与目标系统交互，通过公开渠道收集目标信息。这种方式不会被目标察觉，是渗透测试的第一步。",
+    "domain": "cybersecurity",
+    "subdomain": "reconnaissance",
+    "tags": [
+      "reconnaissance",
+      "osint",
+      "information-gathering",
+      "dns-enumeration",
+      "passive-recon"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1592",
+      "T1590",
+      "T1596"
+    ],
+    "nist_csf": [
+      "ID.AM-01",
+      "ID.AM-04",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "01-信息搜集-Reconnaissance",
+    "file": "01-信息搜集-Reconnaissance/skills/被动信息搜集-PassiveRecon.md"
+  },
+  {
+    "name": "dns枚举-dns-enumeration",
+    "description": "通过DNS查询获取目标域名的IP、NS记录、MX记录、TXT记录等信息，发现目标网络拓扑结构。",
+    "domain": "cybersecurity",
+    "subdomain": "reconnaissance",
+    "tags": [
+      "reconnaissance",
+      "osint",
+      "information-gathering",
+      "dns-enumeration",
+      "passive-recon"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1592",
+      "T1590",
+      "T1596"
+    ],
+    "nist_csf": [
+      "ID.AM-01",
+      "ID.AM-04",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "01-信息搜集-Reconnaissance",
+    "file": "01-信息搜集-Reconnaissance/skills/DNS枚举-DNSEnumeration.md"
+  },
+  {
+    "name": "主动信息搜集-active-reconnaissance",
+    "description": "直接与目标系统交互，探测开放的端口、运行的服务和操作系统信息。**注意：主动探测会留下源IP记录。**",
+    "domain": "cybersecurity",
+    "subdomain": "reconnaissance",
+    "tags": [
+      "reconnaissance",
+      "osint",
+      "information-gathering",
+      "dns-enumeration",
+      "passive-recon"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1592",
+      "T1590",
+      "T1596"
+    ],
+    "nist_csf": [
+      "ID.AM-01",
+      "ID.AM-04",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "01-信息搜集-Reconnaissance",
+    "file": "01-信息搜集-Reconnaissance/skills/主动信息搜集-ActiveRecon.md"
+  },
+  {
+    "name": "社会工程学信息收集-social-engineering-information-gathering",
+    "description": "收集目标组织的人员信息、组织结构、联系方式，为社会工程学攻击或暴力破解提供素材。",
+    "domain": "cybersecurity",
+    "subdomain": "reconnaissance",
+    "tags": [
+      "reconnaissance",
+      "osint",
+      "information-gathering",
+      "dns-enumeration",
+      "passive-recon"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1592",
+      "T1590",
+      "T1596"
+    ],
+    "nist_csf": [
+      "ID.AM-01",
+      "ID.AM-04",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "01-信息搜集-Reconnaissance",
+    "file": "01-信息搜集-Reconnaissance/skills/社会工程学信息-SocialEngineeringInfo.md"
+  },
+  {
+    "name": "网络空间搜索引擎-cyberspace-search-engine",
+    "description": "利用网络空间搜索引擎直接搜索全球联网设备、网站和服务，快速定位目标的信息系统资产。",
+    "domain": "cybersecurity",
+    "subdomain": "reconnaissance",
+    "tags": [
+      "reconnaissance",
+      "osint",
+      "information-gathering",
+      "dns-enumeration",
+      "passive-recon"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1592",
+      "T1590",
+      "T1596"
+    ],
+    "nist_csf": [
+      "ID.AM-01",
+      "ID.AM-04",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "01-信息搜集-Reconnaissance",
+    "file": "01-信息搜集-Reconnaissance/skills/网络空间搜索引擎-OSINT-SearchEngine.md"
+  },
+  {
+    "name": "web漏洞扫描-web-vulnerability-scanning",
+    "description": "使用自动化扫描器和手动技术发现Web应用程序中的安全漏洞，包括OWASP Top 10中的常见风险。",
+    "domain": "cybersecurity",
+    "subdomain": "vulnerability-scanning",
+    "tags": [
+      "vulnerability-scanning",
+      "web-security",
+      "network-security",
+      "database-security"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1589",
+      "T1592"
+    ],
+    "nist_csf": [
+      "ID.RA-01",
+      "DE.CM-08",
+      "PR.IP-12"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "02-漏洞扫描-VulnerabilityScanning",
+    "file": "02-漏洞扫描-VulnerabilityScanning/skills/Web漏洞扫描-WebVulnScan.md"
+  },
+  {
+    "name": "网络漏洞扫描-network-vulnerability-scanning",
+    "description": "通过网络扫描发现主机和服务中的已知漏洞，包括操作系统漏洞、服务漏洞和错误配置。",
+    "domain": "cybersecurity",
+    "subdomain": "vulnerability-scanning",
+    "tags": [
+      "vulnerability-scanning",
+      "web-security",
+      "network-security",
+      "database-security"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1589",
+      "T1592"
+    ],
+    "nist_csf": [
+      "ID.RA-01",
+      "DE.CM-08",
+      "PR.IP-12"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "02-漏洞扫描-VulnerabilityScanning",
+    "file": "02-漏洞扫描-VulnerabilityScanning/skills/网络漏洞扫描-NetworkVulnScan.md"
+  },
+  {
+    "name": "漏洞扫描器自动化-vulnerability-scanner-automation",
+    "description": "使用脚本和自动化工具实现大规模、高效率的漏洞扫描流程，包括批量扫描、结果分析和报告生成。",
+    "domain": "cybersecurity",
+    "subdomain": "vulnerability-scanning",
+    "tags": [
+      "vulnerability-scanning",
+      "web-security",
+      "network-security",
+      "database-security"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1589",
+      "T1592"
+    ],
+    "nist_csf": [
+      "ID.RA-01",
+      "DE.CM-08",
+      "PR.IP-12"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "02-漏洞扫描-VulnerabilityScanning",
+    "file": "02-漏洞扫描-VulnerabilityScanning/skills/漏洞扫描器自动化-VulnScannerAutomation.md"
+  },
+  {
+    "name": "ai-agent漏洞扫描-ai-agent-vulnerability-scanning",
+    "description": "AI智能体（AI Agent）系统引入独特的攻击面，包括工具函数调用、外部API集成、RAG检索管道、Agent间通信等环节的安全风险。本技能覆盖AI Agent系统的全链路漏洞扫描方法论。",
+    "domain": "cybersecurity",
+    "subdomain": "vulnerability-scanning",
+    "tags": [
+      "vulnerability-scanning",
+      "web-security",
+      "network-security",
+      "database-security"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1589",
+      "T1592"
+    ],
+    "nist_csf": [
+      "ID.RA-01",
+      "DE.CM-08",
+      "PR.IP-12"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "02-漏洞扫描-VulnerabilityScanning",
+    "file": "02-漏洞扫描-VulnerabilityScanning/skills/AI代理漏洞扫描-AIAgentVulnScan.md"
+  },
+  {
+    "name": "数据库安全评估-database-security-assessment",
+    "description": "评估数据库系统的安全配置和漏洞，包括弱密码、未授权访问、配置缺陷等。",
+    "domain": "cybersecurity",
+    "subdomain": "vulnerability-scanning",
+    "tags": [
+      "vulnerability-scanning",
+      "web-security",
+      "network-security",
+      "database-security"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1589",
+      "T1592"
+    ],
+    "nist_csf": [
+      "ID.RA-01",
+      "DE.CM-08",
+      "PR.IP-12"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "02-漏洞扫描-VulnerabilityScanning",
+    "file": "02-漏洞扫描-VulnerabilityScanning/skills/数据库安全评估-DatabaseAssessment.md"
+  },
+  {
+    "name": "配置审计扫描-configuration-audit-scanning",
+    "description": "检查系统和应用程序的安全配置，发现默认配置、弱密码、不必要的服务、权限配置不当等安全问题。",
+    "domain": "cybersecurity",
+    "subdomain": "vulnerability-scanning",
+    "tags": [
+      "vulnerability-scanning",
+      "web-security",
+      "network-security",
+      "database-security"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1589",
+      "T1592"
+    ],
+    "nist_csf": [
+      "ID.RA-01",
+      "DE.CM-08",
+      "PR.IP-12"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "02-漏洞扫描-VulnerabilityScanning",
+    "file": "02-漏洞扫描-VulnerabilityScanning/skills/配置审计扫描-ConfigAuditScan.md"
+  },
+  {
+    "name": "metasploit框架利用-metasploit-framework-exploitation",
+    "description": "使用Metasploit框架发现漏洞、生成利用载荷、建立会话并进行后渗透操作。",
+    "domain": "cybersecurity",
+    "subdomain": "exploitation",
+    "tags": [
+      "exploitation",
+      "web-attack",
+      "sql-injection",
+      "penetration-testing",
+      "metasploit"
+    ],
+    "mitre_attack": [
+      "T1190",
+      "T1505",
+      "T1203",
+      "T1210"
+    ],
+    "nist_csf": [
+      "DE.CM-08",
+      "PR.IP-12"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "03-漏洞利用-Exploitation",
+    "file": "03-漏洞利用-Exploitation/skills/Metasploit框架利用-Metasploit.md"
+  },
+  {
+    "name": "xss跨站脚本攻击-cross-site-scripting-exploitation",
+    "description": "XSS漏洞允许攻击者在受害者的浏览器中执行恶意脚本，窃取会话、重定向用户、篡改页面内容。",
+    "domain": "cybersecurity",
+    "subdomain": "exploitation",
+    "tags": [
+      "exploitation",
+      "web-attack",
+      "sql-injection",
+      "penetration-testing",
+      "metasploit"
+    ],
+    "mitre_attack": [
+      "T1190",
+      "T1505",
+      "T1203",
+      "T1210"
+    ],
+    "nist_csf": [
+      "DE.CM-08",
+      "PR.IP-12"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "03-漏洞利用-Exploitation",
+    "file": "03-漏洞利用-Exploitation/skills/XSS跨站脚本-XSSExploitation.md"
+  },
+  {
+    "name": "文件包含与上传利用-file-inclusion-upload-exploitation",
+    "description": "利用文件包含漏洞（LFI/RFI）读取敏感文件或执行代码，利用文件上传漏洞获取服务器控制权。",
+    "domain": "cybersecurity",
+    "subdomain": "exploitation",
+    "tags": [
+      "exploitation",
+      "web-attack",
+      "sql-injection",
+      "penetration-testing",
+      "metasploit"
+    ],
+    "mitre_attack": [
+      "T1190",
+      "T1505",
+      "T1203",
+      "T1210"
+    ],
+    "nist_csf": [
+      "DE.CM-08",
+      "PR.IP-12"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "03-漏洞利用-Exploitation",
+    "file": "03-漏洞利用-Exploitation/skills/文件包含利用-FileInclusion.md"
+  },
+  {
+    "name": "ssrf服务端请求伪造-server-side-request-forgery",
+    "description": "SSRF漏洞允许攻击者诱使服务器向任意地址发起请求，攻击内部系统、读取云元数据或进行内网端口扫描。",
+    "domain": "cybersecurity",
+    "subdomain": "exploitation",
+    "tags": [
+      "exploitation",
+      "web-attack",
+      "sql-injection",
+      "penetration-testing",
+      "metasploit"
+    ],
+    "mitre_attack": [
+      "T1190",
+      "T1505",
+      "T1203",
+      "T1210"
+    ],
+    "nist_csf": [
+      "DE.CM-08",
+      "PR.IP-12"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "03-漏洞利用-Exploitation",
+    "file": "03-漏洞利用-Exploitation/skills/SSRF服务端请求伪造-SSRF.md"
+  },
+  {
+    "name": "web漏洞利用-web-exploitation",
+    "description": "利用Web应用程序中的安全漏洞获取未授权访问、数据泄露或远程代码执行。",
+    "domain": "cybersecurity",
+    "subdomain": "exploitation",
+    "tags": [
+      "exploitation",
+      "web-attack",
+      "sql-injection",
+      "penetration-testing",
+      "metasploit"
+    ],
+    "mitre_attack": [
+      "T1190",
+      "T1505",
+      "T1203",
+      "T1210"
+    ],
+    "nist_csf": [
+      "DE.CM-08",
+      "PR.IP-12"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "03-漏洞利用-Exploitation",
+    "file": "03-漏洞利用-Exploitation/skills/Web漏洞利用-WebExploitation.md"
+  },
+  {
+    "name": "sql注入利用-sql-injection-exploitation",
+    "description": "SQL注入是最危险的Web漏洞之一，通过操纵SQL查询实现数据库越权访问、数据泄露乃至服务器控制。",
+    "domain": "cybersecurity",
+    "subdomain": "exploitation",
+    "tags": [
+      "exploitation",
+      "web-attack",
+      "sql-injection",
+      "penetration-testing",
+      "metasploit"
+    ],
+    "mitre_attack": [
+      "T1190",
+      "T1505",
+      "T1203",
+      "T1210"
+    ],
+    "nist_csf": [
+      "DE.CM-08",
+      "PR.IP-12"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "03-漏洞利用-Exploitation",
+    "file": "03-漏洞利用-Exploitation/skills/SQL注入利用-SQLInjection.md"
+  },
+  {
+    "name": "命令注入-command-injection",
+    "description": "通过注入操作系统命令，在服务器上执行任意系统命令，获取远程代码执行权限。",
+    "domain": "cybersecurity",
+    "subdomain": "exploitation",
+    "tags": [
+      "exploitation",
+      "web-attack",
+      "sql-injection",
+      "penetration-testing",
+      "metasploit"
+    ],
+    "mitre_attack": [
+      "T1190",
+      "T1505",
+      "T1203",
+      "T1210"
+    ],
+    "nist_csf": [
+      "DE.CM-08",
+      "PR.IP-12"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "03-漏洞利用-Exploitation",
+    "file": "03-漏洞利用-Exploitation/skills/命令注入-CommandInjection.md"
+  },
+  {
+    "name": "ai-agent漏洞利用-ai-agent-exploitation",
+    "description": "AI智能体系统的漏洞利用涉及提示注入利用、工具函数滥用、RAG数据投毒、Agent间通信劫持等攻击技术。本技能覆盖AI Agent在渗透测试中的利用方法和攻击技术。",
+    "domain": "cybersecurity",
+    "subdomain": "exploitation",
+    "tags": [
+      "exploitation",
+      "web-attack",
+      "sql-injection",
+      "penetration-testing",
+      "metasploit"
+    ],
+    "mitre_attack": [
+      "T1190",
+      "T1505",
+      "T1203",
+      "T1210"
+    ],
+    "nist_csf": [
+      "DE.CM-08",
+      "PR.IP-12"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "03-漏洞利用-Exploitation",
+    "file": "03-漏洞利用-Exploitation/skills/AI代理漏洞利用-AIAgentExploitation.md"
+  },
+  {
+    "name": "认证绕过与权限绕过-authentication-bypass-authorization-bypass",
+    "description": "绕过身份验证和访问控制机制，获取未授权的系统或数据访问权限。",
+    "domain": "cybersecurity",
+    "subdomain": "exploitation",
+    "tags": [
+      "exploitation",
+      "web-attack",
+      "sql-injection",
+      "penetration-testing",
+      "metasploit"
+    ],
+    "mitre_attack": [
+      "T1190",
+      "T1505",
+      "T1203",
+      "T1210"
+    ],
+    "nist_csf": [
+      "DE.CM-08",
+      "PR.IP-12"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "03-漏洞利用-Exploitation",
+    "file": "03-漏洞利用-Exploitation/skills/认证绕过-AuthBypass.md"
+  },
+  {
+    "name": "凭证窃取与利用-credential-theft-exploitation",
+    "description": "窃取系统存储的密码、哈希、令牌等凭证信息，用于权限提升、横向移动和持久化控制。",
+    "domain": "cybersecurity",
+    "subdomain": "privilege-escalation",
+    "tags": [
+      "privilege-escalation",
+      "linux-privilege",
+      "windows-privilege",
+      "credential-theft"
+    ],
+    "mitre_attack": [
+      "T1068",
+      "T1548",
+      "T1055",
+      "T1003"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "DE.CM-04"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "04-权限提升-PrivilegeEscalation",
+    "file": "04-权限提升-PrivilegeEscalation/skills/凭证窃取与利用-CredentialTheft.md"
+  },
+  {
+    "name": "windows权限提升-windows-privilege-escalation",
+    "description": "Windows系统中的权限提升技术，利用内核漏洞、服务漏洞、令牌窃取、注册表配置错误等方式从普通用户提升到SYSTEM或管理员权限。",
+    "domain": "cybersecurity",
+    "subdomain": "privilege-escalation",
+    "tags": [
+      "privilege-escalation",
+      "linux-privilege",
+      "windows-privilege",
+      "credential-theft"
+    ],
+    "mitre_attack": [
+      "T1068",
+      "T1548",
+      "T1055",
+      "T1003"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "DE.CM-04"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "04-权限提升-PrivilegeEscalation",
+    "file": "04-权限提升-PrivilegeEscalation/skills/Windows提权-WindowsPrivEsc.md"
+  },
+  {
+    "name": "内核漏洞与服务配置错误提权-kernel-exploit-service-misconfig-privesc",
+    "description": "利用操作系统内核漏洞和系统服务配置错误进行权限提升。",
+    "domain": "cybersecurity",
+    "subdomain": "privilege-escalation",
+    "tags": [
+      "privilege-escalation",
+      "linux-privilege",
+      "windows-privilege",
+      "credential-theft"
+    ],
+    "mitre_attack": [
+      "T1068",
+      "T1548",
+      "T1055",
+      "T1003"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "DE.CM-04"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "04-权限提升-PrivilegeEscalation",
+    "file": "04-权限提升-PrivilegeEscalation/skills/内核漏洞与服务配置错误提权-KernelServicePrivEsc.md"
+  },
+  {
+    "name": "linux权限提升-linux-privilege-escalation",
+    "description": "Linux系统中的权限提升技术，利用内核漏洞、配置错误、SUID/SGID、特权滥用等方式从普通用户提升到root权限。",
+    "domain": "cybersecurity",
+    "subdomain": "privilege-escalation",
+    "tags": [
+      "privilege-escalation",
+      "linux-privilege",
+      "windows-privilege",
+      "credential-theft"
+    ],
+    "mitre_attack": [
+      "T1068",
+      "T1548",
+      "T1055",
+      "T1003"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "DE.CM-04"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "04-权限提升-PrivilegeEscalation",
+    "file": "04-权限提升-PrivilegeEscalation/skills/Linux提权-LinuxPrivEsc.md"
+  },
+  {
+    "name": "凭证转储与哈希传递-credential-dumping-pass-the-hash",
+    "description": "从被控系统中提取明文密码、NTLM哈希、Kerberos票据等凭证信息，并利用哈希传递(Pass-the-Hash)、票据传递(Pass-the-Ticket)等技术进行内网横向移动。",
+    "domain": "cybersecurity",
+    "subdomain": "post-exploitation",
+    "tags": [
+      "post-exploitation",
+      "credential-access",
+      "data-exfiltration",
+      "remote-control"
+    ],
+    "mitre_attack": [
+      "T1003",
+      "T1555",
+      "T1055",
+      "T1021"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-05"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "05-后渗透-PostExploitation",
+    "file": "05-后渗透-PostExploitation/skills/凭证转储与哈希传递-CredentialDumpingPtH.md"
+  },
+  {
+    "name": "键盘记录与屏幕捕获-keylogging-screen-capture",
+    "description": "在被控系统上记录键盘输入和捕获屏幕画面，获取用户凭证、通信内容等敏感信息。是后渗透阶段最常用的信息收集手段之一。",
+    "domain": "cybersecurity",
+    "subdomain": "post-exploitation",
+    "tags": [
+      "post-exploitation",
+      "credential-access",
+      "data-exfiltration",
+      "remote-control"
+    ],
+    "mitre_attack": [
+      "T1003",
+      "T1555",
+      "T1055",
+      "T1021"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-05"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "05-后渗透-PostExploitation",
+    "file": "05-后渗透-PostExploitation/skills/键盘记录与屏幕捕获-KeyloggingScreenCapture.md"
+  },
+  {
+    "name": "后渗透信息收集与数据窃取-post-exploitation-info-gathering-data-exfil",
+    "description": "获得系统访问权限后，全面收集系统信息、用户数据、网络拓扑等敏感信息，并为数据外传做好准备。",
+    "domain": "cybersecurity",
+    "subdomain": "post-exploitation",
+    "tags": [
+      "post-exploitation",
+      "credential-access",
+      "data-exfiltration",
+      "remote-control"
+    ],
+    "mitre_attack": [
+      "T1003",
+      "T1555",
+      "T1055",
+      "T1021"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-05"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "05-后渗透-PostExploitation",
+    "file": "05-后渗透-PostExploitation/skills/信息收集与数据窃取-InfoGatheringDataExfil.md"
+  },
+  {
+    "name": "远程控制与交互式shell-remote-control-interactive-shell",
+    "description": "建立稳定、隐蔽的远程控制通道，实现交互式Shell访问、文件管理、代理转发等功能。涵盖Beacon/C2框架、反向Shell、绑定Shell、端口中转等核心技术。",
+    "domain": "cybersecurity",
+    "subdomain": "post-exploitation",
+    "tags": [
+      "post-exploitation",
+      "credential-access",
+      "data-exfiltration",
+      "remote-control"
+    ],
+    "mitre_attack": [
+      "T1003",
+      "T1555",
+      "T1055",
+      "T1021"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-05"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "05-后渗透-PostExploitation",
+    "file": "05-后渗透-PostExploitation/skills/远程控制与交互式Shell-RemoteControlShell.md"
+  },
+  {
+    "name": "内网代理与隧道-internal-proxy-tunneling",
+    "description": "在内网环境中搭建代理或隧道，穿透网络隔离，使攻击机能够访问原本无法直接到达的内网资源。",
+    "domain": "cybersecurity",
+    "subdomain": "lateral-movement",
+    "tags": [
+      "lateral-movement",
+      "pivoting",
+      "tunneling",
+      "remote-execution"
+    ],
+    "mitre_attack": [
+      "T1021",
+      "T1570",
+      "T1080",
+      "T1550"
+    ],
+    "nist_csf": [
+      "DE.CM-04",
+      "PR.AC-05"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "06-横向移动-LateralMovement",
+    "file": "06-横向移动-LateralMovement/skills/内网代理与隧道-InternalProxyTunnel.md"
+  },
+  {
+    "name": "横向移动-lateral-movement",
+    "description": "在已攻破的网络中，从一台主机移动到另一台主机，扩大控制范围，最终到达目标系统（如域控制器）。",
+    "domain": "cybersecurity",
+    "subdomain": "lateral-movement",
+    "tags": [
+      "lateral-movement",
+      "pivoting",
+      "tunneling",
+      "remote-execution"
+    ],
+    "mitre_attack": [
+      "T1021",
+      "T1570",
+      "T1080",
+      "T1550"
+    ],
+    "nist_csf": [
+      "DE.CM-04",
+      "PR.AC-05"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "06-横向移动-LateralMovement",
+    "file": "06-横向移动-LateralMovement/skills/横向移动-LateralMovement.md"
+  },
+  {
+    "name": "psexec与wmi远程执行-psexec-wmi-remote-execution",
+    "description": "使用PsExec和WMI等Windows内置管理工具在远程系统上执行命令，实现横向移动和远程控制。",
+    "domain": "cybersecurity",
+    "subdomain": "lateral-movement",
+    "tags": [
+      "lateral-movement",
+      "pivoting",
+      "tunneling",
+      "remote-execution"
+    ],
+    "mitre_attack": [
+      "T1021",
+      "T1570",
+      "T1080",
+      "T1550"
+    ],
+    "nist_csf": [
+      "DE.CM-04",
+      "PR.AC-05"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "06-横向移动-LateralMovement",
+    "file": "06-横向移动-LateralMovement/skills/PsExec与WMI远程执行-PsExecWMI.md"
+  },
+  {
+    "name": "启动项与登录自动执行-boot-logon-autostart",
+    "description": "操作系统提供了多种机制允许程序在系统启动或用户登录时自动执行。攻击者利用这些合法功能实现持久化控制，包括注册表 Run 键、启动文件夹、系统服务、计划任务以及跨平台的启动脚本等。",
+    "domain": "cybersecurity",
+    "subdomain": "persistence",
+    "tags": [
+      "persistence",
+      "bootkit",
+      "startup-autostart",
+      "account-persistence"
+    ],
+    "mitre_attack": [
+      "T1543",
+      "T1547",
+      "T1136",
+      "T1053"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "07-持久化-Persistence",
+    "file": "07-持久化-Persistence/skills/启动项与登录自动执行-BootLogonAutostart.md"
+  },
+  {
+    "name": "office应用程序持久化-office-application-persistence",
+    "description": "Microsoft Office 应用程序提供了丰富的扩展机制，包括 COM 加载项、VBA 宏、Outlook 规则和表单等。攻击者可利用这些功能在 Office 程序启动时自动执行恶意代码，隐蔽性强且难以检测。",
+    "domain": "cybersecurity",
+    "subdomain": "persistence",
+    "tags": [
+      "persistence",
+      "bootkit",
+      "startup-autostart",
+      "account-persistence"
+    ],
+    "mitre_attack": [
+      "T1543",
+      "T1547",
+      "T1136",
+      "T1053"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "07-持久化-Persistence",
+    "file": "07-持久化-Persistence/skills/Office应用程序持久化-OfficePersistence.md"
+  },
+  {
+    "name": "账户创建与凭证持久化-account-persistence",
+    "description": "通过创建新账户、修改现有账户权限或植入持久化凭证（SSH 密钥、云服务访问密钥），攻击者可在网络中获得稳定的访问入口。该技术在 Windows 域环境、Linux 服务器和云平台中均有广泛应用。",
+    "domain": "cybersecurity",
+    "subdomain": "persistence",
+    "tags": [
+      "persistence",
+      "bootkit",
+      "startup-autostart",
+      "account-persistence"
+    ],
+    "mitre_attack": [
+      "T1543",
+      "T1547",
+      "T1136",
+      "T1053"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "07-持久化-Persistence",
+    "file": "07-持久化-Persistence/skills/账户持久化-AccountPersistence.md"
+  },
+  {
+    "name": "bootkit与固件持久化-bootkit-firmware-persistence",
+    "description": "Bootkit 和固件级持久化是最高级的持久化技术之一。攻击者将恶意代码植入系统引导过程（MBR/VBR）、UEFI 固件或设备固件中，使其在操作系统加载前或独立于操作系统执行。此类持久化难以检测、难以清除，格式化硬盘甚至重装系统都无法移除。",
+    "domain": "cybersecurity",
+    "subdomain": "persistence",
+    "tags": [
+      "persistence",
+      "bootkit",
+      "startup-autostart",
+      "account-persistence"
+    ],
+    "mitre_attack": [
+      "T1543",
+      "T1547",
+      "T1136",
+      "T1053"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "07-持久化-Persistence",
+    "file": "07-持久化-Persistence/skills/Bootkit与固件持久化-BootkitFirmwarePersistence.md"
+  },
+  {
+    "name": "持久化-长期控制-persistence-long-term-access",
+    "description": "在目标系统上建立持久化后门，确保在系统重启、凭证更改后仍能维持访问控制权。",
+    "domain": "cybersecurity",
+    "subdomain": "persistence",
+    "tags": [
+      "persistence",
+      "bootkit",
+      "startup-autostart",
+      "account-persistence"
+    ],
+    "mitre_attack": [
+      "T1543",
+      "T1547",
+      "T1136",
+      "T1053"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "07-持久化-Persistence",
+    "file": "07-持久化-Persistence/skills/持久化-Persistence.md"
+  },
+  {
+    "name": "amsi绕过与edr规避-amsi-bypass-edr-evasion",
+    "description": "AMSI（Windows Antimalware Scan Interface）和 EDR（Endpoint Detection and Response）是现代 Windows 环境中主要的检测防御层。AMSI 实时扫描脚本执行内容，EDR 监控系统调用和进程行为。本技能覆盖 AMSI/ETW 绕过技术、EDR 规避方法以及 Sysmon 检测绕过。",
+    "domain": "cybersecurity",
+    "subdomain": "covering-tracks",
+    "tags": [
+      "covering-tracks",
+      "anti-forensics",
+      "process-injection",
+      "obfuscation"
+    ],
+    "mitre_attack": [
+      "T1070",
+      "T1562",
+      "T1055",
+      "T1027"
+    ],
+    "nist_csf": [
+      "DE.CM-01",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "08-痕迹清除-CoveringTracks",
+    "file": "08-痕迹清除-CoveringTracks/skills/AMSI绕过与EDR规避-AMSIByPassEDREvasion.md"
+  },
+  {
+    "name": "代码混淆与反分析-code-obfuscation-anti-analysis",
+    "description": "代码混淆和反分析技术用于保护恶意代码不被安全工具检测和分析。包括代码混淆（控制流平坦化、字符串加密、虚假控制流）、反调试（IsDebuggerPresent、NtGlobalFlag）、反虚拟化（检测VMware/VirtualBox环境）以及代码保护（加壳、加密）。",
+    "domain": "cybersecurity",
+    "subdomain": "covering-tracks",
+    "tags": [
+      "covering-tracks",
+      "anti-forensics",
+      "process-injection",
+      "obfuscation"
+    ],
+    "mitre_attack": [
+      "T1070",
+      "T1562",
+      "T1055",
+      "T1027"
+    ],
+    "nist_csf": [
+      "DE.CM-01",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "08-痕迹清除-CoveringTracks",
+    "file": "08-痕迹清除-CoveringTracks/skills/代码混淆与反分析-ObfuscationAntiAnalysis.md"
+  },
+  {
+    "name": "痕迹清除-covering-tracks-anti-forensics",
+    "description": "渗透测试完成后清除操作痕迹，包括日志清理、时间戳修改、文件删除恢复防护等，降低被检测和追踪的风险。",
+    "domain": "cybersecurity",
+    "subdomain": "covering-tracks",
+    "tags": [
+      "covering-tracks",
+      "anti-forensics",
+      "process-injection",
+      "obfuscation"
+    ],
+    "mitre_attack": [
+      "T1070",
+      "T1562",
+      "T1055",
+      "T1027"
+    ],
+    "nist_csf": [
+      "DE.CM-01",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "08-痕迹清除-CoveringTracks",
+    "file": "08-痕迹清除-CoveringTracks/skills/痕迹清除-CoveringTracks.md"
+  },
+  {
+    "name": "进程注入与代码注入-process-injection-code-injection",
+    "description": "进程注入是将恶意代码植入合法进程地址空间执行的技术，是防御规避的重要手段。通过将恶意代码隐藏在可信进程（如 explorer.exe、svchost.exe、notepad.exe）中，攻击者可以绕过应用白名单、逃避进程检测和网络监控。",
+    "domain": "cybersecurity",
+    "subdomain": "covering-tracks",
+    "tags": [
+      "covering-tracks",
+      "anti-forensics",
+      "process-injection",
+      "obfuscation"
+    ],
+    "mitre_attack": [
+      "T1070",
+      "T1562",
+      "T1055",
+      "T1027"
+    ],
+    "nist_csf": [
+      "DE.CM-01",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "08-痕迹清除-CoveringTracks",
+    "file": "08-痕迹清除-CoveringTracks/skills/进程注入与代码注入-ProcessInjection.md"
+  },
+  {
+    "name": "漏洞评级与cvss评分-vulnerability-rating-cvss-scoring",
+    "description": "使用CVSS（Common Vulnerability Scoring System）标准和行业最佳实践对漏洞进行评级和严重性评估。",
+    "domain": "cybersecurity",
+    "subdomain": "reporting",
+    "tags": [
+      "reporting",
+      "documentation",
+      "cvss",
+      "pentest-report",
+      "markdown"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.GV-01",
+      "ID.SC-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "09-报告撰写-Reporting",
+    "file": "09-报告撰写-Reporting/skills/漏洞评级与CVSS-VulnRatingCVSS.md"
+  },
+  {
+    "name": "渗透测试报告编写-penetration-test-report-writing",
+    "description": "编写高质量的渗透测试报告，清晰呈现发现的问题、风险评级和修复建议，使技术和管理人员都能理解。",
+    "domain": "cybersecurity",
+    "subdomain": "reporting",
+    "tags": [
+      "reporting",
+      "documentation",
+      "cvss",
+      "pentest-report",
+      "markdown"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.GV-01",
+      "ID.SC-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "09-报告撰写-Reporting",
+    "file": "09-报告撰写-Reporting/skills/报告编写-PentestReport.md"
+  },
+  {
+    "name": "安全报告模板-word-pdf格式-security-report-template-word-pdf",
+    "description": "> **版本**: v2.0 | **更新**: 2025-Q1 | **依赖**: python-docx | **输出**: .docx → 可转为 PDF",
+    "domain": "cybersecurity",
+    "subdomain": "reporting",
+    "tags": [
+      "reporting",
+      "documentation",
+      "cvss",
+      "pentest-report",
+      "markdown"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.GV-01",
+      "ID.SC-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "09-报告撰写-Reporting",
+    "file": "09-报告撰写-Reporting/skills/安全报告模板-Word.md"
+  },
+  {
+    "name": "安全报告模板-markdown格式-security-report-template-markdown",
+    "description": "> **版本**: v2.0 | **更新**: 2025-Q1 | **兼容**: CVSS 3.1 / 4.0, OWASP Top 10 2021, CWE, PCI DSS, 等保2.0",
+    "domain": "cybersecurity",
+    "subdomain": "reporting",
+    "tags": [
+      "reporting",
+      "documentation",
+      "cvss",
+      "pentest-report",
+      "markdown"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.GV-01",
+      "ID.SC-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "09-报告撰写-Reporting",
+    "file": "09-报告撰写-Reporting/skills/安全报告模板-Markdown.md"
+  },
+  {
+    "name": "安全报告模板-html格式-security-report-template-html",
+    "description": "> **版本**: v2.0 | **更新**: 2025-Q1 | **特性**: 响应式设计、Chart.js图表、暗色模式、侧边栏导航、打印/PDF导出、AI Agent原生接口",
+    "domain": "cybersecurity",
+    "subdomain": "reporting",
+    "tags": [
+      "reporting",
+      "documentation",
+      "cvss",
+      "pentest-report",
+      "markdown"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.GV-01",
+      "ID.SC-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "09-报告撰写-Reporting",
+    "file": "09-报告撰写-Reporting/skills/安全报告模板-HTML.md"
+  },
+  {
+    "name": "ios安全测试-ios-security-testing",
+    "description": "对iOS应用程序进行安全评估，包括IPA分析、运行时调试、越狱检测绕过和API安全测试。",
+    "domain": "cybersecurity",
+    "subdomain": "mobile-security",
+    "tags": [
+      "mobile-security",
+      "android",
+      "ios",
+      "mobile-audit"
+    ],
+    "mitre_attack": [
+      "T1475",
+      "T1514",
+      "T1529",
+      "T1204"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-03",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "10-移动安全-MobileSecurity",
+    "file": "10-移动安全-MobileSecurity/skills/iOS安全测试-iOSSecurityTest.md"
+  },
+  {
+    "name": "android安全测试-android-security-testing",
+    "description": "对Android应用程序进行安全评估，包括静态分析、动态调试、逆向工程和API安全测试。",
+    "domain": "cybersecurity",
+    "subdomain": "mobile-security",
+    "tags": [
+      "mobile-security",
+      "android",
+      "ios",
+      "mobile-audit"
+    ],
+    "mitre_attack": [
+      "T1475",
+      "T1514",
+      "T1529",
+      "T1204"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-03",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "10-移动安全-MobileSecurity",
+    "file": "10-移动安全-MobileSecurity/skills/Android安全测试-AndroidSecurityTest.md"
+  },
+  {
+    "name": "wi-fi安全审计-wi-fi-security-audit",
+    "description": "评估无线网络的安全性，包括加密协议检测、弱密码破解、钓鱼接入点检测和客户端攻击。",
+    "domain": "cybersecurity",
+    "subdomain": "wireless-security",
+    "tags": [
+      "wireless-security",
+      "wifi",
+      "wpa",
+      "network-audit"
+    ],
+    "mitre_attack": [
+      "T1559",
+      "T1465"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-02"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "11-无线安全-WirelessSecurity",
+    "file": "11-无线安全-WirelessSecurity/skills/WiFi安全审计-WiFiSecurityAudit.md"
+  },
+  {
+    "name": "go代码审计-go-code-audit",
+    "description": "Go语言以内存安全（带GC、无野指针）和并发原语著称，但依然存在Web安全漏洞、配置错误、加密API误用、竞争条件和逻辑漏洞等风险。Go代码审计的重点在于数据流安全、并发安全和配置安全。",
+    "domain": "cybersecurity",
+    "subdomain": "code-audit",
+    "tags": [
+      "code-audit",
+      "static-analysis",
+      "php-audit",
+      "java-audit",
+      "javascript-audit"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.IP-12",
+      "ID.RA-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "12-代码审计-CodeAudit",
+    "file": "12-代码审计-CodeAudit/skills/Go代码审计-GoCodeAudit.md"
+  },
+  {
+    "name": "javascript-node-js代码审计-javascript-node-js-code-audit",
+    "description": "审查JavaScript应用（前端和后端）中的安全漏洞，包括Node.js特有风险和客户端XSS、原型污染等问题。",
+    "domain": "cybersecurity",
+    "subdomain": "code-audit",
+    "tags": [
+      "code-audit",
+      "static-analysis",
+      "php-audit",
+      "java-audit",
+      "javascript-audit"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.IP-12",
+      "ID.RA-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "12-代码审计-CodeAudit",
+    "file": "12-代码审计-CodeAudit/skills/JavaScript代码审计-JSCodeAudit.md"
+  },
+  {
+    "name": "php代码审计-php-code-audit",
+    "description": "通过静态分析技术审查PHP代码中的安全漏洞，发现常见的Web安全问题如注入、文件操作和反序列化漏洞。",
+    "domain": "cybersecurity",
+    "subdomain": "code-audit",
+    "tags": [
+      "code-audit",
+      "static-analysis",
+      "php-audit",
+      "java-audit",
+      "javascript-audit"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.IP-12",
+      "ID.RA-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "12-代码审计-CodeAudit",
+    "file": "12-代码审计-CodeAudit/skills/PHP代码审计-PHPCodeAudit.md"
+  },
+  {
+    "name": "java-代码审计进阶-java-audit-advanced",
+    "description": "专注于 Java 代码审计的进阶技能集合，提供自动化源码分析、路由提取、参数映射等功能，辅助安全研究人员进行 Java Web 应用的深度安全审计。",
+    "domain": "cybersecurity",
+    "subdomain": "code-audit",
+    "tags": [
+      "java",
+      "code-audit",
+      "static-analysis",
+      "vulnerability-research"
+    ],
+    "mitre_attack": [
+      "T1059.003",
+      "T1190"
+    ],
+    "nist_csf": [
+      "PR.IP-12",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "12-代码审计-CodeAudit",
+    "file": "12-代码审计-CodeAudit/skills/Java代码审计进阶-JavaAuditAdvanced.md"
+  },
+  {
+    "name": "c-代码审计-c-code-audit",
+    "description": "C++在C语言基础上增加了面向对象、泛型编程和RAII等特性。C++审计除了继承C语言的缓冲区溢出等问题外，还需关注虚函数劫持、智能指针误用、STL安全、异常安全和模板元编程等特有的安全风险。",
+    "domain": "cybersecurity",
+    "subdomain": "code-audit",
+    "tags": [
+      "code-audit",
+      "static-analysis",
+      "php-audit",
+      "java-audit",
+      "javascript-audit"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.IP-12",
+      "ID.RA-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "12-代码审计-CodeAudit",
+    "file": "12-代码审计-CodeAudit/skills/C++代码审计-CPPCodeAudit.md"
+  },
+  {
+    "name": "c代码审计-c-code-audit",
+    "description": "C语言因其底层内存操作能力而广泛应用于系统软件、嵌入式、内核模块和网络服务中。C代码的安全审计重点在于内存安全、未定义行为和危险的库函数使用。",
+    "domain": "cybersecurity",
+    "subdomain": "code-audit",
+    "tags": [
+      "code-audit",
+      "static-analysis",
+      "php-audit",
+      "java-audit",
+      "javascript-audit"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.IP-12",
+      "ID.RA-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "12-代码审计-CodeAudit",
+    "file": "12-代码审计-CodeAudit/skills/C代码审计-CCodeAudit.md"
+  },
+  {
+    "name": "python代码审计-python-code-audit",
+    "description": "审查Python Web应用和服务中的安全漏洞，包括Django/Flask框架特有漏洞和Python运行时安全问题。",
+    "domain": "cybersecurity",
+    "subdomain": "code-audit",
+    "tags": [
+      "code-audit",
+      "static-analysis",
+      "php-audit",
+      "java-audit",
+      "javascript-audit"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.IP-12",
+      "ID.RA-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "12-代码审计-CodeAudit",
+    "file": "12-代码审计-CodeAudit/skills/Python代码审计-PythonCodeAudit.md"
+  },
+  {
+    "name": "java代码审计-java-code-audit",
+    "description": "审查Java Web应用和框架中的安全漏洞，包括Spring、Struts2等框架特有漏洞和通用安全问题。",
+    "domain": "cybersecurity",
+    "subdomain": "code-audit",
+    "tags": [
+      "code-audit",
+      "static-analysis",
+      "php-audit",
+      "java-audit",
+      "javascript-audit"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.IP-12",
+      "ID.RA-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "12-代码审计-CodeAudit",
+    "file": "12-代码审计-CodeAudit/skills/Java代码审计-JavaCodeAudit.md"
+  },
+  {
+    "name": "php-代码审计专业版-php-code-audit-pro",
+    "description": "面向 PHP Web 的专业白盒代码安全审计技能，覆盖从路由枚举到漏洞验证的全流程审计，适用于 Cursor/Trae 等 AI Agent 环境。",
+    "domain": "cybersecurity",
+    "subdomain": "code-audit",
+    "tags": [
+      "php",
+      "code-audit",
+      "white-box",
+      "vulnerability-discovery"
+    ],
+    "mitre_attack": [
+      "T1059.006",
+      "T1190"
+    ],
+    "nist_csf": [
+      "PR.IP-12",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "12-代码审计-CodeAudit",
+    "file": "12-代码审计-CodeAudit/skills/PHP代码审计专业版-PHPAuditPro.md"
+  },
+  {
+    "name": "rust代码审计-rust-code-audit",
+    "description": "Rust通过所有权系统和借用检查器在编译时消除了大量内存安全漏洞，但其安全保证依赖于所有代码都是安全的（Safe Rust）。`unsafe` 代码块、FFI调用和不安全的宏可以绕过编译器检查，成为安全审计的重点区域。",
+    "domain": "cybersecurity",
+    "subdomain": "code-audit",
+    "tags": [
+      "code-audit",
+      "static-analysis",
+      "php-audit",
+      "java-audit",
+      "javascript-audit"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.IP-12",
+      "ID.RA-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "12-代码审计-CodeAudit",
+    "file": "12-代码审计-CodeAudit/skills/Rust代码审计-RustCodeAudit.md"
+  },
+  {
+    "name": "ai-agent代码审计-ai-agent-code-audit",
+    "description": "AI Agent代码审计关注AI智能体系统在工具函数实现、Agent编排、Prompt模板、RAG管道等环节的代码安全。结合传统代码审计技术与AI特有安全风险，覆盖LangChain、AutoGPT、CrewAI等主流框架。",
+    "domain": "cybersecurity",
+    "subdomain": "code-audit",
+    "tags": [
+      "code-audit",
+      "static-analysis",
+      "php-audit",
+      "java-audit",
+      "javascript-audit"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.IP-12",
+      "ID.RA-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "12-代码审计-CodeAudit",
+    "file": "12-代码审计-CodeAudit/skills/AI Agent代码审计-AIAgentCodeAudit.md"
+  },
+  {
+    "name": "静态逆向分析-static-reverse-engineering",
+    "description": "使用静态分析方法对二进制程序进行分析，不运行程序，通过反汇编、反编译等手段理解程序逻辑、发现漏洞和提取敏感信息。",
+    "domain": "cybersecurity",
+    "subdomain": "reverse-engineering",
+    "tags": [
+      "reverse-engineering",
+      "malware-analysis",
+      "debugging",
+      "static-analysis"
+    ],
+    "mitre_attack": [
+      "T1204",
+      "T1036"
+    ],
+    "nist_csf": [
+      "DE.CM-04",
+      "DE.AE-02"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "13-逆向工程-ReverseEngineering",
+    "file": "13-逆向工程-ReverseEngineering/skills/静态逆向分析-StaticReverseAnalysis.md"
+  },
+  {
+    "name": "动态调试分析-dynamic-debug-analysis",
+    "description": "通过运行和调试目标程序，实时观察执行流程、内存状态和行为特征，分析程序逻辑和漏洞。",
+    "domain": "cybersecurity",
+    "subdomain": "reverse-engineering",
+    "tags": [
+      "reverse-engineering",
+      "malware-analysis",
+      "debugging",
+      "static-analysis"
+    ],
+    "mitre_attack": [
+      "T1204",
+      "T1036"
+    ],
+    "nist_csf": [
+      "DE.CM-04",
+      "DE.AE-02"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "13-逆向工程-ReverseEngineering",
+    "file": "13-逆向工程-ReverseEngineering/skills/动态调试分析-DynamicDebugAnalysis.md"
+  },
+  {
+    "name": "恶意软件分析-malware-analysis",
+    "description": "对恶意软件样本进行全面分析，包括静态特征提取、行为分析、网络通信分析、IoC提取和逆向工程。",
+    "domain": "cybersecurity",
+    "subdomain": "reverse-engineering",
+    "tags": [
+      "reverse-engineering",
+      "malware-analysis",
+      "debugging",
+      "static-analysis"
+    ],
+    "mitre_attack": [
+      "T1204",
+      "T1036"
+    ],
+    "nist_csf": [
+      "DE.CM-04",
+      "DE.AE-02"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "13-逆向工程-ReverseEngineering",
+    "file": "13-逆向工程-ReverseEngineering/skills/恶意软件分析-MalwareAnalysis.md"
+  },
+  {
+    "name": "配置安全审计-configuration-security-audit",
+    "description": "对操作系统、数据库、中间件、网络设备进行安全配置核查，发现配置不当导致的潜在安全风险，依据CIS Benchmarks等基线标准进行评估。",
+    "domain": "cybersecurity",
+    "subdomain": "security-audit",
+    "tags": [
+      "security-audit",
+      "compliance",
+      "cloud-audit",
+      "container-audit",
+      "network-audit"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.GV-01",
+      "ID.RM-01",
+      "ID.SC-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "14-安全审计-SecurityAudit",
+    "file": "14-安全审计-SecurityAudit/skills/配置安全审计-ConfigSecurityAudit.md"
+  },
+  {
+    "name": "容器安全审计-container-security-audit",
+    "description": "对容器化环境（Docker、Kubernetes、容器镜像仓库）进行安全审计，覆盖容器镜像漏洞扫描、运行时安全、K8s集群安全配置、网络策略、RBAC权限等。",
+    "domain": "cybersecurity",
+    "subdomain": "security-audit",
+    "tags": [
+      "security-audit",
+      "compliance",
+      "cloud-audit",
+      "container-audit",
+      "network-audit"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.GV-01",
+      "ID.RM-01",
+      "ID.SC-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "14-安全审计-SecurityAudit",
+    "file": "14-安全审计-SecurityAudit/skills/容器安全审计-ContainerSecurityAudit.md"
+  },
+  {
+    "name": "网络安全合规评估-network-security-compliance-assessment",
+    "description": "对网络环境进行安全评估与合规检查，包括防火墙策略审计、网络分段检查、入侵检测评估、VPN安全审计、DNS安全、网络设备基线配置等。",
+    "domain": "cybersecurity",
+    "subdomain": "security-audit",
+    "tags": [
+      "security-audit",
+      "compliance",
+      "cloud-audit",
+      "container-audit",
+      "network-audit"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.GV-01",
+      "ID.RM-01",
+      "ID.SC-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "14-安全审计-SecurityAudit",
+    "file": "14-安全审计-SecurityAudit/skills/网络安全合规评估-NetworkComplianceAssessment.md"
+  },
+  {
+    "name": "云安全审计-cloud-security-audit",
+    "description": "对云基础设施（AWS、Azure、阿里云等）进行安全配置审计，检查云资源的访问控制、数据加密、日志审计、网络安全组等配置是否符合安全最佳实践。",
+    "domain": "cybersecurity",
+    "subdomain": "security-audit",
+    "tags": [
+      "security-audit",
+      "compliance",
+      "cloud-audit",
+      "container-audit",
+      "network-audit"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.GV-01",
+      "ID.RM-01",
+      "ID.SC-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "14-安全审计-SecurityAudit",
+    "file": "14-安全审计-SecurityAudit/skills/云安全审计-CloudSecurityAudit.md"
+  },
+  {
+    "name": "ai-agent安全审计-ai-agent-security-audit",
+    "description": "AI Agent安全审计是对AI智能体系统的全面安全评估，涵盖Agent权限模型、工具函数安全、数据隐私、供应链安全、合规要求等维度。参照 **OWASP LLM Verification Standard**、**NIST AI RMF**、**IEEE P7001** 等标准。",
+    "domain": "cybersecurity",
+    "subdomain": "security-audit",
+    "tags": [
+      "compliance",
+      "等级保护",
+      "security-audit",
+      "classification",
+      "government-standard"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.GV-01",
+      "ID.RM-01",
+      "ID.SC-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "14-安全审计-SecurityAudit",
+    "file": "14-安全审计-SecurityAudit/skills/AI Agent安全审计-AIAgentSecurityAudit.md"
+  },
+  {
+    "name": "等级保护合规审计-classified-protection-compliance-audit",
+    "description": "依据《网络安全法》及《信息安全技术 网络安全等级保护基本要求》（GB/T 22239-2019），对信息系统进行等级保护合规评估，检查安全控制措施是否符合对应等级要求。",
+    "domain": "cybersecurity",
+    "subdomain": "security-audit",
+    "tags": [
+      "security-audit",
+      "compliance",
+      "cloud-audit",
+      "container-audit",
+      "network-audit"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.GV-01",
+      "ID.RM-01",
+      "ID.SC-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "14-安全审计-SecurityAudit",
+    "file": "14-安全审计-SecurityAudit/skills/等级保护合规审计-ClassifiedProtectionAudit.md"
+  },
+  {
+    "name": "安全架构审计-security-architecture-audit",
+    "description": "对组织整体安全架构进行系统性审计评估，包括网络架构、零信任架构、身份与访问管理架构、数据安全架构等，识别架构层面的安全设计缺陷。",
+    "domain": "cybersecurity",
+    "subdomain": "security-audit",
+    "tags": [
+      "security-audit",
+      "compliance",
+      "cloud-audit",
+      "container-audit",
+      "network-audit"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.GV-01",
+      "ID.RM-01",
+      "ID.SC-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "14-安全审计-SecurityAudit",
+    "file": "14-安全审计-SecurityAudit/skills/安全架构审计-SecurityArchitectureAudit.md"
+  },
+  {
+    "name": "linux-应急响应-ai-检查-linuxgun-ai-response",
+    "description": "基于 AI 的 Linux 应急响应检查技能，通过渐进式披露原则，系统化排查系统信息、用户信息、进程、网络、文件等 16 个领域的风险。",
+    "domain": "cybersecurity",
+    "subdomain": "incident-response",
+    "tags": [
+      "linux",
+      "incident-response",
+      "malware-analysis",
+      "ai-security"
+    ],
+    "mitre_attack": [
+      "T1070",
+      "T1078",
+      "T1543"
+    ],
+    "nist_csf": [
+      "RS.RP-01",
+      "RS.AN-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "15-应急响应-IncidentResponse",
+    "file": "15-应急响应-IncidentResponse/skills/Linux应急响应AI检查-LinuxGun.md"
+  },
+  {
+    "name": "日志收集与分析-log-collection-analysis",
+    "description": "日志是应急响应中最关键的证据来源。通过对操作系统、网络设备、应用系统和云服务的日志进行系统化收集和分析，还原攻击路径、确定影响范围并提取入侵指标（IoC）。",
+    "domain": "cybersecurity",
+    "subdomain": "incident-response",
+    "tags": [
+      "incident-response",
+      "forensics",
+      "memory-forensics",
+      "threat-hunting",
+      "ransomware"
+    ],
+    "mitre_attack": [
+      "T1486",
+      "T1490",
+      "T1485",
+      "T1562"
+    ],
+    "nist_csf": [
+      "RS.RP-01",
+      "RS.CO-02",
+      "RS.AN-01",
+      "RS.MI-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "15-应急响应-IncidentResponse",
+    "file": "15-应急响应-IncidentResponse/skills/日志收集与分析-LogCollectionAnalysis.md"
+  },
+  {
+    "name": "网络流量分析-network-traffic-analysis",
+    "description": "通过对网络流量进行捕获和分析，发现恶意通信模式、提取入侵指标（IoC）、还原攻击路径。是应急响应中确定C2通信、数据外传、横向移动等行为的关键技术。",
+    "domain": "cybersecurity",
+    "subdomain": "incident-response",
+    "tags": [
+      "incident-response",
+      "forensics",
+      "memory-forensics",
+      "threat-hunting",
+      "ransomware"
+    ],
+    "mitre_attack": [
+      "T1486",
+      "T1490",
+      "T1485",
+      "T1562"
+    ],
+    "nist_csf": [
+      "RS.RP-01",
+      "RS.CO-02",
+      "RS.AN-01",
+      "RS.MI-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "15-应急响应-IncidentResponse",
+    "file": "15-应急响应-IncidentResponse/skills/网络流量分析-NetworkTrafficAnalysis.md"
+  },
+  {
+    "name": "ai安全应急响应-ai-security-incident-response",
+    "description": "AI系统安全事件具有独特的特征：提示注入攻击、模型数据泄露、Agent越权操作、对抗攻击等。本技能覆盖AI安全事件的检测、分析、遏制、清除和复盘全流程，参照 **NIST SP 800-61 Rev 2**、**MITRE ATLAS** 事件响应指南。",
+    "domain": "cybersecurity",
+    "subdomain": "incident-response",
+    "tags": [
+      "incident-response",
+      "forensics",
+      "memory-forensics",
+      "threat-hunting",
+      "ransomware"
+    ],
+    "mitre_attack": [
+      "T1486",
+      "T1490",
+      "T1485",
+      "T1562"
+    ],
+    "nist_csf": [
+      "RS.RP-01",
+      "RS.CO-02",
+      "RS.AN-01",
+      "RS.MI-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "15-应急响应-IncidentResponse",
+    "file": "15-应急响应-IncidentResponse/skills/AI安全应急响应-AISecurityIncidentResponse.md"
+  },
+  {
+    "name": "事件分类与优先级评估-incident-triage-prioritization",
+    "description": "对安全事件进行快速分类和优先级评估，确保有限的安全资源聚焦于影响最大的事件。参照 **NIST SP 800-61** 的四阶段分类模型和 **FIRST CVSS** 评分体系，建立标准化的事件分级机制。",
+    "domain": "cybersecurity",
+    "subdomain": "incident-response",
+    "tags": [
+      "incident-response",
+      "forensics",
+      "memory-forensics",
+      "threat-hunting",
+      "ransomware"
+    ],
+    "mitre_attack": [
+      "T1486",
+      "T1490",
+      "T1485",
+      "T1562"
+    ],
+    "nist_csf": [
+      "RS.RP-01",
+      "RS.CO-02",
+      "RS.AN-01",
+      "RS.MI-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "15-应急响应-IncidentResponse",
+    "file": "15-应急响应-IncidentResponse/skills/事件分类与优先级评估-IncidentTriage.md"
+  },
+  {
+    "name": "云环境应急响应-cloud-incident-response",
+    "description": "云环境的安全事件响应与传统IT存在显著差异：共享责任模型、API驱动的控制平面、短暂的云资源、以及需要云原生取证技术。参照 **AWS IR Guide**、**Azure Sentinel IR Playbooks** 和 **GCP IR Framework** 最佳实践。",
+    "domain": "cybersecurity",
+    "subdomain": "incident-response",
+    "tags": [
+      "incident-response",
+      "forensics",
+      "memory-forensics",
+      "threat-hunting",
+      "ransomware"
+    ],
+    "mitre_attack": [
+      "T1486",
+      "T1490",
+      "T1485",
+      "T1562"
+    ],
+    "nist_csf": [
+      "RS.RP-01",
+      "RS.CO-02",
+      "RS.AN-01",
+      "RS.MI-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "15-应急响应-IncidentResponse",
+    "file": "15-应急响应-IncidentResponse/skills/云环境应急响应-CloudIncidentResponse.md"
+  },
+  {
+    "name": "事件遏制与清除-containment-eradication",
+    "description": "事件遏制（Containment）与清除（Eradication）是应急响应中最关键的阶段。目标是在最小化业务影响的前提下，阻止攻击者进一步活动，并从受影响的系统中彻底清除威胁。",
+    "domain": "cybersecurity",
+    "subdomain": "incident-response",
+    "tags": [
+      "incident-response",
+      "forensics",
+      "memory-forensics",
+      "threat-hunting",
+      "ransomware"
+    ],
+    "mitre_attack": [
+      "T1486",
+      "T1490",
+      "T1485",
+      "T1562"
+    ],
+    "nist_csf": [
+      "RS.RP-01",
+      "RS.CO-02",
+      "RS.AN-01",
+      "RS.MI-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "15-应急响应-IncidentResponse",
+    "file": "15-应急响应-IncidentResponse/skills/事件遏制与清除-ContainmentEradication.md"
+  },
+  {
+    "name": "事件复盘与报告-lessons-learned-reporting",
+    "description": "事件复盘（Lessons Learned）是应急响应生命周期的最后阶段，也是最重要的改进环节。通过系统化地复盘事件处理的全过程，发现流程、技术和管理层面的短板，推动安全体系持续改进。参照 **NIST SP 800-61** 和 **SANS Incident Handler's Handbook** 的复盘方法论。",
+    "domain": "cybersecurity",
+    "subdomain": "incident-response",
+    "tags": [
+      "incident-response",
+      "forensics",
+      "memory-forensics",
+      "threat-hunting",
+      "ransomware"
+    ],
+    "mitre_attack": [
+      "T1486",
+      "T1490",
+      "T1485",
+      "T1562"
+    ],
+    "nist_csf": [
+      "RS.RP-01",
+      "RS.CO-02",
+      "RS.AN-01",
+      "RS.MI-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "15-应急响应-IncidentResponse",
+    "file": "15-应急响应-IncidentResponse/skills/事件复盘与报告-LessonsLearnedReporting.md"
+  },
+  {
+    "name": "联邦学习安全-federated-learning-security",
+    "description": "联邦学习（Federated Learning）允许多方协作训练模型而不共享原始数据，但面临梯度泄露、模型投毒、成员推理等特有安全威胁。本技能覆盖联邦学习中的隐私保护、投毒防御、安全聚合等关键技术，参照 **MITRE ATLAS** 联邦学习攻击矩阵、**IEEE FL安全标准**。",
+    "domain": "cybersecurity",
+    "subdomain": "llm-security",
+    "tags": [
+      "llm-security",
+      "ai-security",
+      "prompt-injection",
+      "model-security",
+      "ai-agent"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "16-大模型安全-LLMSecurity",
+    "file": "16-大模型安全-LLMSecurity/skills/联邦学习安全-FederatedLearningSecurity.md"
+  },
+  {
+    "name": "模型输出安全与幻觉检测-output-safety-hallucination-detection",
+    "description": "LLM输出安全涵盖有害内容生成、事实幻觉、版权侵权（OWASP LLM-02: Insecure Output Handling）等问题。本技能覆盖输出过滤、幻觉检测、事实一致性验证、内容安全审核等关键技术。",
+    "domain": "cybersecurity",
+    "subdomain": "llm-security",
+    "tags": [
+      "llm-security",
+      "ai-security",
+      "prompt-injection",
+      "model-security",
+      "ai-agent"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "16-大模型安全-LLMSecurity",
+    "file": "16-大模型安全-LLMSecurity/skills/模型输出安全与幻觉检测-OutputSafetyHallucination.md"
+  },
+  {
+    "name": "ai-agent权限与访问控制-agent-authorization-access-control",
+    "description": "AI智能体（AI Agent）具有执行工具调用、访问外部资源、处理敏感数据的能力（OWASP LLM-08: Excessive Agency）。不当的权限控制可能导致Agent越权操作，造成严重安全事件。本技能覆盖Agent权限模型设计、工具函数授权、最小权限原则、人机确认机制等核心议题。",
+    "domain": "cybersecurity",
+    "subdomain": "llm-security",
+    "tags": [
+      "llm-security",
+      "ai-security",
+      "prompt-injection",
+      "model-security",
+      "ai-agent"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "16-大模型安全-LLMSecurity",
+    "file": "16-大模型安全-LLMSecurity/skills/AI Agent权限与访问控制-AgentAuthorization.md"
+  },
+  {
+    "name": "ai供应链安全-ai-supply-chain-security",
+    "description": "AI供应链安全涵盖模型托管、第三方API依赖、开源组件、训练数据、部署基础设施等环节的安全风险（OWASP LLM-05）。攻击者可能通过污染预训练模型、投毒训练数据、篡改推理管道等方式实施供应链攻击。本技能参照 **SLSA**、**SBOM**、**NIST SSDF**、**CNCF Software Supply Chain Best Practices** 等标准。",
+    "domain": "cybersecurity",
+    "subdomain": "llm-security",
+    "tags": [
+      "llm-security",
+      "ai-security",
+      "prompt-injection",
+      "model-security",
+      "ai-agent"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "16-大模型安全-LLMSecurity",
+    "file": "16-大模型安全-LLMSecurity/skills/AI供应链安全-AISupplyChainSecurity.md"
+  },
+  {
+    "name": "ai应用安全配置审计-ai-application-security-configuration-audit",
+    "description": "AI应用安全配置审计涵盖LLM服务部署、API端点、模型推理服务、向量数据库等基础设施的安全基线检查。参照 **OWASP ASVS (Application Security Verification Standard)**、**CIS AI Benchmarks**、**CSA Cloud Controls Matrix (CCM) for AI** 等标准。",
+    "domain": "cybersecurity",
+    "subdomain": "llm-security",
+    "tags": [
+      "llm-security",
+      "ai-security",
+      "prompt-injection",
+      "model-security",
+      "ai-agent"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "16-大模型安全-LLMSecurity",
+    "file": "16-大模型安全-LLMSecurity/skills/AI应用安全配置审计-AIAppSecurityConfig.md"
+  },
+  {
+    "name": "大模型红队测试-llm-red-teaming",
+    "description": "大模型红队测试是一种系统化的对抗性评估方法，通过模拟真实攻击者的技术、战术和流程，全面评估LLM应用的安全边界、健壮性和合规性。参照 **MITRE ATLAS™** 攻击矩阵、**OWASP LLM Red Team Guide**、**Microsoft AI Red Team** 等最佳实践。",
+    "domain": "cybersecurity",
+    "subdomain": "llm-security",
+    "tags": [
+      "llm-security",
+      "ai-security",
+      "prompt-injection",
+      "model-security",
+      "ai-agent"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "16-大模型安全-LLMSecurity",
+    "file": "16-大模型安全-LLMSecurity/skills/大模型红队测试-LLMRedTeaming.md"
+  },
+  {
+    "name": "llm提示注入与安全防护-prompt-injection-defense",
+    "description": "提示注入（Prompt Injection）是大语言模型应用最严重的安全威胁之一（OWASP LLM-01）。攻击者通过精心构造的输入，覆盖或绕过系统预设指令，诱导模型执行非预期行为。本技能覆盖直接提示注入、间接提示注入、越狱攻击等类型及防护方案。",
+    "domain": "cybersecurity",
+    "subdomain": "llm-security",
+    "tags": [
+      "llm-security",
+      "ai-security",
+      "prompt-injection",
+      "model-security",
+      "ai-agent"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "16-大模型安全-LLMSecurity",
+    "file": "16-大模型安全-LLMSecurity/skills/LLM提示注入与安全防护-PromptInjectionDefense.md"
+  },
+  {
+    "name": "多模态ai安全-multimodal-ai-security",
+    "description": "多模态AI系统同时处理文本、图像、音频、视频等多种模态数据，引入了独特的攻击面和安全挑战。包括视觉对抗样本、音频隐蔽指令注入、跨模态对抗攻击等（OWASP LLM Top 10 扩展）。本技能覆盖多模态模型的安全评估技术。",
+    "domain": "cybersecurity",
+    "subdomain": "llm-security",
+    "tags": [
+      "llm-security",
+      "ai-security",
+      "prompt-injection",
+      "model-security",
+      "ai-agent"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "16-大模型安全-LLMSecurity",
+    "file": "16-大模型安全-LLMSecurity/skills/多模态AI安全-MultimodalAISecurity.md"
+  },
+  {
+    "name": "llm数据泄露与隐私保护-data-leakage-privacy-protection",
+    "description": "大语言模型在训练、推理和部署各阶段都可能发生数据泄露（OWASP LLM-06）。本技能覆盖模型训练数据记忆泄露、推理时敏感信息泄露、第三方API数据外泄、差分隐私保护等核心议题，参照 **GDPR**、**中国个人信息保护法**、**NIST Privacy Framework** 等法规标准。",
+    "domain": "cybersecurity",
+    "subdomain": "llm-security",
+    "tags": [
+      "llm-security",
+      "ai-security",
+      "prompt-injection",
+      "model-security",
+      "ai-agent"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "16-大模型安全-LLMSecurity",
+    "file": "16-大模型安全-LLMSecurity/skills/LLM数据泄露与隐私保护-DataLeakagePrivacy.md"
+  },
+  {
+    "name": "模型对抗攻击与防御-adversarial-attack-defense",
+    "description": "对抗攻击（Adversarial Attack）通过对输入施加人眼难以察觉的微小扰动，使模型产生错误输出。在LLM领域，对抗攻击包括对抗性Token序列、梯度攻击、嵌入扰动等技术。本技能参照 **NIST IR 8269**（对抗性机器学习分类）、**MITRE ATLAS**、**Google AI Red Team** 等标准。",
+    "domain": "cybersecurity",
+    "subdomain": "llm-security",
+    "tags": [
+      "llm-security",
+      "ai-security",
+      "prompt-injection",
+      "model-security",
+      "ai-agent"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "16-大模型安全-LLMSecurity",
+    "file": "16-大模型安全-LLMSecurity/skills/模型对抗攻击与防御-AdversarialAttackDefense.md"
+  },
+  {
+    "name": "云网络与waf安全-cloud-network-waf-security",
+    "description": "评估云平台网络层面的安全控制，包括VPC网络分段、安全组与防火墙规则审查、WAF策略配置审计、DDoS防护和私有连接安全。",
+    "domain": "cybersecurity",
+    "subdomain": "cloud-security",
+    "tags": [
+      "cloud-security",
+      "aws",
+      "azure",
+      "gcp",
+      "cloud-iam",
+      "cloud-network"
+    ],
+    "mitre_attack": [
+      "T1525",
+      "T1613",
+      "T1537"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-05",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "17-云安全-CloudSecurity",
+    "file": "17-云安全-CloudSecurity/skills/云网络与WAF安全-CloudNetworkWAF.md"
+  },
+  {
+    "name": "云存储安全配置审计-cloud-storage-security",
+    "description": "全面审计三大云平台的存储服务安全配置，包括AWS S3、Azure Blob Storage和GCP Cloud Storage的公开访问、加密、版本管理和访问日志检查。",
+    "domain": "cybersecurity",
+    "subdomain": "cloud-security",
+    "tags": [
+      "cloud-security",
+      "aws",
+      "azure",
+      "gcp",
+      "cloud-iam",
+      "cloud-network"
+    ],
+    "mitre_attack": [
+      "T1525",
+      "T1613",
+      "T1537"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-05",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "17-云安全-CloudSecurity",
+    "file": "17-云安全-CloudSecurity/skills/云存储安全配置审计-CloudStorageSecurity.md"
+  },
+  {
+    "name": "云iam权限与访问控制审计-cloud-iam-audit",
+    "description": "跨云平台的身份与访问管理审计方法论，识别过度授权的IAM角色/用户、权限提升路径、闲置凭证和不合规的信任策略。",
+    "domain": "cybersecurity",
+    "subdomain": "cloud-security",
+    "tags": [
+      "cloud-security",
+      "aws",
+      "azure",
+      "gcp",
+      "cloud-iam",
+      "cloud-network"
+    ],
+    "mitre_attack": [
+      "T1525",
+      "T1613",
+      "T1537"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-05",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "17-云安全-CloudSecurity",
+    "file": "17-云安全-CloudSecurity/skills/云IAM权限与访问控制审计-CloudIAMAudit.md"
+  },
+  {
+    "name": "azure安全评估-azure-security-assessment",
+    "description": "对Microsoft Azure云环境进行安全评估，涵盖Azure RBAC权限审计、KeyVault密钥管理、NSG网络安全组配置、Azure AD安全、存储账户加密和合规基线检查。",
+    "domain": "cybersecurity",
+    "subdomain": "cloud-security",
+    "tags": [
+      "cloud-security",
+      "aws",
+      "azure",
+      "gcp",
+      "cloud-iam",
+      "cloud-network"
+    ],
+    "mitre_attack": [
+      "T1525",
+      "T1613",
+      "T1537"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-05",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "17-云安全-CloudSecurity",
+    "file": "17-云安全-CloudSecurity/skills/Azure安全评估-AzureSecurityAssessment.md"
+  },
+  {
+    "name": "多云安全策略评估-multi-cloud-security-strategy",
+    "description": "评估跨多云/混合云环境的整体安全策略，包括统一身份管理、合规一致性、安全工具集成、数据主权和云治理框架。",
+    "domain": "cybersecurity",
+    "subdomain": "cloud-security",
+    "tags": [
+      "cloud-security",
+      "aws",
+      "azure",
+      "gcp",
+      "cloud-iam",
+      "cloud-network"
+    ],
+    "mitre_attack": [
+      "T1525",
+      "T1613",
+      "T1537"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-05",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "17-云安全-CloudSecurity",
+    "file": "17-云安全-CloudSecurity/skills/多云安全策略评估-MultiCloudSecurity.md"
+  },
+  {
+    "name": "aws安全评估-aws-security-assessment",
+    "description": "对AWS云环境进行全面的安全评估，包括身份与访问管理（IAM）、S3存储桶权限、安全组配置、CloudTrail审计日志、KMS密钥管理和合规基线检查。",
+    "domain": "cybersecurity",
+    "subdomain": "cloud-security",
+    "tags": [
+      "cloud-security",
+      "aws",
+      "azure",
+      "gcp",
+      "cloud-iam",
+      "cloud-network"
+    ],
+    "mitre_attack": [
+      "T1525",
+      "T1613",
+      "T1537"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-05",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "17-云安全-CloudSecurity",
+    "file": "17-云安全-CloudSecurity/skills/AWS安全评估-AWSSecurityAssessment.md"
+  },
+  {
+    "name": "无服务器架构安全-serverless-security",
+    "description": "评估AWS Lambda、Azure Functions、GCP Cloud Functions等无服务器计算环境的安全性，涵盖函数权限配置、事件源安全、依赖漏洞和环境变量保护。",
+    "domain": "cybersecurity",
+    "subdomain": "cloud-security",
+    "tags": [
+      "cloud-security",
+      "aws",
+      "azure",
+      "gcp",
+      "cloud-iam",
+      "cloud-network"
+    ],
+    "mitre_attack": [
+      "T1525",
+      "T1613",
+      "T1537"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-05",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "17-云安全-CloudSecurity",
+    "file": "17-云安全-CloudSecurity/skills/无服务器架构安全-ServerlessSecurity.md"
+  },
+  {
+    "name": "gcp安全评估-gcp-security-assessment",
+    "description": "对Google Cloud Platform环境进行全面安全评估，涵盖IAM权限审计、Cloud Storage存储桶加固、GKE集群安全、VPC防火墙规则和合规基线检查。",
+    "domain": "cybersecurity",
+    "subdomain": "cloud-security",
+    "tags": [
+      "cloud-security",
+      "aws",
+      "azure",
+      "gcp",
+      "cloud-iam",
+      "cloud-network"
+    ],
+    "mitre_attack": [
+      "T1525",
+      "T1613",
+      "T1537"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-05",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "17-云安全-CloudSecurity",
+    "file": "17-云安全-CloudSecurity/skills/GCP安全评估-GCPSecurityAssessment.md"
+  },
+  {
+    "name": "sast静态应用安全测试-static-application-security-testing",
+    "description": "在开发阶段对源码进行自动安全扫描，识别SQL注入、XSS、命令注入、安全配置错误等漏洞，实现左移安全。",
+    "domain": "cybersecurity",
+    "subdomain": "devsecops",
+    "tags": [
+      "devsecops",
+      "ci-cd",
+      "sast",
+      "dast",
+      "iac-security",
+      "supply-chain"
+    ],
+    "mitre_attack": [
+      "T1505"
+    ],
+    "nist_csf": [
+      "PR.IP-12",
+      "ID.RA-01",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "18-安全开发运维-DevSecOps",
+    "file": "18-安全开发运维-DevSecOps/skills/SAST静态应用安全测试-SAST.md"
+  },
+  {
+    "name": "dast动态应用安全测试-dynamic-application-security-testing",
+    "description": "在运行时对Web应用进行自动化安全测试，识别OWASP Top 10漏洞，包括爬虫、认证扫描、主动扫描和API测试。",
+    "domain": "cybersecurity",
+    "subdomain": "devsecops",
+    "tags": [
+      "devsecops",
+      "ci-cd",
+      "sast",
+      "dast",
+      "iac-security",
+      "supply-chain"
+    ],
+    "mitre_attack": [
+      "T1505"
+    ],
+    "nist_csf": [
+      "PR.IP-12",
+      "ID.RA-01",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "18-安全开发运维-DevSecOps",
+    "file": "18-安全开发运维-DevSecOps/skills/DAST动态应用安全测试-DAST.md"
+  },
+  {
+    "name": "软件供应链安全-software-supply-chain-security",
+    "description": "确保软件开发生命周期中所有组件的安全性和可追溯性，涵盖依赖漏洞管理、SBOM生成、制品签名、供应链威胁检测和SLSA合规。",
+    "domain": "cybersecurity",
+    "subdomain": "devsecops",
+    "tags": [
+      "devsecops",
+      "ci-cd",
+      "sast",
+      "dast",
+      "iac-security",
+      "supply-chain"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.IP-12",
+      "ID.RA-01",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "18-安全开发运维-DevSecOps",
+    "file": "18-安全开发运维-DevSecOps/skills/软件供应链安全-SoftwareSupplyChainSecurity.md"
+  },
+  {
+    "name": "安全需求与威胁建模-security-requirements-threat-modeling",
+    "description": "在系统设计阶段系统化识别安全威胁和风险，建立安全需求基线。涵盖STRIDE、PASTA、LINDDUN等主流威胁建模方法论。",
+    "domain": "cybersecurity",
+    "subdomain": "devsecops",
+    "tags": [
+      "devsecops",
+      "ci-cd",
+      "sast",
+      "dast",
+      "iac-security",
+      "supply-chain"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.IP-12",
+      "ID.RA-01",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "18-安全开发运维-DevSecOps",
+    "file": "18-安全开发运维-DevSecOps/skills/安全需求与威胁建模-ThreatModeling.md"
+  },
+  {
+    "name": "ci-cd管道安全审计-ci-cd-pipeline-security",
+    "description": "对CI/CD管道进行端到端安全审计，包括代码仓库安全、构建环境隔离、凭证管理、制品签名和部署安全管控。",
+    "domain": "cybersecurity",
+    "subdomain": "devsecops",
+    "tags": [
+      "devsecops",
+      "ci-cd",
+      "sast",
+      "dast",
+      "iac-security",
+      "supply-chain"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.IP-12",
+      "ID.RA-01",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "18-安全开发运维-DevSecOps",
+    "file": "18-安全开发运维-DevSecOps/skills/CI-CD管道安全审计-CICDPipelineSecurity.md"
+  },
+  {
+    "name": "iac安全扫描-infrastructure-as-code-security",
+    "description": "对Terraform、CloudFormation、ARM、Kubernetes manifests等基础设施即代码进行安全配置扫描，发现错误配置、安全基线偏离和合规违规。",
+    "domain": "cybersecurity",
+    "subdomain": "devsecops",
+    "tags": [
+      "devsecops",
+      "ci-cd",
+      "sast",
+      "dast",
+      "iac-security",
+      "supply-chain"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.IP-12",
+      "ID.RA-01",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "18-安全开发运维-DevSecOps",
+    "file": "18-安全开发运维-DevSecOps/skills/IaC安全扫描-InfrastructureAsCodeSecurity.md"
+  },
+  {
+    "name": "plc与rtu安全测试-plc-rtu-security-testing",
+    "description": "对可编程逻辑控制器(PLC)和远程终端单元(RTU)进行深入安全测试，包括固件分析、逻辑注入、Ladder Logic安全审查和物理接口安全评估。",
+    "domain": "cybersecurity",
+    "subdomain": "ics-ot-security",
+    "tags": [
+      "ics-security",
+      "ot-security",
+      "scada",
+      "plc",
+      "iec-62443",
+      "industrial-security"
+    ],
+    "mitre_attack": [
+      "T0843",
+      "T0839",
+      "T0881",
+      "T0855"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-07",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "19-工控安全-ICS-OT-Security",
+    "file": "19-工控安全-ICS-OT-Security/skills/PLC与RTU安全测试-PLC-RTU-SecurityTesting.md"
+  },
+  {
+    "name": "工控安全合规审计-iec-62443-ics-compliance-audit",
+    "description": "按照IEC 62443系列标准进行工控安全合规审计，涵盖安全等级(SL)评估、风险管理、安全策略审计与安全能力成熟度评估。",
+    "domain": "cybersecurity",
+    "subdomain": "ics-ot-security",
+    "tags": [
+      "ics-security",
+      "ot-security",
+      "scada",
+      "plc",
+      "iec-62443",
+      "industrial-security"
+    ],
+    "mitre_attack": [
+      "T0843",
+      "T0839",
+      "T0881",
+      "T0855"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-07",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "19-工控安全-ICS-OT-Security",
+    "file": "19-工控安全-ICS-OT-Security/skills/工控安全合规审计-IEC62443-Audit.md"
+  },
+  {
+    "name": "工业防火墙与网络分段-industrial-firewall-segmentation",
+    "description": "基于Purdue企业参考架构的OT网络分段方法论，涵盖工业防火墙部署策略、安全区(Security Zone)与管道(Conduit)的IEC 62443合规设计。",
+    "domain": "cybersecurity",
+    "subdomain": "ics-ot-security",
+    "tags": [
+      "ics-security",
+      "ot-security",
+      "scada",
+      "plc",
+      "iec-62443",
+      "industrial-security"
+    ],
+    "mitre_attack": [
+      "T0843",
+      "T0839",
+      "T0881",
+      "T0855"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-07",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "19-工控安全-ICS-OT-Security",
+    "file": "19-工控安全-ICS-OT-Security/skills/工业防火墙与网络分段-Industrial-Firewall-Segmentation.md"
+  },
+  {
+    "name": "工控网络协议安全-ics-network-protocol-security",
+    "description": "系统评估工业控制网络中的关键协议安全性，包括Modbus/TCP、DNP3、S7comm、EtherNet/IP、PROFINET、OPC UA和MQTT等。",
+    "domain": "cybersecurity",
+    "subdomain": "ics-ot-security",
+    "tags": [
+      "ics-security",
+      "ot-security",
+      "scada",
+      "plc",
+      "iec-62443",
+      "industrial-security"
+    ],
+    "mitre_attack": [
+      "T0843",
+      "T0839",
+      "T0881",
+      "T0855"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-07",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "19-工控安全-ICS-OT-Security",
+    "file": "19-工控安全-ICS-OT-Security/skills/工控网络协议安全-ICS-NetworkProtocolSecurity.md"
+  },
+  {
+    "name": "工控安全应急预案-ics-incident-response",
+    "description": "针对工业控制系统和OT环境的应急响应方法论，涵盖工控特有的安全事件检测、响应策略、系统恢复和工控取证分析。",
+    "domain": "cybersecurity",
+    "subdomain": "ics-ot-security",
+    "tags": [
+      "ics-security",
+      "ot-security",
+      "scada",
+      "plc",
+      "iec-62443",
+      "industrial-security"
+    ],
+    "mitre_attack": [
+      "T0843",
+      "T0839",
+      "T0881",
+      "T0855"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-07",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "19-工控安全-ICS-OT-Security",
+    "file": "19-工控安全-ICS-OT-Security/skills/工控安全应急预案-ICS-IncidentResponse.md"
+  },
+  {
+    "name": "scada系统安全评估-scada-system-security-assessment",
+    "description": "对SCADA(监控与数据采集)系统进行安全评估，涵盖Modbus、DNP3、S7等工业协议的安全性测试、PLC设备发现、固件版本核查和网络隔离审查。",
+    "domain": "cybersecurity",
+    "subdomain": "ics-ot-security",
+    "tags": [
+      "ics-security",
+      "ot-security",
+      "scada",
+      "plc",
+      "iec-62443",
+      "industrial-security"
+    ],
+    "mitre_attack": [
+      "T0843",
+      "T0839",
+      "T0881",
+      "T0855"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-07",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "19-工控安全-ICS-OT-Security",
+    "file": "19-工控安全-ICS-OT-Security/skills/SCADA系统安全评估-SCADASecurityAssessment.md"
+  },
+  {
+    "name": "mev与跨链桥安全-mev-cross-chain-bridge-security",
+    "description": "深入评估MEV提取策略的安全影响和跨链桥的核心安全机制，涵盖Flashbots MEV-Boost、跨链消息验证、轻客户端验证和经济安全。",
+    "domain": "cybersecurity",
+    "subdomain": "blockchain-web3-security",
+    "tags": [
+      "blockchain-security",
+      "web3",
+      "smart-contract",
+      "defi",
+      "solidity"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "20-区块链安全-Blockchain-Web3-Security",
+    "file": "20-区块链安全-Blockchain-Web3-Security/skills/MEV与跨链桥安全-MEV-CrossChainBridgeSecurity.md"
+  },
+  {
+    "name": "共识机制安全分析-consensus-mechanism-security",
+    "description": "分析区块链共识层的安全威胁，涵盖PoW 51%攻击、PoS长程攻击、账本分叉、验证器安全、MEV安全等。",
+    "domain": "cybersecurity",
+    "subdomain": "blockchain-web3-security",
+    "tags": [
+      "blockchain-security",
+      "web3",
+      "smart-contract",
+      "defi",
+      "solidity"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "20-区块链安全-Blockchain-Web3-Security",
+    "file": "20-区块链安全-Blockchain-Web3-Security/skills/共识机制安全分析-ConsensusSecurityAnalysis.md"
+  },
+  {
+    "name": "区块链节点安全加固-blockchain-node-hardening",
+    "description": "对区块链节点进行全面安全加固，包括节点配置安全、P2P网络安全、API防护、密钥管理和监控告警。",
+    "domain": "cybersecurity",
+    "subdomain": "blockchain-web3-security",
+    "tags": [
+      "blockchain-security",
+      "web3",
+      "smart-contract",
+      "defi",
+      "solidity"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "20-区块链安全-Blockchain-Web3-Security",
+    "file": "20-区块链安全-Blockchain-Web3-Security/skills/区块链节点安全加固-BlockchainNodeHardening.md"
+  },
+  {
+    "name": "defi协议安全评估-defi-protocol-security-assessment",
+    "description": "针对去中心化金融(DeFi)协议的安全评估方法论，涵盖AMM DEX借贷协议、收益聚合器、跨链桥和合成资产等复杂金融协议的深度审计。",
+    "domain": "cybersecurity",
+    "subdomain": "blockchain-web3-security",
+    "tags": [
+      "blockchain-security",
+      "web3",
+      "smart-contract",
+      "defi",
+      "solidity"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "20-区块链安全-Blockchain-Web3-Security",
+    "file": "20-区块链安全-Blockchain-Web3-Security/skills/DeFi协议安全评估-DeFiSecurityAssessment.md"
+  },
+  {
+    "name": "web3前端与钱包安全-web3-frontend-wallet-security",
+    "description": "评估Web3 DApp前端的客户端安全、钱包集成安全、签名逻辑验证和交易模拟，防止前端劫持、钓鱼和签名攻击。",
+    "domain": "cybersecurity",
+    "subdomain": "blockchain-web3-security",
+    "tags": [
+      "blockchain-security",
+      "web3",
+      "smart-contract",
+      "defi",
+      "solidity"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "20-区块链安全-Blockchain-Web3-Security",
+    "file": "20-区块链安全-Blockchain-Web3-Security/skills/Web3前端与钱包安全-Web3WalletSecurity.md"
+  },
+  {
+    "name": "智能合约安全审计-smart-contract-audit",
+    "description": "对Ethereum及其他EVM兼容链上的智能合约进行安全审计，涵盖重入攻击、访问控制、整数溢出、闪电贷攻击等漏洞分析与静态/动态测试。",
+    "domain": "cybersecurity",
+    "subdomain": "blockchain-web3-security",
+    "tags": [
+      "blockchain-security",
+      "web3",
+      "smart-contract",
+      "defi",
+      "solidity"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "20-区块链安全-Blockchain-Web3-Security",
+    "file": "20-区块链安全-Blockchain-Web3-Security/skills/智能合约安全审计-SmartContractAudit.md"
+  },
+  {
+    "name": "嵌入式设备硬件安全测试-embedded-hardware-security",
+    "description": "对物联网嵌入式硬件进行物理安全评估，涵盖JTAG/SWD调试接口测试、UART串口攻击、SPI/I2C总线窃听和侧信道攻击分析。",
+    "domain": "cybersecurity",
+    "subdomain": "iot-security",
+    "tags": [
+      "iot-security",
+      "firmware",
+      "embedded",
+      "ble",
+      "zigbee",
+      "hardware-security"
+    ],
+    "mitre_attack": [
+      "T1465",
+      "T1559",
+      "T1524"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-03",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "21-物联网安全-IoT-Security",
+    "file": "21-物联网安全-IoT-Security/skills/嵌入式设备硬件安全测试-EmbeddedHardwareSecurity.md"
+  },
+  {
+    "name": "物联网平台与云安全-iot-platform-cloud-security",
+    "description": "评估主流IoT云平台的安全性，包括AWS IoT Core、Azure IoT Hub、GCP IoT Core的认证机制、设备影子安全、OTA更新策略和规则引擎配置。",
+    "domain": "cybersecurity",
+    "subdomain": "iot-security",
+    "tags": [
+      "iot-security",
+      "firmware",
+      "embedded",
+      "ble",
+      "zigbee",
+      "hardware-security"
+    ],
+    "mitre_attack": [
+      "T1465",
+      "T1559",
+      "T1524"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-03",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "21-物联网安全-IoT-Security",
+    "file": "21-物联网安全-IoT-Security/skills/物联网平台与云安全-IoTPlatformCloudSecurity.md"
+  },
+  {
+    "name": "ble-zigbee-z-wave无线安全测试-wireless-protocol-security-testing",
+    "description": "对物联网设备最常用的三种无线协议（BLE、Zigbee、Z-Wave）进行全面的安全测试和评估。",
+    "domain": "cybersecurity",
+    "subdomain": "iot-security",
+    "tags": [
+      "iot-security",
+      "firmware",
+      "embedded",
+      "ble",
+      "zigbee",
+      "hardware-security"
+    ],
+    "mitre_attack": [
+      "T1465",
+      "T1559",
+      "T1524"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-03",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "21-物联网安全-IoT-Security",
+    "file": "21-物联网安全-IoT-Security/skills/BLE-Zigbee-Z-Wave无线安全测试-WirelessProtocolSecurity.md"
+  },
+  {
+    "name": "固件逆向与分析-firmware-reverse-engineering",
+    "description": "系统化地对物联网设备固件进行逆向分析，包括固件提取、文件系统分析、架构识别、漏洞发现和后门检测。",
+    "domain": "cybersecurity",
+    "subdomain": "iot-security",
+    "tags": [
+      "iot-security",
+      "firmware",
+      "embedded",
+      "ble",
+      "zigbee",
+      "hardware-security"
+    ],
+    "mitre_attack": [
+      "T1465",
+      "T1559",
+      "T1524"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-03",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "21-物联网安全-IoT-Security",
+    "file": "21-物联网安全-IoT-Security/skills/固件逆向与分析-FirmwareReverseEngineering.md"
+  },
+  {
+    "name": "物联网通信协议安全-iot-communication-security",
+    "description": "评估物联网通信协议的安全性，包括MQTT、CoAP、HTTP/2、AMQP、LoRaWAN等IoT协议的安全配置和漏洞识别。",
+    "domain": "cybersecurity",
+    "subdomain": "iot-security",
+    "tags": [
+      "iot-security",
+      "firmware",
+      "embedded",
+      "ble",
+      "zigbee",
+      "hardware-security"
+    ],
+    "mitre_attack": [
+      "T1465",
+      "T1559",
+      "T1524"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-03",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "21-物联网安全-IoT-Security",
+    "file": "21-物联网安全-IoT-Security/skills/物联网通信协议安全-IoTCommunicationSecurity.md"
+  },
+  {
+    "name": "智能家居与车联网安全-smart-home-connected-vehicle-security",
+    "description": "评估智能家居生态系统和车联网系统的安全性，包括智能家电漏洞分析、Matter协议安全、CAN总线测试和OBD-II安全评估。",
+    "domain": "cybersecurity",
+    "subdomain": "iot-security",
+    "tags": [
+      "iot-security",
+      "firmware",
+      "embedded",
+      "ble",
+      "zigbee",
+      "hardware-security"
+    ],
+    "mitre_attack": [
+      "T1465",
+      "T1559",
+      "T1524"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-03",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "21-物联网安全-IoT-Security",
+    "file": "21-物联网安全-IoT-Security/skills/智能家居与车联网安全-SmartHomeConnectedVehicleSecurity.md"
+  },
+  {
+    "name": "dlp数据防泄漏策略-data-loss-prevention",
+    "description": "数据防泄漏（DLP）通过内容识别、策略控制和行为监控，防止敏感数据通过网络、终端和存储渠道被未授权外泄。覆盖数据**静态**（存储）、**传输中**（网络）和**使用中**（终端）三种状态。",
+    "domain": "cybersecurity",
+    "subdomain": "data-security-privacy",
+    "tags": [
+      "data-security",
+      "privacy",
+      "dlp",
+      "gdpr",
+      "encryption",
+      "data-classification"
+    ],
+    "mitre_attack": [
+      "T1530",
+      "T1048",
+      "T1567"
+    ],
+    "nist_csf": [
+      "PR.DS-01",
+      "PR.DS-02",
+      "PR.DS-05",
+      "ID.GV-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "22-数据安全与隐私-DataSecurityPrivacy",
+    "file": "22-数据安全与隐私-DataSecurityPrivacy/skills/DLP数据防泄漏策略-DataLossPrevention.md"
+  },
+  {
+    "name": "数据脱敏与匿名化-data-masking-anonymization",
+    "description": "数据脱敏和匿名化是通过变形、替换、泛化等技术，在保留数据可用性的前提下消除敏感信息的技术手段。用于测试环境、数据共享、分析和合规场景。关键技术包括：**k-匿名**、**l-多样性**、**t-紧密性**和**差分隐私**。",
+    "domain": "cybersecurity",
+    "subdomain": "data-security-privacy",
+    "tags": [
+      "data-security",
+      "privacy",
+      "dlp",
+      "gdpr",
+      "encryption",
+      "data-classification"
+    ],
+    "mitre_attack": [
+      "T1530",
+      "T1048",
+      "T1567"
+    ],
+    "nist_csf": [
+      "PR.DS-01",
+      "PR.DS-02",
+      "PR.DS-05",
+      "ID.GV-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "22-数据安全与隐私-DataSecurityPrivacy",
+    "file": "22-数据安全与隐私-DataSecurityPrivacy/skills/数据脱敏与匿名化-DataMaskingAnonymization.md"
+  },
+  {
+    "name": "隐私影响评估-pia-privacy-impact-assessment",
+    "description": "隐私影响评估（PIA）/ 数据保护影响评估（DPIA）是识别和降低个人数据处理活动隐私风险的系统性方法。GDPR Art.35 要求在高风险处理前必须进行DPIA。中国《个人信息保护法》第五十五条也要求在自动化决策、委托处理等场景进行影响评估。",
+    "domain": "cybersecurity",
+    "subdomain": "data-security-privacy",
+    "tags": [
+      "data-security",
+      "privacy",
+      "dlp",
+      "gdpr",
+      "encryption",
+      "data-classification"
+    ],
+    "mitre_attack": [
+      "T1530",
+      "T1048",
+      "T1567"
+    ],
+    "nist_csf": [
+      "PR.DS-01",
+      "PR.DS-02",
+      "PR.DS-05",
+      "ID.GV-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "22-数据安全与隐私-DataSecurityPrivacy",
+    "file": "22-数据安全与隐私-DataSecurityPrivacy/skills/隐私影响评估-PIA-PrivacyImpactAssessment.md"
+  },
+  {
+    "name": "gdpr-个保法合规评估-privacy-compliance-assessment",
+    "description": "面向 **GDPR（通用数据保护条例）**、**中国《个人信息保护法》（PIPL）**、**CCPA/CPRA** 等全球主要隐私法规的合规评估方法。涵盖数据处理映射、数据主体权利响应、跨境数据传输、数据保护影响评估（DPIA）等核心合规领域。",
+    "domain": "cybersecurity",
+    "subdomain": "data-security-privacy",
+    "tags": [
+      "data-security",
+      "privacy",
+      "dlp",
+      "gdpr",
+      "encryption",
+      "data-classification"
+    ],
+    "mitre_attack": [
+      "T1530",
+      "T1048",
+      "T1567"
+    ],
+    "nist_csf": [
+      "PR.DS-01",
+      "PR.DS-02",
+      "PR.DS-05",
+      "ID.GV-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "22-数据安全与隐私-DataSecurityPrivacy",
+    "file": "22-数据安全与隐私-DataSecurityPrivacy/skills/GDPR-个保法合规评估-PrivacyCompliance.md"
+  },
+  {
+    "name": "数据库安全与加密-database-security-encryption",
+    "description": "数据库安全涵盖访问控制、审计日志、加密（TDE/列加密）、备份安全和配置加固。保障数据在存储层和应用层的机密性、完整性和可用性。支持关系型、NoSQL和云数据库。",
+    "domain": "cybersecurity",
+    "subdomain": "data-security-privacy",
+    "tags": [
+      "data-security",
+      "privacy",
+      "dlp",
+      "gdpr",
+      "encryption",
+      "data-classification"
+    ],
+    "mitre_attack": [
+      "T1530",
+      "T1048",
+      "T1567"
+    ],
+    "nist_csf": [
+      "PR.DS-01",
+      "PR.DS-02",
+      "PR.DS-05",
+      "ID.GV-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "22-数据安全与隐私-DataSecurityPrivacy",
+    "file": "22-数据安全与隐私-DataSecurityPrivacy/skills/数据库安全与加密-DatabaseSecurityEncryption.md"
+  },
+  {
+    "name": "数据分类与分级保护-data-classification-grading",
+    "description": "数据分类分级是数据安全治理的基石。根据数据的敏感程度、业务影响和法规要求，对数据进行分级标识，并实施差异化的访问控制和保护策略。本标准参考 **ISO 27001**、**等级保护2.0**、**GDPR** 和 **NIST SP 800-60** 等规范。",
+    "domain": "cybersecurity",
+    "subdomain": "data-security-privacy",
+    "tags": [
+      "data-security",
+      "privacy",
+      "dlp",
+      "gdpr",
+      "encryption",
+      "data-classification"
+    ],
+    "mitre_attack": [
+      "T1530",
+      "T1048",
+      "T1567"
+    ],
+    "nist_csf": [
+      "PR.DS-01",
+      "PR.DS-02",
+      "PR.DS-05",
+      "ID.GV-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "22-数据安全与隐私-DataSecurityPrivacy",
+    "file": "22-数据安全与隐私-DataSecurityPrivacy/skills/数据分类与分级保护-DataClassificationGrading.md"
+  },
+  {
+    "name": "钓鱼基础设施搭建-phishing-infrastructure",
+    "description": "钓鱼基础设施包括域名注册、邮件服务器配置、SSL证书、反向代理和追踪系统。专业的基础设施可以显著提高钓鱼测试的成功率和隐蔽性。",
+    "domain": "cybersecurity",
+    "subdomain": "social-engineering",
+    "tags": [
+      "social-engineering",
+      "phishing",
+      "vishing",
+      "physical-security",
+      "awareness"
+    ],
+    "mitre_attack": [
+      "T1566",
+      "T1598",
+      "T1204"
+    ],
+    "nist_csf": [
+      "PR.AT-01",
+      "PR.AT-02"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "23-社会工程学-SocialEngineering",
+    "file": "23-社会工程学-SocialEngineering/skills/钓鱼基础设施搭建-PhishingInfrastructure.md"
+  },
+  {
+    "name": "物理渗透与社会工程-physical-social-engineering",
+    "description": "物理渗透测试通过伪装身份、尾随进入、物理设备植入等方式评估组织的物理安全控制。结合社会工程技术，突破人员、流程和技术的防线。",
+    "domain": "cybersecurity",
+    "subdomain": "social-engineering",
+    "tags": [
+      "social-engineering",
+      "phishing",
+      "vishing",
+      "physical-security",
+      "awareness"
+    ],
+    "mitre_attack": [
+      "T1566",
+      "T1598",
+      "T1204"
+    ],
+    "nist_csf": [
+      "PR.AT-01",
+      "PR.AT-02"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "23-社会工程学-SocialEngineering",
+    "file": "23-社会工程学-SocialEngineering/skills/物理渗透与社会工程-PhysicalSocialEngineering.md"
+  },
+  {
+    "name": "钓鱼邮件模拟-phishing-simulation",
+    "description": "钓鱼邮件模拟是评估组织员工安全意识和检测安全控制的有效方法。通过构造逼真的钓鱼场景，测量员工的识别和响应能力，持续提升组织的防钓鱼能力。",
+    "domain": "cybersecurity",
+    "subdomain": "social-engineering",
+    "tags": [
+      "social-engineering",
+      "phishing",
+      "vishing",
+      "physical-security",
+      "awareness"
+    ],
+    "mitre_attack": [
+      "T1566",
+      "T1598",
+      "T1204"
+    ],
+    "nist_csf": [
+      "PR.AT-01",
+      "PR.AT-02"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "23-社会工程学-SocialEngineering",
+    "file": "23-社会工程学-SocialEngineering/skills/钓鱼邮件模拟-PhishingSimulation.md"
+  },
+  {
+    "name": "电话诈骗与vishing测试-vishing-testing",
+    "description": "Vishing（语音钓鱼）是通过电话进行的社交工程攻击。测试人员模拟可信实体（IT支持、银行、供应商）通过电话获取敏感信息。本节涵盖脚本编写、通话自动化、录音分析和防御策略。",
+    "domain": "cybersecurity",
+    "subdomain": "social-engineering",
+    "tags": [
+      "social-engineering",
+      "phishing",
+      "vishing",
+      "physical-security",
+      "awareness"
+    ],
+    "mitre_attack": [
+      "T1566",
+      "T1598",
+      "T1204"
+    ],
+    "nist_csf": [
+      "PR.AT-01",
+      "PR.AT-02"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "23-社会工程学-SocialEngineering",
+    "file": "23-社会工程学-SocialEngineering/skills/电话诈骗与Vishing测试-VishingTesting.md"
+  },
+  {
+    "name": "员工安全意识评估-security-awareness-assessment",
+    "description": "员工安全意识评估通过钓鱼模拟、知识测试、行为分析等方法测量组织的安全文化成熟度，识别高风险人群，指导针对性培训。",
+    "domain": "cybersecurity",
+    "subdomain": "social-engineering",
+    "tags": [
+      "social-engineering",
+      "phishing",
+      "vishing",
+      "physical-security",
+      "awareness"
+    ],
+    "mitre_attack": [
+      "T1566",
+      "T1598",
+      "T1204"
+    ],
+    "nist_csf": [
+      "PR.AT-01",
+      "PR.AT-02"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "23-社会工程学-SocialEngineering",
+    "file": "23-社会工程学-SocialEngineering/skills/员工安全意识评估-SecurityAwarenessAssessment.md"
+  },
+  {
+    "name": "闭环防御改进-defense-improvement-cycle",
+    "description": "闭环防御改进通过PDCA（计划-执行-检查-改进）循环，将红蓝对抗发现转化为具体的防御增强措施。核心包括：**发现度量**、**差距分析**、**改进跟踪**和**效果验证**。",
+    "domain": "cybersecurity",
+    "subdomain": "red-blue-team",
+    "tags": [
+      "red-team",
+      "blue-team",
+      "purple-team",
+      "bas",
+      "adversary-simulation"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1562"
+    ],
+    "nist_csf": [
+      "DE.AE-02",
+      "RS.AN-01",
+      "ID.RM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "24-红蓝对抗-RedBlueTeam",
+    "file": "24-红蓝对抗-RedBlueTeam/skills/闭环防御改进-DefenseImprovementCycle.md"
+  },
+  {
+    "name": "红队评估方法论-red-team-assessment",
+    "description": "红队评估通过模拟真实攻击者的TTP（战术、技术和流程），全面测试组织的检测响应能力。红队评估超越传统渗透测试，以攻击场景为目标，评估整体安全防御体系的有效性。",
+    "domain": "cybersecurity",
+    "subdomain": "red-blue-team",
+    "tags": [
+      "red-team",
+      "blue-team",
+      "purple-team",
+      "bas",
+      "adversary-simulation"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1562"
+    ],
+    "nist_csf": [
+      "DE.AE-02",
+      "RS.AN-01",
+      "ID.RM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "24-红蓝对抗-RedBlueTeam",
+    "file": "24-红蓝对抗-RedBlueTeam/skills/红队评估方法论-RedTeamAssessment.md"
+  },
+  {
+    "name": "蓝队防御与检测-blue-team-defense-detection",
+    "description": "蓝队负责检测、分析和响应安全威胁。基于 **NIST SP 800-61** 和 **MITRE ATT&CK** 框架，构建从日志收集到告警响应的完整检测防御体系，覆盖SIEM规则编写、威胁狩猎、EDR配置和SOC运营。",
+    "domain": "cybersecurity",
+    "subdomain": "red-blue-team",
+    "tags": [
+      "red-team",
+      "blue-team",
+      "purple-team",
+      "bas",
+      "adversary-simulation"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1562"
+    ],
+    "nist_csf": [
+      "DE.AE-02",
+      "RS.AN-01",
+      "ID.RM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "24-红蓝对抗-RedBlueTeam",
+    "file": "24-红蓝对抗-RedBlueTeam/skills/蓝队防御与检测-BlueTeamDefense.md"
+  },
+  {
+    "name": "bas攻击模拟平台-breach-attack-simulation",
+    "description": "BAS（入侵与攻击模拟）平台通过持续自动化地模拟真实攻击行为，验证安全控制（防火墙、EDR、SIEM、WAF等）的有效性。相比传统渗透测试，BAS提供**持续验证**、**闭环度量**和**量化风险降低**的能力。",
+    "domain": "cybersecurity",
+    "subdomain": "red-blue-team",
+    "tags": [
+      "red-team",
+      "blue-team",
+      "purple-team",
+      "bas",
+      "adversary-simulation"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1562"
+    ],
+    "nist_csf": [
+      "DE.AE-02",
+      "RS.AN-01",
+      "ID.RM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "24-红蓝对抗-RedBlueTeam",
+    "file": "24-红蓝对抗-RedBlueTeam/skills/BAS攻击模拟平台-BreachAttackSimulation.md"
+  },
+  {
+    "name": "紫队协作评估-purple-team-exercise",
+    "description": "紫队是红队和蓝队的协作机制，通过共同演练和验证安全控制有效性，实现防御能力的持续提升。紫队评估关注**检测覆盖验证**、**响应流程检验**和**防御能力度量**。",
+    "domain": "cybersecurity",
+    "subdomain": "red-blue-team",
+    "tags": [
+      "red-team",
+      "blue-team",
+      "purple-team",
+      "bas",
+      "adversary-simulation"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1562"
+    ],
+    "nist_csf": [
+      "DE.AE-02",
+      "RS.AN-01",
+      "ID.RM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "24-红蓝对抗-RedBlueTeam",
+    "file": "24-红蓝对抗-RedBlueTeam/skills/紫队协作评估-PurpleTeamExercise.md"
+  },
+  {
+    "name": "agent-黑客技能集-agent-hack-skills",
+    "description": "这是一个面向 AI Agent 的全能黑客技能知识库，旨在赋予智能体执行专业级渗透测试、漏洞赏金和红队评估的能力。",
+    "domain": "cybersecurity",
+    "subdomain": "red-blue-team",
+    "tags": [
+      "agent-security",
+      "automated-pentest",
+      "red-teaming",
+      "skill-library"
+    ],
+    "mitre_attack": [
+      "T1595",
+      "T1190",
+      "T1068"
+    ],
+    "nist_csf": [
+      "ID.RA-01",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "24-红蓝对抗-RedBlueTeam",
+    "file": "24-红蓝对抗-RedBlueTeam/skills/Agent黑客技能集-AgentHackSkills.md"
+  },
+  {
+    "name": "供应链攻击检测与响应-supply-chain-attack-detection-response",
+    "description": "供应链攻击（如 SolarWinds、Codecov、Log4Shell）利用软件供应链的信任关系，通过污染上游组件来攻陷下游用户。检测和响应供应链攻击需要多层可见性和快速响应能力。",
+    "domain": "cybersecurity",
+    "subdomain": "supply-chain-security",
+    "tags": [
+      "supply-chain-security",
+      "sbom",
+      "dependency-check",
+      "container-image",
+      "third-party-risk"
+    ],
+    "mitre_attack": [
+      "T1195",
+      "T1525"
+    ],
+    "nist_csf": [
+      "ID.SC-01",
+      "ID.SC-02",
+      "PR.DS-10"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "25-供应链安全-SupplyChainSecurity",
+    "file": "25-供应链安全-SupplyChainSecurity/skills/供应链攻击检测与响应-SupplyChainAttackResponse.md"
+  },
+  {
+    "name": "软件依赖与开源合规审计-dependency-license-compliance",
+    "description": "开源组件已成为软件的基石，但许可证合规风险也随之增加。本节涵盖许可证识别、合规检查、策略实施和自动化审计，确保开源使用符合法律要求。",
+    "domain": "cybersecurity",
+    "subdomain": "supply-chain-security",
+    "tags": [
+      "supply-chain-security",
+      "sbom",
+      "dependency-check",
+      "container-image",
+      "third-party-risk"
+    ],
+    "mitre_attack": [
+      "T1195",
+      "T1525"
+    ],
+    "nist_csf": [
+      "ID.SC-01",
+      "ID.SC-02",
+      "PR.DS-10"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "25-供应链安全-SupplyChainSecurity",
+    "file": "25-供应链安全-SupplyChainSecurity/skills/软件依赖与开源合规审计-DependencyLicenseCompliance.md"
+  },
+  {
+    "name": "代码签名与供应链完整性-code-signing-supply-chain-integrity",
+    "description": "代码签名确保软件的**来源真实性**和**完整性**。通过数字签名、透明日志和可验证构建，构建从开发到部署的信任链。核心技术包括 **Sigstore**、**SLSA** 框架和 **in-toto** 元数据。",
+    "domain": "cybersecurity",
+    "subdomain": "supply-chain-security",
+    "tags": [
+      "supply-chain-security",
+      "sbom",
+      "dependency-check",
+      "container-image",
+      "third-party-risk"
+    ],
+    "mitre_attack": [
+      "T1195",
+      "T1525"
+    ],
+    "nist_csf": [
+      "ID.SC-01",
+      "ID.SC-02",
+      "PR.DS-10"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "25-供应链安全-SupplyChainSecurity",
+    "file": "25-供应链安全-SupplyChainSecurity/skills/代码签名与供应链完整性-CodeSigningIntegrity.md"
+  },
+  {
+    "name": "sbom生成与验证-sbom-generation-verification",
+    "description": "SBOM（软件物料清单）是供应链安全的基石。通过生成和维护SBOM，组织可以清晰了解软件中包含的组件、依赖和许可证信息，快速响应漏洞事件。标准格式包括 **SPDX**、**CycloneDX** 和 **SWID**。",
+    "domain": "cybersecurity",
+    "subdomain": "supply-chain-security",
+    "tags": [
+      "supply-chain-security",
+      "sbom",
+      "dependency-check",
+      "container-image",
+      "third-party-risk"
+    ],
+    "mitre_attack": [
+      "T1195",
+      "T1525"
+    ],
+    "nist_csf": [
+      "ID.SC-01",
+      "ID.SC-02",
+      "PR.DS-10"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "25-供应链安全-SupplyChainSecurity",
+    "file": "25-供应链安全-SupplyChainSecurity/skills/SBOM生成与验证-SBOMGeneration.md"
+  },
+  {
+    "name": "第三方供应商风险评估-third-party-vendor-risk-assessment",
+    "description": "第三方供应商是供应链安全中最薄弱的环节之一。通过系统化的供应商安全评估、持续监控和合同约束，有效管理由外部合作伙伴带来的安全风险。",
+    "domain": "cybersecurity",
+    "subdomain": "supply-chain-security",
+    "tags": [
+      "supply-chain-security",
+      "sbom",
+      "dependency-check",
+      "container-image",
+      "third-party-risk"
+    ],
+    "mitre_attack": [
+      "T1195",
+      "T1525"
+    ],
+    "nist_csf": [
+      "ID.SC-01",
+      "ID.SC-02",
+      "PR.DS-10"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "25-供应链安全-SupplyChainSecurity",
+    "file": "25-供应链安全-SupplyChainSecurity/skills/第三方供应商风险评估-ThirdPartyVendorRisk.md"
+  },
+  {
+    "name": "漏洞奖励计划与安全众测-bug-bounty-crowdsourced-testing",
+    "description": "漏洞奖励计划和众测利用全球白帽社区的力量，发现传统安全测试难以覆盖的安全盲区。相比传统渗透测试，众测具有**持续覆盖、成本弹性、人才多样性**等优势。核心能力包括**计划设计、平台运营、漏洞分级、社区管理和ROI度量**。",
+    "domain": "cybersecurity",
+    "subdomain": "vulnerability-management",
+    "tags": [
+      "vulnerability-management",
+      "cve",
+      "patch-management",
+      "bug-bounty",
+      "prioritization"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.RA-01",
+      "PR.IP-12",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "26-漏洞管理-VulnerabilityManagement",
+    "file": "26-漏洞管理-VulnerabilityManagement/skills/漏洞奖励计划与安全众测-BugBountyCrowdsourcedTesting.md"
+  },
+  {
+    "name": "漏洞优先级与风险评估-vulnerability-prioritization-risk-assessment",
+    "description": "漏洞优先级是漏洞管理的核心决策环节。面对大量漏洞，需要结合**CVSS评分、EPSS利用概率、业务上下文、资产价值和威胁情报**进行多维度综合评估，确定修复顺序。核心能力包括**CVSS评分、EPSS分析、业务风险加权和修复优先级矩阵**。",
+    "domain": "cybersecurity",
+    "subdomain": "vulnerability-management",
+    "tags": [
+      "vulnerability-management",
+      "cve",
+      "patch-management",
+      "bug-bounty",
+      "prioritization"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.RA-01",
+      "PR.IP-12",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "26-漏洞管理-VulnerabilityManagement",
+    "file": "26-漏洞管理-VulnerabilityManagement/skills/漏洞优先级与风险评估-VulnerabilityPrioritization.md"
+  },
+  {
+    "name": "漏洞验证与poc测试-vulnerability-verification-poc-testing",
+    "description": "漏洞验证是连接扫描发现与修复决策的关键环节。通过可控的PoC（Proof of Concept）测试，确认漏洞的真实性、可利用性和影响范围，避免盲目修复耗费资源和误报带来的安全盲区。核心能力包括**PoC获取与评估、沙箱复现、自动化验证和验证报告生成**。",
+    "domain": "cybersecurity",
+    "subdomain": "vulnerability-management",
+    "tags": [
+      "vulnerability-management",
+      "cve",
+      "patch-management",
+      "bug-bounty",
+      "prioritization"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.RA-01",
+      "PR.IP-12",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "26-漏洞管理-VulnerabilityManagement",
+    "file": "26-漏洞管理-VulnerabilityManagement/skills/漏洞验证与PoC测试-VulnerabilityVerification.md"
+  },
+  {
+    "name": "漏洞生命周期闭环管理-vulnerability-lifecycle-management",
+    "description": "漏洞生命周期管理将漏洞从发现到关闭的全过程纳入可追踪、可度量的闭环体系。核心原则：**发现→评估→分配→修复→验证→关闭**，每个阶段都通过工单系统流转，确保无漏洞被遗漏。核心能力包括**工单流转、SLA管理、修复验证和度量报告**。",
+    "domain": "cybersecurity",
+    "subdomain": "vulnerability-management",
+    "tags": [
+      "vulnerability-management",
+      "cve",
+      "patch-management",
+      "bug-bounty",
+      "prioritization"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.RA-01",
+      "PR.IP-12",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "26-漏洞管理-VulnerabilityManagement",
+    "file": "26-漏洞管理-VulnerabilityManagement/skills/漏洞生命周期闭环管理-VulnerabilityLifecycle.md"
+  },
+  {
+    "name": "漏洞情报与cve查询-vulnerability-intelligence-cve-query",
+    "description": "漏洞情报是漏洞管理的起点。通过自动化查询NVD、CNNVD、Exploit-DB等漏洞数据库，结合威胁情报源（CISA KEV、EPSS、暗网监控），实现对漏洞的快速发现、精准关联和优先级预判。核心能力包括**CVE检索、漏洞库聚合、情报丰富化和自动预警**。",
+    "domain": "cybersecurity",
+    "subdomain": "vulnerability-management",
+    "tags": [
+      "vulnerability-management",
+      "cve",
+      "patch-management",
+      "bug-bounty",
+      "prioritization"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.RA-01",
+      "PR.IP-12",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "26-漏洞管理-VulnerabilityManagement",
+    "file": "26-漏洞管理-VulnerabilityManagement/skills/漏洞情报与CVE查询-VulnerabilityIntelligence.md"
+  },
+  {
+    "name": "漏洞修复与补丁管理-vulnerability-remediation-patch-management",
+    "description": "漏洞修复是漏洞管理的最终交付环节。补丁管理需要兼顾**速度与稳定性**，在缩短暴露窗口的同时避免补丁引入新的问题。核心能力包括**补丁分类与紧急度判断、自动化部署、虚拟补丁缓解和修复验证回滚机制**。",
+    "domain": "cybersecurity",
+    "subdomain": "vulnerability-management",
+    "tags": [
+      "vulnerability-management",
+      "cve",
+      "patch-management",
+      "bug-bounty",
+      "prioritization"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.RA-01",
+      "PR.IP-12",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "26-漏洞管理-VulnerabilityManagement",
+    "file": "26-漏洞管理-VulnerabilityManagement/skills/漏洞修复与补丁管理-VulnerabilityRemediation.md"
+  },
+  {
+    "name": "国产操作系统安全加固-domestic-os-security-hardening",
+    "description": "国产操作系统在政府、军工、金融、能源等关键基础设施领域的部署快速增长，其安全加固能力直接关系到国家安全。本技能覆盖银河麒麟（KylinOS）、统信 UOS、华为 openEuler 等主流国产操作系统的安全加固实践，以等保2.0 三级要求为核心基线，结合 GB/T 39786-2021《信息安全技术 操作系统安全技术要求》和 CIS 基准的适用部分，系统覆盖身份鉴别、访问控制、安全审计、密码合规（",
+    "domain": "cybersecurity",
+    "subdomain": "os-security",
+    "tags": [
+      "os-security",
+      "windows-hardening",
+      "linux-hardening",
+      "macos",
+      "privilege-escalation"
+    ],
+    "mitre_attack": [
+      "T1548",
+      "T1552",
+      "T1562"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-07",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "27-操作系统安全-OSSecurity",
+    "file": "27-操作系统安全-OSSecurity/skills/国产操作系统安全加固-DomesticOSSecurity.md"
+  },
+  {
+    "name": "windows安全加固与基线检查-windows-hardening-baseline",
+    "description": "Windows 系统安全加固是保障企业环境安全的基础。本技能以 CIS Microsoft Windows Server Benchmarks、等保2.0 三级安全要求、Microsoft 安全基线为参考，系统覆盖 Windows 系统安全配置、组策略加固、用户权限管理、服务加固、安全功能配置等核心领域，帮助安全运维人员建立标准化的 Windows 安全加固体系。",
+    "domain": "cybersecurity",
+    "subdomain": "os-security",
+    "tags": [
+      "os-security",
+      "windows-hardening",
+      "linux-hardening",
+      "macos",
+      "privilege-escalation"
+    ],
+    "mitre_attack": [
+      "T1548",
+      "T1552",
+      "T1562"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-07",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "27-操作系统安全-OSSecurity",
+    "file": "27-操作系统安全-OSSecurity/skills/Windows安全加固与基线检查-WindowsHardeningBaseline.md"
+  },
+  {
+    "name": "linux安全加固与基线检查-linux-hardening-baseline",
+    "description": "Linux 系统是企业基础设施的核心组成部分，安全加固是防范攻击的第一道防线。本技能以 CIS Linux Benchmarks、等保2.0 三级要求、NIST SP 800-53 为参考，系统化覆盖 Linux 内核参数调优、身份鉴别与访问控制、SELinux/AppArmor 强制访问控制、系统审计、网络层加固等关键领域，适用于 CentOS/RHEL、Ubuntu、Debian 等主流发行版",
+    "domain": "cybersecurity",
+    "subdomain": "os-security",
+    "tags": [
+      "os-security",
+      "windows-hardening",
+      "linux-hardening",
+      "macos",
+      "privilege-escalation"
+    ],
+    "mitre_attack": [
+      "T1548",
+      "T1552",
+      "T1562"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-07",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "27-操作系统安全-OSSecurity",
+    "file": "27-操作系统安全-OSSecurity/skills/Linux安全加固与基线检查-LinuxHardeningBaseline.md"
+  },
+  {
+    "name": "macos安全评估与加固-macos-security-assessment-hardening",
+    "description": "macOS 在企业环境中日益普及，其基于 XNU 内核的安全机制（SIP、TCC、AMFI、XProtect）与其他操作系统有显著差异。本技能覆盖 macOS 安全架构解析、本地安全评估、隐私保护与 TCC 策略管理、端点检测与响应配置、企业 MDM 安全策略实施，同时涵盖 macOS 攻击面分析（恶意软件持续化、TCC 绕过、Gatekeeper 逃逸等），帮助安全人员全面评估和加固 macOS",
+    "domain": "cybersecurity",
+    "subdomain": "os-security",
+    "tags": [
+      "os-security",
+      "windows-hardening",
+      "linux-hardening",
+      "macos",
+      "privilege-escalation"
+    ],
+    "mitre_attack": [
+      "T1548",
+      "T1552",
+      "T1562"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-07",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "27-操作系统安全-OSSecurity",
+    "file": "27-操作系统安全-OSSecurity/skills/macOS安全评估与加固-macOSSecurityHardening.md"
+  },
+  {
+    "name": "linux攻击与权限维持技术-linux-attack-persistence",
+    "description": "Linux 系统的攻击技术涵盖本地权限维持、凭据窃取、持久化后门、rootkit 安装、容器逃逸等多个维度。本技能深入覆盖超出基础提权枚举（模块04已覆盖）的进阶 Linux 攻击手法，包括 capabilities 滥用、LD_PRELOAD 劫持、动态链接库注入、systemd-managed 持久化、LKM rootkit、eBPF 逃逸检测等，为渗透测试和红队评估提供系统化的技术参考。",
+    "domain": "cybersecurity",
+    "subdomain": "os-security",
+    "tags": [
+      "os-security",
+      "windows-hardening",
+      "linux-hardening",
+      "macos",
+      "privilege-escalation"
+    ],
+    "mitre_attack": [
+      "T1548",
+      "T1552",
+      "T1562"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-07",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "27-操作系统安全-OSSecurity",
+    "file": "27-操作系统安全-OSSecurity/skills/Linux攻击与权限维持技术-LinuxAttackPersistence.md"
+  },
+  {
+    "name": "windows攻击与横向移动技术-windows-attack-lateral-movement",
+    "description": "Windows 域环境攻击是红队评估和渗透测试的核心能力。本技能覆盖 Active Directory 攻击技术、Kerberos 协议滥用、NTLM 中继攻击、ACL 滥用、域横向移动等关键技术，帮助安全测试人员深入理解 Windows 身份认证机制和安全缺陷，同时为蓝队防御提供检测视角。参考 MITRE ATT&CK 框架和等保2.0 中对域控安全的防护要求。",
+    "domain": "cybersecurity",
+    "subdomain": "os-security",
+    "tags": [
+      "os-security",
+      "windows-hardening",
+      "linux-hardening",
+      "macos",
+      "privilege-escalation"
+    ],
+    "mitre_attack": [
+      "T1548",
+      "T1552",
+      "T1562"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-07",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "27-操作系统安全-OSSecurity",
+    "file": "27-操作系统安全-OSSecurity/skills/Windows攻击与横向移动技术-WindowsAttackLateralMovement.md"
+  },
+  {
+    "name": "基于att-ck的威胁狩猎-mitre-att-ck-threat-hunting",
+    "description": "MITRE ATT&CK 是全球公认的对抗性战术和技术知识库，为威胁狩猎提供结构化框架。本技能基于 ATT&CK v15+，覆盖攻击路径分析、覆盖度评估、热力图生成、对抗模拟验证等核心技术。通过将 ATT&CK 作为狩猎的\"脚手架\"，安全团队可以系统化识别防御盲区。",
+    "domain": "cybersecurity",
+    "subdomain": "threat-hunting",
+    "tags": [
+      "mitre-attack",
+      "threat-hunting",
+      "coverage-gap",
+      "adversary-emulation"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "DE.AE-01",
+      "DE.AE-03",
+      "ID.GV-04"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "28-威胁狩猎-ThreatHunting",
+    "file": "28-威胁狩猎-ThreatHunting/skills/ATT&CK威胁狩猎-MITREAttackHunting.md"
+  },
+  {
+    "name": "威胁狩猎方法论与假设驱动-threat-hunting-methodology-hypothesis",
+    "description": "威胁狩猎（Threat Hunting）是在传统检测规则触发之前，主动搜索网络中潜在威胁的过程。其核心是基于假设驱动（Hypothesis-Driven）的方法论，利用威胁情报、ATT&CK 框架、异常分析等技术，在攻击者造成实质性损害前发现其踪迹。本技能覆盖狩猎全流程：假设生成 → 数据采集 → 分析验证 → 闭环改进。",
+    "domain": "cybersecurity",
+    "subdomain": "threat-hunting",
+    "tags": [
+      "threat-hunting",
+      "hypothesis",
+      "methodology",
+      "ioc",
+      "analytics"
+    ],
+    "mitre_attack": [
+      "T1046",
+      "T1057",
+      "T1082",
+      "T1087",
+      "T1482"
+    ],
+    "nist_csf": [
+      "DE.AE-01",
+      "DE.AE-02",
+      "DE.DP-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "28-威胁狩猎-ThreatHunting",
+    "file": "28-威胁狩猎-ThreatHunting/skills/威胁狩猎方法论-ThreatHuntingMethodology.md"
+  },
+  {
+    "name": "网络流量与日志异常检测-network-traffic-log-anomaly-detection",
+    "description": "网络流量异常检测是威胁狩猎的核心能力之一，常用于发现 DNS 隧道、C2 通信、数据外传等隐蔽行为。本技能覆盖流量层面（Zeek/包分析）和日志层面（Windows Event/EDR/代理日志）的异常检测技术，结合统计分析和机器学习方法识别偏离基线的行为。",
+    "domain": "cybersecurity",
+    "subdomain": "threat-hunting",
+    "tags": [
+      "anomaly-detection",
+      "network-traffic",
+      "dns",
+      "beaconing",
+      "log-analysis"
+    ],
+    "mitre_attack": [
+      "T1041",
+      "T1071",
+      "T1095",
+      "T1571",
+      "T1572"
+    ],
+    "nist_csf": [
+      "DE.AE-02",
+      "DE.AE-04",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "28-威胁狩猎-ThreatHunting",
+    "file": "28-威胁狩猎-ThreatHunting/skills/网络流量与日志异常检测-TrafficLogAnomalyDetection.md"
+  },
+  {
+    "name": "基于sigma规则的检测工程-sigma-rule-detection-engineering",
+    "description": "Sigma 是开源的通用检测规则格式，类似 YARA 但面向日志事件。它允许安全团队编写一次检测规则，便可转换为 Splunk、Elasticsearch QL、KQL、ArcSight、QRadar 等 20+ 种 SIEM 平台的查询语言。本技能覆盖 Sigma 规则编写、转换、测试和部署的全流程。",
+    "domain": "cybersecurity",
+    "subdomain": "threat-hunting",
+    "tags": [
+      "sigma",
+      "detection",
+      "rules",
+      "siem",
+      "yara",
+      "threat-hunting"
+    ],
+    "mitre_attack": [
+      "T1059",
+      "T1055",
+      "T1078",
+      "T1134",
+      "T1569"
+    ],
+    "nist_csf": [
+      "DE.AE-02",
+      "DE.CM-01",
+      "DE.CM-04"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "28-威胁狩猎-ThreatHunting",
+    "file": "28-威胁狩猎-ThreatHunting/skills/Sigma规则检测工程-SigmaRuleEngineering.md"
+  },
+  {
+    "name": "apt组织分析与归因-apt-group-analysis-attribution",
+    "description": "APT（高级持续威胁）组织分析是威胁情报的最高阶能力，涉及对手 TTP 分析、恶意软件关联、基础设施追踪和归因推理。本技能覆盖 APT 组织画像构建、攻击活动图谱分析、归因证据链和报告生成。参考 MITRE ATT&CK 的 140+ 个已知威胁行为体数据。",
+    "domain": "cybersecurity",
+    "subdomain": "threat-intelligence",
+    "tags": [
+      "apt",
+      "attribution",
+      "threat-actor",
+      "intelligence",
+      "malware-analysis"
+    ],
+    "mitre_attack": [
+      "T1587",
+      "T1588",
+      "T1593",
+      "T1594"
+    ],
+    "nist_csf": [
+      "ID.RA-02",
+      "RS.AN-01",
+      "DE.AE-05"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "29-威胁情报-ThreatIntelligence",
+    "file": "29-威胁情报-ThreatIntelligence/skills/APT组织分析与归因-APTGroupAnalysisAttribution.md"
+  },
+  {
+    "name": "威胁情报驱动安全运营-threat-intel-driven-security-operations",
+    "description": "威胁情报的核心价值在于驱动安全运营决策。本技能覆盖 IOC 自动化导入、威胁情报与 SIEM 联动、基于情报的告警优先级排序、自动化阻断响应等场景。通过将外部情报与内部遥测数据关联，实现从\"被动告警\"到\"情报驱动\"的运营升级。",
+    "domain": "cybersecurity",
+    "subdomain": "threat-intelligence",
+    "tags": [
+      "threat-intelligence",
+      "security-operations",
+      "automation",
+      "ioc",
+      "intel-driven"
+    ],
+    "mitre_attack": [
+      "T1041",
+      "T1071",
+      "T1568",
+      "T1573"
+    ],
+    "nist_csf": [
+      "DE.CM-04",
+      "DE.AE-03",
+      "RS.AN-01",
+      "RS.CO-02"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "29-威胁情报-ThreatIntelligence",
+    "file": "29-威胁情报-ThreatIntelligence/skills/威胁情报驱动安全运营-ThreatIntelDrivenSOC.md"
+  },
+  {
+    "name": "misp平台部署与威胁情报共享-misp-deployment-threat-intel-sharing",
+    "description": "MISP（Malware Information Sharing Platform）是目前全球应用最广泛的开源威胁情报共享平台。本技能覆盖 MISP 平台部署、事件管理、Galaxy 使用、自动化导入导出、Cortex 集成联动等技术。",
+    "domain": "cybersecurity",
+    "subdomain": "threat-intelligence",
+    "tags": [
+      "misp",
+      "threat-intelligence",
+      "sharing",
+      "galaxy",
+      "cortex"
+    ],
+    "mitre_attack": [
+      "T1583",
+      "T1597"
+    ],
+    "nist_csf": [
+      "DE.AE-01",
+      "ID.RA-02",
+      "RS.CO-04"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "29-威胁情报-ThreatIntelligence",
+    "file": "29-威胁情报-ThreatIntelligence/skills/MISP部署与威胁情报共享-MISPDeploymentIntelSharing.md"
+  },
+  {
+    "name": "威胁情报馈入与taxii-stix管理-threat-intelligence-feeds-taxii-stix",
+    "description": "威胁情报的自动化采集和消费是现代安全运营的基础。STIX（Structured Threat Information Expression）和 TAXII（Trusted Automated Exchange of Intelligence Resources）是业界标准的威胁情报交换格式和协议。本技能覆盖威胁情报馈入源管理、STIX 对象解析、TAXII 客户端配置、IOC 提取和情报质量评估。",
+    "domain": "cybersecurity",
+    "subdomain": "threat-intelligence",
+    "tags": [
+      "threat-intelligence",
+      "stix",
+      "taxii",
+      "cti",
+      "ioc",
+      "feed-management"
+    ],
+    "mitre_attack": [
+      "T1583",
+      "T1584",
+      "T1595",
+      "T1597"
+    ],
+    "nist_csf": [
+      "DE.AE-01",
+      "ID.RA-02",
+      "RS.AN-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "29-威胁情报-ThreatIntelligence",
+    "file": "29-威胁情报-ThreatIntelligence/skills/威胁情报馈入与TAXII-STIX管理-ThreatIntelFeedsTAXIISTIX.md"
+  },
+  {
+    "name": "linux数字取证分析-linux-digital-forensics",
+    "description": "Linux 系统在服务器和云环境中占据主导地位，也是攻击者常针对的目标。本技能覆盖 Linux 系统取证中的关键痕迹源，包括日志系统、文件系统时间轴、用户活动、持久化机制和 Rootkit 检测。",
+    "domain": "cybersecurity",
+    "subdomain": "digital-forensics",
+    "tags": [
+      "forensics",
+      "linux",
+      "system-analysis",
+      "artifact",
+      "incident-response"
+    ],
+    "mitre_attack": [
+      "T1059",
+      "T1505",
+      "T1543",
+      "T1546",
+      "T1554"
+    ],
+    "nist_csf": [
+      "DE.AE-02",
+      "DE.CM-04",
+      "RS.AN-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "30-数字取证-DigitalForensics",
+    "file": "30-数字取证-DigitalForensics/skills/Linux数字取证分析-LinuxDigitalForensics.md"
+  },
+  {
+    "name": "浏览器与邮件取证-browser-email-forensics",
+    "description": "浏览器和电子邮件是日常网络活动的核心工具，也是数字取证中最丰富的证据源。浏览器历史记录包含用户的网页访问轨迹、搜索记录、下载文件信息；电子邮件则记录了通信往来和社交工程攻击的线索。本技能覆盖主流浏览器（Chrome/Firefox/Edge）和邮件客户端（Outlook/Thunderbird）的取证分析。",
+    "domain": "cybersecurity",
+    "subdomain": "digital-forensics",
+    "tags": [
+      "forensics",
+      "browser",
+      "email",
+      "web-history",
+      "pst-analysis"
+    ],
+    "mitre_attack": [
+      "T1071",
+      "T1114",
+      "T1557",
+      "T1566"
+    ],
+    "nist_csf": [
+      "DE.AE-02",
+      "DE.CM-07",
+      "RS.AN-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "30-数字取证-DigitalForensics",
+    "file": "30-数字取证-DigitalForensics/skills/浏览器与邮件取证-BrowserEmailForensics.md"
+  },
+  {
+    "name": "磁盘镜像与证据获取-disk-imaging-evidence-acquisition",
+    "description": "证据获取是数字取证的第一步，也是最关键的一步。任何取证分析的质量都取决于原始证据的完整性。本技能覆盖磁盘镜像工具的使用、写保护技术、证据保管链管理、哈希校验、文件系统分析、Windows/Linux痕迹取证与文件恢复。",
+    "domain": "cybersecurity",
+    "subdomain": "digital-forensics",
+    "tags": [
+      "forensics",
+      "disk-imaging",
+      "evidence-acquisition",
+      "chain-of-custody",
+      "hash-verification"
+    ],
+    "mitre_attack": [
+      "T1003",
+      "T1552",
+      "T1560"
+    ],
+    "nist_csf": [
+      "DE.CM-07",
+      "DE.AE-05",
+      "ID.RA-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "30-数字取证-DigitalForensics",
+    "file": "30-数字取证-DigitalForensics/skills/磁盘镜像与证据获取-DiskImagingEvidenceAcquisition.md"
+  },
+  {
+    "name": "内存取证分析-memory-forensics-with-volatility",
+    "description": "内存取证是数字取证和事件响应（DFIR）的核心技术。攻击者留下的恶意代码和证据通常在内存中，而不会写入磁盘。本技能覆盖内存获取、Volatility 插件使用、进程分析、网络连接恢复、Rootkit 检测和恶意代码提取。",
+    "domain": "cybersecurity",
+    "subdomain": "digital-forensics",
+    "tags": [
+      "forensics",
+      "memory-analysis",
+      "volatility",
+      "ram",
+      "malware-analysis"
+    ],
+    "mitre_attack": [
+      "T1003",
+      "T1055",
+      "T1071",
+      "T1564"
+    ],
+    "nist_csf": [
+      "DE.AE-02",
+      "DE.AE-05",
+      "RS.AN-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "30-数字取证-DigitalForensics",
+    "file": "30-数字取证-DigitalForensics/skills/内存取证分析-Volatility-MemoryForensicsVolatility.md"
+  },
+  {
+    "name": "windows数字取证分析-windows-digital-forensics",
+    "description": "Windows 操作系统在运行过程中会产生大量的取证痕迹，包括文件系统元数据、注册表、事件日志和各类应用痕迹。本技能覆盖 Windows 核心取证痕迹的提取与分析，包括 MFT、USN Journal、Event Logs、Prefetch、Shimcache、Amcache、SRUM 等。",
+    "domain": "cybersecurity",
+    "subdomain": "digital-forensics",
+    "tags": [
+      "forensics",
+      "windows",
+      "artifacts",
+      "event-logs",
+      "timeline-analysis"
+    ],
+    "mitre_attack": [
+      "T1003",
+      "T1070",
+      "T1071",
+      "T1546",
+      "T1564"
+    ],
+    "nist_csf": [
+      "DE.AE-02",
+      "DE.CM-04",
+      "RS.AN-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "30-数字取证-DigitalForensics",
+    "file": "30-数字取证-DigitalForensics/skills/Windows数字取证分析-WindowsDigitalForensics.md"
+  },
+  {
+    "name": "soc指标与运营效能度量-soc-metrics-operational-kpis",
+    "description": "安全运营中心的效能需要通过关键绩效指标（KPI）进行量化度量。本技能覆盖 SOC 运营的核心指标，包括检测覆盖率、响应时效、告警质量、团队效能和整体安全态势评估，以及可视化仪表盘构建。",
+    "domain": "cybersecurity",
+    "subdomain": "soc-operations",
+    "tags": [
+      "soc",
+      "metrics",
+      "kpi",
+      "reporting",
+      "performance-measurement"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "DE.DP-01",
+      "RS.IM-01",
+      "RS.IM-02"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "31-SOC运营-SOCOperations",
+    "file": "31-SOC运营-SOCOperations/skills/SOC指标与运营效能度量-SOCMetricsKPIs.md"
+  },
+  {
+    "name": "安全自动化与编排-security-automation-orchestration-soar",
+    "description": "SOAR（Security Orchestration, Automation and Response）是将安全运营自动化的核心平台。通过工作流编排、API 联动和自动化响应，SOAR 能够大幅缩短平均响应时间（MTTR），提升 SOC 运营效率。本技能覆盖 SOAR 工作流设计、常见集成场景、自动化剧本开发和运营指标。",
+    "domain": "cybersecurity",
+    "subdomain": "soc-operations",
+    "tags": [
+      "soar",
+      "automation",
+      "orchestration",
+      "playbook",
+      "security-automation"
+    ],
+    "mitre_attack": [
+      "T1580",
+      "T1587",
+      "T1588"
+    ],
+    "nist_csf": [
+      "RS.CO-01",
+      "RS.CO-02",
+      "RS.MI-01",
+      "RS.MI-02"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "31-SOC运营-SOCOperations",
+    "file": "31-SOC运营-SOCOperations/skills/安全自动化与编排-SOAR-SecurityAutomationOrchestration.md"
+  },
+  {
+    "name": "soc事件分级与响应流程-soc-triage-response",
+    "description": "安全运营中心（SOC）的核心职能是对安全事件进行高效的分级、分类和响应。本技能覆盖 SOC 事件处理流程，包括告警分类分级、三级处置流程、响应手册（Playbook）以及事件上报和复盘机制。",
+    "domain": "cybersecurity",
+    "subdomain": "soc-operations",
+    "tags": [
+      "soc",
+      "incident-response",
+      "triage",
+      "severity-classification",
+      "playbook"
+    ],
+    "mitre_attack": [
+      "T1580",
+      "T1585",
+      "T1586",
+      "T1590"
+    ],
+    "nist_csf": [
+      "RS.AN-01",
+      "RS.AN-04",
+      "RS.AN-05",
+      "RS.MI-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "31-SOC运营-SOCOperations",
+    "file": "31-SOC运营-SOCOperations/skills/SOC事件分级与响应流程-SOCTriageResponse.md"
+  },
+  {
+    "name": "siem告警规则与关联分析-siem-alert-rules-correlation",
+    "description": "SIEM（Security Information and Event Management）是现代安全运营的核心平台。高效的告警规则和关联分析能够将海量日志转化为可操作的安全告警。本技能覆盖主流 SIEM 平台的检测规则编写、跨数据源关联分析、误报优化规则和安全场景建模。",
+    "domain": "cybersecurity",
+    "subdomain": "soc-operations",
+    "tags": [
+      "siem",
+      "detection",
+      "correlation-rules",
+      "alerting",
+      "security-monitoring"
+    ],
+    "mitre_attack": [
+      "T1046",
+      "T1071",
+      "T1082",
+      "T1560",
+      "T1580"
+    ],
+    "nist_csf": [
+      "DE.CM-01",
+      "DE.CM-04",
+      "DE.AE-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "31-SOC运营-SOCOperations",
+    "file": "31-SOC运营-SOCOperations/skills/SIEM告警规则与关联分析-SIEMAlertCorrelation.md"
+  },
+  {
+    "name": "pam特权账号管理-privileged-access-management",
+    "description": "特权账号是攻击者的首要目标。PAM（Privileged Access Management）通过管理、监控和保护特权凭证，减少攻击面。本技能覆盖特权凭证管理、会话监控、Just-In-Time 权限提升、密码轮换和审计等核心能力。",
+    "domain": "cybersecurity",
+    "subdomain": "identity-access-management",
+    "tags": [
+      "pam",
+      "privileged-access",
+      "secrets-management",
+      "vault",
+      "just-in-time"
+    ],
+    "mitre_attack": [
+      "T1078",
+      "T1555",
+      "T1556",
+      "T1569"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.AC-04",
+      "PR.AC-06",
+      "PR.DS-05"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "32-身份访问管理-IAM",
+    "file": "32-身份访问管理-IAM/skills/PAM特权账号管理-PrivilegedAccessManagement.md"
+  },
+  {
+    "name": "ad域安全与攻击路径分析-ad-security-attack-path-analysis",
+    "description": "Active Directory 是企业身份认证的核心，也是攻击者横向移动的关键目标。AD 中的权限配置错误和信任关系常被利用来提升权限。本技能覆盖 AD 安全评估工具使用、攻击路径分析、ACL 滥用检测和域安全加固。",
+    "domain": "cybersecurity",
+    "subdomain": "identity-access-management",
+    "tags": [
+      "active-directory",
+      "domain-security",
+      "attack-path",
+      "bloodhound",
+      "acl-abuse"
+    ],
+    "mitre_attack": [
+      "T1003",
+      "T1207",
+      "T1484",
+      "T1550",
+      "T1611"
+    ],
+    "nist_csf": [
+      "DE.AE-02",
+      "DE.AE-05",
+      "PR.AC-01",
+      "PR.AC-05"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "32-身份访问管理-IAM",
+    "file": "32-身份访问管理-IAM/skills/AD域安全与攻击路径分析-ADSecurityAttackPathAnalysis.md"
+  },
+  {
+    "name": "企业iam策略与架构-enterprise-iam-strategy-architecture",
+    "description": "身份与访问管理（IAM）是企业安全架构的基石。有效的 IAM 策略确保正确的用户在正确的时间以正确的理由访问正确的资源。本技能覆盖 IAM 架构设计、身份生命周期管理、访问控制模型、SSO 和 MFA 实施。",
+    "domain": "cybersecurity",
+    "subdomain": "identity-access-management",
+    "tags": [
+      "iam",
+      "identity-management",
+      "access-control",
+      "sso",
+      "directory-services"
+    ],
+    "mitre_attack": [
+      "T1078",
+      "T1528",
+      "T1550",
+      "T1556"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.AC-04",
+      "PR.AC-06",
+      "ID.AM-05"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "32-身份访问管理-IAM",
+    "file": "32-身份访问管理-IAM/skills/企业IAM策略与架构-EnterpriseIAMStrategy.md"
+  },
+  {
+    "name": "云iam与联邦认证-cloud-iam-federation",
+    "description": "云环境中的 IAM 是多云安全的基础。不同云厂商的 IAM 模型各有特点，需要统一管理和联邦集成。本技能覆盖 AWS IAM、GCP IAM、Azure RBAC 的策略编写、跨云联邦认证和基础设施即代码（IaC）管理。",
+    "domain": "cybersecurity",
+    "subdomain": "identity-access-management",
+    "tags": [
+      "cloud-iam",
+      "federation",
+      "aws-iam",
+      "gcp-iam",
+      "azure-rbac",
+      "oidc"
+    ],
+    "mitre_attack": [
+      "T1078",
+      "T1528",
+      "T1550",
+      "T1613"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.AC-04",
+      "PR.AC-06",
+      "PR.AC-07"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "32-身份访问管理-IAM",
+    "file": "32-身份访问管理-IAM/skills/云IAM与联邦认证-CloudIAMFederation.md"
+  },
+  {
+    "name": "kubernetes-rbac与安全策略-kubernetes-rbac-security-policy",
+    "description": "Kubernetes 安全的核心在于 RBAC 访问控制、Pod 安全策略和网络策略。错误配置的 RBAC 是 K8s 环境中最常见的安全漏洞。本技能覆盖 K8s RBAC 最小权限配置、Pod Security Standards、OPA/Gatekeeper 策略即代码和审计日志分析。",
+    "domain": "cybersecurity",
+    "subdomain": "container-security",
+    "tags": [
+      "kubernetes",
+      "rbac",
+      "security-policy",
+      "admission-controller",
+      "pod-security"
+    ],
+    "mitre_attack": [
+      "T1525",
+      "T1578",
+      "T1610",
+      "T1613"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.AC-04",
+      "PR.DS-03",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "33-容器安全-ContainerSecurity",
+    "file": "33-容器安全-ContainerSecurity/skills/Kubernetes RBAC与安全策略-KubernetesRBACSecurityPolicy.md"
+  },
+  {
+    "name": "容器运行时安全-container-runtime-security-with-falco",
+    "description": "容器运行时安全关注容器运行时的行为监控和威胁检测。与镜像扫描不同，运行时安全检测的是容器在运行过程中产生的异常行为。本技能覆盖 Falco 规则引擎、系统调用监控、tracee/eBPF 分析和运行时异常检测。",
+    "domain": "cybersecurity",
+    "subdomain": "container-security",
+    "tags": [
+      "container-security",
+      "runtime-security",
+      "falco",
+      "syscall-monitoring",
+      "threat-detection"
+    ],
+    "mitre_attack": [
+      "T1525",
+      "T1578",
+      "T1610",
+      "T1611"
+    ],
+    "nist_csf": [
+      "DE.CM-01",
+      "DE.CM-08",
+      "PR.PT-01",
+      "PR.PT-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "33-容器安全-ContainerSecurity",
+    "file": "33-容器安全-ContainerSecurity/skills/容器运行时安全-Falco-ContainerRuntimeSecurityFalco.md"
+  },
+  {
+    "name": "容器逃逸检测与防御-container-escape-detection-defense",
+    "description": "容器逃逸是容器安全中最严重的威胁之一。攻击者利用容器引擎漏洞、配置错误或内核漏洞突破容器隔离，获取宿主机权限。本技能覆盖容器逃逸技术分析、逃逸检测方法和多层防御策略。",
+    "domain": "cybersecurity",
+    "subdomain": "container-security",
+    "tags": [
+      "container-security",
+      "escape-detection",
+      "sandbox",
+      "privilege-escalation",
+      "defense"
+    ],
+    "mitre_attack": [
+      "T1525",
+      "T1578",
+      "T1610",
+      "T1611"
+    ],
+    "nist_csf": [
+      "PR.AC-05",
+      "PR.PT-01",
+      "DE.CM-08",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "33-容器安全-ContainerSecurity",
+    "file": "33-容器安全-ContainerSecurity/skills/容器逃逸检测与防御-ContainerEscapeDetectionDefense.md"
+  },
+  {
+    "name": "容器镜像安全与漏洞扫描-container-image-security-scanning",
+    "description": "容器镜像安全是云原生安全的第一道防线。镜像中隐藏的漏洞、恶意软件和配置错误是攻击者进入容器环境的常见入口。本技能覆盖镜像漏洞扫描、Dockerfile 安全最佳实践、SBOM 生成、镜像签名和供应链安全。",
+    "domain": "cybersecurity",
+    "subdomain": "container-security",
+    "tags": [
+      "container-security",
+      "image-scanning",
+      "vulnerability",
+      "sbom",
+      "supply-chain"
+    ],
+    "mitre_attack": [
+      "T1204",
+      "T1525",
+      "T1578",
+      "T1610"
+    ],
+    "nist_csf": [
+      "ID.RA-01",
+      "PR.DS-03",
+      "PR.DS-06",
+      "DE.CM-08"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "33-容器安全-ContainerSecurity",
+    "file": "33-容器安全-ContainerSecurity/skills/容器镜像安全与漏洞扫描-ContainerImageSecurityScanning.md"
+  },
+  {
+    "name": "api认证与授权安全-api-authentication-authorization-security",
+    "description": "API 认证和授权是 API 安全的基石。严重的漏洞往往来自认证机制缺陷或授权控制不当。本技能覆盖 OAuth 2.0 流程安全、JWT 安全实现、OIDC 配置和 API Key 管理。",
+    "domain": "cybersecurity",
+    "subdomain": "api-security",
+    "tags": [
+      "api-security",
+      "authentication",
+      "authorization",
+      "oauth",
+      "jwt",
+      "oidc"
+    ],
+    "mitre_attack": [
+      "T1528",
+      "T1550",
+      "T1556",
+      "T1606"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.AC-04",
+      "PR.AC-07",
+      "PR.DS-05"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "34-API安全-APISecurity",
+    "file": "34-API安全-APISecurity/skills/API认证与授权安全-APIAuthAuthorizationSecurity.md"
+  },
+  {
+    "name": "graphql与微服务api安全-graphql-microservice-api-security",
+    "description": "GraphQL 和微服务架构给 API 安全带来了新的挑战。GraphQL 的灵活性可能导致复杂查询攻击，而微服务的分布式特性扩大了攻击面。本技能覆盖 GraphQL 安全防护、微服务间认证、服务网格安全通信和 API Gateway 安全配置。",
+    "domain": "cybersecurity",
+    "subdomain": "api-security",
+    "tags": [
+      "graphql",
+      "microservices",
+      "api-security",
+      "federation",
+      "service-mesh"
+    ],
+    "mitre_attack": [
+      "T1071",
+      "T1190",
+      "T1578",
+      "T1613"
+    ],
+    "nist_csf": [
+      "PR.AC-04",
+      "PR.AC-07",
+      "DE.CM-08",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "34-API安全-APISecurity",
+    "file": "34-API安全-APISecurity/skills/GraphQL与微服务API安全-GraphQLMicroserviceAPISecurity.md"
+  },
+  {
+    "name": "owasp-api安全测试-owasp-api-security-testing",
+    "description": "API 是现代应用架构的基石，也是最常见的攻击目标之一。OWASP API Security Top 10 列出了 API 最常见的 10 类安全风险。本技能覆盖 API 安全测试方法论、认证绕过、注入攻击、批量分配（Mass Assignment）和速率限制测试等。",
+    "domain": "cybersecurity",
+    "subdomain": "api-security",
+    "tags": [
+      "api-security",
+      "owasp",
+      "penetration-testing",
+      "rest-api",
+      "graphql"
+    ],
+    "mitre_attack": [
+      "T1071",
+      "T1190",
+      "T1550",
+      "T1593"
+    ],
+    "nist_csf": [
+      "PR.AC-04",
+      "PR.AC-07",
+      "DE.CM-08",
+      "ID.RA-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "34-API安全-APISecurity",
+    "file": "34-API安全-APISecurity/skills/OWASP API安全测试-OWASPAPISecurityTesting.md"
+  },
+  {
+    "name": "加密算法与密钥管理-encryption-algorithms-key-management",
+    "description": "密码学是信息安全的基础，密钥管理则是密码学的核心难题。本技能覆盖对称与非对称加密算法、哈希函数、数字签名、密钥生命周期管理和硬件安全模块（HSM）的基础应用。",
+    "domain": "cybersecurity",
+    "subdomain": "cryptography-pki",
+    "tags": [
+      "cryptography",
+      "encryption",
+      "key-management",
+      "symmetric",
+      "asymmetric",
+      "hsm"
+    ],
+    "mitre_attack": [
+      "T1552",
+      "T1573",
+      "T1587",
+      "T1608"
+    ],
+    "nist_csf": [
+      "PR.DS-01",
+      "PR.DS-02",
+      "PR.DS-05",
+      "PR.DS-06"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "35-密码学与PKI-CryptographyPKI",
+    "file": "35-密码学与PKI-CryptographyPKI/skills/加密算法与密钥管理-EncryptionAlgorithmsKeyManagement.md"
+  },
+  {
+    "name": "tls-ssl安全配置与审计-tls-ssl-security-configuration-audit",
+    "description": "TLS/SSL 是保护网络通信安全的基石协议。错误的 TLS 配置可能导致中间人攻击、协议降级和信息泄露。本技能覆盖 TLS 协议原理、安全配置方法、证书部署和自动化安全审计。",
+    "domain": "cybersecurity",
+    "subdomain": "cryptography-pki",
+    "tags": [
+      "tls",
+      "ssl",
+      "certificate",
+      "cipher",
+      "security-configuration",
+      "audit"
+    ],
+    "mitre_attack": [
+      "T1573",
+      "T1587",
+      "T1608"
+    ],
+    "nist_csf": [
+      "PR.DS-01",
+      "PR.DS-02",
+      "PR.DS-05",
+      "DE.CM-07"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "35-密码学与PKI-CryptographyPKI",
+    "file": "35-密码学与PKI-CryptographyPKI/skills/TLS-SSL安全配置与审计-TLSSSLSecurityConfigurationAudit.md"
+  },
+  {
+    "name": "pki架构与证书安全管理-pki-architecture-certificate-management",
+    "description": "公钥基础设施（PKI）是数字信任的基石，也是企业安全基础设施的关键组件。本技能覆盖 CA 搭建、证书签发与管理、证书生命周期管理和私有 PKI 的最佳实践。",
+    "domain": "cybersecurity",
+    "subdomain": "cryptography-pki",
+    "tags": [
+      "pki",
+      "certificate-authority",
+      "certificate-management",
+      "x509",
+      "chain-of-trust"
+    ],
+    "mitre_attack": [
+      "T1552",
+      "T1587",
+      "T1588",
+      "T1608"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-01",
+      "PR.DS-05",
+      "ID.AM-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "35-密码学与PKI-CryptographyPKI",
+    "file": "35-密码学与PKI-CryptographyPKI/skills/PKI架构与证书安全管理-PKIArchitectureCertificateManagement.md"
+  },
+  {
+    "name": "ztna解决方案与iam集成-ztna-solutions-iam-integration",
+    "description": "ZTNA（Zero Trust Network Access）是零信任理念在网络访问层的落地。它隐藏应用基础设施，确保只有经过认证和授权的用户才能访问指定应用。本技能覆盖 ZTNA 架构、IAM 集成、身份感知代理部署和策略配置。",
+    "domain": "cybersecurity",
+    "subdomain": "zero-trust",
+    "tags": [
+      "ztna",
+      "zero-trust",
+      "iam-integration",
+      "sso",
+      "identity-aware-proxy"
+    ],
+    "mitre_attack": [
+      "T1078",
+      "T1550",
+      "T1556"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.AC-04",
+      "PR.AC-06",
+      "PR.AC-07"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "36-零信任架构-ZeroTrust",
+    "file": "36-零信任架构-ZeroTrust/skills/ZTNA解决方案与IAM集成-ZTNASolutionsIAMIntegration.md"
+  },
+  {
+    "name": "微隔离与软件定义边界-microsegmentation-software-defined-perimeter",
+    "description": "微隔离（Microsegmentation）是零信任网络的核心技术，将数据中心/云网络分为细粒度的安全段，限制东西向流量。软件定义边界（SDP）隐藏网络基础设施，只有经过认证的用户才能访问。本技能覆盖微隔离策略设计、SDP 部署和网络可视化。",
+    "domain": "cybersecurity",
+    "subdomain": "zero-trust",
+    "tags": [
+      "zero-trust",
+      "microsegmentation",
+      "sdp",
+      "network-security",
+      "east-west-traffic"
+    ],
+    "mitre_attack": [
+      "T1046",
+      "T1090",
+      "T1557"
+    ],
+    "nist_csf": [
+      "PR.AC-04",
+      "PR.AC-05",
+      "PR.PT-01",
+      "PR.PT-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "36-零信任架构-ZeroTrust",
+    "file": "36-零信任架构-ZeroTrust/skills/微隔离与软件定义边界-SDP-MicrosegmentationSDP.md"
+  },
+  {
+    "name": "零信任架构设计与实施-zero-trust-architecture-design-implementation",
+    "description": "零信任（Zero Trust）以\"永不信任，始终验证\"为核心理念，要求无论请求来自内网还是外网，都需要持续验证。本技能覆盖零信任架构模型、NIST ZTA 框架、策略决策和 Google BeyondCorp/ AWS Verified Access 实施。",
+    "domain": "cybersecurity",
+    "subdomain": "zero-trust",
+    "tags": [
+      "zero-trust",
+      "architecture",
+      "beyondcorp",
+      "never-trust-always-verify",
+      "microsegmentation"
+    ],
+    "mitre_attack": [
+      "T1078",
+      "T1550",
+      "T1557"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.AC-04",
+      "PR.AC-05",
+      "PR.AC-06"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "36-零信任架构-ZeroTrust",
+    "file": "36-零信任架构-ZeroTrust/skills/零信任架构设计与实施-ZeroTrustArchitectureDesign.md"
+  },
+  {
+    "name": "edr部署与检测规则-edr-deployment-detection-rules",
+    "description": "端点检测与响应（EDR）是企业安全防御的核心产品。EDR 通过在端点采集大量数据，结合规则和算法检测恶意行为。本技能覆盖 EDR 部署架构、检测规则编写、事件调查和响应行动。",
+    "domain": "cybersecurity",
+    "subdomain": "endpoint-security",
+    "tags": [
+      "edr",
+      "endpoint-detection",
+      "response",
+      "detection-rules",
+      "endpoint-security"
+    ],
+    "mitre_attack": [
+      "T1059",
+      "T1071",
+      "T1546",
+      "T1562",
+      "T1564"
+    ],
+    "nist_csf": [
+      "DE.CM-01",
+      "DE.CM-04",
+      "DE.AE-02",
+      "RS.AN-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "37-端点安全-EndpointSecurity",
+    "file": "37-端点安全-EndpointSecurity/skills/EDR部署与检测规则-EDRDeploymentDetectionRules.md"
+  },
+  {
+    "name": "移动设备安全与mdm-mobile-device-security-mdm",
+    "description": "移动设备已成为企业办公的必需品，但也带来了新的安全风险。MDM（移动设备管理）帮助企业管理和保护移动设备。本技能覆盖 MDM 策略配置、设备合规、应用管理和移动威胁防御。",
+    "domain": "cybersecurity",
+    "subdomain": "endpoint-security",
+    "tags": [
+      "mobile-security",
+      "mdm",
+      "ios",
+      "android",
+      "byod",
+      "device-compliance"
+    ],
+    "mitre_attack": [
+      "T1204",
+      "T1475",
+      "T1514",
+      "T1529"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-03",
+      "PR.PT-01",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "37-端点安全-EndpointSecurity",
+    "file": "37-端点安全-EndpointSecurity/skills/移动设备安全与MDM-MobileDeviceSecurityMDM.md"
+  },
+  {
+    "name": "文件less恶意软件与lolbins检测-fileless-malware-lolbins-detection",
+    "description": "无文件恶意软件（Fileless Malware）和LOLBins（Living-Off-the-Land Binaries）是高级攻击者的常用技术。它们利用系统内置工具执行恶意操作，避免传统文件扫描检测。本技能覆盖 LOLBins 滥用检测、PowerShell 攻击分析、WMI 滥用和内存代码执行检测。",
+    "domain": "cybersecurity",
+    "subdomain": "endpoint-security",
+    "tags": [
+      "fileless",
+      "lolbins",
+      "powershell",
+      "wmi",
+      "living-off-the-land",
+      "amsi"
+    ],
+    "mitre_attack": [
+      "T1059",
+      "T1218",
+      "T1546",
+      "T1564",
+      "T1620"
+    ],
+    "nist_csf": [
+      "DE.CM-01",
+      "DE.CM-04",
+      "DE.AE-02",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "37-端点安全-EndpointSecurity",
+    "file": "37-端点安全-EndpointSecurity/skills/文件less恶意软件与LOLBins检测-FilelessMalwareLOLBinsDetection.md"
+  },
+  {
+    "name": "端点加固与合规基线-endpoint-hardening-compliance-baseline",
+    "description": "端点加固是减少攻击面的基础安全措施。通过配置安全基线、关闭不必要的服务、强化系统配置，可以抵御大量常见攻击。本技能覆盖 CIS 基准检查、安全基线部署和合规自动化。",
+    "domain": "cybersecurity",
+    "subdomain": "endpoint-security",
+    "tags": [
+      "endpoint-hardening",
+      "compliance",
+      "cis-benchmarks",
+      "security-baseline",
+      "automation"
+    ],
+    "mitre_attack": [
+      "T1562",
+      "T1564"
+    ],
+    "nist_csf": [
+      "PR.AC-01",
+      "PR.DS-07",
+      "PR.IP-01",
+      "PR.PT-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "37-端点安全-EndpointSecurity",
+    "file": "37-端点安全-EndpointSecurity/skills/端点加固与合规基线-EndpointHardeningComplianceBaseline.md"
+  },
+  {
+    "name": "勒索软件攻击链分析与检测-ransomware-attack-chain-analysis-detection",
+    "description": "勒索软件（Ransomware）是最具破坏性的网络威胁之一。理解勒索软件的攻击链，在每个阶段建立检测能力，是有效防御的关键。本技能覆盖勒索软件攻击生命周期分析、行为检测指标、YARA 规则编写和早期预警。",
+    "domain": "cybersecurity",
+    "subdomain": "ransomware-defense",
+    "tags": [
+      "ransomware",
+      "detection",
+      "attack-chain",
+      "behavior-analysis",
+      "threat-hunting"
+    ],
+    "mitre_attack": [
+      "T1486",
+      "T1490",
+      "T1485",
+      "T1561"
+    ],
+    "nist_csf": [
+      "DE.AE-02",
+      "DE.CM-01",
+      "DE.CM-04",
+      "RS.AN-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "38-勒索软件防御-RansomwareDefense",
+    "file": "38-勒索软件防御-RansomwareDefense/skills/勒索软件攻击链分析与检测-RansomwareAttackChainAnalysisDetection.md"
+  },
+  {
+    "name": "勒索软件应急响应与恢复-ransomware-incident-response-recovery",
+    "description": "勒索软件攻击的黄金响应时间通常以分钟计算。快速隔离、准确评估、有效恢复是减少损失的关键。本技能覆盖勒索软件应急响应全流程，从初始检测到隔离遏制、取证分析、解密恢复和事后复盘。",
+    "domain": "cybersecurity",
+    "subdomain": "ransomware-defense",
+    "tags": [
+      "ransomware",
+      "incident-response",
+      "containment",
+      "recovery",
+      "IR-playbook"
+    ],
+    "mitre_attack": [
+      "T1486",
+      "T1490",
+      "T1485"
+    ],
+    "nist_csf": [
+      "RS.RP-01",
+      "RS.CO-02",
+      "RS.AN-01",
+      "RS.MI-01",
+      "RC.RP-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "38-勒索软件防御-RansomwareDefense",
+    "file": "38-勒索软件防御-RansomwareDefense/skills/勒索软件应急响应与恢复-RansomwareIncidentResponseRecovery.md"
+  },
+  {
+    "name": "反勒索软件加固与备份策略-anti-ransomware-hardening-backup-strategy",
+    "description": "勒索软件防御的核心在于\"防得住、备得稳、恢复得快\"。主动加固减少攻击面，智能备份确保可恢复。本技能覆盖反勒索软件系统加固、3-2-1备份策略、不可变备份架构、以及备份恢复演练自动化。",
+    "domain": "cybersecurity",
+    "subdomain": "ransomware-defense",
+    "tags": [
+      "ransomware",
+      "hardening",
+      "backup",
+      "disaster-recovery",
+      "immutable-backup"
+    ],
+    "mitre_attack": [
+      "T1486",
+      "T1490"
+    ],
+    "nist_csf": [
+      "PR.DS-04",
+      "PR.DS-10",
+      "PR.IP-04",
+      "DE.CM-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "38-勒索软件防御-RansomwareDefense",
+    "file": "38-勒索软件防御-RansomwareDefense/skills/反勒索软件加固与备份策略-AntiRansomwareHardeningBackup.md"
+  },
+  {
+    "name": "安全框架与合规审计-security-framework-compliance-audit",
+    "description": "安全框架为企业提供了系统化的安全管理方法论，合规审计确保安全措施符合法规和行业标准。本技能覆盖主流安全框架（NIST CSF、ISO 27001、SOC 2、CIS、PCI DSS、HIPAA）的核心要求、控制映射方法、审计准备和合规自动化。",
+    "domain": "cybersecurity",
+    "subdomain": "governance-compliance",
+    "tags": [
+      "compliance",
+      "audit",
+      "framework",
+      "iso27001",
+      "nist-csf",
+      "soc2",
+      "governance"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.GV-01",
+      "ID.RM-01",
+      "ID.SC-01",
+      "ID.GV-03"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "39-安全治理合规-GovernanceCompliance",
+    "file": "39-安全治理合规-GovernanceCompliance/skills/安全框架与合规审计-SecurityFrameworkComplianceAudit.md"
+  },
+  {
+    "name": "风险管理与安全度量-risk-management-security-metrics",
+    "description": "网络安全风险管理是企业安全决策的基础。通过量化风险、测量安全运营效能、向管理层报告风险态势，安全团队可以从\"成本中心\"转变为\"业务赋能者\"。本技能覆盖风险评估方法论（FAIR 定量分析）、安全 KPI/KRI、管理层报告和风险处置决策。",
+    "domain": "cybersecurity",
+    "subdomain": "governance-compliance",
+    "tags": [
+      "risk-management",
+      "security-metrics",
+      "fair",
+      "risk-assessment",
+      "board-reporting"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.RA-01",
+      "ID.RA-02",
+      "ID.RA-03",
+      "ID.RM-01",
+      "ID.SC-01"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "39-安全治理合规-GovernanceCompliance",
+    "file": "39-安全治理合规-GovernanceCompliance/skills/风险管理与安全度量-RiskManagementSecurityMetrics.md"
+  },
+  {
+    "name": "安全策略体系与安全意识-security-policy-awareness",
+    "description": "安全策略体系是安全治理的基石，安全意识培训是将策略转化为行动的关键。没有策略的安全是无序的，没有意识的策略是无效的。本技能覆盖安全策略框架设计、策略生命周期管理、安全意识培训计划、钓鱼模拟和安全文化建设。",
+    "domain": "cybersecurity",
+    "subdomain": "governance-compliance",
+    "tags": [
+      "security-policy",
+      "awareness-training",
+      "phishing",
+      "security-culture",
+      "policy-management"
+    ],
+    "mitre_attack": [],
+    "nist_csf": [
+      "ID.GV-01",
+      "PR.AT-01",
+      "PR.AT-02",
+      "ID.GV-02"
+    ],
+    "version": "4.3.2",
+    "author": "multi-cybersecurity",
+    "license": "Apache-2.0",
+    "category": "39-安全治理合规-GovernanceCompliance",
+    "file": "39-安全治理合规-GovernanceCompliance/skills/安全策略体系与安全意识-SecurityPolicyAwareness.md"
+  }
+]

@@ -12,106 +12,124 @@ export default function AttackPage() {
     if (!filter.trim()) return attackTechniques;
     const q = filter.toLowerCase();
     return attackTechniques.filter(
-      (t) =>
-        t.techniqueID.toLowerCase().includes(q) ||
-        t.metadata[0]?.value.toLowerCase().includes(q),
+      (t) => t.techniqueID.toLowerCase().includes(q) || t.metadata[0]?.value.toLowerCase().includes(q),
     );
   }, [filter]);
 
   const scoreColor = (score: number) => {
-    if (score >= 8) return "#ef4444";
-    if (score >= 5) return "#fb923c";
-    if (score >= 3) return "#facc15";
-    if (score > 0) return "#4ade80";
-    return "#333";
+    if (score >= 8) return "#ff0040";
+    if (score >= 5) return "#ffb000";
+    if (score >= 3) return "#fff700";
+    if (score > 0) return "#00ff88";
+    return "#1a1f24";
   };
 
   const csfLabels: Record<string, string> = {
-    ID: "识别 (ID)",
-    PR: "保护 (PR)",
-    DE: "检测 (DE)",
-    RS: "响应 (RS)",
-    RC: "恢复 (RC)",
+    ID: "IDENTIFY", PR: "PROTECT", DE: "DETECT", RS: "RESPOND", RC: "RECOVER",
   };
 
-  const maxCsf = Math.max(...csfData.map((d) => d.count));
-
   return (
-    <div className="p-8 max-w-5xl">
-      <h1 className="text-xl font-bold text-accent mb-6 font-mono">ATT&CK 可视化仪表盘</h1>
-
-      {/* 统计卡片 */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <StatCard label="ATT&CK 技术总数" value={stats.total} color="#4f9eff" />
-        <StatCard label="已覆盖" value={stats.covered} color="#4ade80" />
-        <StatCard label="平均分" value={stats.avgScore} color="#facc15" />
-        <StatCard label="技能总数" value={skillsIndex.length} color="#a78bfa" />
+    <div className="p-8 max-w-5xl animate-fade-in">
+      {/* Header */}
+      <div className="mb-6">
+        <div className="text-[9px] text-accent/50 font-mono tracking-widest uppercase mb-1">
+          // THREAT INTELLIGENCE MATRIX
+        </div>
+        <h1 className="text-xl font-bold text-gray-100 font-mono">ATT&CK 仪表盘</h1>
       </div>
 
-      {/* NIST CSF 覆盖 */}
-      <div className="border border-bg-border rounded-lg p-5 mb-8">
-        <h2 className="text-sm font-semibold text-gray-300 mb-4">NIST CSF 覆盖</h2>
+      {/* Stats */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+        {[
+          { v: String(stats.total).padStart(3, "0"), l: "TECHNIQUES", c: "#00e5ff" },
+          { v: String(stats.covered).padStart(3, "0"), l: "COVERED", c: "#00ff88" },
+          { v: stats.avgScore, l: "AVG SCORE", c: "#ffb000" },
+          { v: String(skillsIndex.length).padStart(3, "0"), l: "SKILLS", c: "#b066ff" },
+        ].map((s, i) => (
+          <div key={s.l} className="tac-card p-4 animate-slide-up" style={{ animationDelay: `${i * 80}ms` }}>
+            <div className="text-[8px] text-gray-600 font-mono tracking-widest mb-1">{s.l}</div>
+            <div className="text-2xl font-bold font-mono" style={{ color: s.c }}>{s.v}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* NIST CSF bars */}
+      <div className="tac-card p-5 mb-6">
+        <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-4">
+          // NIST CSF DISTRIBUTION
+        </div>
         <div className="space-y-3">
-          {csfData.map((d) => (
-            <div key={d.func} className="flex items-center gap-3">
-              <span className="text-xs text-gray-400 w-28">{csfLabels[d.func] || d.func}</span>
-              <div className="flex-1 h-5 bg-bg-secondary rounded overflow-hidden">
-                <div
-                  className="h-full rounded transition-all"
-                  style={{
-                    width: `${(d.count / maxCsf) * 100}%`,
-                    backgroundColor: "#00ff88",
-                    opacity: 0.7,
-                  }}
-                />
+          {csfData.map((d, i) => {
+            const max = csfData[0].count;
+            return (
+              <div key={d.func} className="flex items-center gap-3 animate-slide-up" style={{ animationDelay: `${i * 60 + 200}ms` }}>
+                <span className="text-[10px] font-mono text-gray-500 w-20 tracking-wider">
+                  {csfLabels[d.func] || d.func}
+                </span>
+                <div className="flex-1 h-4 bg-bg-tertiary relative overflow-hidden border border-bg-border">
+                  <div
+                    className="h-full transition-all duration-700"
+                    style={{
+                      width: `${(d.count / max) * 100}%`,
+                      background: "linear-gradient(90deg, var(--accent-dim), var(--accent))",
+                    }}
+                  />
+                </div>
+                <span className="text-[10px] font-mono text-accent/60 w-8 text-right">{d.count}</span>
               </div>
-              <span className="text-xs text-gray-500 w-8 text-right font-mono">{d.count}</span>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
-      {/* ATT&CK 技术列表 */}
-      <div className="border border-bg-border rounded-lg p-5">
+      {/* ATT&CK matrix grid */}
+      <div className="tac-card p-5">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-sm font-semibold text-gray-300">ATT&CK 技术覆盖矩阵</h2>
+          <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase">
+            // ATT&CK TECHNIQUE MATRIX
+          </div>
           <input
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            placeholder="搜索技术 ID..."
-            className="px-3 py-1.5 bg-bg-secondary border border-bg-border rounded text-xs text-gray-300 focus:border-accent/50 focus:outline-none font-mono w-48"
+            placeholder="filter ID..."
+            className="px-2 py-1 bg-bg border border-bg-border text-[10px] text-gray-300 font-mono placeholder-gray-700 w-32"
           />
         </div>
-        <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-1.5">
+
+        {/* Grid */}
+        <div className="grid grid-cols-6 md:grid-cols-10 lg:grid-cols-12 gap-1 mb-4">
           {filtered.map((t) => (
             <div
               key={t.techniqueID}
-              className="group relative aspect-square rounded flex items-center justify-center cursor-pointer transition-transform hover:scale-110"
-              style={{ backgroundColor: scoreColor(t.score) + "30", border: `1px solid ${scoreColor(t.score)}` }}
-              title={`${t.techniqueID} (score: ${t.score})\n${t.metadata[0]?.value || ""}`}
+              className="group relative aspect-square flex items-center justify-center cursor-pointer transition-transform hover:scale-125 hover:z-10"
+              style={{
+                backgroundColor: scoreColor(t.score) + "15",
+                border: `1px solid ${scoreColor(t.score)}40`,
+              }}
+              title={`${t.techniqueID} [score: ${t.score}]\n${t.metadata[0]?.value || ""}`}
             >
-              <span className="text-[8px] font-mono" style={{ color: scoreColor(t.score) }}>
+              <span className="text-[7px] font-mono" style={{ color: scoreColor(t.score) }}>
                 {t.techniqueID}
               </span>
             </div>
           ))}
         </div>
-        <div className="flex gap-4 mt-4 text-xs text-gray-500">
-          <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-green-500/30 border border-green-500" />0-2</span>
-          <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-yellow-500/30 border border-yellow-500" />3-4</span>
-          <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-orange-500/30 border border-orange-500" />5-7</span>
-          <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-red-500/30 border border-red-500" />8+</span>
+
+        {/* Legend */}
+        <div className="flex gap-4 text-[9px] font-mono text-gray-600 pt-3 border-t border-bg-border">
+          {[
+            { c: "#00ff88", l: "0-2" },
+            { c: "#fff700", l: "3-4" },
+            { c: "#ffb000", l: "5-7" },
+            { c: "#ff0040", l: "8+" },
+          ].map((x) => (
+            <span key={x.l} className="flex items-center gap-1.5">
+              <span className="w-2.5 h-2.5 border" style={{ borderColor: x.c, backgroundColor: x.c + "15" }} />
+              {x.l}
+            </span>
+          ))}
         </div>
       </div>
-    </div>
-  );
-}
-
-function StatCard({ label, value, color }: { label: string; value: string | number; color: string }) {
-  return (
-    <div className="border border-bg-border rounded-lg p-4">
-      <p className="text-xs text-gray-500 mb-1">{label}</p>
-      <p className="text-2xl font-bold font-mono" style={{ color }}>{value}</p>
     </div>
   );
 }

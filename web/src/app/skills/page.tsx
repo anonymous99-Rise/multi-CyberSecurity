@@ -17,158 +17,178 @@ export default function SkillsPage() {
 
   return (
     <div className="flex h-screen">
-      {/* 左侧模块树 */}
-      <div className="w-56 shrink-0 border-r border-bg-border bg-bg-secondary overflow-y-auto">
-        <div className="p-3 sticky top-0 bg-bg-secondary z-10">
+      {/* Module tree */}
+      <div className="w-48 shrink-0 border-r border-bg-border bg-bg-secondary/50 overflow-y-auto">
+        <div className="px-3 py-3 sticky top-0 bg-bg-secondary/90 backdrop-blur-sm z-10 border-b border-bg-border">
+          <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-2">// MODULES</div>
           <div className="relative">
-            <Search size={14} className="absolute left-2.5 top-2.5 text-gray-600" />
+            <Search size={11} className="absolute left-2 top-2 text-gray-700" />
             <input
               value={query}
               onChange={(e) => { setQuery(e.target.value); setSelectedModule(null); }}
-              placeholder="搜索技能..."
-              className="w-full pl-8 pr-3 py-2 text-xs bg-bg border border-bg-border rounded text-gray-300 focus:border-accent/50 focus:outline-none"
+              placeholder="search..."
+              className="w-full pl-7 pr-2 py-1.5 text-[11px] bg-bg border border-bg-border text-gray-300 placeholder-gray-700 font-mono"
             />
           </div>
         </div>
-        <div className="px-2 pb-4">
+        <div className="px-2 py-2">
           <button
             onClick={() => { setSelectedModule(null); setQuery(""); }}
             className={cn(
-              "w-full text-left px-3 py-1.5 rounded text-xs mb-0.5",
-              !selectedModule && !query ? "bg-accent/10 text-accent" : "text-gray-400 hover:text-gray-200",
+              "w-full text-left px-2 py-1 text-[11px] font-mono mb-0.5 transition-colors",
+              !selectedModule && !query ? "text-accent bg-accent/5" : "text-gray-500 hover:text-gray-300",
             )}
           >
-            全部 ({skillsIndex.length})
+            ALL [{skillsIndex.length}]
           </button>
           {modules.map((m) => (
             <button
               key={m.id}
               onClick={() => { setSelectedModule(m.path); setQuery(""); }}
               className={cn(
-                "w-full text-left px-3 py-1.5 rounded text-xs mb-0.5 flex items-center gap-2",
-                selectedModule === m.path ? "bg-accent/10 text-accent" : "text-gray-400 hover:text-gray-200 hover:bg-white/5",
+                "w-full text-left px-2 py-1 text-[11px] mb-0.5 flex items-center gap-1.5 transition-colors",
+                selectedModule === m.path ? "text-accent bg-accent/5" : "text-gray-500 hover:text-gray-300",
               )}
             >
-              <span>{m.emoji}</span>
+              <span className="text-[9px] text-gray-700">{String(m.id).padStart(2, "0")}</span>
               <span className="truncate">{m.name_cn}</span>
-              <span className="ml-auto text-gray-600">{m.skill_count}</span>
+              <span className="ml-auto text-gray-700 text-[9px]">{m.skill_count}</span>
             </button>
           ))}
         </div>
       </div>
 
-      {/* 中间技能列表 */}
-      <div className="w-80 shrink-0 border-r border-bg-border overflow-y-auto">
-        <div className="px-4 py-3 border-b border-bg-border sticky top-0 bg-bg-secondary z-10">
-          <p className="text-xs text-gray-500">
-            {filtered.length} 个结果
-            {selectedModule && ` · ${modules.find(m => m.path === selectedModule)?.name_cn}`}
-          </p>
+      {/* Skill list */}
+      <div className="w-72 shrink-0 border-r border-bg-border overflow-y-auto">
+        <div className="px-3 py-3 border-b border-bg-border sticky top-0 bg-bg-secondary/90 backdrop-blur-sm z-10">
+          <div className="flex items-center justify-between">
+            <span className="text-[9px] text-gray-600 font-mono tracking-widest uppercase">
+              // RESULTS
+            </span>
+            <span className="text-[10px] font-mono text-accent/60">{filtered.length}</span>
+          </div>
         </div>
         {filtered.length === 0 ? (
-          <div className="p-8 text-center text-gray-600 text-sm">无匹配结果</div>
+          <div className="p-8 text-center text-gray-700 text-xs font-mono">// no matches</div>
         ) : (
           filtered.map((skill, i) => (
             <button
               key={i}
               onClick={() => setSelectedSkill(skill)}
               className={cn(
-                "w-full text-left px-4 py-3 border-b border-bg-border/50 hover:bg-white/5 transition-colors",
-                selectedSkill?.name === skill.name && "bg-accent/5",
+                "w-full text-left px-3 py-2.5 border-b border-bg-border/30 hover:bg-accent/5 transition-colors",
+                selectedSkill?.name === skill.name && "bg-accent/5 border-l-2 border-l-accent",
               )}
             >
-              <h3 className="text-sm text-gray-200 mb-1">{skill.name.split("-")[0]}</h3>
-              <p className="text-xs text-gray-500 line-clamp-2">{skill.description}</p>
-              <div className="flex gap-1 mt-1.5 flex-wrap">
-                {skill.mitre_attack.slice(0, 3).map((t) => (
-                  <span key={t} className="text-[10px] px-1.5 py-0.5 rounded bg-accent/10 text-accent/70 font-mono">
-                    {t}
-                  </span>
-                ))}
-              </div>
+              <h3 className="text-[12px] text-gray-200 mb-0.5 truncate">
+                {skill.name.split("-")[0]}
+              </h3>
+              <p className="text-[10px] text-gray-600 line-clamp-1">{skill.description}</p>
+              {skill.mitre_attack.length > 0 && (
+                <div className="flex gap-1 mt-1">
+                  {skill.mitre_attack.slice(0, 2).map((t) => (
+                    <span key={t} className="text-[8px] px-1 py-0.5 bg-accent/8 text-accent/60 font-mono">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              )}
             </button>
           ))
         )}
       </div>
 
-      {/* 右侧详情 */}
+      {/* Detail panel */}
       <div className="flex-1 overflow-y-auto">
         {selectedSkill ? (
-          <div className="p-6">
-            <button
-              onClick={() => setSelectedSkill(null)}
-              className="absolute top-4 right-4 lg:hidden text-gray-500 hover:text-gray-300"
-            >
-              <X size={18} />
-            </button>
-            <h1 className="text-xl font-bold text-gray-100 mb-2">{selectedSkill.name}</h1>
-            <p className="text-sm text-gray-400 mb-4">{selectedSkill.description}</p>
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <Field label="分类" value={selectedSkill.category} />
-              <Field label="子域" value={selectedSkill.subdomain} />
-              <Field label="版本" value={selectedSkill.version} />
-              <Field label="作者" value={selectedSkill.author} />
-            </div>
-            <div className="mb-6">
-              <h2 className="text-xs text-gray-500 mb-2">标签</h2>
-              <div className="flex flex-wrap gap-1.5">
-                {selectedSkill.tags.map((t) => (
-                  <span key={t} className="text-xs px-2 py-0.5 bg-white/5 rounded text-gray-400">{t}</span>
-                ))}
+          <div className="p-6 animate-fade-in">
+            {/* Header */}
+            <div className="mb-5">
+              <div className="text-[9px] text-accent/50 font-mono tracking-widest uppercase mb-1">
+                // SKILL DETAIL
               </div>
+              <h1 className="text-xl font-bold text-gray-100 font-mono">{selectedSkill.name}</h1>
+              <p className="text-xs text-gray-500 mt-1">{selectedSkill.description}</p>
             </div>
-            <div className="grid grid-cols-2 gap-6 mb-6">
-              <div>
-                <h2 className="text-xs text-gray-500 mb-2">MITRE ATT&CK</h2>
-                <div className="flex flex-wrap gap-1.5">
+
+            {/* Meta grid */}
+            <div className="grid grid-cols-2 gap-3 mb-5">
+              {[
+                { l: "CATEGORY", v: selectedSkill.category },
+                { l: "SUBDOMAIN", v: selectedSkill.subdomain },
+                { l: "VERSION", v: selectedSkill.version },
+                { l: "AUTHOR", v: selectedSkill.author },
+              ].map((f) => (
+                <div key={f.l} className="tac-card p-3">
+                  <div className="text-[8px] text-gray-600 font-mono tracking-widest mb-0.5">{f.l}</div>
+                  <div className="text-xs text-gray-300 font-mono">{f.v}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Tags */}
+            {selectedSkill.tags.length > 0 && (
+              <div className="mb-5">
+                <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-2">// TAGS</div>
+                <div className="flex flex-wrap gap-1">
+                  {selectedSkill.tags.map((t) => (
+                    <span key={t} className="text-[10px] px-1.5 py-0.5 bg-bg-tertiary border border-bg-border text-gray-500 font-mono">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* ATT&CK + NIST */}
+            <div className="grid grid-cols-2 gap-3 mb-5">
+              <div className="tac-card p-3">
+                <div className="text-[8px] text-gray-600 font-mono tracking-widest mb-2">MITRE ATT&CK</div>
+                <div className="flex flex-wrap gap-1">
                   {selectedSkill.mitre_attack.map((t) => (
-                    <span key={t} className="text-xs px-2 py-1 bg-accent/10 text-accent/80 rounded font-mono">{t}</span>
+                    <span key={t} className="text-[10px] px-1.5 py-0.5 bg-accent/8 text-accent/70 font-mono">{t}</span>
                   ))}
                 </div>
               </div>
-              <div>
-                <h2 className="text-xs text-gray-500 mb-2">NIST CSF</h2>
-                <div className="flex flex-wrap gap-1.5">
+              <div className="tac-card p-3">
+                <div className="text-[8px] text-gray-600 font-mono tracking-widest mb-2">NIST CSF</div>
+                <div className="flex flex-wrap gap-1">
                   {selectedSkill.nist_csf.map((t) => (
-                    <span key={t} className="text-xs px-2 py-1 bg-warning/10 text-warning/80 rounded font-mono">{t}</span>
+                    <span key={t} className="text-[10px] px-1.5 py-0.5 bg-warning/8 text-warning/70 font-mono">{t}</span>
                   ))}
                 </div>
               </div>
             </div>
-            {/* MD 正文 */}
+
+            {/* MD content */}
             {skillsContent[selectedSkill.name] && (
-              <div className="mt-6 pt-4 border-t border-bg-border">
-                <h2 className="text-xs text-gray-500 mb-3">技能正文</h2>
-                <div className="p-4 bg-black/50 border border-bg-border rounded-lg overflow-x-auto">
-                  <pre className="text-xs text-gray-400 font-mono whitespace-pre-wrap leading-relaxed">
+              <div className="tac-card p-4 mb-5">
+                <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-3">
+                  // CONTENT
+                </div>
+                <div className="bg-black/40 border border-bg-border p-3 overflow-x-auto max-h-[400px] overflow-y-auto">
+                  <pre className="text-[11px] text-gray-400 font-mono whitespace-pre-wrap leading-relaxed">
                     {skillsContent[selectedSkill.name]}
                   </pre>
                 </div>
               </div>
             )}
-            <div className="mt-6 pt-4 border-t border-bg-border">
-              <p className="text-xs text-gray-600">文件路径</p>
-              <code className="text-xs text-gray-400 font-mono break-all">{selectedSkill.file}</code>
+
+            {/* File path */}
+            <div className="tac-card p-3">
+              <div className="text-[8px] text-gray-600 font-mono tracking-widest mb-1">FILE PATH</div>
+              <code className="text-[11px] text-accent/60 font-mono break-all">{selectedSkill.file}</code>
             </div>
           </div>
         ) : (
-          <div className="flex items-center justify-center h-full text-gray-600">
+          <div className="flex items-center justify-center h-full text-gray-700">
             <div className="text-center">
-              <ChevronRight size={24} className="mx-auto mb-2 opacity-50" />
-              <p className="text-sm">选择一个技能查看详情</p>
+              <ChevronRight size={20} className="mx-auto mb-2 opacity-30" />
+              <p className="text-xs font-mono">// select a skill</p>
             </div>
           </div>
         )}
       </div>
-    </div>
-  );
-}
-
-function Field({ label, value }: { label: string; value: string }) {
-  return (
-    <div>
-      <p className="text-xs text-gray-500">{label}</p>
-      <p className="text-sm text-gray-300 mt-0.5">{value}</p>
     </div>
   );
 }

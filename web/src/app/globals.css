@@ -3,21 +3,121 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0a0a0a;
-  --bg-secondary: #111111;
-  --border: #1a1a1a;
+  --bg: #050507;
+  --bg-2: #0b0d10;
+  --bg-3: #111518;
+  --border: #1a1f24;
   --accent: #00ff88;
-  --danger: #ff3366;
-  --warning: #ffaa00;
+  --accent-dim: #008844;
+  --danger: #ff0040;
+  --warning: #ffb000;
+  --info: #00e5ff;
+  --grid: rgba(0, 255, 136, 0.03);
 }
+
+/* === Base === */
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
-  color: #e0e0e0;
-  font-family: "Inter", system-ui, sans-serif;
+  color: #c8ccd0;
+  font-family: var(--font-plex), system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-::-webkit-scrollbar { width: 6px; height: 6px; }
+/* Grid background texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Scanline overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 2px,
+    rgba(255, 255, 255, 0.012) 2px,
+    rgba(255, 255, 255, 0.012) 4px
+  );
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #555; }
+::-webkit-scrollbar-thumb { background: var(--accent-dim); }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* === Selection === */
+::selection { background: var(--accent); color: var(--bg); }
+
+/* === Tactical Card === */
+.tac-card {
+  position: relative;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.tac-card:hover {
+  border-color: var(--accent-dim);
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.08);
+}
+.tac-card::before,
+.tac-card::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.tac-card::before {
+  top: -1px; left: -1px;
+  border-top: 1px solid var(--accent);
+  border-left: 1px solid var(--accent);
+}
+.tac-card::after {
+  bottom: -1px; right: -1px;
+  border-bottom: 1px solid var(--accent);
+  border-right: 1px solid var(--accent);
+}
+.tac-card:hover::before,
+.tac-card:hover::after { opacity: 1; }
+
+/* === Terminal Text === */
+.term-glow {
+  text-shadow: 0 0 6px currentColor;
+}
+
+/* === Grid glow accent === */
+.glow-line {
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  height: 1px;
+}
+
+/* === Input reset === */
+input, select, textarea {
+  background: transparent;
+  outline: none;
+}
+
+/* Focus ring */
+input:focus, select:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.15);
+}

@@ -5,18 +5,18 @@ import { platforms, meta } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 const operations = [
-  { id: "audit", label: "安全审计 (8阶段)", cmd: "audit", needs: ["target"] },
+  { id: "audit", label: "安全审计", cmd: "audit", needs: ["target"] },
   { id: "redteam", label: "红队操作", cmd: "redteam", needs: ["operation", "target", "platform"] },
   { id: "jailbreak", label: "破限 Payload", cmd: "jailbreak payload", needs: ["level", "platform"] },
   { id: "skill", label: "技能导出", cmd: "skill export", needs: ["platform"] },
 ];
 
 const opTypes = [
-  { v: "recon", l: "Recon 侦察" },
-  { v: "exploit", l: "Exploit 利用" },
-  { v: "scan", l: "Scan 扫描" },
-  { v: "analyze", l: "Analyze 分析" },
-  { v: "generate_poc", l: "Generate PoC" },
+  { v: "recon", l: "RECON" },
+  { v: "exploit", l: "EXPLOIT" },
+  { v: "scan", l: "SCAN" },
+  { v: "analyze", l: "ANALYZE" },
+  { v: "generate_poc", l: "GEN_POC" },
 ];
 
 export default function CliPage() {
@@ -30,7 +30,6 @@ export default function CliPage() {
   const [copied, setCopied] = useState(false);
 
   const selected = operations.find((o) => o.id === op)!;
-  const cmd = buildCommand();
 
   function buildCommand() {
     let c = `python cli.py ${selected.cmd}`;
@@ -40,6 +39,8 @@ export default function CliPage() {
     if (selected.needs.includes("level")) c += ` --level ${level}`;
     return c;
   }
+
+  const cmd = buildCommand();
 
   const copyCmd = () => {
     navigator.clipboard.writeText(cmd);
@@ -66,181 +67,166 @@ export default function CliPage() {
         i++;
       } else {
         clearInterval(interval);
-        setOutput((prev) =>
-          prev + `\n[✓] 命令已生成。复制到终端执行实际操作。\n\n${cmd}`,
-        );
+        setOutput((prev) => prev + `\n[✓] Command generated. Copy to terminal to execute.\n\n${cmd}`);
         setRunning(false);
       }
     }, 300);
   };
 
   return (
-    <div className="p-8 max-w-4xl">
-      <h1 className="text-xl font-bold text-accent mb-6 font-mono">CLI 可视化操作台</h1>
+    <div className="p-8 max-w-3xl animate-fade-in">
+      {/* Header */}
+      <div className="mb-6">
+        <div className="text-[9px] text-accent/50 font-mono tracking-widest uppercase mb-1">
+          // COMMAND CONSOLE
+        </div>
+        <h1 className="text-xl font-bold text-gray-100 font-mono">CLI 操作台</h1>
+      </div>
 
-      <div className="space-y-6">
-        {/* 操作类型 */}
-        <div>
-          <label className="text-xs text-gray-500 mb-2 block">操作类型</label>
-          <div className="flex flex-wrap gap-2">
-            {operations.map((o) => (
+      {/* Operation type */}
+      <div className="mb-6">
+        <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-2">// OPERATION</div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+          {operations.map((o) => (
+            <button
+              key={o.id}
+              onClick={() => setOp(o.id)}
+              className={cn(
+                "p-2.5 border text-center transition-all",
+                op === o.id
+                  ? "border-accent bg-accent/5 text-accent"
+                  : "border-bg-border text-gray-500 hover:text-gray-300 hover:border-gray-700",
+              )}
+            >
+              <span className="text-[11px] font-mono font-medium">{o.label}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Dynamic params */}
+      {op === "audit" && (
+        <ParamInput label="TARGET" value={target} onChange={setTarget} placeholder="https://example.com" />
+      )}
+
+      {op === "redteam" && (
+        <div className="grid grid-cols-2 gap-3 mb-6">
+          <div>
+            <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-1.5">OP TYPE</div>
+            <select
+              value={operation}
+              onChange={(e) => setOperation(e.target.value)}
+              className="w-full px-3 py-2 bg-bg-secondary border border-bg-border text-xs text-gray-300 font-mono"
+            >
+              {opTypes.map((o) => (
+                <option key={o.v} value={o.v} className="bg-bg-secondary">{o.l}</option>
+              ))}
+            </select>
+          </div>
+          <ParamInput label="TARGET" value={target} onChange={setTarget} placeholder="192.168.1.1" />
+        </div>
+      )}
+
+      {(op === "redteam" || op === "jailbreak" || op === "skill") && (
+        <div className="mb-6">
+          <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-2">// PLATFORM</div>
+          <div className="flex flex-wrap gap-1.5">
+            {platforms.map((p) => (
               <button
-                key={o.id}
-                onClick={() => setOp(o.id)}
-                className={cn(
-                  "px-3 py-1.5 rounded text-xs font-mono border transition-all",
-                  op === o.id
-                    ? "border-accent bg-accent/10 text-accent"
-                    : "border-bg-border text-gray-400 hover:text-gray-200",
-                )}
+                key={p.id}
+                onClick={() => setPlatform(p.id)}
+                className={cn("px-2.5 py-1 text-[10px] font-mono border transition-all", platform === p.id ? "text-white" : "border-bg-border text-gray-500")}
+                style={platform === p.id ? { borderColor: p.color, backgroundColor: p.color + "15", color: p.color } : {}}
               >
-                {o.label}
+                {p.name}
+              </button>
+            ))}
+            {op === "redteam" && (
+              <button
+                onClick={() => setPlatform("universal")}
+                className={cn("px-2.5 py-1 text-[10px] font-mono border", platform === "universal" ? "border-accent bg-accent/5 text-accent" : "border-bg-border text-gray-500")}
+              >
+                UNIVERSAL
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
+      {op === "jailbreak" && (
+        <div className="mb-6">
+          <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-2">// LEVEL</div>
+          <div className="flex gap-2">
+            {["L1", "L2", "L3", "L4"].map((l) => (
+              <button
+                key={l}
+                onClick={() => setLevel(l)}
+                disabled={l === "L4"}
+                className={cn("px-4 py-1.5 text-xs font-mono border transition-all disabled:opacity-20", level === l ? "border-accent bg-accent/5 text-accent" : "border-bg-border text-gray-500")}
+              >
+                {l}
               </button>
             ))}
           </div>
         </div>
+      )}
 
-        {/* 动态参数 */}
-        {op === "audit" && (
-          <Input label="目标 (URL/IP)" value={target} onChange={setTarget} placeholder="https://example.com" />
-        )}
-
-        {op === "redteam" && (
-          <div className="grid grid-cols-2 gap-4">
-            <Select label="操作类型" value={operation} onChange={setOperation} options={opTypes} />
-            <Input label="目标" value={target} onChange={setTarget} placeholder="192.168.1.1" />
-          </div>
-        )}
-
-        {(op === "redteam" || op === "jailbreak" || op === "skill") && (
-          <div>
-            <label className="text-xs text-gray-500 mb-2 block">平台</label>
-            <div className="flex flex-wrap gap-2">
-              {platforms.map((p) => (
-                <button
-                  key={p.id}
-                  onClick={() => setPlatform(p.id)}
-                  className={cn(
-                    "px-2.5 py-1 rounded text-xs font-mono border transition-all",
-                    platform === p.id ? "text-white" : "border-bg-border text-gray-400 hover:text-gray-200",
-                  )}
-                  style={platform === p.id ? { borderColor: p.color, backgroundColor: p.color + "20", color: p.color } : {}}
-                >
-                  {p.name}
-                </button>
-              ))}
-              {op === "redteam" && (
-                <button
-                  onClick={() => setPlatform("universal")}
-                  className={cn(
-                    "px-2.5 py-1 rounded text-xs font-mono border",
-                    platform === "universal" ? "border-accent bg-accent/10 text-accent" : "border-bg-border text-gray-400",
-                  )}
-                >
-                  universal
-                </button>
-              )}
-            </div>
-          </div>
-        )}
-
-        {op === "jailbreak" && (
-          <div>
-            <label className="text-xs text-gray-500 mb-2 block">破限级别</label>
-            <div className="flex gap-2">
-              {["L1", "L2", "L3", "L4"].map((l) => (
-                <button
-                  key={l}
-                  onClick={() => setLevel(l)}
-                  disabled={l === "L4"}
-                  className={cn(
-                    "px-4 py-1.5 rounded text-xs font-mono border transition-all disabled:opacity-30",
-                    level === l
-                      ? "border-accent bg-accent/10 text-accent"
-                      : "border-bg-border text-gray-400 hover:text-gray-200",
-                  )}
-                >
-                  {l}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* 命令预览 */}
-      <div className="mt-6">
+      {/* Command preview */}
+      <div className="mb-4">
         <div className="flex items-center justify-between mb-2">
-          <label className="text-xs text-gray-500">生成命令</label>
-          <button
-            onClick={copyCmd}
-            className="flex items-center gap-1 text-xs text-accent hover:text-accent/80 transition-colors"
-          >
-            {copied ? <Check size={12} /> : <Copy size={12} />}
-            {copied ? "已复制" : "复制"}
+          <span className="text-[9px] text-gray-600 font-mono tracking-widest uppercase">// COMMAND</span>
+          <button onClick={copyCmd} className="flex items-center gap-1 text-[10px] text-accent hover:text-accent/80 transition-colors">
+            {copied ? <Check size={10} /> : <Copy size={10} />} {copied ? "COPIED" : "COPY"}
           </button>
         </div>
-        <div className="p-3 bg-black border border-bg-border rounded-lg">
-          <code className="text-xs text-accent font-mono break-all">{cmd}</code>
+        <div className="p-3 bg-black border border-bg-border">
+          <code className="text-xs text-accent font-mono break-all term-glow">{cmd}</code>
         </div>
       </div>
 
+      {/* Run button */}
       <button
         onClick={runCommand}
         disabled={running}
-        className="mt-4 flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/30 rounded text-accent text-sm hover:bg-accent/20 transition-colors disabled:opacity-50"
+        className="flex items-center gap-2 px-4 py-2 bg-accent/8 border border-accent/30 text-accent text-xs font-mono hover:bg-accent/15 transition-colors disabled:opacity-30 mb-4"
       >
-        {running ? <Loader2 size={16} className="animate-spin" /> : <Play size={16} />}
-        模拟执行
+        {running ? <Loader2 size={14} className="animate-spin" /> : <Play size={14} />}
+        {running ? "RUNNING..." : "EXECUTE"}
       </button>
 
-      {/* 输出终端 */}
+      {/* Terminal output */}
       {output && (
-        <div className="mt-6">
-          <div className="flex items-center gap-2 mb-2">
-            <Terminal size={14} className="text-gray-500" />
-            <span className="text-xs text-gray-500">终端输出</span>
+        <div className="animate-fade-in">
+          <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-2 flex items-center gap-2">
+            <Terminal size={11} /> // OUTPUT
           </div>
-          <pre className="p-4 bg-black border border-bg-border rounded-lg text-xs font-mono text-gray-300 whitespace-pre-wrap min-h-[120px] max-h-[400px] overflow-y-auto">
-            {output}
-          </pre>
+          <div className="p-4 bg-black border border-bg-border max-h-[300px] overflow-y-auto">
+            <pre className="text-[11px] font-mono text-gray-400 whitespace-pre-wrap">
+              {output}
+              {running && <span className="inline-block w-2 h-3 bg-accent animate-blink ml-0.5" />}
+            </pre>
+          </div>
         </div>
       )}
 
-      <div className="mt-8 text-xs text-gray-600 border-t border-bg-border pt-4">
-        <p>multi-CyberSecurity v{meta.version} · 授权 CTF/渗透测试实验室环境</p>
+      {/* Footer */}
+      <div className="mt-8 pt-4 border-t border-bg-border text-[9px] text-gray-700 font-mono tracking-widest">
+        mCS v{meta.version} · AUTHORIZED CTF / PENTEST LAB
       </div>
     </div>
   );
 }
 
-function Input({ label, value, onChange, placeholder }: { label: string; value: string; onChange: (v: string) => void; placeholder?: string }) {
+function ParamInput({ label, value, onChange, placeholder }: { label: string; value: string; onChange: (v: string) => void; placeholder?: string }) {
   return (
-    <div>
-      <label className="text-xs text-gray-500 mb-1.5 block">{label}</label>
+    <div className="mb-6">
+      <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-1.5">{label}</div>
       <input
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full px-3 py-2 bg-bg-secondary border border-bg-border rounded text-sm text-gray-300 focus:border-accent/50 focus:outline-none font-mono"
+        className="w-full px-3 py-2 bg-bg-secondary border border-bg-border text-xs text-gray-300 font-mono placeholder-gray-700"
       />
-    </div>
-  );
-}
-
-function Select({ label, value, onChange, options }: { label: string; value: string; onChange: (v: string) => void; options: { v: string; l: string }[] }) {
-  return (
-    <div>
-      <label className="text-xs text-gray-500 mb-1.5 block">{label}</label>
-      <select
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="w-full px-3 py-2 bg-bg-secondary border border-bg-border rounded text-sm text-gray-300 focus:border-accent/50 focus:outline-none font-mono"
-      >
-        {options.map((o) => (
-          <option key={o.v} value={o.v} className="bg-bg-secondary">{o.l}</option>
-        ))}
-      </select>
     </div>
   );
 }

@@ -1,11 +1,14 @@
 external/AboutSecurity
 external/Anthropic-Cybersecurity-Skills
+external/CkSKILLS
 external/Claude-BugHunter
 external/CyberStrikeAI
 external/Vulnerability-Wiki-PoC
 external/agency-agents
 external/agency-agents-zh
 external/cve_monitor
+external/dsh-infinite-gen-4
+external/dsh-pentest
 external/reverse-skill
 standards/owasp-top10
 vendor/burp-mcp

@@ -46,3 +46,6 @@
 [submodule "external/dsh-infinite-gen-4"]
 	path = external/dsh-infinite-gen-4
 	url = https://github.com/Minglink/dsh-infinite-gen-4.git
+[submodule "external/dsh-redteam-model"]
+	path = external/dsh-redteam-model
+	url = https://github.com/SeaOf0/dsh-redteam-model.git

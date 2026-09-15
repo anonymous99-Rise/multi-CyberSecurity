@@ -23,6 +23,7 @@
 | **CkSKILLS** | `external/CkSKILLS/` | 20 | SRC 挖洞技能体系（JS 分析/认证鉴权/注入/WAF 绕过/小程序/APK 逆向）+ `hunts/` 线索板 |
 | **dsh-pentest** | `external/dsh-pentest/` | 8 工具 | DSH 渗透模式插件：`pentest_*` 工具链（goal/intent/fact/finding/asset/submit/graph/report）+ sqlite 会话 + Web UI |
 | **dsh-infinite-gen-4** | `external/dsh-infinite-gen-4/` | 插件 | DSH 红队评测破甲插件：零工具面 + 双层系统提示词注入 |
+| **dsh-redteam-model** | `external/dsh-redteam-model/` | 研究 | DSH 红队模型研究：提示词工程 + 防御规避 + 场景构建 |
 
 ---
 
@@ -175,6 +176,7 @@ external/reverse-skill/
 | SRC/众包挖洞方法论、线索板跟踪 | `external/CkSKILLS/.agents/skills/`、`hunts/` | DSH skill-filesystem 行按目录加载 |
 | 渗透任务全链路记录（goal→intent→fact→finding→report） | `external/dsh-pentest/` | `dsh plugin --profile web add` 安装 bundle；`pentest_*` 工具 + pentest preset |
 | 红队模型破甲评测 / 双层提示词注入研究 | `external/dsh-infinite-gen-4/` | `install.ps1` / `install.sh` 安装（仅授权评测环境） |
+| 红队模型研究（提示词工程 + 防御规避 + 场景构建） | `external/dsh-redteam-model/` | DSH skill-filesystem 或直接引用 |
 
 DSH 运行时纪律：commander（decision agent）建 goal/intent 并委派；spawn/fork 执行子代理
 只回写 `pentest_submit` 已确认结果，引用真实 ID，finding 必须含 `reproducibleSteps`。

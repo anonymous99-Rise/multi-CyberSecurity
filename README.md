@@ -47,13 +47,14 @@ workflows/      多Agent工作流定义（web_pentest_flow.yaml等）
 | **DeepSeek Harness (DSH)** | [.dsh/](.dsh) | `dsh` |
 
 DSH 平台采用 Cordis 组合式架构（preset + bundle + 系统提示词段），集成说明、插件安装命令与
-8 阶段流水线映射见 [.dsh/HARNESS.md](.dsh/HARNESS.md)。配套 3 个 DSH 生态子仓库：
+8 阶段流水线映射见 [.dsh/HARNESS.md](.dsh/HARNESS.md)。配套 4 个 DSH 生态子仓库：
 
 | 子仓库 | 用途 |
 |--------|------|
 | [external/CkSKILLS](external/CkSKILLS)（[zhaji2333/CkSKILLS](https://github.com/zhaji2333/CkSKILLS)） | SRC 挖洞技能体系（`.agents/skills/` 20 个技能 + hunts 线索板） |
 | [external/dsh-pentest](external/dsh-pentest)（[howmp/dsh-pentest](https://github.com/howmp/dsh-pentest)） | DSH 渗透模式插件（`pentest_*` 工具 + sqlite 会话存储 + Web UI） |
 | [external/dsh-infinite-gen-4](external/dsh-infinite-gen-4)（[Minglink/dsh-infinite-gen-4](https://github.com/Minglink/dsh-infinite-gen-4)） | DSH 红队评测破甲插件（双层系统提示词注入） |
+| [external/dsh-redteam-model](external/dsh-redteam-model)（[SeaOf0/dsh-redteam-model](https://github.com/SeaOf0/dsh-redteam-model)） | DSH 红队模型研究（提示词工程 + 防御规避 + 场景构建） |
 
 ```bash
 # 指定平台执行红队操作 / 获取破限 payload

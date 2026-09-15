@@ -9,6 +9,7 @@ external/agency-agents-zh
 external/cve_monitor
 external/dsh-infinite-gen-4
 external/dsh-pentest
+external/dsh-redteam-model
 external/reverse-skill
 standards/owasp-top10
 vendor/burp-mcp

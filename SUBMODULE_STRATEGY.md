@@ -32,7 +32,7 @@ external/                    # 外部引用的独立项目
 ├── CkSKILLS/                # SRC 挖洞技能体系 (.agents/skills + hunts)
 ├── dsh-pentest/             # DeepSeek Harness 渗透模式插件 (pentest_*)
 ├── dsh-infinite-gen-4/      # DSH 红队评测破甲插件
-└── <new-submodule>/         # 欢迎新的独立项目
+└── dsh-redteam-model/       # DSH 红队模型研究（SeaOf0/dsh-redteam-model）
 
 vendor/                      # 内部使用的工具/库 (可修改)
 ├── codegraph/               # 代码分析工具

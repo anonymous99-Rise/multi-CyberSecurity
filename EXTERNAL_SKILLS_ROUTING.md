@@ -17,6 +17,7 @@
 | 子仓库 | 路径 | 技能数量 | 主要用途 |
 |--------|------|----------|----------|
 | **Claude-BugHunter** | `external/Claude-BugHunter/` | 71+ | Bug Hunting, Red Team, 漏洞挖掘 |
+| **Claude-Red** | `external/Claude-Red/` | 78 | Claude Skills 攻击性安全技能库（23 大类：SQLi/AD/EDR 规避/exploit-dev/云/容器/取证等；`Skills/` 按需加载 + `claude-skills.json` 索引） |
 | **Anthropic-Cybersecurity-Skills** | `external/Anthropic-Cybersecurity-Skills/` | 817+ | 全面安全评估, 29个领域 |
 | **reverse-skill** | `external/reverse-skill/` | 20+ | 逆向工程, CTF, 渗透测试 |
 | **AboutSecurity** | `external/AboutSecurity/` | 工具集 | 安全工具集合 |

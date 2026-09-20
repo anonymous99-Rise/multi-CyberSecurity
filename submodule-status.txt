@@ -1,3 +1,4 @@
++739512a8588b28ff3b554e669391c22508602878 external/Claude-Red
 -d664bca7af0e54f856f3ef7ffa6f7393b89546fa external/dsh-redteam-model
 -ef9d0cd14cc21d1404b2fd3fe1405b6b4b9bacdb external/AboutSecurity
 -93f3c5f81837cb784e225c3cebe5c3620d7d3cd4 external/agency-agents

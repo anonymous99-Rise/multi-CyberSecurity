@@ -49,3 +49,6 @@
 [submodule "external/dsh-redteam-model"]
 	path = external/dsh-redteam-model
 	url = https://github.com/SeaOf0/dsh-redteam-model.git
+[submodule "external/Claude-Red"]
+	path = external/Claude-Red
+	url = https://github.com/SnailSploit/Claude-Red.git

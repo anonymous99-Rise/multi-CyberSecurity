@@ -2,6 +2,7 @@ external/AboutSecurity
 external/Anthropic-Cybersecurity-Skills
 external/CkSKILLS
 external/Claude-BugHunter
+external/Claude-Red
 external/CyberStrikeAI
 external/Vulnerability-Wiki-PoC
 external/agency-agents

@@ -32,7 +32,8 @@ external/                    # 外部引用的独立项目
 ├── CkSKILLS/                # SRC 挖洞技能体系 (.agents/skills + hunts)
 ├── dsh-pentest/             # DeepSeek Harness 渗透模式插件 (pentest_*)
 ├── dsh-infinite-gen-4/      # DSH 红队评测破甲插件
-└── dsh-redteam-model/       # DSH 红队模型研究（SeaOf0/dsh-redteam-model）
+├── dsh-redteam-model/       # DSH 红队模型研究（SeaOf0/dsh-redteam-model）
+└── Claude-Red/              # Claude Skills 攻击性安全技能库（SnailSploit/Claude-Red）
 
 vendor/                      # 内部使用的工具/库 (可修改)
 ├── codegraph/               # 代码分析工具
@@ -129,6 +130,7 @@ Agent → 查询 external/<kb>/README.md → 获取知识
 | AboutSecurity | 工具集合 | 工具索引 | ✅ 活跃 |
 | CyberStrikeAI | AI安全操作平台 | Eino ADK + Skills20260809 技能包 | ✅ 活跃 |
 | codegraph | 代码分析 | MCP 集成 | ✅ 活跃 |
+| Claude-Red | Claude Skills 技能库 | `Skills/` 下 SKILL.md 按需加载 | ✅ 活跃 |
 
 ---
 

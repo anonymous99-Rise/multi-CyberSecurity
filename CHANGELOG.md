@@ -1,5 +1,51 @@
 # Changelog
 
+## [Unreleased]
+
+### 🐛 修复
+
+#### 数据完整性：模块 24 丢失的 6 个 skill 已恢复
+
+- `95c5bd3` 把 `24-红蓝对抗-RedBlueTeam/` 当作"重复目录"删除（保留 `24-红蓝对抗-RedTeam/`），但保留目录里并没有 `skills/` —— 于是 `index.json`、`skills_index.json`、`framework/skill_graph.json`、`framework/skills/index.md` 与前端共有 6 条索引指向不存在的文件（网站技能详情页空白，索引 199 vs 磁盘 193）
+- 现从历史恢复这 6 个 skill 到 `24-红蓝对抗-RedTeam/skills/`（`红队评估方法论`、`蓝队防御与检测`、`紫队协作评估`、`BAS攻击模拟平台`、`闭环防御改进`、`Agent黑客技能集`），并把全部引用统一到该目录；技能数与索引重新对齐（199 = 199）
+
+#### 工具与 CI 修复
+
+- `tools/validate_skills.py`、`tools/gen_index.py`、`tools/transform_skills.py`：基准路径硬编码为 `/tmp/our`（任何机器上必崩，README 却让用户执行），改为默认仓库根目录并支持传入路径参数；`validate_skills.py` 校验失败时返回非 0
+- `.github/workflows/submodule-health-check.yml`：原 bash 解析器对 19 个子仓库命中 **0**（`.gitmodules` 的 tab 缩进 + CRLF 使 `[[ "$key" == "path" ]]` 恒假），每天误报"全部正常"；改为 python3 解析 + 带 token 的 GitHub API 检查，并修复报告生成与 Issue 逻辑（原 `github.rest.issues.listForRepo` 未 await，真出现异常时必然崩溃）
+- `.github/workflows/version-sync.yml`：`COMMIT_MSG` 环境变量从未注入 —— `feat:` 永远只升 patch、"防重复 bump"守卫失效；补齐 env，并显式声明 `permissions: contents: write`
+- `web`：补 favicon（`web/src/app/icon.svg`，此前 `/favicon.ico` 请求 404）与 openGraph 元数据
+
+### 🛡️ 防回归
+
+- `.github/workflows/validate.yml` 新增第 4 项检查：`skills_index.json` ↔ 磁盘 `NN-*/skills/*.md` ↔ `index.json` 模块数量三方一致（本次漂移能潜伏 4 个月，正是因为 CI 只扫磁盘、从不与索引交叉校验）
+
+### 🚀 优化
+
+- 前端首页 REPOSITORIES 卡片改为解析 `.gitmodules` 自动生成（`web/scripts/sync-data.mjs` + `web/src/data/submodules.json`），`deploy-web.yml` 触发路径加入 `.gitmodules`
+- `web/src/data/*` 刷新到当前数据（此前索引副本停留在 v4.3.5、仅 193 个技能正文）
+- `SUBMODULE_STRATEGY.md` 移除 3 个不存在的脚本与 `SUBMODULE_REPORT.md` 引用，改为与实际工作流一致
+
+---
+
+## [v4.3.2 ~ v4.3.11] - 2026-09-11 ~ 2026-09-21
+
+> 说明：自 v4.3.2 起版本号由 `.github/workflows/version-sync.yml` 在每次 push 时自动递增，
+> 该工作流不写 CHANGELOG，因此这里按提交记录补记这一段的实际变更。
+
+### 🚀 新增功能
+
+- **Next.js 前端 + GitHub Pages 自动部署**：`web/` 目录，4 个页面（技能库 / CLI 操作台 / ATT&CK 矩阵 / 破限 Payload），Tactical Terminal 视觉，`basePath=/multi-CyberSecurity` + `.nojekyll`（`c449445`、`370416f`、`2e71d88`、`140ef40`、`a0205fb`）
+- **子仓库扩充**：`dsh-redteam-model`（`05a086e`）、`Claude-Red`（`485d3c5`）、`cnvd-skill`（`5c903ae`）
+- **子仓库批量同步**：`chore: sync submodules to latest`（`a5ad936`）
+
+### 🔧 优化与修复
+
+- 框架核心 bug 修复（review 驱动，`ee8d7cb`）
+- `version_manager` 优化、`generate_batch` 参数透传、版本同步至 v4.3.1（`41a2010`）
+
+---
+
 ## [v4.3.1] - 2026-09-11
 
 ### 🔧 优化与修复
@@ -331,4 +377,4 @@ vendor/codegraph/
 
 ---
 
-*旧版本历史见 [CHANGELOG_v3.md](CHANGELOG_v3.md), [CHANGELOG_v4.md](CHANGELOG_v4.md)*
+*本文件已收录 v3.0.0 起的全部版本历史；逐版本快照与更早历史见 git tag（v4.2.26 ~ v4.3.11）及提交记录。*

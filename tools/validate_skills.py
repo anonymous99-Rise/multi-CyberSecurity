@@ -37,9 +37,14 @@ def validate_file(p):
     return None if not issues else '; '.join(issues), issues
 
 def main():
-    base = Path('/tmp/our')
+    # 默认扫描脚本所在仓库的根目录；可传参覆盖：python tools/validate_skills.py [仓库根]
+    import sys
+    base = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent
+    if not base.is_dir():
+        print(f'ERROR: 目录不存在: {base}')
+        raise SystemExit(2)
     skill_files = []
-    for cat_dir in base.iterdir():
+    for cat_dir in sorted(base.iterdir()):
         if cat_dir.is_dir() and cat_dir.name[0].isdigit():
             skills_dir = cat_dir / 'skills'
             if skills_dir.exists():
@@ -53,13 +58,15 @@ def main():
             failed.append((f, err))
         else:
             passed += 1
-    print(f'Validation: {passed}/{total} passed')
+    print(f'Validation: {passed}/{total} passed (root: {base})')
     if failed:
         for f, err in failed[:20]:
             print(f'  FAIL: {f.parent.parent.name}/{f.name}')
             print(f'    {err}')
-    else:
-        print('All skills pass validation!')
+        if len(failed) > 20:
+            print(f'  ... 共 {len(failed)} 个文件未通过')
+        raise SystemExit(1)
+    print('All skills pass validation!')
 
 if __name__ == '__main__':
     main()

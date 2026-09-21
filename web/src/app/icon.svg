@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="multi-CyberSecurity">
+  <rect width="64" height="64" rx="14" fill="#0a0e14" />
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#00e5ff" stroke-opacity="0.35" stroke-width="2" />
+  <path d="M17 20 L31 32 L17 44" fill="none" stroke="#00e5ff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="36" y="38" width="14" height="6" rx="3" fill="#00ff88" />
+</svg>

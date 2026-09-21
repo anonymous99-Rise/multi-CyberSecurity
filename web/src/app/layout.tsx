@@ -18,7 +18,15 @@ const plex = IBM_Plex_Sans({
 
 export const metadata: Metadata = {
   title: "multi-CyberSecurity",
-  description: "AI驱动的网络安全技能框架",
+  description: "AI驱动的网络安全技能框架 — 渗透测试全流程技能体系（MITRE ATT&CK + NIST CSF）",
+  applicationName: "multi-CyberSecurity",
+  keywords: ["cybersecurity", "渗透测试", "MITRE ATT&CK", "NIST CSF", "安全技能库"],
+  openGraph: {
+    title: "multi-CyberSecurity",
+    description: "AI驱动的网络安全技能框架 — 199 个技能 · 39 个分类 · 97 项 ATT&CK 技术覆盖",
+    type: "website",
+    locale: "zh_CN",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

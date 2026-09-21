@@ -1,5 +1,10 @@
 # 子仓库健康检查工作流
 # 检查所有子仓库是否可访问，检测 404/403 等异常
+#
+# 说明（2026-09 修复）：原实现用 bash `read -r key value` 按 `=` 切分 .gitmodules，
+# 但 .gitmodules 的 path/url 行带 tab 缩进（key 变成 "\tpath "），且 Windows checkout 下带 CRLF，
+# 因此 19 个子仓库一个都没进入检查分支 —— 每天都会误报"全部正常"。
+# 现改为 python3 解析（与 validate.yml 保持同一技术栈），并顺带修掉报告生成与 issue 逻辑的问题。
 
 name: Submodule Health Check
 
@@ -10,6 +15,10 @@ on:
   workflow_dispatch:
   repository_dispatch:
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   health-check:
     runs-on: ubuntu-latest
@@ -17,6 +26,7 @@ jobs:
     outputs:
       report: ${{ steps.check.outputs.report }}
       has_issues: ${{ steps.check.outputs.has_issues }}
+      count: ${{ steps.check.outputs.count }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,76 +35,98 @@ jobs:
 
       - name: Parse .gitmodules and check health
         id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          REPORT=""
-          HAS_ISSUES="false"
+          python3 << 'PYEOF'
+          import os, re, urllib.request, urllib.error
+          from datetime import datetime, timezone
+          from pathlib import Path
 
-          while IFS='=' read -r key value; do
-            # 解析 [submodule "path"] url = value
-            if [[ "$key" =~ ^\[submodule\ \"([^\"]+)\"\]$ ]]; then
-              current_path="${BASH_REMATCH[1]}"
-              current_url=""
-            elif [[ "$key" == "path" ]] && [[ -n "$current_path" ]]; then
-              :
-            elif [[ "$key" == "url" ]] && [[ -n "$current_path" ]]; then
-              current_url="$value"
-            elif [[ "$key" == "]" ]] && [[ -n "$current_path" && -n "$current_url" ]]; then
-              # 检查这个子仓库
-              echo "检查子仓库: $current_path ($current_url)"
+          text = Path('.gitmodules').read_text(encoding='utf-8')
 
-              # 提取 host 和 path
-              if [[ "$current_url" =~ github\.com[:/](.+)\.git$ ]] || [[ "$current_url" =~ github\.com/(.+)$ ]]; then
-                repo_path="${BASH_REMATCH[1]}"
-                api_url="https://api.github.com/repos/$repo_path"
+          # 解析 [submodule "..."] 段，容忍 tab/空格缩进与 CRLF
+          entries = []
+          for block in re.split(r'(?m)^\s*\[submodule\s+', text):
+              name = re.match(r'"([^"]+)"\]', block)
+              path = re.search(r'(?m)^\s*path\s*=\s*(\S+?)\s*$', block)
+              url = re.search(r'(?m)^\s*url\s*=\s*(\S+?)\s*$', block)
+              if name and path and url:
+                  entries.append((name.group(1), path.group(1), url.group(1)))
 
-                # 调用 GitHub API 检查状态
-                HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$api_url")
+          token = os.environ.get('GH_TOKEN', '').strip()
+          headers = {
+              'User-Agent': 'submodule-health-check',
+              'Accept': 'application/vnd.github+json',
+          }
+          if token:
+              headers['Authorization'] = f'Bearer {token}'
 
-                if [[ "$HTTP_CODE" == "200" ]]; then
-                  echo "  ✅ 正常"
-                  REPORT="${REPORT}✅ \`$current_path\` - 正常\n"
-                elif [[ "$HTTP_CODE" == "404" ]]; then
-                  echo "  ❌ 404 - 仓库不存在或已删除"
-                  REPORT="${REPORT}❌ \`$current_path\` - 404 仓库不存在\n"
-                  HAS_ISSUES="true"
-                elif [[ "$HTTP_CODE" == "403" ]]; then
-                  echo "  ⚠️ 403 - 访问被限制"
-                  REPORT="${REPORT}⚠️ \`$current_path\` - 403 访问受限\n"
-                  HAS_ISSUES="true"
-                else
-                  echo "  ⚠️ HTTP $HTTP_CODE"
-                  REPORT="${REPORT}⚠️ \`$current_path\` - HTTP $HTTP_CODE\n"
-                  HAS_ISSUES="true"
-                fi
-              fi
+          lines = []
+          has_issues = 'false'
+          for name, path, url in entries:
+              m = re.search(r'github\.com[:/]([^/\s]+/[^/\s]+?)(?:\.git)?/?$', url)
+              if not m:
+                  lines.append(f"⚠️ `{path}` - 非 GitHub 仓库源: {url}")
+                  has_issues = 'true'
+                  continue
+              repo = m.group(1)
+              request = urllib.request.Request(f"https://api.github.com/repos/{repo}", headers=headers)
+              try:
+                  with urllib.request.urlopen(request, timeout=30) as response:
+                      code = response.status
+              except urllib.error.HTTPError as e:
+                  code = e.code
+              except Exception as e:
+                  code = 0
+                  print(f"  ERR {path}: {e}")
+              if code == 200:
+                  lines.append(f"✅ `{path}` - 正常（{repo}）")
+              elif code == 404:
+                  lines.append(f"❌ `{path}` - 404 仓库不存在或已删除（{repo}）")
+                  has_issues = 'true'
+              elif code == 403:
+                  lines.append(f"⚠️ `{path}` - 403 访问受限（{repo}）")
+                  has_issues = 'true'
+              else:
+                  lines.append(f"⚠️ `{path}` - HTTP {code}（{repo}）")
+                  has_issues = 'true'
+              print(f"  {code} {path} ({repo})")
 
-              current_path=""
-              current_url=""
-            fi
-          done < .gitmodules
+          report = "\n".join(lines) if lines else "（.gitmodules 中未解析到任何子仓库 —— 请检查工作流解析逻辑）"
+          now = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
+          md = [
+              "# 🔍 子仓库健康检查报告",
+              "",
+              f"**检查时间**: {now}",
+              f"**子仓库数量**: {len(entries)}",
+              "",
+              "## 检查结果",
+              "",
+              report,
+              "",
+              "## 异常仓库",
+              "",
+              "⚠️ 发现异常，请及时处理" if has_issues == 'true' else "✅ 所有仓库状态正常",
+              "",
+              "---",
+              "*由 GitHub Actions 自动生成*",
+          ]
+          Path('submodule-health-report.md').write_text("\n".join(md) + "\n", encoding='utf-8')
 
-          echo "report=$REPORT" >> $GITHUB_OUTPUT
-          echo "has_issues=$HAS_ISSUES" >> $GITHUB_OUTPUT
+          out = os.environ.get('GITHUB_OUTPUT')
+          if out:
+              with open(out, 'a', encoding='utf-8') as f:
+                  f.write(f"count={len(entries)}\n")
+                  f.write(f"has_issues={has_issues}\n")
+                  f.write("report<<REPORT_EOF\n")
+                  f.write(report + "\n")
+                  f.write("REPORT_EOF\n")
 
-      - name: 生成健康报告
-        if: always()
-        run: |
-          cat << 'EOF' > submodule-health-report.md
-          # 🔍 子仓库健康检查报告
-
-          **检查时间**: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
-
-          ## 检查结果
-
-          ${{ steps.check.outputs.report }}
-
-          ## 异常仓库
-
-          ${{ steps.check.outputs.has_issues == 'true' && '⚠️ 发现异常，请及时处理' || '✅ 所有仓库状态正常' }}
-
-          ---
-          *由 GitHub Actions 自动生成*
-          EOF
+          print(f"检查完成: {len(entries)} 个子仓库, has_issues={has_issues}")
+          if len(entries) == 0:
+              raise SystemExit("ERROR: .gitmodules 解析结果为空，拒绝输出『全部正常』的结论")
+          PYEOF
 
       - name: 上传报告作为 Artifact
         uses: actions/upload-artifact@v4
@@ -103,7 +135,7 @@ jobs:
           path: submodule-health-report.md
           retention-days: 30
 
-      - name: 创建 Issue 记录异常
+      - name: 创建/更新 Issue 记录异常
         if: steps.check.outputs.has_issues == 'true'
         uses: actions/github-script@v7
         with:
@@ -111,34 +143,33 @@ jobs:
             const fs = require('fs');
             const report = fs.readFileSync('submodule-health-report.md', 'utf8');
 
-            // 查找是否已有开启的 issue
-            const existing = github.rest.issues.listForRepo({
+            const existing = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
               state: 'open',
-              labels: ['submodule-health']
+              labels: 'submodule-health',
             });
 
             if (existing.data.length > 0) {
-              // 更新已有 issue
-              github.rest.issues.update({
+              await github.rest.issues.update({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: existing.data[0].number,
-                body: report
+                body: report,
               });
+              core.info(`已更新 Issue #${existing.data[0].number}`);
             } else {
-              // 创建新 issue
-              github.rest.issues.create({
+              const created = await github.rest.issues.create({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 title: '⚠️ 子仓库健康检查异常',
                 body: report,
-                labels: ['submodule-health']
+                labels: ['submodule-health'],
               });
+              core.info(`已创建 Issue #${created.data.number}`);
             }
 
       - name: 通知 (成功时)
         if: steps.check.outputs.has_issues != 'true'
         run: |
-          echo "✅ 所有子仓库健康检查通过"
+          echo "✅ 全部 ${{ steps.check.outputs.count }} 个子仓库健康检查通过"

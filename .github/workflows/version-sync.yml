@@ -17,6 +17,9 @@ on:
           - minor
           - major
 
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -35,6 +38,11 @@ jobs:
 
       - name: Detect bump and sync version
         id: version
+        env:
+          # 原实现未注入 COMMIT_MSG，导致 os.environ.get("COMMIT_MSG") 恒为空：
+          # feat: 永远升不了 minor，且"防重复 bump"的守卫失效 —— 这里补齐。
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+          FORCE_BUMP: ${{ inputs.bump }}
         run: |
           python3 << 'PYEOF'
           import json, re, sys, os
@@ -126,6 +134,19 @@ jobs:
                   json.dump(skills_data, f, indent=2, ensure_ascii=False)
               print(f"Updated {len(skills_data)} skills to v{new_ver}")
 
+          # 同步 web/package.json + web/package-lock.json 的根版本（此前二者长期停留在旧版本）
+          for web_file in ("web/package.json", "web/package-lock.json"):
+              web_path = project_root / web_file
+              if not web_path.exists():
+                  continue
+              txt = web_path.read_text(encoding="utf-8")
+              old_field = f'"version": "{old_ver}"'
+              if old_field in txt:
+                  web_path.write_text(txt.replace(old_field, f'"version": "{new_ver}"'), encoding="utf-8")
+                  print(f"Updated {web_file}")
+              else:
+                  print(f"SKIP {web_file}: 未找到 v{old_ver} 字段（可能与主版本已漂移）")
+
           # Write outputs
           with open(os.environ["GITHUB_OUTPUT"], "a") as f:
               f.write(f"version={new_ver}\n")
@@ -140,7 +161,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add index.json README.md skills_index.json
+          git add index.json README.md skills_index.json web/package.json web/package-lock.json
           git commit -m "chore: bump version v${{ steps.version.outputs.old_version }} -> v${{ steps.version.outputs.version }}"
           git push origin main
 

@@ -13,13 +13,18 @@ def parse_frontmatter(content):
         return None
 
 def main():
-    base = Path('/tmp/our')
+    # 默认以脚本所在仓库根目录为基准；可传参覆盖：python tools/gen_index.py [仓库根]
+    import sys
+    base = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent
+    if not base.is_dir():
+        print(f'ERROR: 目录不存在: {base}')
+        raise SystemExit(2)
     skill_files = []
     for cat_dir in sorted(base.iterdir()):
         if cat_dir.is_dir() and cat_dir.name[0].isdigit():
             skills_dir = cat_dir / 'skills'
             if skills_dir.exists():
-                skill_files.extend([(f, cat_dir.name) for f in skills_dir.glob('*.md') if f.name != 'README.md'])
+                skill_files.extend([(f, cat_dir.name) for f in sorted(skills_dir.glob('*.md')) if f.name != 'README.md'])
 
     index = []
     for f, cat_name in skill_files:

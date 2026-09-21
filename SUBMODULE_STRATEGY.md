@@ -40,10 +40,17 @@ vendor/                      # 内部使用的工具/库 (可修改)
 ├── codegraph/               # 代码分析工具
 └── ...
 
-scripts/                     # 协同脚本 (我们维护)
-├── submodule-health-check.py
-├── submodule-sync.py
-└── invoke-external.py       # 调用子仓库的统一入口
+scripts/                     # 仓库维护脚本 (我们维护)
+├── build_graph.py           # 生成 framework/skill_graph.json
+├── update_index.json.py     # 索引补丁脚本
+├── version_manager.py       # 版本号管理
+└── ...
+
+.github/workflows/           # 子仓库自动化（以工作流承载，无独立 py 脚本）
+├── submodule-sync.yml         # 每周同步子仓库到最新并自动开 PR
+├── submodule-health-check.yml # 每日检查全部子仓库可达性（直接解析 .gitmodules）
+├── submodule-report.yml       # 生成子仓库状态报告
+└── update-submodules.yml      # 手动触发子仓库更新
 ```
 
 ---
@@ -93,10 +100,11 @@ scripts/                     # 协同脚本 (我们维护)
 ```
 
 ### 集成阶段
-1. 创建 PR 添加 `.gitmodules` 条目
+1. 创建 PR 添加 `.gitmodules` 条目：`git submodule add <url> external/<name>`
 2. 放置到合适的目录 (`external/` 或 `vendor/`)
-3. 添加到 `submodule-health-check.yml` 检测列表
-4. 更新 `SUBMODULE_REPORT.md`
+3. 更新文档清单：`EXTERNAL_SKILLS_ROUTING.md`（子仓库速查表）、`SUBMODULE_STRATEGY.md`（目录树 + 已集成表）、`submodule-paths.txt`、`submodule-status.txt`
+4. 不需要登记检测列表 —— `submodule-health-check.yml` 直接解析 `.gitmodules`，每天自动覆盖全部子仓库
+5. 前端首页 REPOSITORIES 卡片由 `web/scripts/sync-data.mjs` 解析 `.gitmodules` 自动生成；新子仓库的中文简介登记在该脚本的 `SUBMODULE_DESC`，未登记会回退显示 `owner/repo` 并在构建日志给出 WARN
 
 ---
 
@@ -139,10 +147,10 @@ Agent → 查询 external/<kb>/README.md → 获取知识
 ## 维护者职责
 
 ### 主仓库维护者
-- 定期运行 `submodule-sync.yml` 同步更新
-- 监控 `submodule-health-check.yml` 健康状态
+- 定期运行 `submodule-sync.yml` 同步更新（每周一 08:00 自动）
+- 监控 `submodule-health-check.yml` 健康状态（每日 06:00 自动；异常时自动创建/更新带 `submodule-health` 标签的 Issue）
 - 审核新的子仓库提名
-- 更新 SUBMODULE_REPORT.md
+- 查看 `submodule-sync-report.md` 与 `submodule-status.txt` 了解状态（由工作流刷新）
 
 ### 欢迎贡献者
 - 发现新的优质安全工具 → 提交 Issue 提名
@@ -153,6 +161,8 @@ Agent → 查询 external/<kb>/README.md → 获取知识
 
 ## 相关文件
 
-- [`.gitmodules`](.gitmodules) - 子仓库配置
-- [`SUBMODULE_REPORT.md`](SUBMODULE_REPORT.md) - 状态汇总报告
-- [`.github/workflows/submodule-*.yml`](.github/workflows/) - 管理工作流
+- [`.gitmodules`](.gitmodules) - 子仓库配置（19 个子仓库）
+- [`submodule-sync-report.md`](submodule-sync-report.md) - 同步报告
+- [`submodule-status.txt`](submodule-status.txt) / [`submodule-paths.txt`](submodule-paths.txt) - 状态与路径清单
+- [`.github/workflows/`](.github/workflows/) - 子仓库管理工作流（sync / health-check / report / update）
+- 健康检查报告为 CI Artifact：`submodule-health-report`（保留 30 天；异常时同步到 Issue）

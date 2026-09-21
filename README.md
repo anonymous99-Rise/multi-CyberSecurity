@@ -20,7 +20,7 @@
 10-19/          权限提升 · 后渗透 · 横向移动 · 持久化
 20-29/          痕迹清除 · 报告撰写 · 移动安全 · 区块链 · IoT
 30-39/          SOC运营 · 威胁狩猎 · 数字取证 · 容器安全 · API安全
-Skills20260809/ CyberStrikeAI v3.0 深度攻防专家技能包（31个技能包，兼容agentskills.io规范）
+Skills20260809/ CyberStrikeAI v3.0 深度攻防专家技能包（30个技能包，兼容agentskills.io规范）
 external/        外部子仓库（CyberStrikeAI 运行时、CkSKILLS、dsh-pentest、dsh-infinite-gen-4 等）
 framework/      红队框架（jailbreak技能分级体系）
 mappings/       ATT&CK Navigator可视化层
@@ -67,7 +67,7 @@ python cli.py skill export --platform dsh
 
 ## CyberStrikeAI 技能包 (Skills20260809)
 
-`Skills20260809/` 集成了 **CyberStrikeAI v3.0** 深度攻防专家技能包（By Tas9er），共 **31个技能包**，兼容 [agentskills.io 规范](https://agentskills.io/specification.md)，支持 Eino ADK 框架的 `skill("name")` 按需加载。
+`Skills20260809/` 集成了 **CyberStrikeAI v3.0** 深度攻防专家技能包（By Tas9er），共 **30个技能包**（与下方分类表 18+11+1 一致），兼容 [agentskills.io 规范](https://agentskills.io/specification.md)，支持 Eino ADK 框架的 `skill("name")` 按需加载。
 
 > 💡 **运行时**：技能包配套的 CyberStrikeAI 运行时已作为子仓库集成至 [external/CyberStrikeAI/](external/CyberStrikeAI)（[AIPentest/CyberStrikeAI](https://github.com/AIPentest/CyberStrikeAI) v1.7.18），提供 HTTP API（端口 8888）、Eino Agent、MCP 工具、RAG 知识库与可视化工作流。克隆时使用 `git clone --recursive` 拉取子仓库。
 

@@ -33,7 +33,7 @@ jobs:
           import yaml
 
           errors_all = []
-          results = {"index": None, "frontmatter": None, "attack_mapping": None}
+          results = {"index": None, "frontmatter": None, "attack_mapping": None, "consistency": None}
 
           # --- 1. Validate skills_index.json exists and is valid ---
           try:
@@ -129,6 +129,61 @@ jobs:
           results["attack_mapping"] = f"PASS: {attack_skills} skills with {len(all_attack_ids)} ATT&CK techniques"
           print(f"[INFO] ATT&CK: {attack_skills} skills, {len(all_attack_ids)} unique techniques")
 
+          # --- 4. 索引/磁盘/模块 一致性（防止索引指向已删除或已移动的文件）---
+          consistency_errors = []
+
+          disk_skills = set()
+          for cat_dir in sorted(Path('.').iterdir()):
+              if not cat_dir.is_dir() or not cat_dir.name[0].isdigit():
+                  continue
+              skills_dir = cat_dir / 'skills'
+              if not skills_dir.exists():
+                  continue
+              for fname in sorted(skills_dir.glob('*.md')):
+                  if fname.name == 'README.md':
+                      continue
+                  disk_skills.add(str(fname).replace(os.sep, '/'))
+
+          indexed_files = set()
+          for entry in index:
+              f = str(entry.get('file', '')).replace('\\', '/')
+              indexed_files.add(f)
+              if not Path(f).exists():
+                  consistency_errors.append(f"skills_index.json -> missing file: {f}")
+              cat = entry.get('category', '')
+              if cat and not Path(cat).is_dir():
+                  consistency_errors.append(f"skills_index.json -> missing category dir: {cat} (skill: {entry.get('name')})")
+
+          for f in sorted(disk_skills - indexed_files):
+              consistency_errors.append(f"skill file on disk but not indexed: {f}")
+
+          if Path('index.json').exists():
+              with open('index.json', 'r', encoding='utf-8') as f:
+                  modules = json.load(f).get('modules', [])
+              for m in modules:
+                  mp = Path(m.get('path', ''))
+                  listed = m.get('skills', [])
+                  if not mp.is_dir():
+                      consistency_errors.append(f"index.json -> missing module dir: {m.get('path')} (id={m.get('id')})")
+                      continue
+                  if (mp / 'skills').is_dir():
+                      files = [x for x in (mp / 'skills').glob('*.md') if x.name != 'README.md']
+                  else:
+                      files = []
+                  if len(files) != len(listed) or m.get('skill_count') != len(listed):
+                      consistency_errors.append(
+                          f"module {m.get('path')} count mismatch: skill_count={m.get('skill_count')} listed={len(listed)} disk={len(files)}")
+
+          if consistency_errors:
+              results["consistency"] = f"FAIL: {len(consistency_errors)} issues"
+              errors_all.extend(consistency_errors[:20])
+              print(f"[FAIL] Index/disk consistency: {len(consistency_errors)} issues")
+              for e in consistency_errors[:10]:
+                  print(f"   - {e}")
+          else:
+              results["consistency"] = f"PASS: {len(indexed_files)} indexed == {len(disk_skills)} on disk"
+              print(f"[PASS] Index/disk consistency: {len(indexed_files)} indexed == {len(disk_skills)} on disk")
+
           # --- Summary ---
           print("\n" + "=" * 50)
           passed = sum(1 for v in results.values() if v and v.startswith("PASS"))
@@ -169,7 +224,8 @@ jobs:
           labels = {
               "index": "skills_index.json",
               "frontmatter": "Skill Frontmatter (新格式)",
-              "attack_mapping": "ATT&CK Coverage"
+              "attack_mapping": "ATT&CK Coverage",
+              "consistency": "Index/disk Consistency"
           }
           for key, label in labels.items():
               val = results.get(key, "N/A")

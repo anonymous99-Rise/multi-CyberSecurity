@@ -422,7 +422,13 @@ def generate_attack_layer(base):
 
 
 def main():
-    base = Path('/tmp/our')
+    # 默认以脚本所在仓库根目录为基准；可传参覆盖：python tools/transform_skills.py [仓库根]
+    # 注意：本脚本会原地重写 skill 文件的 frontmatter，运行前先提交/备份。
+    import sys
+    base = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent
+    if not base.is_dir():
+        print(f'ERROR: 目录不存在: {base}')
+        raise SystemExit(2)
     skill_files = []
     for cat_dir in sorted(base.iterdir()):
         if cat_dir.is_dir() and cat_dir.name[0].isdigit():

@@ -20,6 +20,16 @@
 
 - `.github/workflows/validate.yml` 新增第 4 项检查：`skills_index.json` ↔ 磁盘 `NN-*/skills/*.md` ↔ `index.json` 模块数量三方一致（本次漂移能潜伏 4 个月，正是因为 CI 只扫磁盘、从不与索引交叉校验）
 
+### ✨ 新增（web）
+
+- **深浅双主题**：颜色全部改为 CSS 变量（`globals.css` 的 `:root` / `html.light`），侧栏新增主题切换、结果写入 `localStorage`，首访跟随系统偏好；`layout` 内联脚本在首次绘制前应用主题以免闪色。用 CDP 实测两种主题的对比度（正文/标题/标签深色 12.6/16.8/5.4，浅色 11.2/17.4/5.5，均 ≥ WCAG AA 4.5）；代码/终端表面在浅色下依旧保持深底
+- **技能库深链**：`#q=` / `#module=` / `#skill=` 可直接分享与前进后退（选择用 `pushState`、输入用 `replaceState`）；技能详情新增"复制链接"。规避了静态导出下 `useSearchParams` 必须包 Suspense 的限制
+
+### 🧪 测试（web）
+
+- **数据层单元测试**：选择器拆为 `lib/data/pure.ts`（纯函数）+ `selectors.ts`（绑定数据集），测试不依赖 JSON 与路径别名；`npm test` 覆盖千分位、ATT&CK 分档边界/计数、五维搜索、覆盖率空输入、入参不可变等；已接入 `validate.yml`
+- 测试首跑即抓到真问题：被截断的百分号编码（`#skill=%E5%AD`）会让 `decodeURIComponent` 抛错打断渲染，已改为容错解码
+
 ### 🏗️ 重构（web）
 
 - **数据层拆分**：原 `web/src/lib/data.ts`（174 行，类型 + JSON 引入 + 配置 + 选择器混在一起）拆成 `lib/data/{types,datasets,config,selectors,index}.ts`，页面导入路径不变（仍是 `@/lib/data`），拆分后零页面改动即通过类型检查

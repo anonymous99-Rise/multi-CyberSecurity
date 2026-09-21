@@ -199,10 +199,19 @@ jobs:
               sys.exit(1)
           PYEOF
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'   # 需要 Node 22.18+ 才能在测试里直接 import .ts（类型擦除）
+
       - name: Web UI style constraints
         run: |
           # 固化美化中踩过的坑：失效的透明度简写 / <10px 字号 / 超出色板的内联颜色
           python3 tools/check_web_style.py
+
+      - name: Web unit tests (data layer / deep link)
+        working-directory: web
+        run: npm test
 
       - name: Generate job summary
         if: always()

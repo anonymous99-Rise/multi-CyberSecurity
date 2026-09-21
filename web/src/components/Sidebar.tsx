@@ -6,6 +6,7 @@ import { Shield, BookOpen, Terminal, Crosshair, Unlock, Menu, X } from "lucide-r
 import { cn } from "@/lib/utils";
 import { meta, externalSkills } from "@/lib/data";
 import { fmt } from "@/lib/format";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 const navItems = [
   { href: "/", label: "概览", code: "00", icon: Shield },
@@ -24,7 +25,7 @@ export function Sidebar() {
       {/* Mobile toggle button */}
       <button
         onClick={() => setMobileOpen(!mobileOpen)}
-        className="lg:hidden fixed top-3 left-3 z-50 p-2 bg-bg-secondary border border-bg-border text-gray-400 hover:text-accent hover:border-accent/40 transition-colors"
+        className="lg:hidden fixed top-3 left-3 z-50 p-2 bg-bg-secondary border border-bg-border text-ink-muted hover:text-accent hover:border-accent/40 transition-colors"
         aria-label="Toggle navigation"
         aria-expanded={mobileOpen}
       >
@@ -34,7 +35,7 @@ export function Sidebar() {
       {/* Backdrop */}
       {mobileOpen && (
         <div
-          className="lg:hidden fixed inset-0 bg-black/60 backdrop-blur-[1px] z-30"
+          className="lg:hidden fixed inset-0 bg-backdrop backdrop-blur-[1px] z-30"
           onClick={() => setMobileOpen(false)}
         />
       )}
@@ -57,14 +58,17 @@ export function Sidebar() {
               <div className="text-[12px] font-bold text-accent font-mono tracking-wider uppercase leading-none">
                 mCS
               </div>
-              <div className="text-[10px] text-gray-400 font-mono mt-0.5 truncate">
+              <div className="text-[10px] text-ink-muted font-mono mt-0.5 truncate">
                 multi-CyberSecurity
               </div>
             </div>
           </div>
-          <p className="text-[10px] text-gray-500 mt-2 font-mono tracking-wide metric-num">
+          <p className="text-[10px] text-ink-faint mt-2 font-mono tracking-wide metric-num">
             v{meta.version} · {meta.last_updated}
           </p>
+          <div className="mt-2 pt-2 border-t border-bg-border">
+            <ThemeToggle />
+          </div>
         </div>
 
         {/* Nav */}
@@ -83,14 +87,14 @@ export function Sidebar() {
                   "group flex items-center gap-3 px-4 py-2.5 text-[13px] transition-colors relative",
                   active
                     ? "text-accent bg-accent/5"
-                    : "text-gray-400 hover:text-gray-100 hover:bg-white/5"
+                    : "text-ink-muted hover:text-ink hover:bg-overlay"
                 )}
               >
                 {active && <span className="absolute left-0 top-0 bottom-0 w-[2px] bg-accent" />}
-                <span className="text-[10px] font-mono text-gray-500 group-hover:text-accent/60 transition-colors metric-num">
+                <span className="text-[10px] font-mono text-ink-faint group-hover:text-accent/60 transition-colors metric-num">
                   {item.code}
                 </span>
-                <Icon size={14} className={active ? "text-accent" : "text-gray-500 group-hover:text-gray-300"} />
+                <Icon size={14} className={active ? "text-accent" : "text-ink-faint group-hover:text-ink-muted"} />
                 <span className="font-medium">{item.label}</span>
               </Link>
             );
@@ -102,21 +106,21 @@ export function Sidebar() {
           <div className="label-tech mb-2">// Status</div>
           <div className="space-y-1.5">
             <div className="flex justify-between text-[11px] font-mono">
-              <span className="text-gray-500">SKILLS</span>
+              <span className="text-ink-faint">SKILLS</span>
               <span className="text-accent metric-num">{meta.total_skills}</span>
             </div>
             <div className="flex justify-between text-[11px] font-mono">
-              <span className="text-gray-500">MODULES</span>
+              <span className="text-ink-faint">MODULES</span>
               <span className="text-accent metric-num">{meta.total_modules}</span>
             </div>
             <div className="flex justify-between text-[11px] font-mono">
-              <span className="text-gray-500" title="external/ 子仓库的 SKILL.md 数（不并入自有技能）">
+              <span className="text-ink-faint" title="external/ 子仓库的 SKILL.md 数（不并入自有技能）">
                 EXTERNAL
               </span>
               <span className="text-info metric-num">{fmt(externalSkills.external_skill_md_total)}</span>
             </div>
             <div className="flex justify-between text-[11px] font-mono">
-              <span className="text-gray-500">STATUS</span>
+              <span className="text-ink-faint">STATUS</span>
               <span className="text-accent flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
                 ONLINE

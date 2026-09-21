@@ -84,7 +84,7 @@ export default function CliPage() {
                 "p-2.5 border text-center transition-all",
                 op === o.id
                   ? "border-accent bg-accent/5 text-accent"
-                  : "border-bg-border text-gray-500 hover:text-gray-300 hover:border-gray-700",
+                  : "border-bg-border text-ink-faint hover:text-ink-muted hover:border-gray-700",
               )}
             >
               <span className="text-[11px] font-mono font-medium">{o.label}</span>
@@ -105,7 +105,7 @@ export default function CliPage() {
             <select
               value={operation}
               onChange={(e) => setOperation(e.target.value)}
-              className="w-full px-3 py-2 bg-bg-secondary border border-bg-border text-xs text-gray-300 font-mono"
+              className="w-full px-3 py-2 bg-bg-secondary border border-bg-border text-xs text-ink-muted font-mono"
             >
               {opTypes.map((o) => (
                 <option key={o.v} value={o.v} className="bg-bg-secondary">{o.l}</option>
@@ -124,7 +124,7 @@ export default function CliPage() {
               <button
                 key={p.id}
                 onClick={() => setPlatform(p.id)}
-                className={cn("px-2.5 py-1 text-[10px] font-mono border transition-all", platform === p.id ? "text-white" : "border-bg-border text-gray-500")}
+                className={cn("px-2.5 py-1 text-[10px] font-mono border transition-all", platform === p.id ? "text-white" : "border-bg-border text-ink-faint")}
                 style={platform === p.id ? { borderColor: p.color, backgroundColor: p.color + "15", color: p.color } : {}}
               >
                 {p.name}
@@ -133,7 +133,7 @@ export default function CliPage() {
             {op === "redteam" && (
               <button
                 onClick={() => setPlatform("universal")}
-                className={cn("px-2.5 py-1 text-[10px] font-mono border", platform === "universal" ? "border-accent bg-accent/5 text-accent" : "border-bg-border text-gray-500")}
+                className={cn("px-2.5 py-1 text-[10px] font-mono border", platform === "universal" ? "border-accent bg-accent/5 text-accent" : "border-bg-border text-ink-faint")}
               >
                 UNIVERSAL
               </button>
@@ -151,7 +151,7 @@ export default function CliPage() {
                 key={l}
                 onClick={() => setLevel(l)}
                 disabled={l === "L4"}
-                className={cn("px-4 py-1.5 text-xs font-mono border transition-all disabled:opacity-20", level === l ? "border-accent bg-accent/5 text-accent" : "border-bg-border text-gray-500")}
+                className={cn("px-4 py-1.5 text-xs font-mono border transition-all disabled:opacity-20", level === l ? "border-accent bg-accent/5 text-accent" : "border-bg-border text-ink-faint")}
               >
                 {l}
               </button>
@@ -166,8 +166,8 @@ export default function CliPage() {
           <span className="label-tech">// COMMAND</span>
           <CopyButton text={cmd} />
         </div>
-        <div className="p-3 bg-black border border-bg-border">
-          <code className="text-xs text-accent font-mono break-all term-glow">{cmd}</code>
+        <div className="p-3 bg-code border border-bg-border">
+          <code className="text-xs text-code-accent font-mono break-all term-glow">{cmd}</code>
         </div>
       </div>
 
@@ -187,8 +187,8 @@ export default function CliPage() {
           <div className="label-tech mb-2 flex items-center gap-2">
             <Terminal size={11} /> // OUTPUT
           </div>
-          <div className="p-4 bg-black border border-bg-border max-h-[300px] overflow-y-auto">
-            <pre className="text-[11px] font-mono text-gray-400 whitespace-pre-wrap">
+          <div className="p-4 bg-code border border-bg-border max-h-[300px] overflow-y-auto">
+            <pre className="text-[11px] font-mono text-ink-muted whitespace-pre-wrap">
               {output}
               {running && <span className="inline-block w-2 h-3 bg-accent animate-blink ml-0.5" />}
             </pre>
@@ -212,7 +212,7 @@ function ParamInput({ label, value, onChange, placeholder }: { label: string; va
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full px-3 py-2 bg-bg-secondary border border-bg-border text-xs text-gray-300 font-mono placeholder-gray-700"
+        className="w-full px-3 py-2 bg-bg-secondary border border-bg-border text-xs text-ink-muted font-mono placeholder-gray-700"
       />
     </div>
   );

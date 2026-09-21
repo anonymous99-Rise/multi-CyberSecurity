@@ -16,10 +16,10 @@ import { StatPanel } from "@/components/ui/StatPanel";
 import { BarList } from "@/components/ui/BarList";
 import { Chip } from "@/components/ui/Chip";
 
-// 配色纪律（全站统一）：主色 #00ff88 = 自有内容/交互；信息色 #00e5ff = 外部引用；
-// warning/danger 仅用于严重度。首页曾一屏出现 12 种颜色，现已收敛为 2 种。
-const ACCENT = "#00ff88";
-const INFO = "#00e5ff";
+// 配色纪律（全站统一）：主色 = 自有内容/交互；信息色 = 外部引用；warning/danger 仅用于严重度。
+// 直接用主题变量而不是写死十六进制，浅色主题下才会跟着换成可读的深色。
+const ACCENT = "var(--accent)";
+const INFO = "var(--info)";
 
 const FEATURE_CARDS = [
   { href: "/skills", icon: BookOpen, title: "技能库", code: "SKILLS" },
@@ -47,26 +47,26 @@ export default function Home() {
       {/* Hero：标题 + 版本/规模速览 */}
       <div className="mb-8">
         <div className="label-tech text-accent/70 mb-2">// AI-Powered Cybersecurity Framework</div>
-        <h1 className="text-4xl sm:text-5xl font-bold text-gray-100 font-mono tracking-tight">
+        <h1 className="text-4xl sm:text-5xl font-bold text-ink font-mono tracking-tight">
           multi<span className="text-accent term-glow">-</span>CyberSecurity
         </h1>
         <div className="glow-line w-40 mt-4 mb-4" />
-        <p className="text-sm text-gray-400 max-w-2xl leading-relaxed">{meta.description}</p>
+        <p className="text-sm text-ink-muted max-w-2xl leading-relaxed">{meta.description}</p>
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-4 text-[11px] font-mono">
           <span className="px-2 py-0.5 border border-accent/40 text-accent">v{meta.version}</span>
-          <span className="text-gray-500">
-            <span className="text-gray-300 metric-num">{meta.total_skills}</span> 自有技能
+          <span className="text-ink-muted">
+            <span className="text-ink metric-num">{meta.total_skills}</span> 自有技能
           </span>
-          <span className="text-gray-700">/</span>
-          <span className="text-gray-500">
-            <span className="text-gray-300 metric-num">{fmt(externalSkills.external_skill_md_total)}</span> 外部 SKILL.md
+          <span className="text-ink-faint">/</span>
+          <span className="text-ink-muted">
+            <span className="text-ink metric-num">{fmt(externalSkills.external_skill_md_total)}</span> 外部 SKILL.md
           </span>
-          <span className="text-gray-700">/</span>
-          <span className="text-gray-500">
-            <span className="text-gray-300 metric-num">{submodules.length}</span> 子仓库
+          <span className="text-ink-faint">/</span>
+          <span className="text-ink-muted">
+            <span className="text-ink metric-num">{submodules.length}</span> 子仓库
           </span>
-          <span className="text-gray-700">·</span>
-          <span className="text-gray-600">更新于 {meta.last_updated}</span>
+          <span className="text-ink-faint">·</span>
+          <span className="text-ink-muted">更新于 {meta.last_updated}</span>
         </div>
       </div>
 
@@ -88,15 +88,15 @@ export default function Home() {
 
       {/* 计数口径：自有技能与外部子仓库技能分开计数 */}
       <div className="note-strip px-3 py-2.5 mb-7">
-        <p className="text-[11px] text-gray-400 leading-relaxed">
+        <p className="text-[11px] text-ink-muted leading-relaxed">
           <span className="text-accent/80 font-mono">统计口径</span> SKILLS / MODULES / ATT&amp;CK 为本仓库自有内容
-          （{meta.total_modules} 个分类下的 <span className="font-mono text-gray-300">NN-*/skills</span>）；external/ 的{" "}
+          （{meta.total_modules} 个分类下的 <span className="font-mono text-ink-muted">NN-*/skills</span>）；external/ 的{" "}
           {externalSkills.repo_count} 个子仓库（{externalSkills.repo_with_skills} 个含 SKILL.md）以 git submodule 引用，
           单独计为{" "}
           <span className="font-mono text-info">EXTERNAL {externalSkills.external_skill_md_total}</span>（另含知识库类 markdown{" "}
-          {fmt(externalSkills.external_md_total ?? 0)} 个），<span className="text-gray-300">不并入</span>自有技能数。
+          {fmt(externalSkills.external_md_total ?? 0)} 个），<span className="text-ink-muted">不并入</span>自有技能数。
           下方仓库右侧：<span className="font-mono text-accent/80">skill</span> = SKILL.md 数，
-          <span className="font-mono text-gray-400">md</span> = markdown 总数。
+          <span className="font-mono text-ink-muted">md</span> = markdown 总数。
         </p>
       </div>
 
@@ -112,16 +112,16 @@ export default function Home() {
                 </span>
                 <span className="min-w-0">
                   <span className="flex items-center gap-2">
-                    <h2 className="text-base font-semibold text-gray-100 group-hover:text-accent transition-colors">
+                    <h2 className="text-base font-semibold text-ink group-hover:text-accent transition-colors">
                       {c.title}
                     </h2>
                     <span className="label-tech">{c.code}</span>
                     <ArrowUpRight
                       size={14}
-                      className="ml-auto shrink-0 text-gray-600 opacity-0 group-hover:opacity-100 group-hover:text-accent transition-all"
+                      className="ml-auto shrink-0 text-ink-faint opacity-0 group-hover:opacity-100 group-hover:text-accent transition-all"
                     />
                   </span>
-                  <span className="block text-xs text-gray-400 mt-1 truncate">{featureDescriptions[c.href]}</span>
+                  <span className="block text-xs text-ink-muted mt-1 truncate">{featureDescriptions[c.href]}</span>
                 </span>
               </Card>
             </Link>
@@ -159,21 +159,21 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
             title={`${s.path} — ${s.desc}`}
-            className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs min-w-0 py-2 border-b border-bg-border/60 hover:bg-white/5 transition-colors group"
+            className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs min-w-0 py-2 border-b border-bg-border/60 hover:bg-overlay transition-colors group"
           >
-            <Package size={12} className="text-gray-500 shrink-0" />
-            <span className="font-mono text-gray-200 group-hover:text-accent transition-colors shrink-0 max-w-[9rem] sm:max-w-[12rem] truncate">
+            <Package size={12} className="text-ink-faint shrink-0" />
+            <span className="font-mono text-ink group-hover:text-accent transition-colors shrink-0 max-w-[9rem] sm:max-w-[12rem] truncate">
               {s.name}
             </span>
             {s.group !== "external" && (
-              <span className="font-mono text-[10px] text-gray-500 shrink-0">{s.group}/</span>
+              <span className="font-mono text-[10px] text-ink-faint shrink-0">{s.group}/</span>
             )}
-            <span className="text-gray-600 shrink-0 hidden sm:inline">—</span>
+            <span className="text-ink-faint shrink-0 hidden sm:inline">—</span>
             <span className="ml-auto sm:ml-0 w-16 sm:w-20 text-right metric-num text-[10px] text-accent shrink-0">
               {fmt((s.skill_md ?? 0) > 0 ? s.skill_md ?? 0 : s.md_total ?? 0)}
-              <span className="text-gray-500"> {s.skill_md ? "skill" : "md"}</span>
+              <span className="text-ink-faint"> {s.skill_md ? "skill" : "md"}</span>
             </span>
-            <span className="order-last w-full sm:order-none sm:w-auto sm:flex-1 sm:min-w-0 text-gray-400 text-[11px] line-clamp-1 sm:truncate">
+            <span className="order-last w-full sm:order-none sm:w-auto sm:flex-1 sm:min-w-0 text-ink-muted text-[11px] line-clamp-1 sm:truncate">
               {s.desc}
             </span>
           </a>

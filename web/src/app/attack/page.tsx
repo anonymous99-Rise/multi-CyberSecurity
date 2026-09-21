@@ -3,7 +3,6 @@ import { useState, useMemo } from "react";
 import { Search, X, Crosshair } from "lucide-react";
 import { attackTechniques, getAttackCoverageStats, getNistCsfCoverage, skillsIndex } from "@/lib/data";
 import { SEVERITY_RAMP, CSF_LABELS, severityBuckets, severityStep } from "@/lib/severity";
-import { hexA } from "@/lib/format";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { StatPanel } from "@/components/ui/StatPanel";
 import { SectionCard } from "@/components/ui/Card";
@@ -55,25 +54,25 @@ export default function AttackPage() {
         suffix={
           <span className="ml-auto flex items-center gap-2">
             <span className="relative">
-              <Search size={12} className="absolute left-2 top-2.5 text-gray-500" />
+              <Search size={12} className="absolute left-2 top-2.5 text-ink-faint" />
               <input
                 value={filter}
                 onChange={(e) => setFilter(e.target.value)}
                 placeholder="筛选技术编号 / 名称，如 T1059"
                 aria-label="筛选 ATT&CK 技术"
-                className="pl-7 pr-7 py-1.5 bg-bg border border-bg-border text-[12px] text-gray-200 placeholder-gray-500 font-mono w-52 sm:w-64 normal-case tracking-normal"
+                className="pl-7 pr-7 py-1.5 bg-bg border border-bg-border text-[12px] text-ink placeholder-gray-500 font-mono w-52 sm:w-64 normal-case tracking-normal"
               />
               {filter && (
                 <button
                   onClick={() => setFilter("")}
                   aria-label="清除筛选"
-                  className="absolute right-1.5 top-1.5 text-gray-500 hover:text-accent transition-colors"
+                  className="absolute right-1.5 top-1.5 text-ink-faint hover:text-accent transition-colors"
                 >
                   <X size={13} />
                 </button>
               )}
             </span>
-            <span className="text-[11px] font-mono text-gray-400 metric-num">
+            <span className="text-[11px] font-mono text-ink-muted metric-num">
               {filtered.length}/{attackTechniques.length}
             </span>
           </span>
@@ -86,7 +85,7 @@ export default function AttackPage() {
               <div
                 key={t.techniqueID}
                 className="group relative aspect-square flex items-center justify-center cursor-pointer transition-transform hover:scale-[1.12] hover:z-10"
-                style={{ backgroundColor: hexA(s.color, s.bg), border: `1px solid ${hexA(s.color, s.border)}` }}
+                style={{ backgroundColor: s.bg, border: `1px solid ${s.border}` }}
                 title={`${t.techniqueID} [score: ${t.score}]\n${t.metadata[0]?.value || ""}`}
               >
                 <span className="text-[10px] font-mono metric-num" style={{ color: s.color }}>
@@ -96,7 +95,7 @@ export default function AttackPage() {
             );
           })}
           {filtered.length === 0 && (
-            <div className="col-span-full py-10 text-center text-gray-500 text-xs font-mono">// 无匹配技术</div>
+            <div className="col-span-full py-10 text-center text-ink-faint text-xs font-mono">// 无匹配技术</div>
           )}
         </div>
 
@@ -107,10 +106,10 @@ export default function AttackPage() {
             <span key={r.label} className="flex items-center gap-2 font-mono">
               <span
                 className="w-4 h-4"
-                style={{ backgroundColor: hexA(r.color, r.bg), border: `1px solid ${hexA(r.color, r.border)}` }}
+                style={{ backgroundColor: r.bg, border: `1px solid ${r.border}` }}
               />
               <span className="text-[12px] metric-num" style={{ color: r.color }}>{r.label}</span>
-              <span className="text-[12px] text-gray-400 metric-num">×{buckets[i]}</span>
+              <span className="text-[12px] text-ink-muted metric-num">×{buckets[i]}</span>
             </span>
           ))}
         </div>

@@ -2,21 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   主题令牌：所有颜色都走 CSS 变量，深色为默认、html.light 覆盖为浅色。
+   组件里请使用语义类（bg-bg-secondary / text-ink / text-ink-muted …），
+   不要写死 gray-100/black 之类的固定色值 —— 否则浅色主题下会看不清。
+   ============================================================ */
 :root {
+  color-scheme: dark;
+
+  /* 表面 */
   --bg: #050507;
   --bg-2: #0b0d10;
   --bg-3: #111518;
+  --bg-raised: #0e1216;
   --border: #1a1f24;
+  --code-bg: #05070a;
+  --overlay: rgba(255, 255, 255, 0.05);
+  --backdrop: rgba(0, 0, 0, 0.6);
+
+  /* 语义色：主色=自有/交互，info=外部/信息，warning|danger 仅表严重度 */
   --accent: #00ff88;
+  --accent-muted: #00cc6a;
   --accent-dim: #008844;
-  --danger: #ff0040;
-  --warning: #ffb000;
   --info: #00e5ff;
-  --grid: rgba(0, 255, 136, 0.018);
-  /* 语义文字色：标签/次要文字必须达到可用对比度（原先 #4a5258 约 3:1，读不清） */
+  --warning: #ffb000;
+  --danger: #ff0040;
+
+  /* 文字三级 + 正文（--text-3 取到与卡片底色对比度 ≥5，满足 WCAG AA 4.5） */
   --text-1: #e6eaee;
-  --text-2: #9aa4ae;
-  --text-3: #6e7882;
+  --text-2: #c8ccd0;
+  --text-3: #7b8592;
+
+  /* 装饰 */
+  --grid: rgba(0, 255, 136, 0.018);
+  --scanline: rgba(255, 255, 255, 0.006);
+  --glow: rgba(0, 255, 136, 0.08);
+  --glow-strong: rgba(0, 255, 136, 0.1);
+  --focus-ring: rgba(0, 255, 136, 0.15);
+  --note-bg: rgba(0, 136, 68, 0.06);
+
+  /* 代码/终端表面：深浅主题都保持"深底亮字"，以保住终端识别度 */
+  --code-bg: #05070a;
+  --code-fg: #b9c2cb;
+  --code-accent: #00ff88;
+
+  /* ATT&CK 分数四档（色值 + 底色 + 描边都用变量，浅色主题单独调深） */
+  --sev1: #00ff88; --sev1-bg: rgba(0, 255, 136, 0.08); --sev1-bd: rgba(0, 255, 136, 0.35);
+  --sev2: #ffd000; --sev2-bg: rgba(255, 208, 0, 0.2); --sev2-bd: rgba(255, 208, 0, 0.6);
+  --sev3: #ff7a00; --sev3-bg: rgba(255, 122, 0, 0.38); --sev3-bd: rgba(255, 122, 0, 0.85);
+  --sev4: #ff0040; --sev4-bg: rgba(255, 0, 64, 0.58); --sev4-bd: rgba(255, 0, 64, 1);
+}
+
+html.light {
+  color-scheme: light;
+
+  --bg: #f7f8fa;
+  --bg-2: #ffffff;
+  --bg-3: #eef1f4;
+  --bg-raised: #fbfcfd;
+  --border: #cdd5dd;
+  --code-bg: #f1f4f7;
+  --overlay: rgba(0, 0, 0, 0.045);
+  --backdrop: rgba(15, 20, 26, 0.45);
+
+  /* 浅色下提亮主色：纯 #00ff88 在白底不可读；下面这组在白底对比度 ≥5 */
+  --accent: #00804a;
+  --accent-muted: #006e40;
+  --accent-dim: #0b6a3f;
+  --info: #0072a3;
+  --warning: #9a5b00;
+  --danger: #c2002f;
+
+  --text-1: #10141a;
+  --text-2: #31383f;
+  --text-3: #5c6672;
+
+  --grid: rgba(0, 0, 0, 0.022);
+  --scanline: transparent; /* 浅色底上扫描线只会显脏，直接关掉 */
+  --glow: rgba(0, 163, 92, 0.1);
+  --glow-strong: rgba(0, 163, 92, 0.14);
+  --focus-ring: rgba(0, 163, 92, 0.18);
+  --note-bg: rgba(0, 163, 92, 0.07);
+
+  /* 代码/终端表面：浅色主题下依然用深底，避免命令框看起来像输入框占位符 */
+  --code-bg: #0f151b;
+  --code-fg: #d3dedb;
+  --code-accent: #6ee7a8;
+
+  /* 浅色下低透明度色块几乎看不见 —— 换成更深的本体色 + 更高不透明度，四档重新可分 */
+  --sev1: #0a7f4c; --sev1-bg: rgba(10, 127, 76, 0.16); --sev1-bd: rgba(10, 127, 76, 0.6);
+  --sev2: #9a6a00; --sev2-bg: rgba(154, 106, 0, 0.22); --sev2-bd: rgba(154, 106, 0, 0.65);
+  --sev3: #b4530a; --sev3-bg: rgba(180, 83, 10, 0.3); --sev3-bd: rgba(180, 83, 10, 0.75);
+  --sev4: #b3001b; --sev4-bg: rgba(179, 0, 27, 0.36); --sev4-bd: rgba(179, 0, 27, 0.9);
 }
 
 /* === Base === */
@@ -24,7 +101,7 @@ html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
-  color: #c8ccd0;
+  color: var(--text-2);
   font-family: var(--font-plex), system-ui, sans-serif;
   font-size: 14px;
   line-height: 1.6;
@@ -44,7 +121,7 @@ body::before {
   z-index: 0;
 }
 
-/* Scanline overlay：降到 1px 周期、极低不透明度，避免盖住正文（原先 2px/0.012 太吵） */
+/* Scanline overlay：1px 周期、极低不透明度，浅色主题下自动关闭 */
 body::after {
   content: "";
   position: fixed;
@@ -53,8 +130,8 @@ body::after {
     0deg,
     transparent 0,
     transparent 3px,
-    rgba(255, 255, 255, 0.006) 3px,
-    rgba(255, 255, 255, 0.006) 4px
+    var(--scanline) 3px,
+    var(--scanline) 4px
   );
   pointer-events: none;
   z-index: 999;
@@ -78,11 +155,11 @@ body::after {
   position: relative;
   background: var(--bg-2);
   border: 1px solid var(--border);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
 .tac-card:hover {
   border-color: var(--accent-dim);
-  box-shadow: 0 0 12px rgba(0, 255, 136, 0.08);
+  box-shadow: 0 0 12px var(--glow);
 }
 .tac-card::before,
 .tac-card::after {
@@ -107,6 +184,16 @@ body::after {
 .tac-card:hover::before,
 .tac-card:hover::after { opacity: 1; }
 
+/* 主入口卡：左侧主色条 + 略高的表面色 */
+.tac-card-primary {
+  border-left: 3px solid var(--accent);
+  background: var(--bg-raised);
+}
+.tac-card-primary:hover {
+  border-left-color: var(--accent);
+  box-shadow: 0 0 18px var(--glow-strong);
+}
+
 /* === Terminal Text === */
 .term-glow {
   text-shadow: 0 0 6px currentColor;
@@ -118,21 +205,28 @@ body::after {
   height: 1px;
 }
 
+/* === 说明条 === */
+.note-strip {
+  border-left: 2px solid var(--accent-dim);
+  background: var(--note-bg);
+}
+
 /* === Input reset === */
 input, select, textarea {
   background: transparent;
+  color: inherit;
   outline: none;
 }
 
 /* Focus ring */
 input:focus, select:focus {
   border-color: var(--accent) !important;
-  box-shadow: 0 0 8px rgba(0, 255, 136, 0.15);
+  box-shadow: 0 0 8px var(--focus-ring);
 }
 
-/* === 统一组件样式（减少各页面各写一套）=== */
+/* === 统一组件样式 === */
 
-/* 技术标签：卡片标题、分区名。10px 大写 + 提高对比度，保证可读 */
+/* 技术标签：卡片标题、分区名。10px 大写 + 足够对比度 */
 .label-tech {
   font-family: var(--font-jetbrains), monospace;
   font-size: 10px;
@@ -142,28 +236,12 @@ input:focus, select:focus {
   color: var(--text-3);
 }
 
-/* 数字：等宽 + 表格数字，保证多行数字右对齐不跳动 */
+/* 数字：等宽 + 表格数字，多行数字右对齐不跳动 */
 .metric-num {
   font-family: var(--font-jetbrains), monospace;
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.01em;
 }
 
-/* 主入口卡：左侧主色条 + 略深底色，用于区分"主入口"与"次要信息卡" */
-.tac-card-primary {
-  border-left: 3px solid var(--accent);
-  background: linear-gradient(180deg, #0e1216 0%, var(--bg-2) 100%);
-}
-.tac-card-primary:hover {
-  border-left-color: var(--accent);
-  box-shadow: 0 0 18px rgba(0, 255, 136, 0.1);
-}
-
-/* 说明条：口径/注意事项，不抢正文但能看见 */
-.note-strip {
-  border-left: 2px solid var(--accent-dim);
-  background: rgba(0, 136, 68, 0.06);
-}
-
-/* 列表分隔线 */
+/* 列表分隔线（配合 border-* 使用） */
 .hairline { border-color: var(--border); }

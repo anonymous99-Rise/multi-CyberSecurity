@@ -39,11 +39,11 @@ export function StatPanel({
           <div key={s.label} className="p-4 min-w-0">
             <span className="block h-[2px] w-8 mb-2.5" style={{ background: s.color ?? "var(--accent)" }} />
             <div className="label-tech mb-1.5 truncate">{s.label}</div>
-            <div className="text-2xl sm:text-3xl font-bold metric-num truncate text-gray-100">{s.value}</div>
+            <div className="text-2xl sm:text-3xl font-bold metric-num truncate text-ink">{s.value}</div>
             {s.sub && (
               <div
                 className="text-[10px] mt-1 truncate"
-                style={{ color: s.color && s.color !== "#00ff88" ? s.color : "var(--text-3)" }}
+                style={{ color: s.color && s.color !== "var(--accent)" ? s.color : "var(--text-3)" }}
               >
                 {s.sub}
               </div>

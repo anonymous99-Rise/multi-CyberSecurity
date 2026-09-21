@@ -36,6 +36,7 @@ Skills20260809/ CyberStrikeAI v3.0 深度攻防专家技能包（30个技能包�
 external/        外部子仓库（CyberStrikeAI 运行时、CkSKILLS、dsh-pentest、dsh-infinite-gen-4 等）
 framework/      红队框架（jailbreak技能分级体系）
 mappings/       ATT&CK Navigator可视化层
+web/            Next.js 静态站点（技能库浏览 / ATT&CK 矩阵 / CLI 操作台 / 破限 Payload；深浅双主题）
 tools/          标准化脚本集
 workflows/      多Agent工作流定义（web_pentest_flow.yaml等）
 .dsh/           DeepSeek Harness (DSH) 平台配置包（AGENTS/RULES/IDENTITY/REDTEAM/HARNESS）
@@ -133,6 +134,9 @@ python3 tools/external_skills_manifest.py
 
 # 校验前端样式约束（透明度刻度 / 最小字号 / 色板；已接入 validate.yml）
 python3 tools/check_web_style.py
+
+# 前端单元测试（数据层选择器 / 深链解析 等；Node 22.18+ 可直接跑 .ts）
+cd web && npm test
 
 # 重新标准化skill格式
 python3 tools/transform_skills.py

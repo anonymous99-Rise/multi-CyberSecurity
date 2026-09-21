@@ -35,9 +35,9 @@ export default function JailbreakPage() {
             >
               <div className="flex items-center justify-between mb-1">
                 <span className="text-sm font-mono font-bold" style={{ color: l.color }}>{l.name}</span>
-                <span className="text-[10px] text-gray-500 font-mono metric-num">{l.id}</span>
+                <span className="text-[10px] text-ink-faint font-mono metric-num">{l.id}</span>
               </div>
-              <p className="text-[11px] text-gray-400 leading-relaxed">{l.desc}</p>
+              <p className="text-[11px] text-ink-muted leading-relaxed">{l.desc}</p>
             </button>
           ))}
         </div>
@@ -56,7 +56,7 @@ export default function JailbreakPage() {
               <button
                 key={p}
                 onClick={() => setPlatform(p)}
-                className={cn("px-2.5 py-1 text-[10px] font-mono border transition-all", platform === p ? "text-white" : "border-bg-border text-gray-500")}
+                className={cn("px-2.5 py-1 text-[10px] font-mono border transition-all", platform === p ? "text-white" : "border-bg-border text-ink-faint")}
                 style={platform === p ? { borderColor: plat.color, backgroundColor: plat.color + "15", color: plat.color } : {}}
               >
                 {plat.name}
@@ -72,8 +72,8 @@ export default function JailbreakPage() {
           <span className="label-tech">// CLI COMMAND</span>
           <CopyButton text={cliCmd} />
         </div>
-        <div className="p-3 bg-black border border-bg-border">
-          <code className="text-xs text-accent font-mono break-all term-glow">{cliCmd}</code>
+        <div className="p-3 bg-code border border-bg-border">
+          <code className="text-xs text-code-accent font-mono break-all term-glow">{cliCmd}</code>
         </div>
       </div>
 
@@ -86,8 +86,8 @@ export default function JailbreakPage() {
               {levelData.name} · {platform}
             </span>
           </div>
-          <div className="p-4 bg-black/40 max-h-[500px] overflow-y-auto">
-            <pre className="text-[11px] text-gray-400 font-mono whitespace-pre-wrap leading-relaxed">
+          <div className="p-4 bg-code max-h-[500px] overflow-y-auto">
+            <pre className="text-[11px] text-code-fg font-mono whitespace-pre-wrap leading-relaxed">
               {payloadContent}
             </pre>
           </div>
@@ -102,10 +102,10 @@ export default function JailbreakPage() {
         <table className="w-full text-[10px] font-mono">
           <thead>
             <tr className="border-b border-bg-border">
-              <th className="text-left py-2 px-2 text-gray-600">LEVEL</th>
-              <th className="text-center py-2 px-2 text-gray-600">UNIVERSAL</th>
+              <th className="text-left py-2 px-2 text-ink-faint">LEVEL</th>
+              <th className="text-center py-2 px-2 text-ink-faint">UNIVERSAL</th>
               {platforms.map((p) => (
-                <th key={p.id} className="text-center py-2 px-2 text-gray-600">{p.id}</th>
+                <th key={p.id} className="text-center py-2 px-2 text-ink-faint">{p.id}</th>
               ))}
             </tr>
           </thead>

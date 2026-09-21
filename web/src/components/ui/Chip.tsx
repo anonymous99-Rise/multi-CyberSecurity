@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 type ChipVariant = "default" | "accent" | "info" | "warning";
 
 const VARIANTS: Record<ChipVariant, string> = {
-  default: "bg-bg-tertiary border-bg-border text-gray-300 hover:border-accent/40",
+  default: "bg-bg-tertiary border-bg-border text-ink-muted hover:border-accent/40",
   accent: "bg-accent/10 border-accent/25 text-accent",
   info: "bg-info/10 border-info/25 text-info",
   warning: "bg-warning/10 border-warning/25 text-warning",

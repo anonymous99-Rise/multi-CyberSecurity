@@ -7,9 +7,3 @@
 
 /** 千分位：1234 → "1,234" */
 export const fmt = (n: number): string => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
-/** 十六进制色 + 透明度 → rgba()，用于按分数分档的格子/图例 */
-export function hexA(hex: string, alpha: number): string {
-  const n = parseInt(hex.slice(1), 16);
-  return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${alpha})`;
-}

@@ -6,13 +6,37 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: { DEFAULT: "#050507", secondary: "#0b0d10", tertiary: "#111518", border: "#1a1f24" },
+        // 全部走 CSS 变量（见 globals.css 的 :root / html.light），因此深浅主题自动适配。
+        // 组件里请用这些语义色，不要写 gray-100 / black 之类的固定色值。
+        bg: {
+          DEFAULT: "var(--bg)",
+          secondary: "var(--bg-2)",
+          tertiary: "var(--bg-3)",
+          raised: "var(--bg-raised)",
+          border: "var(--border)",
+        },
+        // 代码/终端表面：深浅主题都保持深底，故给独立的 bg/fg/accent 三色
+        code: {
+          DEFAULT: "var(--code-bg)",
+          fg: "var(--code-fg)",
+          accent: "var(--code-accent)",
+        },
+        ink: {
+          DEFAULT: "var(--text-1)",
+          muted: "var(--text-2)",
+          faint: "var(--text-3)",
+        },
+        overlay: "var(--overlay)",
+        backdrop: "var(--backdrop)",
         // 配色纪律：accent 主色（自有内容/交互）、info 外部引用/信息、warning|danger 仅表严重度。
-        // 不再提供 purple 等装饰色 token，避免又被用在卡片上变成"彩虹界面"。
-        accent: { DEFAULT: "#00ff88", muted: "#00cc6a", dim: "#008844" },
-        danger: "#ff0040",
-        warning: "#ffb000",
-        info: "#00e5ff",
+        accent: {
+          DEFAULT: "var(--accent)",
+          muted: "var(--accent-muted)",
+          dim: "var(--accent-dim)",
+        },
+        info: "var(--info)",
+        warning: "var(--warning)",
+        danger: "var(--danger)",
       },
       fontFamily: {
         mono: ["var(--font-jetbrains)", "monospace"],

@@ -13,7 +13,8 @@ export function CopyButton({
   label = "COPY",
   copiedLabel = "COPIED",
 }: {
-  text: string;
+  /** 要复制的内容；传函数则点击时才求值（如需要读取当前 URL） */
+  text: string | (() => string);
   className?: string;
   label?: string;
   copiedLabel?: string;
@@ -22,7 +23,7 @@ export function CopyButton({
 
   const copy = async () => {
     try {
-      await navigator.clipboard.writeText(text);
+      await navigator.clipboard.writeText(typeof text === "function" ? text() : text);
     } catch {
       // 非安全上下文（http）下 clipboard 可能不可用，静默降级，不影响页面
     }
@@ -36,7 +37,7 @@ export function CopyButton({
       title={copied ? "已复制" : "复制到剪贴板"}
       className={cn(
         "flex items-center gap-1 text-[10px] font-mono transition-colors",
-        copied ? "text-accent" : "text-gray-400 hover:text-accent",
+        copied ? "text-accent" : "text-ink-muted hover:text-accent",
         className,
       )}
     >

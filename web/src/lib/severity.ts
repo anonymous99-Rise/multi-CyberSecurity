@@ -5,17 +5,24 @@
 export interface SeverityStep {
   /** 该档的上界分数（含） */
   max: number;
+  /** 文字/标记色 */
   color: string;
+  /** 格子底色 */
+  bg: string;
+  /** 格子描边色 */
+  border: string;
   label: string;
-  bg: number;
-  border: number;
 }
 
+/**
+ * 四档色阶的色值全部走 CSS 变量（见 globals.css 的 --sevN / --sevN-bg / --sevN-bd），
+ * 这样浅色主题可以单独调深，而组件端不必知道当前主题（也就不会出现 SSR/hydration 不一致）。
+ */
 export const SEVERITY_RAMP: SeverityStep[] = [
-  { max: 2, color: "#00ff88", label: "0-2", bg: 0.08, border: 0.35 },
-  { max: 4, color: "#ffd000", label: "3-4", bg: 0.2, border: 0.6 },
-  { max: 7, color: "#ff7a00", label: "5-7", bg: 0.38, border: 0.85 },
-  { max: Infinity, color: "#ff0040", label: "8+", bg: 0.58, border: 1 },
+  { max: 2, color: "var(--sev1)", bg: "var(--sev1-bg)", border: "var(--sev1-bd)", label: "0-2" },
+  { max: 4, color: "var(--sev2)", bg: "var(--sev2-bg)", border: "var(--sev2-bd)", label: "3-4" },
+  { max: 7, color: "var(--sev3)", bg: "var(--sev3-bg)", border: "var(--sev3-bd)", label: "5-7" },
+  { max: Infinity, color: "var(--sev4)", bg: "var(--sev4-bg)", border: "var(--sev4-bd)", label: "8+" },
 ];
 
 export const severityStep = (score: number): SeverityStep =>

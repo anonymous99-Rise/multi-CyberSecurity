@@ -36,7 +36,7 @@ export function BarList({
       {items.map((item) => {
         const row = (
           <>
-            <span className={cn("text-[11px] font-mono text-gray-400 tracking-wider shrink-0 truncate", labelWidth)}>
+            <span className={cn("text-[11px] font-mono text-ink-muted tracking-wider shrink-0 truncate", labelWidth)}>
               {item.label}
             </span>
             <span className={cn("flex-1 bg-bg-tertiary border border-bg-border relative overflow-hidden", barHeight)}>
@@ -59,7 +59,7 @@ export function BarList({
             key={item.label}
             onClick={item.onClick}
             title={item.title}
-            className="w-full flex items-center gap-3 text-left group hover:bg-white/5 transition-colors"
+            className="w-full flex items-center gap-3 text-left group hover:bg-overlay transition-colors"
           >
             {row}
           </button>

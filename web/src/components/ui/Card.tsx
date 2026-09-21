@@ -18,7 +18,7 @@ export function Card({
 
 /**
  * 带标题的分区卡：标题统一用 .label-tech（10px / 高对比），
- * 避免各页面自己拼 `text-[9px] text-gray-600 font-mono tracking-widest` 这类写法。
+ * 避免各页面自己拼 `text-[9px] text-ink-faint font-mono tracking-widest` 这类写法。
  */
 export function SectionCard({
   label,
@@ -42,7 +42,7 @@ export function SectionCard({
       <div className="label-tech mb-3 flex flex-wrap items-center gap-2">
         {Icon && <Icon size={12} className={cn("text-accent", iconClassName)} />}
         <span>{label}</span>
-        {suffix && <span className="text-gray-500 normal-case tracking-normal">{suffix}</span>}
+        {suffix && <span className="text-ink-faint normal-case tracking-normal">{suffix}</span>}
       </div>
       <div className={bodyClassName}>{children}</div>
     </Card>

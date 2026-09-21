@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "sync": "node scripts/sync-data.mjs",
-    "prebuild": "node scripts/sync-data.mjs"
+    "prebuild": "node scripts/sync-data.mjs",
+    "test": "node --test --disable-warning=MODULE_TYPELESS_PACKAGE_JSON tests/format.test.mjs tests/severity.test.mjs tests/selectors.test.mjs tests/deeplink.test.mjs"
   },
   "dependencies": {
     "next": "^15.1.0",

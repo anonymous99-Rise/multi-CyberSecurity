@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Generate skills_index.json from all transformed skill files."""
+"""Generate skills_index.json from all transformed skill files.
+
+⚠️ 一次性脚本，产物与仓库当前维护的 skills_index.json 不同构，直接运行会覆盖它：
+   - 条目顺序按目录/文件名排序（现文件是历史顺序）
+   - `version` 取自 frontmatter（现文件由 version-sync 工作流统一写为仓库版本）
+   - `file` 用本机路径分隔符（Windows 下为反斜杠，现文件为正斜杠）
+   需要重新生成索引时，请先确认上述差异可接受，并跑 `tools/validate_skills.py` 与
+   `.github/workflows/validate.yml` 的索引/磁盘一致性检查。
+"""
 import os, re, json, yaml
 from pathlib import Path
 

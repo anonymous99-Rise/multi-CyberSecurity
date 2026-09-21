@@ -17,6 +17,8 @@ const jsonFiles = [
   ["index.json", "index.json"],
   ["skills_index.json", "skills_index.json"],
   ["mappings/attack-navigator-layer.json", "attack-navigator-layer.json"],
+  // 外部子仓库技能计数（由 tools/external_skills_manifest.py 生成，单独维度、不计入自有技能数）
+  ["external-skills.json", "external-skills.json"],
 ];
 
 console.log("=== 同步 JSON 数据 ===");

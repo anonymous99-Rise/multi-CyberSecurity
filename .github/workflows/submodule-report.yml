@@ -203,6 +203,12 @@ jobs:
           print(f"报告已生成: {len(all_info)} 个子仓库, {synced} 同步, {behind} 落后")
           PYEOF
 
+      - name: Regenerate external skills manifest
+        run: |
+          # 该工作流已递归 checkout 子仓库，可直接本地遍历统计（写入 external-skills.json）
+          python3 tools/external_skills_manifest.py
+          python3 -c "import json;d=json.load(open('external-skills.json'));print('外部 SKILL.md 合计:', d['external_skill_md_total'], '| 仓库:', d['repo_count'])"
+
       - name: Configure Git identity
         run: |
           git config --global user.name 'github-actions[bot]'
@@ -219,7 +225,7 @@ jobs:
 
           # 注意：`git diff --quiet HEAD -- <file>` 对**未跟踪**文件恒为"无变化"，
           # 首次生成报告时因此永远走到 else 之外 —— 改为先 add 再比对暂存区。
-          git add SUBMODULE_REPORT.md
+          git add SUBMODULE_REPORT.md external-skills.json
           if git diff --cached --quiet; then
             echo "报告无变化，不需更新"
             exit 0

@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-21 05:39:12 UTC",
+  "generated_by": "tools/external_skills_manifest.py --api",
+  "note": "external/ 子仓库以 git submodule 引用，不计入本仓库自有技能数（index.json meta.total_skills）；此文件只做「外部技能」单独计数维度，供站点与文档引用。",
+  "metric": "SKILL.md 文件数（递归，大小写不敏感）",
+  "repo_count": 20,
+  "repo_with_skills": 11,
+  "external_skill_md_total": 1427,
+  "repos": [
+    {
+      "name": "external/agency-agents-zh",
+      "path": "external/agency-agents-zh",
+      "url": "https://github.com/jnMetaCode/agency-agents-zh.git",
+      "repo": "jnMetaCode/agency-agents-zh",
+      "commit": "da1542f",
+      "skill_md": 0,
+      "count_source": "api",
+      "kind": "tool"
+    },
+    {
+      "name": "external/agency-agents",
+      "path": "external/agency-agents",
+      "url": "https://github.com/msitarzewski/agency-agents.git",
+      "repo": "msitarzewski/agency-agents",
+      "commit": "87f8301",
+      "skill_md": 0,
+      "count_source": "api",
+      "kind": "tool"
+    },
+    {
+      "name": "external/AboutSecurity",
+      "path": "external/AboutSecurity",
+      "url": "https://github.com/wgpsec/AboutSecurity.git",
+      "repo": "wgpsec/AboutSecurity",
+      "commit": "1b027e1",
+      "skill_md": 249,
+      "count_source": "api",
+      "kind": "skills"
+    },
+    {
+      "name": "vendor/codegraph",
+      "path": "vendor/codegraph",
+      "url": "https://github.com/colbymchenry/codegraph.git",
+      "repo": "colbymchenry/codegraph",
+      "commit": "ba3c21e",
+      "skill_md": 2,
+      "count_source": "api",
+      "kind": "skills"
+    },
+    {
+      "name": "external/reverse-skill",
+      "path": "external/reverse-skill",
+      "url": "https://github.com/zhaoxuya520/reverse-skill.git",
+      "repo": "zhaoxuya520/reverse-skill",
+      "commit": "7e2097f",
+      "skill_md": 89,
+      "count_source": "api",
+      "kind": "skills"
+    },
+    {
+      "name": "external/Claude-BugHunter",
+      "path": "external/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter.git",
+      "repo": "elementalsouls/Claude-BugHunter",
+      "commit": "136bc92",
+      "skill_md": 83,
+      "count_source": "api",
+      "kind": "skills"
+    },
+    {
+      "name": "external/Anthropic-Cybersecurity-Skills",
+      "path": "external/Anthropic-Cybersecurity-Skills",
+      "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "repo": "mukul975/Anthropic-Cybersecurity-Skills",
+      "commit": "54a7988",
+      "skill_md": 820,
+      "count_source": "api",
+      "kind": "skills"
+    },
+    {
+      "name": "external/cve_monitor",
+      "path": "external/cve_monitor",
+      "url": "https://github.com/anonymous99-Rise/cve_monitor.git",
+      "repo": "anonymous99-Rise/cve_monitor",
+      "commit": "068afd1",
+      "skill_md": 0,
+      "count_source": "api",
+      "kind": "tool"
+    },
+    {
+      "name": "vendor/burp-mcp",
+      "path": "vendor/burp-mcp",
+      "url": "https://github.com/PortSwigger/mcp-server.git",
+      "repo": "PortSwigger/mcp-server",
+      "commit": "642e6fa",
+      "skill_md": 0,
+      "count_source": "api",
+      "kind": "tool"
+    },
+    {
+      "name": "vendor/redteam-mcp",
+      "path": "vendor/redteam-mcp",
+      "url": "https://github.com/ktol1/RedTeam-Agent.git",
+      "repo": "ktol1/RedTeam-Agent",
+      "commit": "9d37526",
+      "skill_md": 1,
+      "count_source": "api",
+      "kind": "skills"
+    },
+    {
+      "name": "external/Vulnerability-Wiki-PoC",
+      "path": "external/Vulnerability-Wiki-PoC",
+      "url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC.git",
+      "repo": "SourByte05/Vulnerability-Wiki-PoC",
+      "commit": "22bb533",
+      "skill_md": 0,
+      "count_source": "api",
+      "kind": "tool"
+    },
+    {
+      "name": "knowledge/owasp-top10",
+      "path": "standards/owasp-top10",
+      "url": "https://github.com/OWASP/Top10.git",
+      "repo": "OWASP/Top10",
+      "commit": "66ebc47",
+      "skill_md": 0,
+      "count_source": "api",
+      "kind": "tool"
+    },
+    {
+      "name": "external/CyberStrikeAI",
+      "path": "external/CyberStrikeAI",
+      "url": "https://github.com/AIPentest/CyberStrikeAI.git",
+      "repo": "AIPentest/CyberStrikeAI",
+      "commit": "8da3c8c",
+      "skill_md": 24,
+      "count_source": "api",
+      "kind": "skills"
+    },
+    {
+      "name": "external/CkSKILLS",
+      "path": "external/CkSKILLS",
+      "url": "https://github.com/zhaji2333/CkSKILLS.git",
+      "repo": "zhaji2333/CkSKILLS",
+      "commit": "482fe78",
+      "skill_md": 21,
+      "count_source": "api",
+      "kind": "skills"
+    },
+    {
+      "name": "external/dsh-pentest",
+      "path": "external/dsh-pentest",
+      "url": "https://github.com/howmp/dsh-pentest.git",
+      "repo": "howmp/dsh-pentest",
+      "commit": "518fed3",
+      "skill_md": 0,
+      "count_source": "api",
+      "kind": "tool"
+    },
+    {
+      "name": "external/dsh-infinite-gen-4",
+      "path": "external/dsh-infinite-gen-4",
+      "url": "https://github.com/Minglink/dsh-infinite-gen-4.git",
+      "repo": "Minglink/dsh-infinite-gen-4",
+      "commit": "75831a2",
+      "skill_md": 0,
+      "count_source": "api",
+      "kind": "tool"
+    },
+    {
+      "name": "external/dsh-redteam-model",
+      "path": "external/dsh-redteam-model",
+      "url": "https://github.com/SeaOf0/dsh-redteam-model.git",
+      "repo": "SeaOf0/dsh-redteam-model",
+      "commit": "f1a8eff",
+      "skill_md": 58,
+      "count_source": "api",
+      "kind": "skills"
+    },
+    {
+      "name": "external/Claude-Red",
+      "path": "external/Claude-Red",
+      "url": "https://github.com/SnailSploit/Claude-Red.git",
+      "repo": "SnailSploit/Claude-Red",
+      "commit": "739512a",
+      "skill_md": 79,
+      "count_source": "api",
+      "kind": "skills"
+    },
+    {
+      "name": "external/cnvd-skill",
+      "path": "external/cnvd-skill",
+      "url": "https://github.com/sywinksvg/cnvd-skill.git",
+      "repo": "sywinksvg/cnvd-skill",
+      "commit": "5982c14",
+      "skill_md": 1,
+      "count_source": "api",
+      "kind": "skills"
+    },
+    {
+      "name": "external/Desinter_scan",
+      "path": "external/Desinter_scan",
+      "url": "https://github.com/Dest1ny-Sec/Desinter_scan.git",
+      "repo": "Dest1ny-Sec/Desinter_scan",
+      "commit": "8eca2de",
+      "skill_md": 0,
+      "count_source": "api",
+      "kind": "tool"
+    }
+  ]
+}

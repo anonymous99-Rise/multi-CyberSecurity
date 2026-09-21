@@ -4,6 +4,7 @@ import attackLayerData from "@/data/attack-navigator-layer.json";
 import skillsContentData from "@/data/skills_content.json";
 import jailbreakPayloadsData from "@/data/jailbreak_payloads.json";
 import submodulesData from "@/data/submodules.json";
+import externalSkillsData from "@/data/external-skills.json";
 
 export const skillsContent = skillsContentData as Record<string, string>;
 export const jailbreakPayloads = jailbreakPayloadsData as Record<string, Record<string, string>>;
@@ -73,6 +74,28 @@ export interface SubmoduleEntry {
   desc: string;
 }
 
+export interface ExternalSkillRepo {
+  name: string;
+  path: string;
+  url: string;
+  repo: string;
+  commit: string | null;
+  skill_md: number | null;
+  count_source: string;
+  kind: string;
+}
+
+export interface ExternalSkillsManifest {
+  generated_at: string;
+  generated_by: string;
+  note: string;
+  metric: string;
+  repo_count: number;
+  repo_with_skills: number;
+  external_skill_md_total: number;
+  repos: ExternalSkillRepo[];
+}
+
 export const meta = (indexData as any).meta as MetaInfo;
 export const modules = (indexData as any).modules as ModuleEntry[];
 export const skillsIndex = skillsIndexData as SkillIndexEntry[];
@@ -80,6 +103,9 @@ export const attackTechniques = (attackLayerData as any).techniques as AttackTec
 
 // 子仓库清单由 scripts/sync-data.mjs 解析根目录 .gitmodules 自动生成
 export const submodules = submodulesData as SubmoduleEntry[];
+
+// 外部子仓库技能计数（单独维度，不计入 meta.total_skills）
+export const externalSkills = externalSkillsData as ExternalSkillsManifest;
 
 export const platforms: PlatformConfig[] = [
   { id: "trae", name: "Trae", configPath: ".trae", color: "#4f9eff" },

@@ -19,11 +19,11 @@
 |------|------|----------------------|
 | 本仓库自有技能（`NN-*/skills/*.md`） | **199**（39 个分类） | ✅ 计入 `index.json` / `skills_index.json` / 站点 |
 | CyberStrikeAI 技能包（[`Skills20260809/`](Skills20260809)） | 30 | ❌ 独立目录，按需 `skill("name")` 加载 |
-| 外部子仓库（[`external/`](external)，见 [`.gitmodules`](.gitmodules)） | 上游口径：817+ / 79 / 71+ / 20 … | ❌ **仅以 submodule 引用**，不复制内容、不并入索引 |
+| 外部子仓库（[`external/`](external)，见 [`.gitmodules`](.gitmodules)） | 按固定 commit 实测 SKILL.md：**1,427**（11/20 个仓库含 SKILL.md） | ❌ **仅以 submodule 引用**，不复制内容、不并入索引；单独计为站点的 `EXTERNAL` 维度 |
 
 > `git submodule add` 只是挂了一个外部引用（`external/<name>`），**不会**增加本仓库的技能数 —— 索引与站点只统计本仓库自己的 199 个技能。
 > 需要用到外部技能时走 [EXTERNAL_SKILLS_ROUTING.md](EXTERNAL_SKILLS_ROUTING.md) 的路由矩阵，而不是把它们的 `SKILL.md` 复制/合并进 `skills_index.json`。
-> 外部仓库的技能数量随其自身演进，以子仓库实际内容为准（本仓库只固定引用到的 commit）。
+> 外部数量的权威来源是 [`external-skills.json`](external-skills.json)（由 [`tools/external_skills_manifest.py`](tools/external_skills_manifest.py) 生成，按 `.gitmodules` 固定的 commit 统计，随子仓库周报刷新）。
 
 ## 目录结构
 
@@ -127,6 +127,9 @@ grep -l "T1059" */skills/*.md
 
 # 验证所有skill的frontmatter格式
 python3 tools/validate_skills.py
+
+# 刷新外部子仓库技能计数（external-skills.json；子仓库未 checkout 时可加 --api）
+python3 tools/external_skills_manifest.py
 
 # 重新标准化skill格式
 python3 tools/transform_skills.py

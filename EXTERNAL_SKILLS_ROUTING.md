@@ -18,19 +18,27 @@
 
 ## 子仓库速查表
 
-| 子仓库 | 路径 | 技能数量 | 主要用途 |
-|--------|------|----------|----------|
-| **Claude-BugHunter** | `external/Claude-BugHunter/` | 71+ | Bug Hunting, Red Team, 漏洞挖掘 |
-| **Claude-Red** | `external/Claude-Red/` | 78 | Claude Skills 攻击性安全技能库（23 大类：SQLi/AD/EDR 规避/exploit-dev/云/容器/取证等；`Skills/` 按需加载 + `claude-skills.json` 索引） |
-| **Anthropic-Cybersecurity-Skills** | `external/Anthropic-Cybersecurity-Skills/` | 817+ | 全面安全评估, 29个领域 |
-| **reverse-skill** | `external/reverse-skill/` | 20+ | 逆向工程, CTF, 渗透测试 |
-| **AboutSecurity** | `external/AboutSecurity/` | 工具集 | 安全工具集合 |
-| **CkSKILLS** | `external/CkSKILLS/` | 20 | SRC 挖洞技能体系（JS 分析/认证鉴权/注入/WAF 绕过/小程序/APK 逆向）+ `hunts/` 线索板 |
-| **cnvd-skill** | `external/cnvd-skill/` | 1 技能 + 9 脚本 | CNVD 通用型未授权漏洞广扫便携包：`skills/cnvd/SKILL.md` 全流程手册 + `tools/scripts/` 测绘→只读验证→查重抽验（零依赖，含 28 条端点字典） |
-| **Desinter_scan** | `external/Desinter_scan/` | 22 collector | AI 自动化信息收集：22 个并发 collector（subfinder/nuclei/httpx/nmap/gau/waybackurls…）+ Claude 6 维度评分排序，输出按攻击优先级排序的资产列表 |
-| **dsh-pentest** | `external/dsh-pentest/` | 8 工具 | DSH 渗透模式插件：`pentest_*` 工具链（goal/intent/fact/finding/asset/submit/graph/report）+ sqlite 会话 + Web UI |
-| **dsh-infinite-gen-4** | `external/dsh-infinite-gen-4/` | 插件 | DSH 红队评测破甲插件：零工具面 + 双层系统提示词注入 |
-| **dsh-redteam-model** | `external/dsh-redteam-model/` | 研究 | DSH 红队模型研究：提示词工程 + 防御规避 + 场景构建 |
+> 下表的**技能数量为按 `.gitmodules` 固定 commit 实测的 SKILL.md 文件数**，权威来源 [`external-skills.json`](external-skills.json)
+> （由 [`tools/external_skills_manifest.py`](tools/external_skills_manifest.py) 生成，每周子仓库报告 PR 自动刷新）。
+> 合计：**20 个子仓库 / 11 个含 SKILL.md / 1,427 个外部 SKILL.md** —— 全部**不计入**自有技能的 199。
+
+| 子仓库 | 路径 | 技能数量（SKILL.md） | 主要用途 |
+|--------|------|----------------------|----------|
+| **Anthropic-Cybersecurity-Skills** | `external/Anthropic-Cybersecurity-Skills/` | 820 | 全面安全评估, 29个领域 |
+| **AboutSecurity** | `external/AboutSecurity/` | 249 | 安全工具集合（含大量 SKILL.md 形态的工具条目） |
+| **reverse-skill** | `external/reverse-skill/` | 89 | 逆向工程, CTF, 渗透测试 |
+| **Claude-BugHunter** | `external/Claude-BugHunter/` | 83 | Bug Hunting, Red Team, 漏洞挖掘 |
+| **Claude-Red** | `external/Claude-Red/` | 79 | Claude Skills 攻击性安全技能库（23 大类：SQLi/AD/EDR 规避/exploit-dev/云/容器/取证等；`Skills/` 按需加载 + `claude-skills.json` 索引） |
+| **dsh-redteam-model** | `external/dsh-redteam-model/` | 58 | DSH 红队模型研究：提示词工程 + 防御规避 + 场景构建 |
+| **CyberStrikeAI** | `external/CyberStrikeAI/` | 24 | AI 原生安全操作平台（Eino + MCP + RAG） |
+| **CkSKILLS** | `external/CkSKILLS/` | 21 | SRC 挖洞技能体系（JS 分析/认证鉴权/注入/WAF 绕过/小程序/APK 逆向）+ `hunts/` 线索板 |
+| **codegraph** | `vendor/codegraph/` | 2 | 代码分析工具（MCP 集成） |
+| **redteam-mcp** | `vendor/redteam-mcp/` | 1 | 红队 Agent MCP |
+| **cnvd-skill** | `external/cnvd-skill/` | 1（+ 9 脚本） | CNVD 通用型未授权漏洞广扫便携包：`skills/cnvd/SKILL.md` 全流程手册 + `tools/scripts/` 测绘→只读验证→查重抽验（零依赖，含 28 条端点字典） |
+| **Desinter_scan** | `external/Desinter_scan/` | 0（22 collector） | AI 自动化信息收集：22 个并发 collector（subfinder/nuclei/httpx/nmap/gau/waybackurls…）+ Claude 6 维度评分排序 |
+| **dsh-pentest** | `external/dsh-pentest/` | 0（8 工具） | DSH 渗透模式插件：`pentest_*` 工具链 + sqlite 会话 + Web UI |
+| **dsh-infinite-gen-4** | `external/dsh-infinite-gen-4/` | 0（插件） | DSH 红队评测破甲插件：零工具面 + 双层系统提示词注入 |
+| 其余 6 个 | `agency-agents` / `agency-agents-zh` / `cve_monitor` / `Vulnerability-Wiki-PoC` / `burp-mcp` / `owasp-top10` | 0 | 编排框架 / 监控 / PoC 库 / MCP / 标准文档，均非 SKILL.md 形态 |
 
 ---
 

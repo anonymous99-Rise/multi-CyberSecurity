@@ -7,6 +7,7 @@ external/CyberStrikeAI
 external/Vulnerability-Wiki-PoC
 external/agency-agents
 external/agency-agents-zh
+external/cnvd-skill
 external/cve_monitor
 external/dsh-infinite-gen-4
 external/dsh-pentest

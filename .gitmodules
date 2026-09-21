@@ -52,3 +52,6 @@
 [submodule "external/Claude-Red"]
 	path = external/Claude-Red
 	url = https://github.com/SnailSploit/Claude-Red.git
+[submodule "external/cnvd-skill"]
+	path = external/cnvd-skill
+	url = https://github.com/sywinksvg/cnvd-skill.git

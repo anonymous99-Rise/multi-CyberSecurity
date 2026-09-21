@@ -22,6 +22,7 @@
 | **reverse-skill** | `external/reverse-skill/` | 20+ | 逆向工程, CTF, 渗透测试 |
 | **AboutSecurity** | `external/AboutSecurity/` | 工具集 | 安全工具集合 |
 | **CkSKILLS** | `external/CkSKILLS/` | 20 | SRC 挖洞技能体系（JS 分析/认证鉴权/注入/WAF 绕过/小程序/APK 逆向）+ `hunts/` 线索板 |
+| **cnvd-skill** | `external/cnvd-skill/` | 1 技能 + 9 脚本 | CNVD 通用型未授权漏洞广扫便携包：`skills/cnvd/SKILL.md` 全流程手册 + `tools/scripts/` 测绘→只读验证→查重抽验（零依赖，含 28 条端点字典） |
 | **dsh-pentest** | `external/dsh-pentest/` | 8 工具 | DSH 渗透模式插件：`pentest_*` 工具链（goal/intent/fact/finding/asset/submit/graph/report）+ sqlite 会话 + Web UI |
 | **dsh-infinite-gen-4** | `external/dsh-infinite-gen-4/` | 插件 | DSH 红队评测破甲插件：零工具面 + 双层系统提示词注入 |
 | **dsh-redteam-model** | `external/dsh-redteam-model/` | 研究 | DSH 红队模型研究：提示词工程 + 防御规避 + 场景构建 |

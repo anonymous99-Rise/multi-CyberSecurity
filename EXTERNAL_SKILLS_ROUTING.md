@@ -2,6 +2,10 @@
 
 > 本文档定义如何按需调用 `external/` 子仓库中的技能模块。
 
+> ⚠️ **口径说明**：本页的技能数量均为**子仓库上游口径**，**不计入** `index.json` / 站点的 199 个自有技能。
+> `external/` 下的仓库以 git submodule 引用（只固定 commit，不复制内容、不并入 `skills_index.json`）；
+> 需要新增自有技能请放到 `NN-*/skills/` 并重新生成索引。
+
 ---
 
 ## 路由总览
@@ -23,6 +27,7 @@
 | **AboutSecurity** | `external/AboutSecurity/` | 工具集 | 安全工具集合 |
 | **CkSKILLS** | `external/CkSKILLS/` | 20 | SRC 挖洞技能体系（JS 分析/认证鉴权/注入/WAF 绕过/小程序/APK 逆向）+ `hunts/` 线索板 |
 | **cnvd-skill** | `external/cnvd-skill/` | 1 技能 + 9 脚本 | CNVD 通用型未授权漏洞广扫便携包：`skills/cnvd/SKILL.md` 全流程手册 + `tools/scripts/` 测绘→只读验证→查重抽验（零依赖，含 28 条端点字典） |
+| **Desinter_scan** | `external/Desinter_scan/` | 22 collector | AI 自动化信息收集：22 个并发 collector（subfinder/nuclei/httpx/nmap/gau/waybackurls…）+ Claude 6 维度评分排序，输出按攻击优先级排序的资产列表 |
 | **dsh-pentest** | `external/dsh-pentest/` | 8 工具 | DSH 渗透模式插件：`pentest_*` 工具链（goal/intent/fact/finding/asset/submit/graph/report）+ sqlite 会话 + Web UI |
 | **dsh-infinite-gen-4** | `external/dsh-infinite-gen-4/` | 插件 | DSH 红队评测破甲插件：零工具面 + 双层系统提示词注入 |
 | **dsh-redteam-model** | `external/dsh-redteam-model/` | 研究 | DSH 红队模型研究：提示词工程 + 防御规避 + 场景构建 |

@@ -55,3 +55,6 @@
 [submodule "external/cnvd-skill"]
 	path = external/cnvd-skill
 	url = https://github.com/sywinksvg/cnvd-skill.git
+[submodule "external/Desinter_scan"]
+	path = external/Desinter_scan
+	url = https://github.com/Dest1ny-Sec/Desinter_scan.git

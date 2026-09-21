@@ -4,6 +4,7 @@ external/CkSKILLS
 external/Claude-BugHunter
 external/Claude-Red
 external/CyberStrikeAI
+external/Desinter_scan
 external/Vulnerability-Wiki-PoC
 external/agency-agents
 external/agency-agents-zh

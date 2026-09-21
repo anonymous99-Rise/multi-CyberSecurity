@@ -46,7 +46,7 @@
     "path": "external/Claude-Red",
     "url": "https://github.com/SnailSploit/Claude-Red.git",
     "group": "external",
-    "desc": "Claude 攻击性安全技能库（78 技能 / 23 类）"
+    "desc": "Claude 攻击性安全技能库（79 SKILL.md / 23 类）"
   },
   {
     "name": "cnvd-skill",
@@ -68,6 +68,13 @@
     "url": "https://github.com/AIPentest/CyberStrikeAI.git",
     "group": "external",
     "desc": "AI 原生安全操作平台（Eino + MCP + RAG）"
+  },
+  {
+    "name": "Desinter_scan",
+    "path": "external/Desinter_scan",
+    "url": "https://github.com/Dest1ny-Sec/Desinter_scan.git",
+    "group": "external",
+    "desc": "AI 自动化信息收集流水线（22 collector + Claude 评分）"
   },
   {
     "name": "dsh-infinite-gen-4",

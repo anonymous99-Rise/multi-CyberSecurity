@@ -84,12 +84,13 @@ console.log("\n=== 同步子仓库清单 ===");
 // 子仓库中文简介；新增子仓库时在此登记，未登记则回退为 owner/repo
 const SUBMODULE_DESC = {
   "external/Claude-BugHunter": "Bug Hunting / Red Team 技能包（71+）",
-  "external/Claude-Red": "Claude 攻击性安全技能库（78 技能 / 23 类）",
+  "external/Claude-Red": "Claude 攻击性安全技能库（79 SKILL.md / 23 类）",
   "external/Anthropic-Cybersecurity-Skills": "全面安全评估技能（817+ / 29 领域）",
   "external/reverse-skill": "逆向 / CTF / 渗透技能路由包",
   "external/AboutSecurity": "安全工具集合",
   "external/CkSKILLS": "SRC 挖洞技能体系 + hunts 线索板",
   "external/cnvd-skill": "CNVD 通用型未授权漏洞广扫便携包",
+  "external/Desinter_scan": "AI 自动化信息收集流水线（22 collector + Claude 评分）",
   "external/CyberStrikeAI": "AI 原生安全操作平台（Eino + MCP + RAG）",
   "external/cve_monitor": "CVE 监控与推送",
   "external/Vulnerability-Wiki-PoC": "漏洞 PoC 库",

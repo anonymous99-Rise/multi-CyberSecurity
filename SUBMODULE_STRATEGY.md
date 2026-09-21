@@ -162,6 +162,7 @@ Agent → 查询 external/<kb>/README.md → 获取知识
 ## 相关文件
 
 - [`.gitmodules`](.gitmodules) - 子仓库配置（19 个子仓库）
+- [`SUBMODULE_REPORT.md`](SUBMODULE_REPORT.md) - 子仓库状态汇总报告（`submodule-report.yml` 每周一/四生成并自动开 PR）
 - [`submodule-sync-report.md`](submodule-sync-report.md) - 同步报告
 - [`submodule-status.txt`](submodule-status.txt) / [`submodule-paths.txt`](submodule-paths.txt) - 状态与路径清单
 - [`.github/workflows/`](.github/workflows/) - 子仓库管理工作流（sync / health-check / report / update）

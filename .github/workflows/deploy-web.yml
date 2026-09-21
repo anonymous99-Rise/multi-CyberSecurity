@@ -10,6 +10,11 @@ on:
       - 'mappings/attack-navigator-layer.json'
       - '.gitmodules'
       - '.github/workflows/deploy-web.yml'
+  # Release 工作流用 GITHUB_TOKEN 提交版本号，这类提交不会触发 push 事件，
+  # 导致站点数据/版本号一直停留在上一次人工推送的状态 —— 用 workflow_run 接住。
+  workflow_run:
+    workflows: ["Release"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -23,6 +28,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     defaults:
       run:

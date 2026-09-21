@@ -10,6 +10,10 @@ on:
   workflow_dispatch:
   repository_dispatch:
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   generate-report:
     runs-on: ubuntu-latest
@@ -195,27 +199,45 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if git diff --quiet HEAD -- SUBMODULE_REPORT.md; then
+          if [ ! -f SUBMODULE_REPORT.md ]; then
+            echo "报告文件未生成，终止"
+            exit 1
+          fi
+
+          # 注意：`git diff --quiet HEAD -- <file>` 对**未跟踪**文件恒为"无变化"，
+          # 首次生成报告时因此永远走到 else 之外 —— 改为先 add 再比对暂存区。
+          git add SUBMODULE_REPORT.md
+          if git diff --cached --quiet; then
             echo "报告无变化，不需更新"
+            exit 0
+          fi
+
+          BRANCH="docs/submodule-report-$(date +%Y%m%d)"
+          git checkout -B "$BRANCH"
+          git commit -m "docs: update submodule status report
+
+          Auto-generated submodule status report
+          Timestamp: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
+
+          Co-Authored-By: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+          git push --force-with-lease origin "$BRANCH" || { echo "推送失败"; exit 1; }
+
+          EXISTING=$(gh pr list \
+            --repo anonymous99-Rise/multi-CyberSecurity \
+            --head "$BRANCH" \
+            --state open \
+            --json number \
+            --jq '.[0].number' 2>/dev/null || true)
+
+          if [ -n "$EXISTING" ] && [ "$EXISTING" != "null" ]; then
+            echo "PR #$EXISTING 已存在，跳过创建"
           else
-            BRANCH="docs/submodule-report-$(date +%Y%m%d)"
-            git checkout -b "$BRANCH"
-            git add SUBMODULE_REPORT.md
-            git commit -m "docs: update submodule status report
-
-            Auto-generated submodule status report
-            Timestamp: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
-
-            Co-Authored-By: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
-            git push origin "$BRANCH" || echo "推送失败"
-
             gh pr create \
               --repo anonymous99-Rise/multi-CyberSecurity \
               --head "$BRANCH" \
               --base main \
-              --title "docs: submodule status report $(date +%Y-%m-%d)" \
-              --body "自动生成的子仓库状态汇总报告" \
-              --fill || echo "PR 创建失败"
+              --title "docs: submodule status report $(date -u '+%Y-%m-%d')" \
+              --body "自动生成的子仓库状态汇总报告。生成时间：$(date -u '+%Y-%m-%d %H:%M UTC')"
           fi
 
       - name: Upload Artifact

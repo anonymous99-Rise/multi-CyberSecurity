@@ -96,10 +96,10 @@ Red team operations and advanced attack skills.
 
 | Skill | Description | Location |
 |-------|-------------|----------|
-| Red Team Assessment | Red team methodology | `24-红蓝对抗-RedBlueTeam/skills/` |
-| Agent Hack Skills | AI agent exploitation | `24-红蓝对抗-RedBlueTeam/skills/` |
-| BAS Platform | Breach and attack simulation | `24-红蓝对抗-RedBlueTeam/skills/` |
-| Purple Team Exercise | Purple team collaboration | `24-红蓝对抗-RedBlueTeam/skills/` |
+| Red Team Assessment | Red team methodology | `24-红蓝对抗-RedTeam/skills/` |
+| Agent Hack Skills | AI agent exploitation | `24-红蓝对抗-RedTeam/skills/` |
+| BAS Platform | Breach and attack simulation | `24-红蓝对抗-RedTeam/skills/` |
+| Purple Team Exercise | Purple team collaboration | `24-红蓝对抗-RedTeam/skills/` |
 
 ### Post-Exploitation
 
@@ -119,8 +119,8 @@ Blue team, detection, and defensive skills.
 
 | Skill | Description | Location |
 |-------|-------------|----------|
-| Blue Team Defense | Defensive operations | `24-红蓝对抗-RedBlueTeam/skills/` |
-| Defense Improvement Cycle | Continuous improvement | `24-红蓝对抗-RedBlueTeam/skills/` |
+| Blue Team Defense | Defensive operations | `24-红蓝对抗-RedTeam/skills/` |
+| Defense Improvement Cycle | Continuous improvement | `24-红蓝对抗-RedTeam/skills/` |
 | Incident Response | IR procedures | `15-应急响应-IncidentResponse/skills/` |
 | Digital Forensics | Forensic analysis | `30-数字取证-DigitalForensics/skills/` |
 | Threat Hunting | Proactive threat detection | `28-威胁狩猎-ThreatHunting/skills/` |

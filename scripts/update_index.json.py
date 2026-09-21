@@ -125,7 +125,7 @@ new_modules = [
         "name_cn": "红蓝对抗",
         "name_en": "Red/Blue Team",
         "emoji": "⚔️",
-        "path": "24-红蓝对抗-RedBlueTeam",
+        "path": "24-红蓝对抗-RedTeam",
         "skill_count": 5,
         "skills": [
             {"name": "红队评估方法论", "file": "红队评估方法论-RedTeamAssessment.md", "difficulty": "★★★★★"},

@@ -1901,7 +1901,7 @@
     {
       "id": "24-006",
       "title": "🤖 Agent 黑客技能集 (Agent Hack Skills)",
-      "path": ".\\24-红蓝对抗-RedBlueTeam\\skills\\Agent黑客技能集-AgentHackSkills.md",
+      "path": ".\\24-红蓝对抗-RedTeam\\skills\\Agent黑客技能集-AgentHackSkills.md",
       "mitre_attack": [
         "T1595",
         "T1190",
@@ -1911,7 +1911,7 @@
     {
       "id": "24-004",
       "title": "⚡ BAS攻击模拟平台 (Breach & Attack Simulation)",
-      "path": ".\\24-红蓝对抗-RedBlueTeam\\skills\\BAS攻击模拟平台-BreachAttackSimulation.md",
+      "path": ".\\24-红蓝对抗-RedTeam\\skills\\BAS攻击模拟平台-BreachAttackSimulation.md",
       "mitre_attack": [
         "T1595",
         "T1562"
@@ -1920,7 +1920,7 @@
     {
       "id": "24-003",
       "title": "🟣 紫队协作评估 (Purple Team Exercise)",
-      "path": ".\\24-红蓝对抗-RedBlueTeam\\skills\\紫队协作评估-PurpleTeamExercise.md",
+      "path": ".\\24-红蓝对抗-RedTeam\\skills\\紫队协作评估-PurpleTeamExercise.md",
       "mitre_attack": [
         "T1595",
         "T1562"
@@ -1929,7 +1929,7 @@
     {
       "id": "24-001",
       "title": "🔴 红队评估方法论 (Red Team Assessment)",
-      "path": ".\\24-红蓝对抗-RedBlueTeam\\skills\\红队评估方法论-RedTeamAssessment.md",
+      "path": ".\\24-红蓝对抗-RedTeam\\skills\\红队评估方法论-RedTeamAssessment.md",
       "mitre_attack": [
         "T1595",
         "T1562"
@@ -1938,7 +1938,7 @@
     {
       "id": "24-002",
       "title": "🔵 蓝队防御与检测 (Blue Team Defense & Detection)",
-      "path": ".\\24-红蓝对抗-RedBlueTeam\\skills\\蓝队防御与检测-BlueTeamDefense.md",
+      "path": ".\\24-红蓝对抗-RedTeam\\skills\\蓝队防御与检测-BlueTeamDefense.md",
       "mitre_attack": [
         "T1595",
         "T1562"
@@ -1947,7 +1947,7 @@
     {
       "id": "24-005",
       "title": "🔄 闭环防御改进 (Defense Improvement Cycle)",
-      "path": ".\\24-红蓝对抗-RedBlueTeam\\skills\\闭环防御改进-DefenseImprovementCycle.md",
+      "path": ".\\24-红蓝对抗-RedTeam\\skills\\闭环防御改进-DefenseImprovementCycle.md",
       "mitre_attack": [
         "T1595",
         "T1562"

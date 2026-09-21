@@ -3545,8 +3545,8 @@
     "version": "4.3.12",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
-    "category": "24-红蓝对抗-RedBlueTeam",
-    "file": "24-红蓝对抗-RedBlueTeam/skills/闭环防御改进-DefenseImprovementCycle.md"
+    "category": "24-红蓝对抗-RedTeam",
+    "file": "24-红蓝对抗-RedTeam/skills/闭环防御改进-DefenseImprovementCycle.md"
   },
   {
     "name": "红队评估方法论-red-team-assessment",
@@ -3572,8 +3572,8 @@
     "version": "4.3.12",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
-    "category": "24-红蓝对抗-RedBlueTeam",
-    "file": "24-红蓝对抗-RedBlueTeam/skills/红队评估方法论-RedTeamAssessment.md"
+    "category": "24-红蓝对抗-RedTeam",
+    "file": "24-红蓝对抗-RedTeam/skills/红队评估方法论-RedTeamAssessment.md"
   },
   {
     "name": "蓝队防御与检测-blue-team-defense-detection",
@@ -3599,8 +3599,8 @@
     "version": "4.3.12",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
-    "category": "24-红蓝对抗-RedBlueTeam",
-    "file": "24-红蓝对抗-RedBlueTeam/skills/蓝队防御与检测-BlueTeamDefense.md"
+    "category": "24-红蓝对抗-RedTeam",
+    "file": "24-红蓝对抗-RedTeam/skills/蓝队防御与检测-BlueTeamDefense.md"
   },
   {
     "name": "bas攻击模拟平台-breach-attack-simulation",
@@ -3626,8 +3626,8 @@
     "version": "4.3.12",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
-    "category": "24-红蓝对抗-RedBlueTeam",
-    "file": "24-红蓝对抗-RedBlueTeam/skills/BAS攻击模拟平台-BreachAttackSimulation.md"
+    "category": "24-红蓝对抗-RedTeam",
+    "file": "24-红蓝对抗-RedTeam/skills/BAS攻击模拟平台-BreachAttackSimulation.md"
   },
   {
     "name": "紫队协作评估-purple-team-exercise",
@@ -3653,8 +3653,8 @@
     "version": "4.3.12",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
-    "category": "24-红蓝对抗-RedBlueTeam",
-    "file": "24-红蓝对抗-RedBlueTeam/skills/紫队协作评估-PurpleTeamExercise.md"
+    "category": "24-红蓝对抗-RedTeam",
+    "file": "24-红蓝对抗-RedTeam/skills/紫队协作评估-PurpleTeamExercise.md"
   },
   {
     "name": "agent-黑客技能集-agent-hack-skills",
@@ -3679,8 +3679,8 @@
     "version": "4.3.12",
     "author": "multi-cybersecurity",
     "license": "Apache-2.0",
-    "category": "24-红蓝对抗-RedBlueTeam",
-    "file": "24-红蓝对抗-RedBlueTeam/skills/Agent黑客技能集-AgentHackSkills.md"
+    "category": "24-红蓝对抗-RedTeam",
+    "file": "24-红蓝对抗-RedTeam/skills/Agent黑客技能集-AgentHackSkills.md"
   },
   {
     "name": "供应链攻击检测与响应-supply-chain-attack-detection-response",

@@ -131,6 +131,9 @@ python3 tools/validate_skills.py
 # 刷新外部子仓库技能计数（external-skills.json；子仓库未 checkout 时可加 --api）
 python3 tools/external_skills_manifest.py
 
+# 校验前端样式约束（透明度刻度 / 最小字号 / 色板；已接入 validate.yml）
+python3 tools/check_web_style.py
+
 # 重新标准化skill格式
 python3 tools/transform_skills.py
 

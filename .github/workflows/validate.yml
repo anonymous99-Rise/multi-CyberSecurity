@@ -199,6 +199,11 @@ jobs:
               sys.exit(1)
           PYEOF
 
+      - name: Web UI style constraints
+        run: |
+          # 固化美化中踩过的坑：失效的透明度简写 / <10px 字号 / 超出色板的内联颜色
+          python3 tools/check_web_style.py
+
       - name: Generate job summary
         if: always()
         run: |

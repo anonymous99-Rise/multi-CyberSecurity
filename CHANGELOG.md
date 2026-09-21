@@ -20,6 +20,13 @@
 
 - `.github/workflows/validate.yml` 新增第 4 项检查：`skills_index.json` ↔ 磁盘 `NN-*/skills/*.md` ↔ `index.json` 模块数量三方一致（本次漂移能潜伏 4 个月，正是因为 CI 只扫磁盘、从不与索引交叉校验）
 
+### 🏗️ 重构（web）
+
+- **数据层拆分**：原 `web/src/lib/data.ts`（174 行，类型 + JSON 引入 + 配置 + 选择器混在一起）拆成 `lib/data/{types,datasets,config,selectors,index}.ts`，页面导入路径不变（仍是 `@/lib/data`），拆分后零页面改动即通过类型检查
+- **共享 UI 组件**：新增 `components/ui/`（`Card`/`SectionCard`/`StatPanel`/`BarList`/`Chip`/`PageHeader`/`CopyButton`），首页、ATT&CK、技能库、CLI、破限五个页面改用同一套原语；删掉了重复实现（`fmt` 3 份、`csfLabels` 2 份、复制按钮逻辑 2 份、条形图 3 份）
+- **共享工具**：`lib/format.ts`（`fmt`/`hexA`）与 `lib/severity.ts`（ATT&CK 分数分档 + 分档计数 + NIST CSF 标签），矩阵格子与图例从此共用同一分档定义
+- **新增 CI 样式闸门** `tools/check_web_style.py`：扫描 `web/src` 拦截三类已踩过的坑 —— 不在 Tailwind 刻度内因而**不会生成 CSS** 的透明度简写、<10px 的字号、超出允许色板的内联颜色；已接入 `validate.yml`（上线首扫即抓出 6 处遗留：5 处 9px 标签 + 1 处 `#888`）
+
 ### 🚀 优化
 
 - 前端首页 REPOSITORIES 卡片改为解析 `.gitmodules` 自动生成（`web/scripts/sync-data.mjs` + `web/src/data/submodules.json`），`deploy-web.yml` 触发路径加入 `.gitmodules`

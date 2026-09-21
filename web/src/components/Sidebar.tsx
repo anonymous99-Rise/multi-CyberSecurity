@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Shield, BookOpen, Terminal, Crosshair, Unlock, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { meta, externalSkills } from "@/lib/data";
+import { fmt } from "@/lib/format";
 
 const navItems = [
   { href: "/", label: "概览", code: "00", icon: Shield },
@@ -13,8 +14,6 @@ const navItems = [
   { href: "/attack", label: "ATT&CK", code: "03", icon: Crosshair },
   { href: "/jailbreak", label: "破限 Payload", code: "04", icon: Unlock },
 ];
-
-const fmt = (n: number) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 export function Sidebar() {
   const pathname = usePathname();

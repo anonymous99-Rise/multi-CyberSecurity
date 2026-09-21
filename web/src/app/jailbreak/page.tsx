@@ -2,33 +2,21 @@
 import { useState, useMemo } from "react";
 import { jailbreakLevels, platforms, jailbreakPayloads } from "@/lib/data";
 import { cn } from "@/lib/utils";
-import { Copy, Check } from "lucide-react";
+import { CopyButton } from "@/components/ui/CopyButton";
+import { PageHeader } from "@/components/ui/PageHeader";
 
 export default function JailbreakPage() {
   const [level, setLevel] = useState("L3");
   const [platform, setPlatform] = useState("dsh");
-  const [copied, setCopied] = useState(false);
 
   const levelData = useMemo(() => jailbreakLevels.find((l) => l.id === level)!, [level]);
   const availablePlatforms = jailbreakPayloads[level] || {};
   const payloadContent = availablePlatforms[platform] || "";
   const cliCmd = `python cli.py jailbreak payload --level ${level} --platform ${platform}`;
 
-  const copyCmd = () => {
-    navigator.clipboard.writeText(cliCmd);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   return (
-    <div className="p-8 max-w-3xl animate-fade-in">
-      {/* Header */}
-      <div className="mb-6">
-        <div className="text-[9px] text-accent/50 font-mono tracking-widest uppercase mb-1">
-          // JAILBREAK PAYLOAD ARSENAL
-        </div>
-        <h1 className="text-xl font-bold text-gray-100 font-mono">破限 Payload 浏览器</h1>
-      </div>
+    <div className="p-5 sm:p-6 lg:p-8 max-w-3xl animate-fade-in">
+      <PageHeader eyebrow="// JAILBREAK PAYLOAD ARSENAL" title="破限 Payload 浏览器" />
 
       {/* Level selector */}
       <div className="mb-6">
@@ -63,7 +51,7 @@ export default function JailbreakPage() {
         <div className="label-tech mb-2">// PLATFORM</div>
         <div className="flex flex-wrap gap-1.5">
           {Object.keys(availablePlatforms).map((p) => {
-            const plat = platforms.find((pl) => pl.id === p) || { name: p, color: "#888" };
+            const plat = platforms.find((pl) => pl.id === p) || { name: p, color: "#9aa4ae" };
             return (
               <button
                 key={p}
@@ -82,9 +70,7 @@ export default function JailbreakPage() {
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <span className="label-tech">// CLI COMMAND</span>
-          <button onClick={copyCmd} className="flex items-center gap-1 text-[10px] text-accent hover:text-accent/80 transition-colors">
-            {copied ? <Check size={10} /> : <Copy size={10} />} {copied ? "COPIED" : "COPY"}
-          </button>
+          <CopyButton text={cliCmd} />
         </div>
         <div className="p-3 bg-black border border-bg-border">
           <code className="text-xs text-accent font-mono break-all term-glow">{cliCmd}</code>
@@ -96,7 +82,7 @@ export default function JailbreakPage() {
         <div className="tac-card overflow-hidden mb-6">
           <div className="px-4 py-2.5 border-b border-bg-border bg-bg-tertiary flex items-center justify-between">
             <div className="label-tech">// PAYLOAD CONTENT</div>
-            <span className="text-[9px] font-mono px-2 py-0.5 border" style={{ borderColor: levelData.color + "40", color: levelData.color }}>
+            <span className="text-[10px] font-mono px-2 py-0.5 border" style={{ borderColor: levelData.color + "40", color: levelData.color }}>
               {levelData.name} · {platform}
             </span>
           </div>

@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
-import { Terminal, Play, Copy, Check, Loader2 } from "lucide-react";
+import { Terminal, Play, Loader2 } from "lucide-react";
 import { platforms, meta } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { CopyButton } from "@/components/ui/CopyButton";
+import { PageHeader } from "@/components/ui/PageHeader";
 
 const operations = [
   { id: "audit", label: "安全审计", cmd: "audit", needs: ["target"] },
@@ -27,7 +29,6 @@ export default function CliPage() {
   const [level, setLevel] = useState("L3");
   const [output, setOutput] = useState("");
   const [running, setRunning] = useState(false);
-  const [copied, setCopied] = useState(false);
 
   const selected = operations.find((o) => o.id === op)!;
 
@@ -41,12 +42,6 @@ export default function CliPage() {
   }
 
   const cmd = buildCommand();
-
-  const copyCmd = () => {
-    navigator.clipboard.writeText(cmd);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
 
   const runCommand = () => {
     setRunning(true);
@@ -74,14 +69,8 @@ export default function CliPage() {
   };
 
   return (
-    <div className="p-8 max-w-3xl animate-fade-in">
-      {/* Header */}
-      <div className="mb-6">
-        <div className="text-[9px] text-accent/50 font-mono tracking-widest uppercase mb-1">
-          // COMMAND CONSOLE
-        </div>
-        <h1 className="text-xl font-bold text-gray-100 font-mono">CLI 操作台</h1>
-      </div>
+    <div className="p-5 sm:p-6 lg:p-8 max-w-3xl animate-fade-in">
+      <PageHeader eyebrow="// COMMAND CONSOLE" title="CLI 操作台" />
 
       {/* Operation type */}
       <div className="mb-6">
@@ -175,9 +164,7 @@ export default function CliPage() {
       <div className="mb-4">
         <div className="flex items-center justify-between mb-2">
           <span className="label-tech">// COMMAND</span>
-          <button onClick={copyCmd} className="flex items-center gap-1 text-[10px] text-accent hover:text-accent/80 transition-colors">
-            {copied ? <Check size={10} /> : <Copy size={10} />} {copied ? "COPIED" : "COPY"}
-          </button>
+          <CopyButton text={cmd} />
         </div>
         <div className="p-3 bg-black border border-bg-border">
           <code className="text-xs text-accent font-mono break-all term-glow">{cmd}</code>

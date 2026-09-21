@@ -195,6 +195,11 @@ jobs:
           print(f"报告已生成: {len(all_info)} 个子仓库, {synced} 同步, {behind} 落后")
           PYEOF
 
+      - name: Configure Git identity
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
       - name: Commit report to repo
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

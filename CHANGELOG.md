@@ -23,6 +23,7 @@
 ### 🚀 优化
 
 - 前端首页 REPOSITORIES 卡片改为解析 `.gitmodules` 自动生成（`web/scripts/sync-data.mjs` + `web/src/data/submodules.json`），`deploy-web.yml` 触发路径加入 `.gitmodules`
+- **前端视觉整改（可读性优先）**：首页配色从 12 种收敛到「主色 + 信息色」2 种（5 张统计卡合并为一个面板 + 发丝分隔线，平台芯片改中性色，移除装饰性 purple token）；语义标签字号 8-9px → 10px、颜色 #4a5258 → #6e7882 提升对比度；网格/扫描线叠加降到几乎不可见；主入口卡加主色左条与 hover 箭头；ATT&CK 矩阵格子放大、T-ID 升到 9px、四档色阶拉开明度并在图例标出各档数量、筛选与图例上移到矩阵顶部；技能库行高与字号上调、右栏空态换成 OVERVIEW 摘要、窄屏详情改整屏浮层；仓库列表在窄屏把描述换到第二行（实测 390px 下被截断元素 13 → 2，且 1440/430/390 三档均无横向溢出）
 - `web/src/data/*` 刷新到当前数据（此前索引副本停留在 v4.3.5、仅 193 个技能正文）
 - `SUBMODULE_STRATEGY.md` 移除 3 个不存在的脚本与 `SUBMODULE_REPORT.md` 引用，改为与实际工作流一致
 

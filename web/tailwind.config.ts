@@ -7,11 +7,12 @@ export default {
     extend: {
       colors: {
         bg: { DEFAULT: "#050507", secondary: "#0b0d10", tertiary: "#111518", border: "#1a1f24" },
+        // 配色纪律：accent 主色（自有内容/交互）、info 外部引用/信息、warning|danger 仅表严重度。
+        // 不再提供 purple 等装饰色 token，避免又被用在卡片上变成"彩虹界面"。
         accent: { DEFAULT: "#00ff88", muted: "#00cc6a", dim: "#008844" },
         danger: "#ff0040",
         warning: "#ffb000",
         info: "#00e5ff",
-        purple: "#b066ff",
       },
       fontFamily: {
         mono: ["var(--font-jetbrains)", "monospace"],

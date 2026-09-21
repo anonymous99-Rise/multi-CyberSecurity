@@ -85,7 +85,7 @@ export default function CliPage() {
 
       {/* Operation type */}
       <div className="mb-6">
-        <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-2">// OPERATION</div>
+        <div className="label-tech mb-2">// OPERATION</div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           {operations.map((o) => (
             <button
@@ -112,7 +112,7 @@ export default function CliPage() {
       {op === "redteam" && (
         <div className="grid grid-cols-2 gap-3 mb-6">
           <div>
-            <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-1.5">OP TYPE</div>
+            <div className="label-tech mb-1.5">OP TYPE</div>
             <select
               value={operation}
               onChange={(e) => setOperation(e.target.value)}
@@ -129,7 +129,7 @@ export default function CliPage() {
 
       {(op === "redteam" || op === "jailbreak" || op === "skill") && (
         <div className="mb-6">
-          <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-2">// PLATFORM</div>
+          <div className="label-tech mb-2">// PLATFORM</div>
           <div className="flex flex-wrap gap-1.5">
             {platforms.map((p) => (
               <button
@@ -155,7 +155,7 @@ export default function CliPage() {
 
       {op === "jailbreak" && (
         <div className="mb-6">
-          <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-2">// LEVEL</div>
+          <div className="label-tech mb-2">// LEVEL</div>
           <div className="flex gap-2">
             {["L1", "L2", "L3", "L4"].map((l) => (
               <button
@@ -174,7 +174,7 @@ export default function CliPage() {
       {/* Command preview */}
       <div className="mb-4">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-[9px] text-gray-600 font-mono tracking-widest uppercase">// COMMAND</span>
+          <span className="label-tech">// COMMAND</span>
           <button onClick={copyCmd} className="flex items-center gap-1 text-[10px] text-accent hover:text-accent/80 transition-colors">
             {copied ? <Check size={10} /> : <Copy size={10} />} {copied ? "COPIED" : "COPY"}
           </button>
@@ -188,7 +188,7 @@ export default function CliPage() {
       <button
         onClick={runCommand}
         disabled={running}
-        className="flex items-center gap-2 px-4 py-2 bg-accent/8 border border-accent/30 text-accent text-xs font-mono hover:bg-accent/15 transition-colors disabled:opacity-30 mb-4"
+        className="flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/30 text-accent text-xs font-mono hover:bg-accent/20 transition-colors disabled:opacity-30 mb-4"
       >
         {running ? <Loader2 size={14} className="animate-spin" /> : <Play size={14} />}
         {running ? "RUNNING..." : "EXECUTE"}
@@ -197,7 +197,7 @@ export default function CliPage() {
       {/* Terminal output */}
       {output && (
         <div className="animate-fade-in">
-          <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-2 flex items-center gap-2">
+          <div className="label-tech mb-2 flex items-center gap-2">
             <Terminal size={11} /> // OUTPUT
           </div>
           <div className="p-4 bg-black border border-bg-border max-h-[300px] overflow-y-auto">
@@ -210,7 +210,7 @@ export default function CliPage() {
       )}
 
       {/* Footer */}
-      <div className="mt-8 pt-4 border-t border-bg-border text-[9px] text-gray-700 font-mono tracking-widest">
+      <div className="mt-8 pt-4 border-t border-bg-border label-tech">
         mCS v{meta.version} · AUTHORIZED CTF / PENTEST LAB
       </div>
     </div>
@@ -220,7 +220,7 @@ export default function CliPage() {
 function ParamInput({ label, value, onChange, placeholder }: { label: string; value: string; onChange: (v: string) => void; placeholder?: string }) {
   return (
     <div className="mb-6">
-      <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-1.5">{label}</div>
+      <div className="label-tech mb-1.5">{label}</div>
       <input
         value={value}
         onChange={(e) => onChange(e.target.value)}

@@ -32,7 +32,7 @@ export default function JailbreakPage() {
 
       {/* Level selector */}
       <div className="mb-6">
-        <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-2">// LEVEL</div>
+        <div className="label-tech mb-2">// LEVEL</div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           {jailbreakLevels.map((l) => (
             <button
@@ -47,9 +47,9 @@ export default function JailbreakPage() {
             >
               <div className="flex items-center justify-between mb-1">
                 <span className="text-sm font-mono font-bold" style={{ color: l.color }}>{l.name}</span>
-                <span className="text-[8px] text-gray-700 font-mono">{l.id}</span>
+                <span className="text-[10px] text-gray-500 font-mono metric-num">{l.id}</span>
               </div>
-              <p className="text-[9px] text-gray-600">{l.desc}</p>
+              <p className="text-[11px] text-gray-400 leading-relaxed">{l.desc}</p>
             </button>
           ))}
         </div>
@@ -60,7 +60,7 @@ export default function JailbreakPage() {
 
       {/* Platform selector */}
       <div className="mb-6">
-        <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-2">// PLATFORM</div>
+        <div className="label-tech mb-2">// PLATFORM</div>
         <div className="flex flex-wrap gap-1.5">
           {Object.keys(availablePlatforms).map((p) => {
             const plat = platforms.find((pl) => pl.id === p) || { name: p, color: "#888" };
@@ -81,7 +81,7 @@ export default function JailbreakPage() {
       {/* CLI command */}
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-[9px] text-gray-600 font-mono tracking-widest uppercase">// CLI COMMAND</span>
+          <span className="label-tech">// CLI COMMAND</span>
           <button onClick={copyCmd} className="flex items-center gap-1 text-[10px] text-accent hover:text-accent/80 transition-colors">
             {copied ? <Check size={10} /> : <Copy size={10} />} {copied ? "COPIED" : "COPY"}
           </button>
@@ -95,7 +95,7 @@ export default function JailbreakPage() {
       {payloadContent && (
         <div className="tac-card overflow-hidden mb-6">
           <div className="px-4 py-2.5 border-b border-bg-border bg-bg-tertiary flex items-center justify-between">
-            <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase">// PAYLOAD CONTENT</div>
+            <div className="label-tech">// PAYLOAD CONTENT</div>
             <span className="text-[9px] font-mono px-2 py-0.5 border" style={{ borderColor: levelData.color + "40", color: levelData.color }}>
               {levelData.name} · {platform}
             </span>
@@ -110,7 +110,7 @@ export default function JailbreakPage() {
 
       {/* Coverage matrix */}
       <div className="tac-card p-5">
-        <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-3">
+        <div className="label-tech mb-3">
           // COVERAGE MATRIX
         </div>
         <table className="w-full text-[10px] font-mono">

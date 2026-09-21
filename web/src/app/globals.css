@@ -12,7 +12,11 @@
   --danger: #ff0040;
   --warning: #ffb000;
   --info: #00e5ff;
-  --grid: rgba(0, 255, 136, 0.03);
+  --grid: rgba(0, 255, 136, 0.018);
+  /* 语义文字色：标签/次要文字必须达到可用对比度（原先 #4a5258 约 3:1，读不清） */
+  --text-1: #e6eaee;
+  --text-2: #9aa4ae;
+  --text-3: #6e7882;
 }
 
 /* === Base === */
@@ -40,7 +44,7 @@ body::before {
   z-index: 0;
 }
 
-/* Scanline overlay */
+/* Scanline overlay：降到 1px 周期、极低不透明度，避免盖住正文（原先 2px/0.012 太吵） */
 body::after {
   content: "";
   position: fixed;
@@ -48,9 +52,9 @@ body::after {
   background: repeating-linear-gradient(
     0deg,
     transparent 0,
-    transparent 2px,
-    rgba(255, 255, 255, 0.012) 2px,
-    rgba(255, 255, 255, 0.012) 4px
+    transparent 3px,
+    rgba(255, 255, 255, 0.006) 3px,
+    rgba(255, 255, 255, 0.006) 4px
   );
   pointer-events: none;
   z-index: 999;
@@ -125,3 +129,41 @@ input:focus, select:focus {
   border-color: var(--accent) !important;
   box-shadow: 0 0 8px rgba(0, 255, 136, 0.15);
 }
+
+/* === 统一组件样式（减少各页面各写一套）=== */
+
+/* 技术标签：卡片标题、分区名。10px 大写 + 提高对比度，保证可读 */
+.label-tech {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+/* 数字：等宽 + 表格数字，保证多行数字右对齐不跳动 */
+.metric-num {
+  font-family: var(--font-jetbrains), monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* 主入口卡：左侧主色条 + 略深底色，用于区分"主入口"与"次要信息卡" */
+.tac-card-primary {
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(180deg, #0e1216 0%, var(--bg-2) 100%);
+}
+.tac-card-primary:hover {
+  border-left-color: var(--accent);
+  box-shadow: 0 0 18px rgba(0, 255, 136, 0.1);
+}
+
+/* 说明条：口径/注意事项，不抢正文但能看见 */
+.note-strip {
+  border-left: 2px solid var(--accent-dim);
+  background: rgba(0, 136, 68, 0.06);
+}
+
+/* 列表分隔线 */
+.hairline { border-color: var(--border); }

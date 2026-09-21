@@ -8,6 +8,7 @@ on:
       - 'index.json'
       - 'skills_index.json'
       - 'mappings/attack-navigator-layer.json'
+      - '.gitmodules'
       - '.github/workflows/deploy-web.yml'
   workflow_dispatch:
 

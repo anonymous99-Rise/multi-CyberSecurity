@@ -3,6 +3,7 @@ import skillsIndexData from "@/data/skills_index.json";
 import attackLayerData from "@/data/attack-navigator-layer.json";
 import skillsContentData from "@/data/skills_content.json";
 import jailbreakPayloadsData from "@/data/jailbreak_payloads.json";
+import submodulesData from "@/data/submodules.json";
 
 export const skillsContent = skillsContentData as Record<string, string>;
 export const jailbreakPayloads = jailbreakPayloadsData as Record<string, Record<string, string>>;
@@ -64,10 +65,21 @@ export interface PlatformConfig {
   color: string;
 }
 
+export interface SubmoduleEntry {
+  name: string;
+  path: string;
+  url: string;
+  group: string;
+  desc: string;
+}
+
 export const meta = (indexData as any).meta as MetaInfo;
 export const modules = (indexData as any).modules as ModuleEntry[];
 export const skillsIndex = skillsIndexData as SkillIndexEntry[];
 export const attackTechniques = (attackLayerData as any).techniques as AttackTechnique[];
+
+// 子仓库清单由 scripts/sync-data.mjs 解析根目录 .gitmodules 自动生成
+export const submodules = submodulesData as SubmoduleEntry[];
 
 export const platforms: PlatformConfig[] = [
   { id: "trae", name: "Trae", configPath: ".trae", color: "#4f9eff" },

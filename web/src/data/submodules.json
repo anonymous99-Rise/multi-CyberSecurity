@@ -1,0 +1,135 @@
+[
+  {
+    "name": "AboutSecurity",
+    "path": "external/AboutSecurity",
+    "url": "https://github.com/wgpsec/AboutSecurity.git",
+    "group": "external",
+    "desc": "安全工具集合"
+  },
+  {
+    "name": "agency-agents",
+    "path": "external/agency-agents",
+    "url": "https://github.com/msitarzewski/agency-agents.git",
+    "group": "external",
+    "desc": "Agent 编排框架"
+  },
+  {
+    "name": "agency-agents-zh",
+    "path": "external/agency-agents-zh",
+    "url": "https://github.com/jnMetaCode/agency-agents-zh.git",
+    "group": "external",
+    "desc": "Agent 编排框架（中文）"
+  },
+  {
+    "name": "Anthropic-Cybersecurity-Skills",
+    "path": "external/Anthropic-Cybersecurity-Skills",
+    "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+    "group": "external",
+    "desc": "全面安全评估技能（817+ / 29 领域）"
+  },
+  {
+    "name": "CkSKILLS",
+    "path": "external/CkSKILLS",
+    "url": "https://github.com/zhaji2333/CkSKILLS.git",
+    "group": "external",
+    "desc": "SRC 挖洞技能体系 + hunts 线索板"
+  },
+  {
+    "name": "Claude-BugHunter",
+    "path": "external/Claude-BugHunter",
+    "url": "https://github.com/elementalsouls/Claude-BugHunter.git",
+    "group": "external",
+    "desc": "Bug Hunting / Red Team 技能包（71+）"
+  },
+  {
+    "name": "Claude-Red",
+    "path": "external/Claude-Red",
+    "url": "https://github.com/SnailSploit/Claude-Red.git",
+    "group": "external",
+    "desc": "Claude 攻击性安全技能库（78 技能 / 23 类）"
+  },
+  {
+    "name": "cnvd-skill",
+    "path": "external/cnvd-skill",
+    "url": "https://github.com/sywinksvg/cnvd-skill.git",
+    "group": "external",
+    "desc": "CNVD 通用型未授权漏洞广扫便携包"
+  },
+  {
+    "name": "cve_monitor",
+    "path": "external/cve_monitor",
+    "url": "https://github.com/anonymous99-Rise/cve_monitor.git",
+    "group": "external",
+    "desc": "CVE 监控与推送"
+  },
+  {
+    "name": "CyberStrikeAI",
+    "path": "external/CyberStrikeAI",
+    "url": "https://github.com/AIPentest/CyberStrikeAI.git",
+    "group": "external",
+    "desc": "AI 原生安全操作平台（Eino + MCP + RAG）"
+  },
+  {
+    "name": "dsh-infinite-gen-4",
+    "path": "external/dsh-infinite-gen-4",
+    "url": "https://github.com/Minglink/dsh-infinite-gen-4.git",
+    "group": "external",
+    "desc": "DSH 红队评测破甲插件"
+  },
+  {
+    "name": "dsh-pentest",
+    "path": "external/dsh-pentest",
+    "url": "https://github.com/howmp/dsh-pentest.git",
+    "group": "external",
+    "desc": "DSH 渗透模式插件（pentest_* 工具链）"
+  },
+  {
+    "name": "dsh-redteam-model",
+    "path": "external/dsh-redteam-model",
+    "url": "https://github.com/SeaOf0/dsh-redteam-model.git",
+    "group": "external",
+    "desc": "DSH 红队模型研究"
+  },
+  {
+    "name": "reverse-skill",
+    "path": "external/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill.git",
+    "group": "external",
+    "desc": "逆向 / CTF / 渗透技能路由包"
+  },
+  {
+    "name": "Vulnerability-Wiki-PoC",
+    "path": "external/Vulnerability-Wiki-PoC",
+    "url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC.git",
+    "group": "external",
+    "desc": "漏洞 PoC 库"
+  },
+  {
+    "name": "owasp-top10",
+    "path": "standards/owasp-top10",
+    "url": "https://github.com/OWASP/Top10.git",
+    "group": "standards",
+    "desc": "OWASP Top 10 标准"
+  },
+  {
+    "name": "burp-mcp",
+    "path": "vendor/burp-mcp",
+    "url": "https://github.com/PortSwigger/mcp-server.git",
+    "group": "vendor",
+    "desc": "Burp Suite MCP Server"
+  },
+  {
+    "name": "codegraph",
+    "path": "vendor/codegraph",
+    "url": "https://github.com/colbymchenry/codegraph.git",
+    "group": "vendor",
+    "desc": "代码分析工具（MCP 集成）"
+  },
+  {
+    "name": "redteam-mcp",
+    "path": "vendor/redteam-mcp",
+    "url": "https://github.com/ktol1/RedTeam-Agent.git",
+    "group": "vendor",
+    "desc": "红队 Agent MCP"
+  }
+]

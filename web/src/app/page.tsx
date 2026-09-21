@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Shield, BookOpen, Terminal, Crosshair, Unlock, Package, GitBranch, Zap } from "lucide-react";
-import { meta, platforms, getAttackCoverageStats, getNistCsfCoverage } from "@/lib/data";
+import { BookOpen, Terminal, Crosshair, Unlock, Package, GitBranch, Zap } from "lucide-react";
+import { meta, platforms, submodules, getAttackCoverageStats, getNistCsfCoverage } from "@/lib/data";
 
 export default function Home() {
   const atkStats = getAttackCoverageStats();
@@ -11,13 +11,6 @@ export default function Home() {
     { href: "/cli", icon: Terminal, title: "CLI 操作台", code: "CLI", desc: "审计 · 红队 · 破限", color: "#00ff88" },
     { href: "/attack", icon: Crosshair, title: "ATT&CK", code: "MATRIX", desc: `${atkStats.covered} techniques covered`, color: "#ffb000" },
     { href: "/jailbreak", icon: Unlock, title: "破限 Payload", code: "JAILBREAK", desc: "L1-L4 · 8 platforms", color: "#ff0040" },
-  ];
-
-  const submodules = [
-    { name: "CkSKILLS", desc: "SRC 挖洞技能体系" },
-    { name: "dsh-pentest", desc: "DSH 渗透模式插件" },
-    { name: "dsh-infinite-gen-4", desc: "DSH 红队评测插件" },
-    { name: "CyberStrikeAI", desc: "AI 原生安全操作平台" },
   ];
 
   const csfLabels: Record<string, string> = {
@@ -83,41 +76,51 @@ export default function Home() {
         })}
       </div>
 
-      {/* Two column: platforms + submodules */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
-        {/* Platforms */}
-        <div className="tac-card p-5">
-          <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-3 flex items-center gap-2">
-            <Zap size={12} className="text-accent" /> PLATFORMS
-          </div>
-          <div className="flex flex-wrap gap-1.5">
-            {platforms.map((p) => (
-              <span
-                key={p.id}
-                className="px-2 py-0.5 text-[10px] font-mono border tracking-wider"
-                style={{ borderColor: p.color + "30", color: p.color, background: p.color + "08" }}
-              >
-                {p.name}
-              </span>
-            ))}
-          </div>
+      {/* Platforms */}
+      <div className="tac-card p-5 mb-3">
+        <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-3 flex items-center gap-2">
+          <Zap size={12} className="text-accent" /> PLATFORMS
         </div>
+        <div className="flex flex-wrap gap-1.5">
+          {platforms.map((p) => (
+            <span
+              key={p.id}
+              className="px-2 py-0.5 text-[10px] font-mono border tracking-wider"
+              style={{ borderColor: p.color + "30", color: p.color, background: p.color + "08" }}
+            >
+              {p.name}
+            </span>
+          ))}
+        </div>
+      </div>
 
-        {/* Submodules */}
-        <div className="tac-card p-5">
-          <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-3 flex items-center gap-2">
-            <GitBranch size={12} className="text-accent" /> REPOSITORIES
-          </div>
-          <div className="space-y-1.5">
-            {submodules.map((s) => (
-              <div key={s.name} className="flex items-center gap-2 text-xs">
-                <Package size={11} className="text-gray-600" />
-                <span className="font-mono text-gray-300">{s.name}</span>
-                <span className="text-gray-700">—</span>
-                <span className="text-gray-600 text-[11px]">{s.desc}</span>
-              </div>
-            ))}
-          </div>
+      {/* Submodules — 清单由 scripts/sync-data.mjs 解析根目录 .gitmodules 生成 */}
+      <div className="tac-card p-5 mb-4">
+        <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-3 flex items-center gap-2">
+          <GitBranch size={12} className="text-accent" /> REPOSITORIES
+          <span className="text-gray-700">· {String(submodules.length).padStart(2, "0")}</span>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-1.5">
+          {submodules.map((s) => (
+            <a
+              key={s.path}
+              href={s.url}
+              target="_blank"
+              rel="noreferrer"
+              title={`${s.path} — ${s.desc}`}
+              className="flex items-center gap-2 text-xs min-w-0 group"
+            >
+              <Package size={11} className="text-gray-600 shrink-0" />
+              {s.group !== "external" && (
+                <span className="font-mono text-[10px] text-gray-700 shrink-0">{s.group}/</span>
+              )}
+              <span className="font-mono text-gray-300 group-hover:text-accent transition-colors shrink-0">
+                {s.name}
+              </span>
+              <span className="text-gray-700 shrink-0">—</span>
+              <span className="text-gray-600 text-[11px] truncate min-w-0">{s.desc}</span>
+            </a>
+          ))}
         </div>
       </div>
 

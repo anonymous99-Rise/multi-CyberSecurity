@@ -2,6 +2,9 @@ import Link from "next/link";
 import { BookOpen, Terminal, Crosshair, Unlock, Package, GitBranch, Zap } from "lucide-react";
 import { meta, platforms, submodules, externalSkills, getAttackCoverageStats, getNistCsfCoverage } from "@/lib/data";
 
+// 千分位格式化：用固定实现而不是 toLocaleString()，避免构建端与浏览器端 locale 不一致导致 hydration 警告
+const fmt = (n: number) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
 export default function Home() {
   const atkStats = getAttackCoverageStats();
   const csfData = getNistCsfCoverage();
@@ -58,7 +61,11 @@ export default function Home() {
       <p className="text-[10px] text-gray-600 font-mono leading-relaxed mb-6">
         统计口径：<span className="text-gray-500">SKILLS {meta.total_skills} / MODULES {meta.total_modules} / ATT&amp;CK {atkStats.covered}</span> 为本仓库自有内容（{meta.total_modules} 个分类下的 <span className="text-gray-500">NN-*/skills</span>）。
         <span className="text-gray-700">
-          {" "}external/ 的 {externalSkills.repo_count} 个子仓库（{externalSkills.repo_with_skills} 个含 SKILL.md）以 git submodule 引用，单独计为 EXTERNAL {externalSkills.external_skill_md_total}，<span className="text-gray-500">不并入</span>自有技能数。
+          {" "}external/ 的 {externalSkills.repo_count} 个子仓库（{externalSkills.repo_with_skills} 个含 SKILL.md）以 git submodule 引用，单独计为 EXTERNAL {externalSkills.external_skill_md_total}
+          （另含知识库类 markdown {fmt(externalSkills.external_md_total ?? 0)} 个），<span className="text-gray-500">不并入</span>自有技能数。
+        </span>
+        <span className="text-gray-700">
+          {" "}下方每个仓库右侧：<span className="text-accent/70">skill</span> = SKILL.md 数，<span className="text-gray-500">md</span> = markdown 文件总数。
         </span>
       </p>
 
@@ -130,6 +137,21 @@ export default function Home() {
               </span>
               <span className="text-gray-700 shrink-0">—</span>
               <span className="text-gray-600 text-[11px] truncate min-w-0">{s.desc}</span>
+              {(s.skill_md ?? 0) > 0 ? (
+                <span
+                  className="ml-auto font-mono text-[10px] text-accent/70 shrink-0 tabular-nums"
+                  title={`${s.path}：SKILL.md ${s.skill_md} 个`}
+                >
+                  {fmt(s.skill_md ?? 0)} skill
+                </span>
+              ) : (s.md_total ?? 0) > 0 ? (
+                <span
+                  className="ml-auto font-mono text-[10px] text-gray-700 shrink-0 tabular-nums"
+                  title={`${s.path}：markdown 文件 ${s.md_total} 个（无 SKILL.md，知识库/文档类）`}
+                >
+                  {fmt(s.md_total ?? 0)} md
+                </span>
+              ) : null}
             </a>
           ))}
         </div>

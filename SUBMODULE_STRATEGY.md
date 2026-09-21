@@ -35,7 +35,8 @@ external/                    # 外部引用的独立项目
 ├── dsh-redteam-model/       # DSH 红队模型研究（SeaOf0/dsh-redteam-model）
 ├── Claude-Red/              # Claude Skills 攻击性安全技能库（SnailSploit/Claude-Red）
 ├── cnvd-skill/              # CNVD 通用型未授权漏洞广扫便携包（sywinksvg/cnvd-skill）
-└── Desinter_scan/           # AI 自动化信息收集流水线（Dest1ny-Sec/Desinter_scan）
+├── Desinter_scan/           # AI 自动化信息收集流水线（Dest1ny-Sec/Desinter_scan）
+└── Des-CTF-Knowledge/       # CTF 知识库：Web 漏洞深度文 + 历年大赛 WP（Dest1ny-Sec/Des-CTF-Knowledge）
 
 vendor/                      # 内部使用的工具/库 (可修改)
 ├── codegraph/               # 代码分析工具
@@ -143,6 +144,7 @@ Agent → 查询 external/<kb>/README.md → 获取知识
 | Claude-Red | Claude Skills 技能库 | `Skills/` 下 SKILL.md 按需加载 | ✅ 活跃 |
 | cnvd-skill | 挖洞工作流工具包 | `skills/cnvd/SKILL.md` 手册 + `tools/scripts/` 脚本链 | ✅ 活跃 |
 | Desinter_scan | 信息收集工具链 | `run.py` + `collectors/` 独立调用 | ✅ 活跃 |
+| Des-CTF-Knowledge | CTF 知识库 | 知识检索/引用（非 SKILL.md 形态） | ✅ 活跃 |
 
 ---
 

@@ -4,139 +4,209 @@
     "path": "external/AboutSecurity",
     "url": "https://github.com/wgpsec/AboutSecurity.git",
     "group": "external",
-    "desc": "安全工具集合"
+    "desc": "安全工具集合",
+    "skill_md": 249,
+    "md_total": 1353,
+    "kind": "skills"
   },
   {
     "name": "agency-agents",
     "path": "external/agency-agents",
     "url": "https://github.com/msitarzewski/agency-agents.git",
     "group": "external",
-    "desc": "Agent 编排框架"
+    "desc": "Agent 编排框架",
+    "skill_md": 0,
+    "md_total": 325,
+    "kind": "knowledge"
   },
   {
     "name": "agency-agents-zh",
     "path": "external/agency-agents-zh",
     "url": "https://github.com/jnMetaCode/agency-agents-zh.git",
     "group": "external",
-    "desc": "Agent 编排框架（中文）"
+    "desc": "Agent 编排框架（中文）",
+    "skill_md": 0,
+    "md_total": 327,
+    "kind": "knowledge"
   },
   {
     "name": "Anthropic-Cybersecurity-Skills",
     "path": "external/Anthropic-Cybersecurity-Skills",
     "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
     "group": "external",
-    "desc": "全面安全评估技能（817+ / 29 领域）"
+    "desc": "全面安全评估技能（817+ / 29 领域）",
+    "skill_md": 820,
+    "md_total": 2588,
+    "kind": "skills"
   },
   {
     "name": "CkSKILLS",
     "path": "external/CkSKILLS",
     "url": "https://github.com/zhaji2333/CkSKILLS.git",
     "group": "external",
-    "desc": "SRC 挖洞技能体系 + hunts 线索板"
+    "desc": "SRC 挖洞技能体系 + hunts 线索板",
+    "skill_md": 21,
+    "md_total": 36,
+    "kind": "skills"
   },
   {
     "name": "Claude-BugHunter",
     "path": "external/Claude-BugHunter",
     "url": "https://github.com/elementalsouls/Claude-BugHunter.git",
     "group": "external",
-    "desc": "Bug Hunting / Red Team 技能包（71+）"
+    "desc": "Bug Hunting / Red Team 技能包（71+）",
+    "skill_md": 83,
+    "md_total": 187,
+    "kind": "skills"
   },
   {
     "name": "Claude-Red",
     "path": "external/Claude-Red",
     "url": "https://github.com/SnailSploit/Claude-Red.git",
     "group": "external",
-    "desc": "Claude 攻击性安全技能库（79 SKILL.md / 23 类）"
+    "desc": "Claude 攻击性安全技能库（79 SKILL.md / 23 类）",
+    "skill_md": 79,
+    "md_total": 84,
+    "kind": "skills"
   },
   {
     "name": "cnvd-skill",
     "path": "external/cnvd-skill",
     "url": "https://github.com/sywinksvg/cnvd-skill.git",
     "group": "external",
-    "desc": "CNVD 通用型未授权漏洞广扫便携包"
+    "desc": "CNVD 通用型未授权漏洞广扫便携包",
+    "skill_md": 1,
+    "md_total": 11,
+    "kind": "skills"
   },
   {
     "name": "cve_monitor",
     "path": "external/cve_monitor",
     "url": "https://github.com/anonymous99-Rise/cve_monitor.git",
     "group": "external",
-    "desc": "CVE 监控与推送"
+    "desc": "CVE 监控与推送",
+    "skill_md": 0,
+    "md_total": 6,
+    "kind": "knowledge"
   },
   {
     "name": "CyberStrikeAI",
     "path": "external/CyberStrikeAI",
     "url": "https://github.com/AIPentest/CyberStrikeAI.git",
     "group": "external",
-    "desc": "AI 原生安全操作平台（Eino + MCP + RAG）"
+    "desc": "AI 原生安全操作平台（Eino + MCP + RAG）",
+    "skill_md": 24,
+    "md_total": 141,
+    "kind": "skills"
+  },
+  {
+    "name": "Des-CTF-Knowledge",
+    "path": "external/Des-CTF-Knowledge",
+    "url": "https://github.com/Dest1ny-Sec/Des-CTF-Knowledge.git",
+    "group": "external",
+    "desc": "CTF 知识库：Web 漏洞深度文 + 历年大赛 WP + Payload 速查",
+    "skill_md": 0,
+    "md_total": 1209,
+    "kind": "knowledge"
   },
   {
     "name": "Desinter_scan",
     "path": "external/Desinter_scan",
     "url": "https://github.com/Dest1ny-Sec/Desinter_scan.git",
     "group": "external",
-    "desc": "AI 自动化信息收集流水线（22 collector + Claude 评分）"
+    "desc": "AI 自动化信息收集流水线（22 collector + Claude 评分）",
+    "skill_md": 0,
+    "md_total": 3,
+    "kind": "knowledge"
   },
   {
     "name": "dsh-infinite-gen-4",
     "path": "external/dsh-infinite-gen-4",
     "url": "https://github.com/Minglink/dsh-infinite-gen-4.git",
     "group": "external",
-    "desc": "DSH 红队评测破甲插件"
+    "desc": "DSH 红队评测破甲插件",
+    "skill_md": 0,
+    "md_total": 6,
+    "kind": "knowledge"
   },
   {
     "name": "dsh-pentest",
     "path": "external/dsh-pentest",
     "url": "https://github.com/howmp/dsh-pentest.git",
     "group": "external",
-    "desc": "DSH 渗透模式插件（pentest_* 工具链）"
+    "desc": "DSH 渗透模式插件（pentest_* 工具链）",
+    "skill_md": 0,
+    "md_total": 10,
+    "kind": "knowledge"
   },
   {
     "name": "dsh-redteam-model",
     "path": "external/dsh-redteam-model",
     "url": "https://github.com/SeaOf0/dsh-redteam-model.git",
     "group": "external",
-    "desc": "DSH 红队模型研究"
+    "desc": "DSH 红队模型研究",
+    "skill_md": 58,
+    "md_total": 1085,
+    "kind": "skills"
   },
   {
     "name": "reverse-skill",
     "path": "external/reverse-skill",
     "url": "https://github.com/zhaoxuya520/reverse-skill.git",
     "group": "external",
-    "desc": "逆向 / CTF / 渗透技能路由包"
+    "desc": "逆向 / CTF / 渗透技能路由包",
+    "skill_md": 89,
+    "md_total": 445,
+    "kind": "skills"
   },
   {
     "name": "Vulnerability-Wiki-PoC",
     "path": "external/Vulnerability-Wiki-PoC",
     "url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC.git",
     "group": "external",
-    "desc": "漏洞 PoC 库"
+    "desc": "漏洞 PoC 库",
+    "skill_md": 0,
+    "md_total": 896,
+    "kind": "knowledge"
   },
   {
     "name": "owasp-top10",
     "path": "standards/owasp-top10",
     "url": "https://github.com/OWASP/Top10.git",
     "group": "standards",
-    "desc": "OWASP Top 10 标准"
+    "desc": "OWASP Top 10 标准",
+    "skill_md": 0,
+    "md_total": 711,
+    "kind": "knowledge"
   },
   {
     "name": "burp-mcp",
     "path": "vendor/burp-mcp",
     "url": "https://github.com/PortSwigger/mcp-server.git",
     "group": "vendor",
-    "desc": "Burp Suite MCP Server"
+    "desc": "Burp Suite MCP Server",
+    "skill_md": 0,
+    "md_total": 1,
+    "kind": "knowledge"
   },
   {
     "name": "codegraph",
     "path": "vendor/codegraph",
     "url": "https://github.com/colbymchenry/codegraph.git",
     "group": "vendor",
-    "desc": "代码分析工具（MCP 集成）"
+    "desc": "代码分析工具（MCP 集成）",
+    "skill_md": 2,
+    "md_total": 93,
+    "kind": "skills"
   },
   {
     "name": "redteam-mcp",
     "path": "vendor/redteam-mcp",
     "url": "https://github.com/ktol1/RedTeam-Agent.git",
     "group": "vendor",
-    "desc": "红队 Agent MCP"
+    "desc": "红队 Agent MCP",
+    "skill_md": 1,
+    "md_total": 12,
+    "kind": "skills"
   }
 ]

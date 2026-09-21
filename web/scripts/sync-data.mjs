@@ -93,6 +93,7 @@ const SUBMODULE_DESC = {
   "external/CkSKILLS": "SRC 挖洞技能体系 + hunts 线索板",
   "external/cnvd-skill": "CNVD 通用型未授权漏洞广扫便携包",
   "external/Desinter_scan": "AI 自动化信息收集流水线（22 collector + Claude 评分）",
+  "external/Des-CTF-Knowledge": "CTF 知识库：Web 漏洞深度文 + 历年大赛 WP + Payload 速查",
   "external/CyberStrikeAI": "AI 原生安全操作平台（Eino + MCP + RAG）",
   "external/cve_monitor": "CVE 监控与推送",
   "external/Vulnerability-Wiki-PoC": "漏洞 PoC 库",
@@ -127,6 +128,20 @@ if (existsSync(gitmodulesPath)) {
   }
   if (current && current.path && current.url) items.push(current);
 
+  // 外部技能计数（tools/external_skills_manifest.py 生成）按 path 并入每个子仓库条目
+  const manifestPath = join(ROOT, "external-skills.json");
+  const counts = new Map();
+  if (existsSync(manifestPath)) {
+    try {
+      const manifest = JSON.parse(readFileSync(manifestPath, "utf-8"));
+      for (const repo of manifest.repos || []) {
+        counts.set(repo.path, { skill_md: repo.skill_md, md_total: repo.md_total, kind: repo.kind });
+      }
+    } catch (e) {
+      console.warn(`  WARN: external-skills.json 解析失败，子仓库计数留空: ${e.message}`);
+    }
+  }
+
   const submodules = items
     .map(({ path, url }) => ({
       name: path.split("/").pop(),
@@ -136,6 +151,9 @@ if (existsSync(gitmodulesPath)) {
       desc:
         SUBMODULE_DESC[path] ||
         url.replace(/^https?:\/\/github\.com\//, "").replace(/\.git$/, ""),
+      skill_md: counts.get(path)?.skill_md ?? null,
+      md_total: counts.get(path)?.md_total ?? null,
+      kind: counts.get(path)?.kind ?? null,
     }))
     // 展示顺序：external -> standards -> vendor，同组内按名称（便于页面扫读）
     .sort((a, b) => {

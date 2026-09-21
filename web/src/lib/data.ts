@@ -72,6 +72,12 @@ export interface SubmoduleEntry {
   url: string;
   group: string;
   desc: string;
+  /** 该子仓库的 SKILL.md 数（null = 清单未覆盖/未统计） */
+  skill_md?: number | null;
+  /** 该子仓库的 .md 总数（知识库类仓库用它体现体量） */
+  md_total?: number | null;
+  /** skills | knowledge | tool */
+  kind?: string | null;
 }
 
 export interface ExternalSkillRepo {
@@ -81,6 +87,7 @@ export interface ExternalSkillRepo {
   repo: string;
   commit: string | null;
   skill_md: number | null;
+  md_total?: number | null;
   count_source: string;
   kind: string;
 }
@@ -92,7 +99,9 @@ export interface ExternalSkillsManifest {
   metric: string;
   repo_count: number;
   repo_with_skills: number;
+  repo_with_knowledge?: number;
   external_skill_md_total: number;
+  external_md_total?: number;
   repos: ExternalSkillRepo[];
 }
 

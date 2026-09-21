@@ -1,3 +1,4 @@
+ e8171fb7cbeb2be668f4026f1257842f628a310a external/Des-CTF-Knowledge
  8eca2de55e15835d6eed7ebbb3bc7a4318b6d9ba external/Desinter_scan
  5982c143bad83bf34f082944a25d37feba0193f0 external/cnvd-skill
  739512a8588b28ff3b554e669391c22508602878 external/Claude-Red

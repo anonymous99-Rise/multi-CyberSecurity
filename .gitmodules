@@ -58,3 +58,6 @@
 [submodule "external/Desinter_scan"]
 	path = external/Desinter_scan
 	url = https://github.com/Dest1ny-Sec/Desinter_scan.git
+[submodule "external/Des-CTF-Knowledge"]
+	path = external/Des-CTF-Knowledge
+	url = https://github.com/Dest1ny-Sec/Des-CTF-Knowledge.git

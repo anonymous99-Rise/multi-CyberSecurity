@@ -48,6 +48,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Refresh external skills manifest
+        working-directory: .
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # 用 API 模式按 .gitmodules 固定 commit 现算外部 SKILL.md / markdown 计数，
+          # 这样新加的子仓库不必等周报 PR 就能在站点显示数量；失败则沿用已提交的清单。
+          python3 tools/external_skills_manifest.py --api \
+            || echo "::warning::外部技能清单刷新失败，沿用已提交的 external-skills.json"
+
       - name: Sync data files
         run: node scripts/sync-data.mjs
 

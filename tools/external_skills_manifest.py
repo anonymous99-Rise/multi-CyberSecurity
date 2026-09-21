@@ -56,9 +56,17 @@ def pinned_sha(path):
 
 def count_local(repo_dir):
     if not repo_dir.is_dir():
-        return None, "not-checked-out"
-    n = sum(1 for p in repo_dir.rglob("SKILL.md") if p.is_file())
-    return n, "local"
+        return None, None, "not-checked-out"
+    skill_md = md_total = 0
+    for p in repo_dir.rglob("*"):
+        if not p.is_file():
+            continue
+        low = p.name.lower()
+        if low == "skill.md":
+            skill_md += 1
+        if low.endswith(".md"):
+            md_total += 1
+    return skill_md, md_total, "local"
 
 
 def count_api(repo, sha, token):
@@ -72,14 +80,21 @@ def count_api(repo, sha, token):
         with urllib.request.urlopen(req, timeout=60) as r:
             data = json.load(r)
     except urllib.error.HTTPError as e:
-        return None, f"http-{e.code}"
+        return None, None, f"http-{e.code}"
     except Exception as e:
-        return None, f"error:{e}"
+        return None, None, f"error:{e}"
     if data.get("truncated"):
-        return None, "truncated"
-    n = sum(1 for item in data.get("tree", [])
-            if item.get("type") == "blob" and item.get("path", "").lower().endswith("skill.md"))
-    return n, "api"
+        return None, None, "truncated"
+    skill_md = md_total = 0
+    for item in data.get("tree", []):
+        if item.get("type") != "blob":
+            continue
+        low = item.get("path", "").lower()
+        if low.endswith("skill.md"):
+            skill_md += 1
+        if low.endswith(".md"):
+            md_total += 1
+    return skill_md, md_total, "api"
 
 
 def main():
@@ -95,30 +110,38 @@ def main():
 
     repos = []
     total = 0
+    md_total_all = 0
     for sm in parse_gitmodules():
         sha = pinned_sha(sm["path"])
         if args.api:
             repo = re.sub(r"^https?://github\.com/", "", sm["url"]).removesuffix(".git")
-            count, source = count_api(repo, sha or "HEAD", token)
-            repo_slug = repo
+            skill_md, md_total, source = count_api(repo, sha or "HEAD", token)
         else:
-            count, source = count_local(ROOT / sm["path"])
-            repo_slug = re.sub(r"^https?://github\.com/", "", sm["url"]).removesuffix(".git")
+            repo = re.sub(r"^https?://github\.com/", "", sm["url"]).removesuffix(".git")
+            skill_md, md_total, source = count_local(ROOT / sm["path"])
+
+        if (skill_md or 0) > 0:
+            kind = "skills"
+        elif (md_total or 0) > 0:
+            kind = "knowledge"   # 知识库形态（如 CTF WP 集合）：有 markdown 但没有 SKILL.md
+        else:
+            kind = "tool"
 
         entry = {
             "name": sm["name"],
             "path": sm["path"],
             "url": sm["url"],
-            "repo": repo_slug,
+            "repo": repo,
             "commit": sha[:7] if sha else None,
-            "skill_md": count,
+            "skill_md": skill_md,
+            "md_total": md_total,
             "count_source": source,
-            "kind": "skills" if (count or 0) > 0 else "tool",
+            "kind": kind,
         }
         repos.append(entry)
-        if count:
-            total += count
-        print(f"  {sm['path']:38s} SKILL.md={str(count):>5s} ({source})")
+        total += skill_md or 0
+        md_total_all += md_total or 0
+        print(f"  {sm['path']:38s} SKILL.md={str(skill_md):>5s} md={str(md_total):>6s} [{kind}] ({source})")
 
     manifest = {
         "schema_version": SCHEMA_VERSION,
@@ -126,10 +149,12 @@ def main():
         "generated_by": "tools/external_skills_manifest.py" + (" --api" if args.api else ""),
         "note": ("external/ 子仓库以 git submodule 引用，不计入本仓库自有技能数（index.json meta.total_skills）；"
                  "此文件只做「外部技能」单独计数维度，供站点与文档引用。"),
-        "metric": "SKILL.md 文件数（递归，大小写不敏感）",
+        "metric": "skill_md = SKILL.md 文件数；md_total = 全部 .md 文件数（递归，大小写不敏感）",
         "repo_count": len(repos),
         "repo_with_skills": sum(1 for r in repos if r["kind"] == "skills"),
+        "repo_with_knowledge": sum(1 for r in repos if r["kind"] == "knowledge"),
         "external_skill_md_total": total,
+        "external_md_total": md_total_all,
         "repos": repos,
     }
     Path(args.out).write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

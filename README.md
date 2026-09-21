@@ -13,6 +13,18 @@
 - **NIST CSF** 全覆盖，每个skill均标注对应的CSF控制措施
 - **YAML标准格式**，机器可读，便于AI Agent动态调用
 
+### 📐 技能口径（为什么子仓库一直在加，199 却不变）
+
+| 内容 | 数量 | 计入 199 / 站点统计？ |
+|------|------|----------------------|
+| 本仓库自有技能（`NN-*/skills/*.md`） | **199**（39 个分类） | ✅ 计入 `index.json` / `skills_index.json` / 站点 |
+| CyberStrikeAI 技能包（[`Skills20260809/`](Skills20260809)） | 30 | ❌ 独立目录，按需 `skill("name")` 加载 |
+| 外部子仓库（[`external/`](external)，见 [`.gitmodules`](.gitmodules)） | 上游口径：817+ / 79 / 71+ / 20 … | ❌ **仅以 submodule 引用**，不复制内容、不并入索引 |
+
+> `git submodule add` 只是挂了一个外部引用（`external/<name>`），**不会**增加本仓库的技能数 —— 索引与站点只统计本仓库自己的 199 个技能。
+> 需要用到外部技能时走 [EXTERNAL_SKILLS_ROUTING.md](EXTERNAL_SKILLS_ROUTING.md) 的路由矩阵，而不是把它们的 `SKILL.md` 复制/合并进 `skills_index.json`。
+> 外部仓库的技能数量随其自身演进，以子仓库实际内容为准（本仓库只固定引用到的 commit）。
+
 ## 目录结构
 
 ```

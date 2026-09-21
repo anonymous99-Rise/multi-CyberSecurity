@@ -52,6 +52,14 @@ export default function Home() {
         ))}
       </div>
 
+      {/* 计数口径：仅统计本仓库自有技能，避免与下方外部子仓库的数量混淆 */}
+      <p className="text-[10px] text-gray-600 font-mono leading-relaxed mb-6">
+        统计口径：上表为本仓库自有技能（{meta.total_modules} 个分类下的 NN-*/skills）。
+        <span className="text-gray-700">
+          {" "}external/ 下的外部子仓库按 git submodule 引用，其技能库不计入此数。
+        </span>
+      </p>
+
       {/* Feature cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
         {cards.map((c, i) => {
@@ -99,6 +107,7 @@ export default function Home() {
         <div className="text-[9px] text-gray-600 font-mono tracking-widest uppercase mb-3 flex items-center gap-2">
           <GitBranch size={12} className="text-accent" /> REPOSITORIES
           <span className="text-gray-700">· {String(submodules.length).padStart(2, "0")}</span>
+          <span className="text-gray-700 normal-case tracking-normal">外部引用 · 不计入技能数</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-1.5">
           {submodules.map((s) => (

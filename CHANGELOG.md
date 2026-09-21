@@ -13,7 +13,7 @@
 
 - `tools/validate_skills.py`、`tools/gen_index.py`、`tools/transform_skills.py`：基准路径硬编码为 `/tmp/our`（任何机器上必崩，README 却让用户执行），改为默认仓库根目录并支持传入路径参数；`validate_skills.py` 校验失败时返回非 0
 - `.github/workflows/submodule-health-check.yml`：原 bash 解析器对 19 个子仓库命中 **0**（`.gitmodules` 的 tab 缩进 + CRLF 使 `[[ "$key" == "path" ]]` 恒假），每天误报"全部正常"；改为 python3 解析 + 带 token 的 GitHub API 检查，并修复报告生成与 Issue 逻辑（原 `github.rest.issues.listForRepo` 未 await，真出现异常时必然崩溃）
-- `.github/workflows/version-sync.yml`：`COMMIT_MSG` 环境变量从未注入 —— `feat:` 永远只升 patch、"防重复 bump"守卫失效；补齐 env，并显式声明 `permissions: contents: write`
+- `.github/workflows/version-sync.yml`：`COMMIT_MSG` 环境变量从未注入 —— `feat:` 永远只升 patch、"防重复 bump"守卫失效；补齐 env，bump 判定改为只看提交标题（`feat(scope):` → minor、`type!:` → major，正文出现 `feat:` 不再误升 minor），显式声明 `permissions: contents: write`，并把 `web/package.json` + `web/package-lock.json` 的根版本纳入自动同步（此前长期停留在 v4.3.1，且一旦漂移便不再同步）
 - `web`：补 favicon（`web/src/app/icon.svg`，此前 `/favicon.ico` 请求 404）与 openGraph 元数据
 
 ### 🛡️ 防回归

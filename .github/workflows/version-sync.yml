@@ -71,9 +71,11 @@ jobs:
           major, minor, patch = int(parts[0]), int(parts[1]), int(parts[2])
 
           # Determine bump type
+          # 只用提交标题（第一行）判定类型：正文里出现 "feat:" 之类的字眼不应改变 bump 级别
           commit_msg = os.environ.get("COMMIT_MSG", "")
           force_bump = os.environ.get("FORCE_BUMP", "")
-          msg_lower = commit_msg.lower()
+          subject = (commit_msg or "").strip().split("\n")[0].strip()
+          subject_lower = subject.lower()
 
           # Skip if already a version bump commit (prevent infinite loop)
           if "chore: bump version" in commit_msg.lower():
@@ -84,9 +86,9 @@ jobs:
 
           if force_bump:
               bump = force_bump
-          elif any(kw in msg_lower for kw in ["breaking", "major", "incompatible"]):
+          elif re.match(r'^[A-Za-z]+(\([^)]*\))?!:', subject) or any(kw in subject_lower for kw in ["breaking", "incompatible"]):
               bump = "major"
-          elif any(kw in msg_lower for kw in ["feat:", "feature", "new module", "new skill"]):
+          elif re.match(r'^(feat|feature)(\([^)]*\))?:', subject, re.IGNORECASE) or any(kw in subject_lower for kw in ["new module", "new skill"]):
               bump = "minor"
           else:
               bump = "patch"
@@ -134,18 +136,21 @@ jobs:
                   json.dump(skills_data, f, indent=2, ensure_ascii=False)
               print(f"Updated {len(skills_data)} skills to v{new_ver}")
 
-          # 同步 web/package.json + web/package-lock.json 的根版本（此前二者长期停留在旧版本）
-          for web_file in ("web/package.json", "web/package-lock.json"):
+          # 同步 web/package.json + web/package-lock.json 的根版本
+          # （与主版本无关：按字段替换，避免二者一旦漂移就永久不再同步）
+          for web_file, occurrences in (("web/package.json", 1), ("web/package-lock.json", 2)):
               web_path = project_root / web_file
               if not web_path.exists():
                   continue
               txt = web_path.read_text(encoding="utf-8")
-              old_field = f'"version": "{old_ver}"'
-              if old_field in txt:
-                  web_path.write_text(txt.replace(old_field, f'"version": "{new_ver}"'), encoding="utf-8")
-                  print(f"Updated {web_file}")
+              new_txt, replaced = re.subn(
+                  r'("version"\s*:\s*")[^"]+(")', rf'\g<1>{new_ver}\g<2>', txt, count=occurrences
+              )
+              if replaced:
+                  web_path.write_text(new_txt, encoding="utf-8")
+                  print(f"Updated {web_file} ({replaced} 处)")
               else:
-                  print(f"SKIP {web_file}: 未找到 v{old_ver} 字段（可能与主版本已漂移）")
+                  print(f"WARN {web_file}: 未找到可替换的 version 字段")
 
           # Write outputs
           with open(os.environ["GITHUB_OUTPUT"], "a") as f:

@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-21 05:47:18 UTC",
-  "generated_by": "tools/external_skills_manifest.py --api",
+  "generated_at": "2026-09-24 14:32:38 UTC",
+  "generated_by": "tools/external_skills_manifest.py",
   "note": "external/ 子仓库以 git submodule 引用，不计入本仓库自有技能数（index.json meta.total_skills）；此文件只做「外部技能」单独计数维度，供站点与文档引用。",
   "metric": "skill_md = SKILL.md 文件数；md_total = 全部 .md 文件数（递归，大小写不敏感）",
   "repo_count": 21,
   "repo_with_skills": 11,
   "repo_with_knowledge": 10,
-  "external_skill_md_total": 1427,
+  "external_skill_md_total": 1425,
   "external_md_total": 9529,
   "repos": [
     {
@@ -18,7 +18,7 @@
       "commit": "da1542f",
       "skill_md": 0,
       "md_total": 327,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -29,7 +29,7 @@
       "commit": "87f8301",
       "skill_md": 0,
       "md_total": 325,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -40,7 +40,7 @@
       "commit": "1b027e1",
       "skill_md": 249,
       "md_total": 1353,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -51,7 +51,7 @@
       "commit": "ba3c21e",
       "skill_md": 2,
       "md_total": 93,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -62,7 +62,7 @@
       "commit": "7e2097f",
       "skill_md": 89,
       "md_total": 445,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -70,10 +70,10 @@
       "path": "external/Claude-BugHunter",
       "url": "https://github.com/elementalsouls/Claude-BugHunter.git",
       "repo": "elementalsouls/Claude-BugHunter",
-      "commit": "136bc92",
+      "commit": "2f3a4a1",
       "skill_md": 83,
       "md_total": 187,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -82,9 +82,9 @@
       "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
       "repo": "mukul975/Anthropic-Cybersecurity-Skills",
       "commit": "54a7988",
-      "skill_md": 820,
+      "skill_md": 818,
       "md_total": 2588,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -92,10 +92,10 @@
       "path": "external/cve_monitor",
       "url": "https://github.com/anonymous99-Rise/cve_monitor.git",
       "repo": "anonymous99-Rise/cve_monitor",
-      "commit": "068afd1",
+      "commit": "d139776",
       "skill_md": 0,
       "md_total": 6,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -106,7 +106,7 @@
       "commit": "642e6fa",
       "skill_md": 0,
       "md_total": 1,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -117,7 +117,7 @@
       "commit": "9d37526",
       "skill_md": 1,
       "md_total": 12,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -128,7 +128,7 @@
       "commit": "22bb533",
       "skill_md": 0,
       "md_total": 896,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -139,7 +139,7 @@
       "commit": "66ebc47",
       "skill_md": 0,
       "md_total": 711,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -150,7 +150,7 @@
       "commit": "8da3c8c",
       "skill_md": 24,
       "md_total": 141,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -161,7 +161,7 @@
       "commit": "482fe78",
       "skill_md": 21,
       "md_total": 36,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -172,7 +172,7 @@
       "commit": "518fed3",
       "skill_md": 0,
       "md_total": 10,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -183,7 +183,7 @@
       "commit": "75831a2",
       "skill_md": 0,
       "md_total": 6,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -194,7 +194,7 @@
       "commit": "f1a8eff",
       "skill_md": 58,
       "md_total": 1085,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -205,7 +205,7 @@
       "commit": "739512a",
       "skill_md": 79,
       "md_total": 84,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -216,7 +216,7 @@
       "commit": "5982c14",
       "skill_md": 1,
       "md_total": 11,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -227,7 +227,7 @@
       "commit": "8eca2de",
       "skill_md": 0,
       "md_total": 3,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -235,10 +235,10 @@
       "path": "external/Des-CTF-Knowledge",
       "url": "https://github.com/Dest1ny-Sec/Des-CTF-Knowledge.git",
       "repo": "Dest1ny-Sec/Des-CTF-Knowledge",
-      "commit": null,
+      "commit": "e8171fb",
       "skill_md": 0,
       "md_total": 1209,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     }
   ]

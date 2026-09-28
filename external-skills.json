@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-21 05:47:18 UTC",
-  "generated_by": "tools/external_skills_manifest.py --api",
+  "generated_at": "2026-09-28 17:53:19 UTC",
+  "generated_by": "tools/external_skills_manifest.py",
   "note": "external/ 子仓库以 git submodule 引用，不计入本仓库自有技能数（index.json meta.total_skills）；此文件只做「外部技能」单独计数维度，供站点与文档引用。",
   "metric": "skill_md = SKILL.md 文件数；md_total = 全部 .md 文件数（递归，大小写不敏感）",
   "repo_count": 21,
   "repo_with_skills": 11,
   "repo_with_knowledge": 10,
-  "external_skill_md_total": 1427,
-  "external_md_total": 9529,
+  "external_skill_md_total": 1425,
+  "external_md_total": 9437,
   "repos": [
     {
       "name": "external/agency-agents-zh",
@@ -18,7 +18,7 @@
       "commit": "da1542f",
       "skill_md": 0,
       "md_total": 327,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -26,10 +26,10 @@
       "path": "external/agency-agents",
       "url": "https://github.com/msitarzewski/agency-agents.git",
       "repo": "msitarzewski/agency-agents",
-      "commit": "87f8301",
+      "commit": "68f0153",
       "skill_md": 0,
-      "md_total": 325,
-      "count_source": "api",
+      "md_total": 326,
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -40,7 +40,7 @@
       "commit": "1b027e1",
       "skill_md": 249,
       "md_total": 1353,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -48,10 +48,10 @@
       "path": "vendor/codegraph",
       "url": "https://github.com/colbymchenry/codegraph.git",
       "repo": "colbymchenry/codegraph",
-      "commit": "ba3c21e",
+      "commit": "003305f",
       "skill_md": 2,
-      "md_total": 93,
-      "count_source": "api",
+      "md_total": 94,
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -59,10 +59,10 @@
       "path": "external/reverse-skill",
       "url": "https://github.com/zhaoxuya520/reverse-skill.git",
       "repo": "zhaoxuya520/reverse-skill",
-      "commit": "7e2097f",
+      "commit": "cab634b",
       "skill_md": 89,
-      "md_total": 445,
-      "count_source": "api",
+      "md_total": 447,
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -70,10 +70,10 @@
       "path": "external/Claude-BugHunter",
       "url": "https://github.com/elementalsouls/Claude-BugHunter.git",
       "repo": "elementalsouls/Claude-BugHunter",
-      "commit": "136bc92",
+      "commit": "e017795",
       "skill_md": 83,
       "md_total": 187,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -82,9 +82,9 @@
       "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
       "repo": "mukul975/Anthropic-Cybersecurity-Skills",
       "commit": "54a7988",
-      "skill_md": 820,
+      "skill_md": 818,
       "md_total": 2588,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -92,10 +92,10 @@
       "path": "external/cve_monitor",
       "url": "https://github.com/anonymous99-Rise/cve_monitor.git",
       "repo": "anonymous99-Rise/cve_monitor",
-      "commit": "068afd1",
+      "commit": "85f551a",
       "skill_md": 0,
       "md_total": 6,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -106,7 +106,7 @@
       "commit": "642e6fa",
       "skill_md": 0,
       "md_total": 1,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -117,7 +117,7 @@
       "commit": "9d37526",
       "skill_md": 1,
       "md_total": 12,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -125,10 +125,10 @@
       "path": "external/Vulnerability-Wiki-PoC",
       "url": "https://github.com/SourByte05/Vulnerability-Wiki-PoC.git",
       "repo": "SourByte05/Vulnerability-Wiki-PoC",
-      "commit": "22bb533",
+      "commit": "802828a",
       "skill_md": 0,
-      "md_total": 896,
-      "count_source": "api",
+      "md_total": 915,
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -136,10 +136,10 @@
       "path": "standards/owasp-top10",
       "url": "https://github.com/OWASP/Top10.git",
       "repo": "OWASP/Top10",
-      "commit": "66ebc47",
+      "commit": "3a31f35",
       "skill_md": 0,
-      "md_total": 711,
-      "count_source": "api",
+      "md_total": 727,
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -147,10 +147,10 @@
       "path": "external/CyberStrikeAI",
       "url": "https://github.com/AIPentest/CyberStrikeAI.git",
       "repo": "AIPentest/CyberStrikeAI",
-      "commit": "8da3c8c",
+      "commit": "470eb5e",
       "skill_md": 24,
       "md_total": 141,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -161,7 +161,7 @@
       "commit": "482fe78",
       "skill_md": 21,
       "md_total": 36,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -169,10 +169,10 @@
       "path": "external/dsh-pentest",
       "url": "https://github.com/howmp/dsh-pentest.git",
       "repo": "howmp/dsh-pentest",
-      "commit": "518fed3",
+      "commit": "5c835b2",
       "skill_md": 0,
       "md_total": 10,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -180,10 +180,10 @@
       "path": "external/dsh-infinite-gen-4",
       "url": "https://github.com/Minglink/dsh-infinite-gen-4.git",
       "repo": "Minglink/dsh-infinite-gen-4",
-      "commit": "75831a2",
+      "commit": "5e37739",
       "skill_md": 0,
       "md_total": 6,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -191,10 +191,10 @@
       "path": "external/dsh-redteam-model",
       "url": "https://github.com/SeaOf0/dsh-redteam-model.git",
       "repo": "SeaOf0/dsh-redteam-model",
-      "commit": "f1a8eff",
+      "commit": "810a25f",
       "skill_md": 58,
       "md_total": 1085,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -205,7 +205,7 @@
       "commit": "739512a",
       "skill_md": 79,
       "md_total": 84,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -216,7 +216,7 @@
       "commit": "5982c14",
       "skill_md": 1,
       "md_total": 11,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "skills"
     },
     {
@@ -227,7 +227,7 @@
       "commit": "8eca2de",
       "skill_md": 0,
       "md_total": 3,
-      "count_source": "api",
+      "count_source": "local",
       "kind": "knowledge"
     },
     {
@@ -235,10 +235,10 @@
       "path": "external/Des-CTF-Knowledge",
       "url": "https://github.com/Dest1ny-Sec/Des-CTF-Knowledge.git",
       "repo": "Dest1ny-Sec/Des-CTF-Knowledge",
-      "commit": null,
+      "commit": "03525c6",
       "skill_md": 0,
-      "md_total": 1209,
-      "count_source": "api",
+      "md_total": 1078,
+      "count_source": "local",
       "kind": "knowledge"
     }
   ]

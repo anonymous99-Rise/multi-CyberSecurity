@@ -1,6 +1,6 @@
 # 📦 子仓库状态汇总报告
 
-> 生成时间: 2026-09-21 16:06 UTC
+> 生成时间: 2026-10-08 17:05 UTC
 > 仓库: [anonymous99-Rise/multi-CyberSecurity](https://github.com/anonymous99-Rise/multi-CyberSecurity)
 
 ## 📊 概览
@@ -8,8 +8,8 @@
 | 指标 | 值 |
 |------|-----|
 | 子仓库总数 | 21 |
-| 同步正常 | 21 |
-| 落后远程 | 0 |
+| 同步正常 | 12 |
+| 落后远程 | 9 |
 
 ---
 
@@ -17,27 +17,27 @@
 
 | 名称 | 描述 | 当前 | 远程 | Stars | 状态 |
 |------|------|------|------|-------|------|
-| `external/agency-agents-zh` | agency-agents 中文版（AI 智能体专家团队） | `da1542f` | `da1542f` | 20845 | ✅ |
-| `external/agency-agents` | 🎭 The Agency: AI Specialists Ready to Tr | `87f8301` | `87f8301` | 153919 | ✅ |
-| `external/AboutSecurity` | AboutSecurity | `1b027e1` | `1b027e1` | 1755 | ✅ |
-| `vendor/codegraph` | CodeGraph | `ba3c21e` | `ba3c21e` | 71700 | ✅ |
-| `external/reverse-skill` | N/A | `7e2097f` | `7e2097f` | 36789 | ✅ |
-| `external/Claude-BugHunter` | claude-bughunter | `2f3a4a1` | `2f3a4a1` | 4597 | ✅ |
-| `external/Anthropic-Cybersecurity-Skills` | Anthropic Cybersecurity Skills | `54a7988` | `54a7988` | 33080 | ✅ |
-| `external/cve_monitor` | CVE威胁情报推送系统 | `d139776` | `d139776` | 0 | ✅ |
-| `vendor/burp-mcp` | Burp Suite MCP Server Extension | `642e6fa` | `642e6fa` | 1178 | ✅ |
-| `vendor/redteam-mcp` | RedTeam-Agent | `9d37526` | `9d37526` | 71 | ✅ |
-| `external/Vulnerability-Wiki-PoC` | 💠 Vulnerability-Wiki-PoC | `22bb533` | `22bb533` | 1142 | ✅ |
-| `standards/owasp-top10` | Top10 | `66ebc47` | `66ebc47` | 6116 | ✅ |
-| `external/CyberStrikeAI` | CyberStrikeAI | `8da3c8c` | `8da3c8c` | 6987 | ✅ |
-| `external/CkSKILLS` | CK-Skills | `482fe78` | `482fe78` | 93 | ✅ |
-| `external/dsh-pentest` | dsh-pentest — DSH 渗透测试模式 | `518fed3` | `518fed3` | 527 | ✅ |
-| `external/dsh-infinite-gen-4` | ⚔️ DeepSeek-V4.1 / V4 Flash 网络安全红队工具（无限四 | `75831a2` | `75831a2` | 1857 | ✅ |
-| `external/dsh-redteam-model` | dsh-redteam-model | `f1a8eff` | `f1a8eff` | 557 | ✅ |
-| `external/Claude-Red` | claude-red | `739512a` | `739512a` | 6634 | ✅ |
-| `external/cnvd-skill` | cnvd-skill | `5982c14` | `5982c14` | 13 | ✅ |
-| `external/Desinter_scan` | N/A | `8eca2de` | `8eca2de` | 47 | ✅ |
-| `external/Des-CTF-Knowledge` | N/A | `e8171fb` | `e8171fb` | 237 | ✅ |
+| `external/agency-agents-zh` | agency-agents 中文版（AI 智能体专家团队） | `c900099` | `e5a6c0a` | 21127 | 🔄 |
+| `external/agency-agents` | 🎭 The Agency: AI Specialists Ready to Tr | `8329468` | `f99f6aa` | 158297 | 🔄 |
+| `external/AboutSecurity` | AboutSecurity | `db4573f` | `d428372` | 1776 | 🔄 |
+| `vendor/codegraph` | CodeGraph | `0c7d0f7` | `b635dd4` | 73481 | 🔄 |
+| `external/reverse-skill` | N/A | `cab634b` | `cab634b` | 40223 | ✅ |
+| `external/Claude-BugHunter` | claude-bughunter | `a590333` | `ec51cd4` | 4799 | 🔄 |
+| `external/Anthropic-Cybersecurity-Skills` | Anthropic Cybersecurity Skills | `54a7988` | `54a7988` | 33956 | ✅ |
+| `external/cve_monitor` | CVE威胁情报推送系统 | `9dc718a` | `7a8b388` | 0 | 🔄 |
+| `vendor/burp-mcp` | Burp Suite MCP Server Extension | `642e6fa` | `642e6fa` | 1221 | ✅ |
+| `vendor/redteam-mcp` | RedTeam-Agent | `9d37526` | `9d37526` | 75 | ✅ |
+| `external/Vulnerability-Wiki-PoC` | 💠 Vulnerability-Wiki-PoC | `fb9be5b` | `fb9be5b` | 1173 | ✅ |
+| `standards/owasp-top10` | Top10 | `3a31f35` | `3a31f35` | 6244 | ✅ |
+| `external/CyberStrikeAI` | CyberStrikeAI | `82b0af1` | `edec607` | 7201 | 🔄 |
+| `external/CkSKILLS` | CK-Skills | `482fe78` | `482fe78` | 114 | ✅ |
+| `external/dsh-pentest` | dsh-pentest — DSH 渗透测试模式 | `df15f80` | `8b695fe` | 601 | 🔄 |
+| `external/dsh-infinite-gen-4` | ⚔️ DeepSeek-V4.1 / V4 Flash 网络安全逆向与红队防御评 | `9097ccc` | `9097ccc` | 2438 | ✅ |
+| `external/dsh-redteam-model` | dsh-redteam-model | `810a25f` | `dd85a9a` | 671 | 🔄 |
+| `external/Claude-Red` | claude-red | `739512a` | `739512a` | 7352 | ✅ |
+| `external/cnvd-skill` | cnvd-skill | `5982c14` | `5982c14` | 23 | ✅ |
+| `external/Desinter_scan` | N/A | `8eca2de` | `8eca2de` | 56 | ✅ |
+| `external/Des-CTF-Knowledge` | N/A | `03525c6` | `03525c6` | 339 | ✅ |
 
 ---
 

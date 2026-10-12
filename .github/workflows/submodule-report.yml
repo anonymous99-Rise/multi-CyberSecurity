@@ -259,6 +259,40 @@ jobs:
               --body "自动生成的子仓库状态汇总报告。生成时间：$(date -u '+%Y-%m-%d %H:%M UTC')"
           fi
 
+          # 自动合并本次报告 PR（与 submodule-sync 保持一致），失败不阻塞后续清理
+          PR_TO_MERGE="${EXISTING}"
+          if [ -z "$PR_TO_MERGE" ] || [ "$PR_TO_MERGE" = "null" ]; then
+            PR_TO_MERGE=$(gh pr list \
+              --repo anonymous99-Rise/multi-CyberSecurity \
+              --head "$BRANCH" \
+              --state open \
+              --json number \
+              --jq '.[0].number' 2>/dev/null || true)
+          fi
+
+          if [ -n "$PR_TO_MERGE" ] && [ "$PR_TO_MERGE" != "null" ]; then
+            echo "自动合并 PR #$PR_TO_MERGE..."
+            gh pr merge "$PR_TO_MERGE" \
+              --repo anonymous99-Rise/multi-CyberSecurity \
+              --squash \
+              --delete-branch \
+              || echo "⚠️ 合并失败（可能有冲突或权限限制），请手动处理"
+          fi
+
+          # 自动合并历史上积压的旧报告 PR（每天新的报告会覆盖旧的，旧 PR 没有保留价值）
+          for old_pr in $(gh pr list \
+                            --repo anonymous99-Rise/multi-CyberSecurity \
+                            --state open \
+                            --json number,headRefName \
+                            --jq '.[] | select(.headRefName | startswith("docs/submodule-report-")) | .number' 2>/dev/null); do
+            echo "自动合并积压 PR #$old_pr..."
+            gh pr merge "$old_pr" \
+              --repo anonymous99-Rise/multi-CyberSecurity \
+              --squash \
+              --delete-branch \
+              || echo "⚠️ PR #$old_pr 合并失败，请手动处理"
+          done
+
           # 清理历史报告分支：已合并/已关闭且无 open PR 的 docs/submodule-report-* 分支
           # （每次运行都会新开一个按日期命名的分支，不清理会无限累积）
           for old_branch in $(git ls-remote --heads origin 'refs/heads/docs/submodule-report-*' \

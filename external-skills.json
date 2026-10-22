@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-19 16:43:19 UTC",
+  "generated_at": "2026-10-22 14:47:10 UTC",
   "generated_by": "tools/external_skills_manifest.py",
   "note": "external/ 子仓库以 git submodule 引用，不计入本仓库自有技能数（index.json meta.total_skills）；此文件只做「外部技能」单独计数维度，供站点与文档引用。",
   "metric": "skill_md = SKILL.md 文件数；md_total = 全部 .md 文件数（递归，大小写不敏感）",
